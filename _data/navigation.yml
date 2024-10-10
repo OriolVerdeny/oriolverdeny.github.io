@@ -1,0 +1,29 @@
+
+
+main_menu:
+
+  - text: "Home"
+    menu_type: "simple"
+    url: "/"
+    
+  - text: "Our services"
+    menu_type: "simple"
+    url: "/services/index"
+
+  - text: "Our work"
+    menu_type: "simple"
+    url: "/"
+
+  - text: "Blog"
+    menu_type: "simple"
+    url: "/blogs/index-4"
+
+  - text: "About us"
+    url: "/about/about" 
+    submenu:
+      - text: "About"
+        url: "/about/about"
+      - text: "Contact"
+        url: "/contact/contact-4"
+      - text: "FAQ"
+        url: "/faq"
