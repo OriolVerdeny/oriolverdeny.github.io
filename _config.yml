@@ -15,6 +15,9 @@ collections:
   shop_items:
     output: true
     permalink: /shop/:name
+  legal_docs:
+    output: true
+    permalink: "/:title"
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
@@ -97,3 +100,21 @@ feed:
   collections:
     posts:
       path: "/index.xml"
+
+
+# LaTeX
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  parse_block_html: true
+  syntax_highlighter: coderay
+  syntax_highlighter_opts:
+    line_numbers: table
+    bold_every: 5
+
+
+sass:
+  sass_dir: _sass
+  style: compressed
+

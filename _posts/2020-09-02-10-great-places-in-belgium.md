@@ -2,7 +2,7 @@
 layout: post
 title: "10 Great Places in Belgium"
 date: 2020-09-02 20:37:13 +0600
-author: "Tortoiz Themes"
+author: "Oriol Verdeny Vilalta"
 post_image: "/assets/images/art/tb2.jpg"
 badge_color: "bg-leaf"
 categories: [architecture]

@@ -8,75 +8,72 @@ custom_font:
 black_menu: true
 header_style: 'one'
 subheader: false
-      
-about_area: 
+
+
+vision:
   enable: true
-  title: "What We Do?"
-  sub_title: "We specialize in web, mobile, brand & product design. We love to turn ideas into beautiful things."
-  projects_number: 450
-  project_tag: "Completed Projects"
-  image: "/assets/images/art/about7.png"
-  skills:
-    - title: "Web Development"
-      numbers: 100
-      style: "pink"
+  title: "Our Vision"
+  image: "/assets/images/04-About/vision.jpg"
+  description: "We envision a world where innovation, technology and sustainable principles drive the creation of a
+  regenerative food system that feeds us, preserves biodiversity, restore ecosystems, and contributes to the development
+  of the economy."
+  footer: "Oriol Verdeny Vilalta"
 
-    - title: "Product Design"
-      numbers: 80
-      style: "blue"
-
-    - title: "Identity & Branding"
-      numbers: 85
-      style: "green"
-
-    - title: "Mobile Development"
-      numbers: 90
-      style: "purple"
-
-boxes_area:
+mission:
   enable: true
-  lists:
-    - title: "Web Development"
-      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida."
-      icon: "icofont-code"
-      bg_color: "bg-pink"
+  title: "What we do?"
+  description:
+    - paragraph: "We are a consulting and implementation services company focused on data-driven agriculture. Our mission is to
+    support development organizations, research institutions, and agribusinesses make informed decisions and
+    achieve their goals to improve agriculture, sustainability, and financial performance."
+    - paragraph: "We offer a range of services, including data analysis, process and mass balance assessments, and financial
+    modeling. These services help our clients use data to enhance project outcomes and make a positive impact on
+    society and the environment."
+  work:
+    title: "We work with"
+    clients: "Research organisations.:Development agencies.:Agribusinesses."
 
-    - title: "Product Design"
-      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida."
-      icon: "icofont-magic-alt"
-      bg_color: "bg-blue"
 
-    - title: "Identity & Branding"
-      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida."
-      icon: "icofont-paint"
-      bg_color: "bg-green"
 
-    - title: "Mobile Development"
-      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida."
-      icon: "icofont-smart-phone"
-      bg_color: "bg-purple"
 
-three_columns:
+
+values:
   enable: true
-  title: "Our Process"
-  sub_title: "Here are 4 working steps to organize our business projects."
-  image: "/assets/images/concept/concept7@2x.png"
-  lists:
+  title: "Our Values"
+  image: "/assets/images/04-About/values.jpg"
+  list:
+    - title: "Care for yourself and others"
+      description: "Build and nurture healthy relationships that support mutual growth and understanding."
+      color: "green"
+      number: 1
+    - title: "Stay positive; we’re in this together"
+      description: "We face challenges as a team and find solutions collaboratively."
+      color: "green"
+      number: 2
+    - title: "Value the journey, not just the destination"
+      description: "We prioritize not only the final result but also the quality of our process and interactions along the way."
+      color: "green"
+      number: 3
+    - title: "Practice patience and reflection time"
+      description: "Dedicate time to build-up value and create meaningful, long-term impact."
+      color: "green"
+      number: 4
+    - title: "Be curious and embrace the unknown"
+      description: Stay open, explore freely, and enjoy the creative process, even in unpredictable situations."
+      color: "green"
+      number: 5
+    - title: "Keep things simple"
+      description: "Simplifying helps us communicate clearly, understand one another, and execute more effectively."
+      color: "green"
+      number: 6
+    - title: "Prioritize what matters most"
+      description: "We focus on delivering high-value outcomes aligned with your goals, staying motivated by meaningful work."
+      color: "green"
+      number: 7
 
-    - title: "Creative Ideas"
-      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras."
-
-    - title: "Magic Touch"
-      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras."
-
-    - title: "Data Analysis"
-      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras."
-
-    - title: "Finalize Product"
-      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras."
 
 testimonials:
-  enable: true
+  enable: false
   image: "/assets/images/art/about9.png"
   projects_number: 500
   project_tag: "Happy Customers"
@@ -101,288 +98,92 @@ testimonials:
       designation: "Sales Manager"
 
 clients_carousel_area:
-  enable: true
+  enable: false
 
-
-contact_area:
-  enable: true
-  title: "Get in Touch"
-  sub_title: "Have any questions? Reach out to us from our contact form and we will get back to you shortly."
-  action_email: "tortoizthemes@gmail.com"
-  image: "/assets/images/art/about8.png"
-  address: |
-    <strong>Moonshine St. <br /> 14/05 Light City<br /> London, UK</strong>
-  forms_data: 
-
-    - field_type: "input"
-      field_name: "first_name"
-      placeholder: "First Name" 
-      error_message: "First Name Is required"
-
-    - field_type: "input"
-      field_name: "last_name"
-      placeholder: "Last Name"
-      error_message: "Last Name Is required"
-
-    - field_type: "input"
-      field_name: "last_email"
-      placeholder: "Email"
-      error_message: "Email Is required"
-
-    - field_type: "input"
-      field_name: "user_phone"
-      placeholder: "Phone"
-      error_message: "Phone Number Is required"
-
-    - field_type: "textarea"
-      field_name: "user_message"
-      placeholder: "Message"
-      error_message: "Message Is required"
 ---
-  <div class="wrapper gray-wrapper">
-    <div class="container inner">
-      {% if page.about_area.enable %}
-      <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2 text-center">
-          <div>
-            {% if page.about_area.image %}
-            <figure>
-              <img src="{{page.about_area.image}}" alt="{{page.about_area.title}}"/>
-            </figure>
-            {% endif %}
-            <div class="row counter counter-s position-absolute" style="top: 45%; right: 8%;">
-              <div class="col-md-10 text-center">
-                <div class="box bg-white shadow">
-                  {% if page.about_area.projects_number %}
-                   <h3><span class="value">{{page.about_area.projects_number}}</span>+</h3>
-                  {% endif %}
-                  {% if page.about_area.project_tag %}
-                   <p>{{page.about_area.project_tag}}</p>
-                  {% endif %}
-                </div>
-                <!--/.box -->
-              </div>
-              <!--/column -->
-            </div>
-            <!--/.row -->
-          </div>
-        </div>
-        <!--/column -->
-        <div class="space30 d-none d-md-block d-lg-none"></div>
-        <div class="col-lg-6 pr-60 pr-md-15">
-          {% if page.about_area.title %}
-           <h2 class="section-title text-uppercase mb-20">{{ page.about_area.title }}</h2>
-          {% endif %}
-          {% if  page.about_area.sub_title %}
-           <p class="lead larger">{{page.about_area.sub_title}}</p>
-          {% endif %}
-          <div class="space20"></div>
-          <ul class="progress-list">
-            {% for skills in page.about_area.skills %}
-            <li>
-              <p>{{skills.title}}</p>
-              <div class="progressbar line {{skills.style}}" data-value="{{skills.numbers}}"></div>
-            </li>
-            {% endfor %}
-          </ul>
-          <!-- /.progress-list -->
-        </div>
-        <!--/column -->
-      </div>
-      <!--/.row --> 
-        {% endif %}
-        {% if page.boxes_area.enable %}
-        <div class="boxes-area"> 
-      <div class="space60"></div>
-      <div class="row text-center">
-          {% for list in page.boxes_area.lists %}
-        <div class="col-md-6 col-lg-3">
-          <div class="box {{list.bg_color}} shadow inverse-text">
-            <div class="icon color-white fs-42 mb-20"> 
-              <i class="{{list.icon}}"></i> 
-            </div>
-            <h5>{{list.title}}</h5>
-            <p>{{list.description}}</p>
-          </div>
-        </div>
-          {% endfor %}
-      </div>
-      <!--/.row -->
-    </div>
-    {% endif %}
-    </div>
-  </div>
-  <!-- /.wrapper -->
-{% if page.three_columns.enable %}
-<div class="wrapper gray-wrapper">
-  <div class="container inner text-center">
-    {% if page.three_columns.title %}
-     <h2 class="section-title">{{page.three_columns.title}}</h2>
-    {% endif %}
-    {% if page.three_columns.sub_title %}
-     <p class="lead larger">{{page.three_columns.sub_title}}</p>
-    {% endif %}
-    <div class="space30"></div>
-    <div class="row gutter-60 d-flex align-items-center">
-      <div class="col-md-6 col-lg-3 order-lg-1">
-        {% for list in page.three_columns.lists limit: 2 %}
-        <h4>{{forloop.index}}. {{list.title}}</h4>
-        <p>{{list.description}}</p>
-        {% endfor %}
-      </div>
-      <!--/column -->
-      {% if page.three_columns.image %}
-      <div class="col-lg-6 order-sm-first order-lg-2">
-        <figure><img src="{{page.three_columns.image}}" alt="{{page.three_columns.title}}"/></figure>
-        <div class="space50 d-none d-md-block d-lg-none"></div>
-      </div>
-      <!--/column -->
-      {% endif %}
-      <div class="col-md-6 col-lg-3 order-lg-3">
-        {% for list in page.three_columns.lists limit: 4  %}
-        {% if forloop.index > 2%}
-        <h4>{{forloop.index}}. {{list.title}}</h4>
-        <p>{{list.description}}</p>
-        {% endif %}
-        {% endfor %}
-      </div>
-      <!--/column -->
-    </div>
-    <!--/.row -->
-  </div>
-  <!-- /.container -->
-</div>
-<!-- /.wrapper -->
-{% endif %}
-  <div class="wrapper gray-wrapper">
-    <div class="container inner">
-      {% if page.testimonials.enable %}
-      <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <div>
-            {% if page.testimonials.image %}
-             <figure><img src="{{page.testimonials.image}}" alt="{{page.testimonials.project_tag}}"/></figure>
-            {% endif %}
-            <div class="row counter counter-s position-absolute" style="top: 10%; left: 25%;">
-              <div class="col-md-10 text-center">
-                <div class="box bg-white shadow">
-                  <h3><span class="value">{{page.testimonials.projects_number}}</span>+</h3>
-                  <p>{{page.testimonials.project_tag}}</p>
-                </div>
-                <!--/.box -->
-              </div>
-              <!--/column -->
-            </div>
-            <!--/.row -->
-          </div>
-        </div>
-        <!--/column -->
-        <div class="space20 d-md-none"></div>
-        <div class="space50 d-none d-md-block d-lg-none"></div>
-        <div class="col-lg-6 pr-60 pr-md-15">
-          <div class="basic-slider owl-carousel gap-small text-center" data-margin="30">
-           {% for quote in page.testimonials.feedback %}
-            <div class="item">
-              <blockquote class="icon larger">
-                <p>"{{quote.quote}}"</p>
-                <div class="blockquote-details justify-content-center">
-                  {% if quote.image %}
-                  <div class="img-blob blob1">
-                    <img src="{{quote.image}}" alt="{{quote.title}}"/>
-                  </div>
-                  {% endif %}
-                  <div class="info">
-                    <h6 class="mb-0">{{quote.name}}</h6>
-                    <span class="meta mb-0">{{quote.designation}}</span>
-                  </div>
-                </div>
-              </blockquote>
-            </div>
-           {% endfor %}
-          </div>
-          <!-- /.owl-carousel -->
-        </div>
-        <!--/column -->
-      </div>
-      <!--/.row -->
-      {% endif %}
-      {% if page.clients_carousel_area.enable %}
-      <div class="space80"></div>
-      {% include clients_carousel.html %}
-      {% endif %}
-    </div>
-    <!-- /.container -->
-  </div>
-  <!-- /.wrapper -->
-{% if page.contact_area.enable %}
-<div class="wrapper gray-wrapper">
+
+{% if page.values.enable %}
+<div class="wrapper image-wrapper bg-image inverse-text"
+  data-image-src="{{relative_url}}/assets/images/04-About/vision.jpg">
   <div class="container inner">
-    <div class="row align-items-start">
-      <div class="col-lg-6">
-        <div>
-          {% if page.contact_area.image %}
-           <figure><img src="{{page.contact_area.image}}" alt="{{page.contact_area.title}}"/></figure>
-          {% endif %}
-          <div class="box bg-white shadow p-30 position-absolute" style="top: 73%; left: 10%;">
-            {% if page.contact_area.address %}
-             <address>{{page.contact_area.address}}</address>
-            {% endif %}
-            <a href="mailto:{{page.contact_area.action_email}}" class="nocolor">{{page.contact_area.action_email}}</a><br />{{site.data.general_settings.phone_number}}</div>
-          <!--/.box -->
+    <div class="row">
+      <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <h2 class="section-title mb-40 text-center">{{ page.vision.title }}</h2>
+        <div class="box bg-white shadow">
+          <blockquote class="icon">
+            <p>{{ page.vision.description }}</p>
+            <!-- <footer class="blockquote-footer">{{ page.vision.footer }}</footer> -->
+          </blockquote>
         </div>
       </div>
-      <!--/column -->
-      <div class="space80 d-lg-none"></div>
-      <div class="col-lg-6 pl-60 pl-md-15">
-        {% if page.contact_area.title %}
-         <h2 class="section-title">{{page.contact_area.title}}</h2>
-        {% endif %}
-        {% if page.contact_area.sub_title %}
-        <p class="lead larger">{{page.contact_area.sub_title}}</p>
-        {% endif %}
-        <div class="space30"></div>
-            <form id="contact-form" class="fields-white" action="https://formsubmit.io/send/{{page.contact_area.action_email}}">
-              <div class="messages"></div>
-              <div class="controls">
-                <div class="form-row">
-                  {% for forms_data in page.contact_area.forms_data %}
-                  {% if forms_data.field_type == "input" %}
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input id="{{forms_data.field_name}}" type="text" name="{{forms_data.field_name}}" class="form-control" placeholder="{{forms_data.placeholder}} *" required="required" data-error="{{forms_data.error_message}}">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-                   {% else if forms_data.field_type == "textarea" %}
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <textarea id="{{forms_data.field_name}}" name="{{forms_data.field_name}}" class="form-control" placeholder="{{forms_data.placeholder}} *" rows="4" required="required" data-error="{{forms_data.error_message}}"></textarea>
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-                     {% endif %}
-                  {% endfor %}
-                </div>
-                <div class="form-row">
-                  <div class="col-md-12">
-                    <input type="submit" class="btn btn-send" value="Send message">
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="col-md-12">
-                    <p class="text-muted mb-0"><strong>*</strong> These fields are required.</p>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <!-- /form -->
-      </div>
-      <!--/column -->
     </div>
-    <!--/.row -->
-    <div class="space40"></div>
   </div>
-  <!-- /.container -->
 </div>
-<!-- /.wrapper -->
 {% endif %}
+
+
+
+<!-- Mission -->
+{% if page.mission.enable %}
+<div class="wrapper dark-wrapper inverse-text">
+  <div class="container inner">
+
+    <h2 class="section-title mb-40 text-center"> {{ page.mission.title}} </h2>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        {% for desctiption in page.mission.description %}
+
+        <p> {{ desctiption.paragraph }}</p>
+
+        {% endfor %}
+
+      </div>
+      <!-- /column -->
+    </div>
+
+    <div class="space50"></div>
+
+    <div class="row">
+      <div class="col-lg-10 offset-lg-2">
+        <h2 class="display-3">
+          {{ page.mission.work.title}}
+          <span class="typer color-default" data-delay="100" data-delim=":"
+            data-words="Research organisations.:Development agencies.:Agribusinesses."></span>
+          <span class="cursor color-default" data-owner="typer"></span>
+        </h2>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+<!-- Values -->
+{% if page.values.enable %}
+<div class="wrapper white-wrapper">
+  <div class="container inner">
+    <h2 class="section-title mb-40 text-center">{{ page.values.title }}</h2>
+    <div class="row gutter-50">
+      {% for value in page.values.list %}
+      <div class="col-md-6 col-lg-4">
+        <div class="d-flex flex-row justify-content-center">
+          <div>
+            <!-- <div class="icon icon-bg icon-bg-{{ value.color }} color-{{ value.color }} mr-25"> -->
+            <div class="icon icon-bg mr-25"
+              style="background-color: var(--color-text_yovori); color: var(--color-default);">
+              <span class="number" style="font-weight: bold;">{{ value.number }}</span>
+            </div>
+          </div>
+          <div>
+            <h5>{{ value.title }}</h5>
+            <p>{{ value.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div> <!-- /.row -->
+  </div> <!-- /.container -->
+</div> <!-- /.wrapper -->
+{% endif %}
+

@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Ligula tristique quis risus eget urna mollis ornare porttitor"
+title: "Cassava transformation unit into gari"
 date: 2020-10-05 20:37:13 +0600
 tags: technology education
-categories: [wedding]
+categories: [Cassava]
 author: "Tortoiz Theme"
-post_image: "/assets/images/art/f1.jpg"
+post_image: "/assets/images/Case studies/cassava-transformation-unit.jpg"
 gallery: 
   - img: "/assets/images/art/bs1.jpg"
   - img: "/assets/images/art/bs2.jpg"

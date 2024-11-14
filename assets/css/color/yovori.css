@@ -1,0 +1,57 @@
+/* Block */
+:root {
+	/* Defines a hexadecimal color (#ffd429), which represents a shade of yellow. 
+	This can be used elsewhere by referencing var(--color-default) */
+	--color-default: rgb(255, 212, 41);
+
+	/* Defines the RGB values of the same color (245, 196, 99) for use in 
+	rgba() functions that support transparency. */
+	--rgb-default: 255, 212, 41;
+
+	/* Defines a box-shadow style (inset shadow with 5px spread and 30% 
+	transparency) that can be applied to buttons on hover, using the RGB 
+	values from --rgb-default */
+	--btn-hover-default: 0 0 0 5px rgba(var(--rgb-default), 0.3);
+
+
+	--color-text_yovori: rgb(51, 45, 41);
+	--rgb-text_yovori: 51, 49, 41;
+	--btn-hover-text_yovori: 0 0 0 5px rgba(var(--rgb-text_yovori), 0.3);
+
+
+	/* --color-text: rgb(255, 212, 41);
+	--rgb-text: 255, 212, 41;
+	--btn-hover-text: 0 0 0 5px rgba(var(--rgb-text), 0.3); */
+
+
+}
+
+
+.color-text_yovori,
+.bullet-text_yovori>li:before,
+.bullet-text_yovori i {
+    color: var(--color-text_yovori) !important
+}
+
+
+/* Selectors */
+
+/* This applies a semi-transparent color to the :after pseudo-element of 
+the .icon-blob-default class. The color is derived from the --rgb-default 
+variable and uses 30% opacity (0.3). */
+.icon-blob-default:after {
+    color: rgba(var(--rgb-default), 0.3);
+}
+
+/* This sets the background color of elements with both .title-bg and 
+.bg-default classes to the same yellow (var(--rgb-default)), but with 
+10% opacity (0.1). */
+.title-bg.bg-default {
+    background: rgba(var(--rgb-default), 0.9);
+}
+
+/* This sets a very subtle background color (6.5% opacity) using the 
+--rgb-default value, creating a nearly transparent effect. */
+.bg-opacity-default {
+    background: rgba(var(--rgb-default), 0.065);
+}

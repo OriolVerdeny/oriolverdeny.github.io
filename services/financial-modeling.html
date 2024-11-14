@@ -1,0 +1,155 @@
+---
+layout: general_page
+
+tab_title: Services
+
+custom_css:
+custom_font:
+
+black_menu: true
+header_style: 'one'
+subheader: false
+
+hero_area:
+  enable: true
+  title: "Financial Modeling"
+  sub_titles:
+    - sub_title: 'We offer financial modeling services to evaluate the financial impact of your agricultural projects and
+    strategies. Our models help you understand the financial health of your operations, forecast future outcomes, and make
+    informed decisions about investments, budgeting, and project viability. We ensure that both profitability and
+    sustainability are considered, so your projects are not only economically successful but also environmentally
+    responsible.'
+  image: 
+
+services_area_1:
+  enable: true
+  title: 
+  image: "/assets/images/01-Home/financial-modeling.jpg"
+  services:
+    - title: "Financial Statement and Budget Modeling"
+      content: |
+        We create financial models that integrate your operational and financial data to build financial statements (income
+        statement, balance sheet, and cash flow statement) and budgets. These models help forecast revenues, costs, and cash
+        flows, providing you with a clear financial roadmap for your agricultural projects and guiding your strategic planning.
+
+    - title: "Cost-benefit Analysis"
+      content: |
+        We perform cost-benefit analyses to evaluate the financial viability and sustainability of your agricultural projects,
+        helping you determine whether a project is worth pursuing before implementation. These analyses consider both economic
+        factors –such as costs, returns, and ROI– and the environmental impacts of your projects. By integrating financial and
+        environmental factors, we help you make investment decisions that consider profitability and responsible agricultural
+        practices.
+
+    - title: "Discounted Cash Flow (DCF) Modeling"
+      content: |
+        We calculate the present value of your future cash flows using DCF models, helping you evaluate the long-term
+        profitability of your agricultural investments. This will give you a better picture of the financial sustainability of
+        your projects and plan for the future.
+
+    - title: "Scenario Planning and Sensibility Analysis"
+      content: |
+        We create financial models that simulate various scenarios, such as price changes, yield fluctuations, and market
+        conditions. This allows you to understand how different factors can impact your financial outcomes, helping you better
+        prepare for uncertainties and make more robust decisions.
+
+---
+
+<!-- Service General Description -->
+<div class="wrapper gray-wrapper">
+  <div class="container inner">
+    {% if page.hero_area.enable %}
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <h2 class="section-title larger text-center">{{page.hero_area.title}}</h2>
+        <div class="space20"></div>
+        {% for subtitle in page.hero_area.sub_titles %}
+        <h5 class="lead text-center"> {{subtitle.sub_title}} </h5>
+        <div class="space20"></div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- <div class="space10"></div> -->
+    {% if page.hero_area.image %}
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <figure>
+          <img src="{{page.hero_area.image}}" alt="{{page.hero_area.sub_title}}" />
+        </figure>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    {% endif %}
+    <!-- <div class="space10"></div> -->
+    {% endif %}
+  </div>
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-white" preserveAspectRatio="none"
+      viewBox="0 0 1070 52.84">
+      <path d="M0,44.84s210-75,504-31,566,15,566,15v24H0Z" />
+    </svg></div>
+</div>
+
+<!-- Toggle Detailed Service Description -->
+<div class="wrapper white-wrapper">
+  <div class="container inner">
+    {% if page.services_area_1.enable %}
+    <div class="two-columns-two">
+      <!-- <div class="space140"></div> -->
+      <div class="row align-items-center">
+        {% if page.services_area_1.image %}
+        <div class="col-lg-4 order-lg-1 text-center">
+          <!-- <div class="col-lg-6 order-lg-2 text-center"> -->
+          <figure class="img-blob blob1 mb-30">
+            <img src="{{page.services_area_1.image}}" alt="{{page.services_area_1.title}}" class="img-fluid" />
+          </figure>
+        </div>
+        {% endif %}
+        <div class="space20 d-md-none"></div>
+        <div class="space50 d-none d-md-block d-lg-none"></div>
+        <div class="col-lg-8 order-lg-2 pr-60 pr-md-15">
+          <!-- <div class="col-lg-6 pr-60 pr-md-15"> -->
+          <h3 class="display-3">{{page.services_area_1.title}}</h3>
+          <div class="space20"></div>
+          <div id="accordion-2" class="accordion-wrapper">
+            {% for service in page.services_area_1.services %}
+            <div class="card shadow">
+              <div class="card-header" id="accordion-heading-2-{{forloop.index}}">
+                <h5>
+                  <button class="collapsed" data-toggle="collapse" data-target="#accordion-collapse-2-{{forloop.index}}"
+                    aria-expanded="false" aria-controls="accordion-collapse-2-1">{{service.title}}</button>
+                </h5>
+              </div>
+              <!-- /.card-header -->
+              <div id="accordion-collapse-2-{{forloop.index}}" class="collapse"
+                aria-labelledby="accordion-heading-2-{{forloop.index}}" data-target="#accordion-2">
+                <div class="card-body">
+                  <p>{{service.content}}</p>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.collapse -->
+            </div>
+            <!-- /.card -->
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+
+<!-- Call to Action -->
+<div class="wrapper white-wrapper" id="whatwedo">
+  <div class="container inner">
+    <div
+      class="box shadow p-60 image-wrapper bg-full bg-image inverse-text rounded d-md-flex align-items-md-center justify-content-md-between"
+      data-image-src="{{relative_url}}/assets/images/art/bg5.jpg">
+      <h3 class="display-3 mb-0">Convinced yet? Let's make something great together.</h3>
+      <!-- <div class="space30 d-md-none"></div> -->
+      <a href="/contact/contact-4" class="btn btn-white btn-strong-hover mb-0">Contact Us</a>
+    </div>
+  </div>
+</div>
+

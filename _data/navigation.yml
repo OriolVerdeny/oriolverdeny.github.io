@@ -6,13 +6,23 @@ main_menu:
     menu_type: "simple"
     url: "/"
     
-  - text: "Our services"
-    menu_type: "simple"
-    url: "/services/index"
+  # - text: "Our services"
+  #   menu_type: "simple"
+  #   url: "/services/index-yovori"
 
-  - text: "Our work"
-    menu_type: "simple"
-    url: "/"
+  - text: "Our services"
+    url: "/#whatwedo"
+    submenu:
+      - text: "Data Analysis"
+        url: "/services/data-analysis"
+      - text: "Process and Mass Balance"
+        url: "/services/process-mass-balance"
+      - text: "Financial Modeling"
+        url: "/services/financial-modeling"
+
+  # - text: "Our work"
+  #   menu_type: "simple"
+  #   url: "/portfolios/index"
 
   - text: "Blog"
     menu_type: "simple"
@@ -25,5 +35,5 @@ main_menu:
         url: "/about/about"
       - text: "Contact"
         url: "/contact/contact-4"
-      - text: "FAQ"
-        url: "/faq"
+      # - text: "FAQ"
+      #   url: "/faq"

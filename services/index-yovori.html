@@ -1,0 +1,263 @@
+---
+layout: general_page
+
+tab_title: Services
+
+custom_css:
+custom_font:
+
+black_menu: true
+header_style: 'one'
+subheader: false
+
+hero_area:
+  enable: true
+  title: "Our Services"
+  sub_title: 'The full service we are offering is specifically designed to meet your business needs.'
+  image: "/assets/images/concept/concept26@2x.png"
+
+services_area:
+  enable: true
+  button_text: "Learn More"
+  button_url: "#"
+  services:
+
+    - title: "Graphic Design"
+      description: "Nulla vitae elit libero elit non porta gravida eget metus cras. Aenean eu leo quam."
+      icon: "jam jam-flower"
+  
+    - title: "App Development"
+      description: "Nulla vitae elit libero elit non porta gravida eget metus cras. Aenean eu leo quam."
+      icon: "jam jam-phone"
+  
+    - title: "Web Design"
+      description: "Nulla vitae elit libero elit non porta gravida eget metus cras. Aenean eu leo quam."
+      icon: "jam jam-layout"
+
+three_columns_area:
+  enable: true
+  title: "What We Do?"
+  sub_title: "We provide specialized data-driven services for the agricultural sector."
+  services:
+    
+    - title: "Data Analysis and Decision Support"
+      description: "Employ data analysis to support decision-making, business development, and research project outcomes within your organization."
+      image: "/assets/images/concept/concept14@2x.png"
+      button_text: "Learn More"
+      button_url: "#"
+      
+    - title: "Process and Mass Balance Analysis"
+      description: "Optimize resource use by understanding material flows in your production process. Ideal for scaling up operations and reducing waste."
+      image: "/assets/images/concept/concept19@2x.png"
+      button_text: "Learn More"
+      button_url: "#"
+      
+    - title: "Financial Modeling"
+      description: "Analyze the financial health and sustainability of your agricultural projects to guide investment decisions, budgeting, and long-term planning."
+      image: "/assets/images/concept/concept18@2x.png"
+      button_text: "Learn More"
+      button_url: "#"
+
+how_it_works:
+  enable: false
+  title: "How It Works?"
+  sub_title: "Here are 3 working steps to organize our business projects."
+  image: "/assets/images/concept/concept25@2x.png"
+  steps:
+    - title: "Creative Ideas"
+      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida. Cras mattis consectetur."
+
+    - title: "Magic Touch"
+      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida. Cras mattis consectetur."
+
+    - title: "Data Analysis"
+      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida. Cras mattis consectetur."
+
+
+testimonials:
+  enable: false
+  feedback:
+
+    - quote: |
+        Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat.
+      image: "/assets/images/art/t5.jpg" 
+      name: "Cornelia Gibson"
+      designation: "Financial Analyst"
+  
+    - quote: |
+        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus.
+      image: "/assets/images/art/t2.jpg" 
+      name: "Coriss Ambady"
+      designation: "Marketing Specialist"
+  
+    - quote: |
+        Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget.
+      image: "/assets/images/art/t3.jpg" 
+      name: "Barclay Widerski"
+      designation: "Sales Manager"
+
+
+
+---
+
+
+<div class="wrapper white-wrapper" id="whatwedo">
+  <div class="container inner">
+    {% if page.three_columns_area.enable %}
+    <div class="three-columns-wrapper">
+      <div class="row">
+        <div class="col-md-7 mx-auto">
+          <div class="text-center">
+            <h2 class="title-bg bg-default color-text_yovori">{{page.three_columns_area.title}}</h2>
+          </div>
+          <div class="space10"></div>
+          <h3 class="display-3 text-center">{{page.three_columns_area.sub_title}}</h3>
+          <div class="space30"></div>
+        </div>
+      </div>
+      <div class="row gutter-60 text-center align-items-end">
+        {% for service in page.three_columns_area.services %}
+        <div class="col-md-4">
+          <figure class="img-blob blob1 mb-30">
+            <img src="{{service.image}}" alt="{{service.title}}" />
+          </figure>
+          <h4>{{service.title}}</h4>
+          <p class="mb-15">{{service.description}}</p>
+          <div class="text-center"><a href="{{service.button_url}}" class="more">{{service.button_text}}</a></div>
+        </div>
+        <div class="space20 d-md-none"></div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+
+<div class="wrapper gray-wrapper">
+  <div class="container inner">
+    {% if page.hero_area.enable %}
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+          <h2 class="section-title larger text-center">{{page.hero_area.title}}</h2>
+          <h3 class="display-4 text-center"> {{page.hero_area.sub_title}} </h3>
+      </div>
+    </div>
+    <div class="space50"></div>
+    {% if page.hero_area.image %}
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <figure>
+          <img src="{{page.hero_area.image}}"  alt="{{page.hero_area.sub_title}}"/>
+        </figure>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    {% endif %}
+    <div class="space50"></div>
+    {% endif %}
+
+    {% if page.services_area.enable %}
+    <div class="row gutter-80 gutter-md-30 text-center">
+      {% for service in page.services_area.services %}
+      <div class="col-md-4">
+        {% if service.icon %}
+        <span class="icon icon-blob
+         {% assign index = forloop.index %}
+         {% case index %}
+          {% when 1 %}
+          icon-blob-yellow color-yellow
+          {% when 2 %}
+          icon-blob-purple color-purple
+          {% when 3 %}
+          icon-blob-teal color-teal
+         {% endcase %}
+         mb-30"><i class="{{service.icon}}"></i><span class="step bg-yellow">{{forloop.index}}</span></span>
+        {% endif %}
+        <h5>{{service.title}}</h5>
+        <p class="mb-15">{{service.description}}</p>
+        {% if service.button_text %}
+         <div class="text-center"><a href="{{service.button_url}}" class="more">{{service.button_text}}</a></div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    <!--/.row -->
+    {% endif %}
+  </div>
+</div>
+
+{% if page.how_it_works.enable %}
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="row align-items-center">
+      {% if page.how_it_works.image %}
+      <div class="col-lg-7">
+        <figure><img src="{{page.how_it_works.image}}" alt="" /></figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space20 d-md-none"></div>
+      <div class="space50 d-none d-md-block d-lg-none"></div>
+      <div class="col-lg-5 pl-60 pl-md-15">
+        {% if page.how_it_works.title %}
+         <h2 class="section-title larger">{{page.how_it_works.title}}</h2>
+        {% endif %}
+        {% if page.how_it_works.sub_title %}
+        <h3 class="display-4">{{page.how_it_works.sub_title}}</h3>
+        <div class="space30"></div>
+        {% endif %}
+        {% for steps in page.how_it_works.steps %}
+        <div class="d-flex flex-row justify-content-center">
+          <div>
+            <div class="icon icon-bg icon-bg-teal color-teal mr-25">
+              <span class="number">{{forloop.index}}</span>
+            </div>
+          </div>
+          <div>
+            <h4 class="mb-10">{{steps.title}}</h4>
+            <p>{{steps.description}}</p>
+          </div>
+        </div>
+        <div class="space10 d-none d-md-block"></div>
+        {% endfor %}
+      </div>
+    </div>
+    <!--/column -->
+  </div>
+</div>
+{% endif %}
+
+
+
+
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    {% if page.testimonials.enable %}
+    <div class="space140"></div>
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <div class="basic-slider owl-carousel gap-small text-center" data-margin="30">
+          {% for feedback in page.testimonials.feedback %}
+          <div class="item">
+            <blockquote class="icon larger">
+              <p>"{{feedback.quote}}"</p>
+              <div class="blockquote-details justify-content-center">
+                <div class="img-blob blob1">
+                  <img src="{{feedback.image}}" alt="{{feedback.name}}" />
+                </div>
+                <div class="info">
+                  <h6 class="mb-0">{{feedback.name}}</h6>
+                  <span class="meta mb-0">{{feedback.designation}}</span>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>

@@ -2,7 +2,7 @@
 layout: post
 title: "My Love Affair with Cappadocia"
 date: 2020-09-04 20:37:13 +0600
-author: "Tortoiz Theme"
+author: "Oriol Verdeny Vilalta"
 post_image: "/assets/images/art/tb4.jpg"
 badge_color: "bg-violet"
 categories: [historic]

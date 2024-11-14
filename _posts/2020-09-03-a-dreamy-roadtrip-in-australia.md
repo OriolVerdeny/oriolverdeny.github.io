@@ -2,7 +2,7 @@
 layout: post
 title: "A Dreamy Roadtrip in Australia"
 date: 2020-09-03 20:37:13 +0600
-author: "Tortoiz Themes"
+author: "Oriol Verdeny Vilalta"
 post_image: "/assets/images/art/tb3.jpg"
 badge_color: "bg-pink"
 categories: [roadtrip]

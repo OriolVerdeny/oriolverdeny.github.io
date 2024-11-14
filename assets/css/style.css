@@ -2211,7 +2211,7 @@ ol {
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     height: auto;
-    width: 4.5rem;
+    width: 100%; /* 4.5rem; */
     max-width: 100%;
     -webkit-mask-size: auto auto;
     -webkit-mask-box-image-repeat: space;
@@ -5591,6 +5591,11 @@ pre {
 .fill-dark {
     fill: var(--color-dark)
 }
+
+.fill-gray {
+    fill: #f3f4f7
+}
+
 .fill-white {
     fill: var(--color-white)
 }

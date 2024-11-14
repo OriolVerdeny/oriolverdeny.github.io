@@ -3,9 +3,17 @@ layout: default
 
 custom_css: 
 custom_font: 
+
 ---
 
+
 {% include header.html extra_class="transparent navbar-hover-opacity nav-uppercase" logo_class="logo" container_class="container" %}
+
+
+{% if page.mathjax %}
+  {% include mathjax.html %}
+{% endif %}
+
 
 <div class="wrapper light-wrapper">
   <div class="container inner pt-80">
@@ -31,7 +39,7 @@ custom_font:
                  <span class="date"><i class="jam jam-clock"></i>{{page.date | date_to_string}}</span>
                 {% endif %}
                 {% if page.author %}
-                 <span class="author"><i class="jam jam-user"></i><a href="/author/{{page.author | slugify}}">By {{page.author}}</a></span>
+                 <span class="author"><i class="jam jam-user"></i><a href="/authors/{{page.author | slugify}}">By {{page.author}}</a></span>
                 {% endif %}
               </div>
                {{page.content}}
@@ -180,18 +188,15 @@ custom_font:
   <!-- /.container -->
 </div>
 <!-- /.wrapper -->
-<div class="wrapper gray-wrapper">
+<!-- <div class="wrapper gray-wrapper">
   <div class="container inner">
     <div class="row">
       <div class="col-lg-10 mx-auto">
         {% include disqus_comments.html %}
       </div>
-      <!-- /column -->
     </div>
-    <!-- /.row -->
   </div>
-  <!-- /.container -->
-</div>
+</div> -->
 <!-- /.wrapper -->
 {% include footer_2.html light_logo="true" %}
 </div>
