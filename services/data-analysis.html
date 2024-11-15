@@ -26,7 +26,7 @@ services_area_1:
     - icon_title: "Data Analysis"
       title: "Data Analysis and Visualization"
       id: "tab3-1"
-      icon: "icofont-safety"
+      icon: "icofont-chart-line-alt"
       image: "/assets/images/01-Home/data-analysis.jpg"
       content: |
         We provide a broad range of data analysis services, from descriptive and diagnostic to predictive analytics and analysis
@@ -39,8 +39,8 @@ services_area_1:
     - icon_title: "Synthesis of Information"
       title: "Synthesis of Information and Communication"
       id: "tab3-2"
-      icon: "icofont-safety"
-      image: "/assets/images/01-Home/data-analysis.jpg"
+      icon: "icofont-presentation"
+      image: "/assets/images/02-Services/synthesis-of-information.jpg"
       content: |
         We synthesize complex datasets and analytical findings into clear and concise conclusions in the form of reports or
         presentations. Our aim is to ensure that all stakeholders, regardless of technical background, can fully understand the
@@ -50,8 +50,8 @@ services_area_1:
     - icon_title: "Decision Support"
       title: "Decision Support Systems"
       id: "tab3-3"
-      icon: "icofont-safety"
-      image: "/assets/images/01-Home/data-analysis.jpg"
+      icon: "icofont-site-map"
+      image: "/assets/images/02-Services/decision-support.jpg"
       content: |
         We help you develop systems that integrate data analytics, business intelligence, and modeling tools to support the
         process of decision-making. While we do not build the systems ourselves, we collaborate with your team to ensure that
@@ -140,59 +140,53 @@ tabs:
     </svg></div>
 </div>
 
-<!-- Toggle Detailed Service Description -->
+
 <div class="wrapper white-wrapper">
   <div class="container inner">
-    {% if page.services_area_1.enable %}
-    <div class="two-columns-two">
-      <!-- <div class="space140"></div> -->
-      <div class="row align-items-center">
-        {% if page.services_area_1.image %}
-        <div class="col-lg-4 order-lg-1 text-center">
-          <!-- <div class="col-lg-6 order-lg-2 text-center"> -->
-          <figure class="img-blob blob1 mb-30">
-            <img src="{{page.services_area_1.image}}" alt="{{page.services_area_1.title}}" class="img-fluid" />
-          </figure>
-        </div>
-        {% endif %}
-        <div class="space20 d-md-none"></div>
-        <div class="space50 d-none d-md-block d-lg-none"></div>
-        <div class="col-lg-8 order-lg-2 pr-60 pr-md-15">
-          <!-- <div class="col-lg-6 pr-60 pr-md-15"> -->
-          <h3 class="display-3">{{page.services_area_1.title}}</h3>
-          <div class="space20"></div>
-          <div id="accordion-2" class="accordion-wrapper">
-            {% for service in page.services_area_1.services %}
-            <div class="card shadow">
-              <div class="card-header" id="accordion-heading-2-{{forloop.index}}">
-                <h5>
-                  <button class="collapsed" data-toggle="collapse" data-target="#accordion-collapse-2-{{forloop.index}}"
-                    aria-expanded="false" aria-controls="accordion-collapse-2-1">{{service.title}}</button>
-                </h5>
+    <h2 class="section-title mb-40 text-center">{{page.services_area_1.title}}</h2>
+    <ul class="nav nav-pills nav-tabs nav-tabs-centered d-flex justify-content-center text-center">
+      {% for service in page.services_area_1.services %}
+        <li class="nav-item">
+          <a class="nav-link {% if forloop.first %}active{% endif %}" data-toggle="tab" href="#{{ service.id }}">
+            <div class="icon color-dark"><i class="{{ service.icon }}"></i></div><span>{{ service.icon_title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <!-- /.nav-tabs -->
+    <div class="space80"></div>
+    <div class="tab-content">
+      {% for service in page.services_area_1.services %}
+        <div class="tab-pane {% if forloop.first %}show active{% endif %}" id="{{ service.id }}">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="pr-15 pr-sm-15 h-100">
+                <figure><img src="#" srcset="{{ relative_url }}{{ service.image }} " alt="" /></figure>
               </div>
-              <!-- /.card-header -->
-              <div id="accordion-collapse-2-{{forloop.index}}" class="collapse"
-                aria-labelledby="accordion-heading-2-{{forloop.index}}" data-target="#accordion-2">
-                <div class="card-body">
-                  <p>{{service.content}}</p>
-                </div>
-                <!-- /.card-body -->
-              </div>
-              <!-- /.collapse -->
             </div>
-            <!-- /.card -->
-            {% endfor %}
+            <!--/column -->
+            <div class="col-md-6">
+              <div class="pl-15 pl-sm-15 h-100">
+                <h2>{{ service.title }}</h2>
+                <p>{{ service.content }}</p>
+              </div>
+            </div>
+            <!--/column -->
           </div>
+          <!--/.row -->
         </div>
-      </div>
+      {% endfor %}
     </div>
-    {% endif %}
+    <!-- /.tab-content -->
   </div>
-  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-gray" preserveAspectRatio="none"
-    viewBox="0 0 1070 52.84">
-    <path d="M0,40 C150,20,300,60,450,40 S800,10,1070,35 v18 H0 Z" />
-  </svg></div>
+  <!-- /.container -->
+<!-- /.wrapper -->
+<div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-gray" preserveAspectRatio="none"
+  viewBox="0 0 1070 52.84">
+  <path d="M0,40 C150,20,300,60,450,40 S800,10,1070,35 v18 H0 Z" />
+</svg></div>
 </div>
+
 
 
 <!-- Toggle Detailed Service Description -->
@@ -259,49 +253,6 @@ tabs:
   </div>
 </div>
 
-
-
-<div class="wrapper light-wrapper">
-  <div class="container inner">
-    <h2 class="section-title mb-40 text-center">{{page.services_area_1.title}}</h2>
-    <ul class="nav nav-pills nav-tabs nav-tabs-centered d-flex justify-content-center text-center">
-      {% for service in page.services_area_1.services %}
-        <li class="nav-item">
-          <a class="nav-link {% if forloop.first %}active{% endif %}" data-toggle="tab" href="#{{ service.id }}">
-            <div class="icon color-dark"><i class="{{ service.icon }}"></i></div><span>{{ service.icon_title }}</span>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-    <!-- /.nav-tabs -->
-    <div class="space80"></div>
-    <div class="tab-content">
-      {% for service in page.services_area_1.services %}
-        <div class="tab-pane {% if forloop.first %}show active{% endif %}" id="{{ service.id }}">
-          <div class="row align-items-center">
-            <div class="col-md-6">
-              <div class="pr-15 pr-sm-15 h-100">
-                <figure><img src="#" srcset="{{ relative_url }}{{ service.image }} " alt="" /></figure>
-              </div>
-            </div>
-            <!--/column -->
-            <div class="col-md-6">
-              <div class="pl-15 pl-sm-15 h-100">
-                <h2>{{ service.title }}</h2>
-                <p>{{ service.content }}</p>
-              </div>
-            </div>
-            <!--/column -->
-          </div>
-          <!--/.row -->
-        </div>
-      {% endfor %}
-    </div>
-    <!-- /.tab-content -->
-  </div>
-  <!-- /.container -->
-</div>
-<!-- /.wrapper -->
 
 
 
