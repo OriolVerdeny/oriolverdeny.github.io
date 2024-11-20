@@ -21,18 +21,32 @@ hero_area:
     responsible.'
   image: 
 
+
+
 services_area_1:
   enable: true
   title: 
   image: "/assets/images/01-Home/financial-modeling.jpg"
   services:
-    - title: "Financial Statement and Budget Modeling"
+    - icon_title: "Finance Modeling"
+      icon_image: "/assets/images/icons/financial.png"
+      title: "Financial Statement and Budget Modeling"
+      id: "tab3-1"
+      icon: "icofont-chart-line-alt"
+      image: "/assets/images/01-Home/financial-modeling.jpg"
+      image_to_right: false
       content: |
-        We create financial models that integrate your operational and financial data to build financial statements (income
+        We create simple financial models that integrate your operational and financial data to build financial statements (income
         statement, balance sheet, and cash flow statement) and budgets. These models help forecast revenues, costs, and cash
         flows, providing you with a clear financial roadmap for your agricultural projects and guiding your strategic planning.
 
-    - title: "Cost-benefit Analysis"
+    - icon_title: "Cost-benefit Analysis"
+      icon_image: "/assets/images/icons/cost.png"
+      title: "Cost-benefit Analysis"
+      id: "tab3-2"
+      icon: "icofont-chart-line-alt"
+      image: "/assets/images/01-Home/financial-modeling.jpg"
+      image_to_right: false
       content: |
         We perform cost-benefit analyses to evaluate the financial viability and sustainability of your agricultural projects,
         helping you determine whether a project is worth pursuing before implementation. These analyses consider both economic
@@ -40,18 +54,24 @@ services_area_1:
         environmental factors, we help you make investment decisions that consider profitability and responsible agricultural
         practices.
 
-    - title: "Discounted Cash Flow (DCF) Modeling"
+    - icon_title: "Discounted Cash Flow"
+      icon_image: "/assets/images/icons/cash-flow.png"
+      title: "Discounted Cash Flow (DCF) Modeling"
+      id: "tab3-3"
+      icon: "icofont-chart-line-alt"
+      image: "/assets/images/01-Home/financial-modeling.jpg"
+      image_to_right: true
       content: |
-        We calculate the present value of your future cash flows using DCF models, helping you evaluate the long-term
-        profitability of your agricultural investments. This will give you a better picture of the financial sustainability of
-        your projects and plan for the future.
+        We calculate the present value of future cash flows using DCF models to evaluate the long-term profitability and
+        financial sustainability of your agricultural investments. Additionally, we simulate various scenarios—such as price
+        changes, yield fluctuations, and market conditions—to assess how different factors can impact financial outcomes,
+        helping you prepare for uncertainties and make more informed decisions.
 
-    - title: "Scenario Planning and Sensibility Analysis"
-      content: |
-        We create financial models that simulate various scenarios, such as price changes, yield fluctuations, and market
-        conditions. This allows you to understand how different factors can impact your financial outcomes, helping you better
-        prepare for uncertainties and make more robust decisions.
-
+call_of_action:
+  enable: true
+  text: "Convinced yet? Let's make something great together."
+  button_text: "Contact Us"
+  background: "/assets/images/art/bg5.jpg"
 ---
 
 <!-- Service General Description -->
@@ -89,67 +109,59 @@ services_area_1:
     </svg></div>
 </div>
 
-<!-- Toggle Detailed Service Description -->
+
 <div class="wrapper white-wrapper">
   <div class="container inner">
-    {% if page.services_area_1.enable %}
-    <div class="two-columns-two">
-      <!-- <div class="space140"></div> -->
-      <div class="row align-items-center">
-        {% if page.services_area_1.image %}
-        <div class="col-lg-4 order-lg-1 text-center">
-          <!-- <div class="col-lg-6 order-lg-2 text-center"> -->
-          <figure class="img-blob blob1 mb-30">
-            <img src="{{page.services_area_1.image}}" alt="{{page.services_area_1.title}}" class="img-fluid" />
-          </figure>
-        </div>
-        {% endif %}
-        <div class="space20 d-md-none"></div>
-        <div class="space50 d-none d-md-block d-lg-none"></div>
-        <div class="col-lg-8 order-lg-2 pr-60 pr-md-15">
-          <!-- <div class="col-lg-6 pr-60 pr-md-15"> -->
-          <h3 class="display-3">{{page.services_area_1.title}}</h3>
-          <div class="space20"></div>
-          <div id="accordion-2" class="accordion-wrapper">
-            {% for service in page.services_area_1.services %}
-            <div class="card shadow">
-              <div class="card-header" id="accordion-heading-2-{{forloop.index}}">
-                <h5>
-                  <button class="collapsed" data-toggle="collapse" data-target="#accordion-collapse-2-{{forloop.index}}"
-                    aria-expanded="false" aria-controls="accordion-collapse-2-1">{{service.title}}</button>
-                </h5>
+    <h2 class="section-title mb-40 text-center">{{page.services_area_1.title}}</h2>
+    <ul class="nav nav-tabs nav-tabs-centered nav-tabs-bg d-flex justify-content-between nav-justified text-center">
+      {% for service in page.services_area_1.services %}
+      <li class="nav-item">
+        <a class="nav-link  {% if forloop.first %}active{% endif %}" data-toggle="tab" href="#{{ service.id }}">
+          <div class="icon icon-svg mb-10"><img src="{{relative_url}}{{service.icon_image}}" alt=""></div>
+          <span>{{ service.icon_title }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <!-- /.nav-tabs -->
+    <div class="space30 d-none d-md-block"></div>
+    <div class="tab-content">
+
+      {% for service in page.services_area_1.services %}
+
+      <div class="tab-pane {% if forloop.first %}show active{% endif %}" id="{{ service.id }}">
+        <div class="box bg-white shadow">
+          <div class="row align-items-center">
+            <div class="col-lg-6 {% if service.image_to_right %}order-lg-2{% else %}order-lg-1{% endif %} ">
+              <div class="pr-15 pr-md-0 pr-sm-0 h-100">
+                <figure><img src="#" srcset="{{relative_url}}{{ service.image }}" alt="" /></figure>
               </div>
-              <!-- /.card-header -->
-              <div id="accordion-collapse-2-{{forloop.index}}" class="collapse"
-                aria-labelledby="accordion-heading-2-{{forloop.index}}" data-target="#accordion-2">
-                <div class="card-body">
-                  <p>{{service.content}}</p>
-                </div>
-                <!-- /.card-body -->
-              </div>
-              <!-- /.collapse -->
             </div>
-            <!-- /.card -->
-            {% endfor %}
+            <!--/column -->
+            <div class="space30 d-none d-md-block d-lg-none"></div>
+            <div class="col-lg-6 {% if service.image_to_right %}order-lg-1{% else %}order-lg-2{% endif %}">
+              <div class="pl-15 pl-md-0 pl-sm-0 h-100">
+                <h2>{{ service.title }}</h2>
+                <p>{{ service.content }}</p>
+              </div>
+            </div>
+            <!--/column -->
           </div>
+          <!--/.row -->
         </div>
+        <!--/.box -->
       </div>
+      {% endfor %}
+
     </div>
-    {% endif %}
+    <!-- /.tab-content -->
   </div>
+  <!-- /.container -->
 </div>
+<!-- /.wrapper -->
 
 
-<!-- Call to Action -->
-<div class="wrapper white-wrapper" id="whatwedo">
-  <div class="container inner">
-    <div
-      class="box shadow p-60 image-wrapper bg-full bg-image inverse-text rounded d-md-flex align-items-md-center justify-content-md-between"
-      data-image-src="{{relative_url}}/assets/images/art/bg5.jpg">
-      <h3 class="display-3 mb-0">Convinced yet? Let's make something great together.</h3>
-      <!-- <div class="space30 d-md-none"></div> -->
-      <a href="/contact/contact-4" class="btn btn-white btn-strong-hover mb-0">Contact Us</a>
-    </div>
-  </div>
-</div>
+{% include call_of_action.html %}
+
+
 

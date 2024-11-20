@@ -1,0 +1,20 @@
+
+{% if page.call_of_action.enable %}
+
+{% assign about_us = site.data.navigation.main_menu | where: "text", "About us" | first %}
+{% assign contact = about_us.submenu | where: "text", "Contact" | first %}
+
+<!-- Call to Action -->
+<div class="wrapper gray-wrapper" id="whatwedo">
+	<div class="container inner">
+	  <div
+		class="box shadow p-60 image-wrapper bg-full bg-image inverse-text rounded d-md-flex align-items-md-center justify-content-md-between"
+		data-image-src="{{relative_url}}{{ page.call_of_action.background }}">
+		<h3 class="display-3 mb-0">{{ page.call_of_action.text }}</h3>
+		<!-- <div class="space30 d-md-none"></div> -->
+		<a href="{{ contact.url }}" class="btn btn-white btn-strong-hover mb-0">{{ page.call_of_action.button_text }}</a>
+	  </div>
+	</div>
+  </div>
+  
+  {% endif %}

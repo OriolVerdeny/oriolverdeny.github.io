@@ -102,7 +102,7 @@ iframe {
 }
 ::selection {
     background: rgba(var(--rgb-default), 0.7);
-    color: var(--color-white);
+    color: var(--color-text_yovori);
 }
 .bg-default ::-moz-selection {
     background: var(--color-white);
@@ -420,6 +420,8 @@ canvas {
 .pointer-none {
     pointer-events: none;
 }
+
+
 /*-----------------------------------------------------------------------------------*/
 /*  03. NAVBAR
 /*-----------------------------------------------------------------------------------*/
@@ -859,7 +861,7 @@ button.hamburger.animate.active:after {
 /*  10. BUTTON
 /*-----------------------------------------------------------------------------------*/
 .btn {
-    color: var(--color-white);
+    color: var(--color-text_yovori);
     background: var(--color-default);
     border: 0;
     margin-bottom: 0.5rem;
@@ -899,7 +901,7 @@ button.hamburger.animate.active:after {
 .btn:hover,
 .btn:active,
 .btn.active {
-    color: var(--color-white);
+    color: var(--color-text_yovori);
     -webkit-box-shadow: var(--btn-hover-default);
             box-shadow: var(--btn-hover-default);
 }

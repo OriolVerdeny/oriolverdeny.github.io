@@ -84,7 +84,12 @@
   </div>
   <!-- /.container -->
   <div class="container inner pt-0 pb-40 d-flex align-items-center">
-    <p class="mb-0 mr-auto">{{site.data.general_settings.copyright_text}} Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a>.</p>
+    <p class="mb-0 mr-auto">{{site.data.general_settings.copyright_text}} Powered by 
+      <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a>.
+      <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer" title="statement icons">Icons created by Flaticon</a>
+    </p>
+
+    
     <ul class="social social-mute social-s ml-auto">
       {% for social_links in site.data.general_settings.social_accounts.links %}
       <li><a href="{{social_links.url}}"><i class="{{social_links.icon}}"></i></a></li>

@@ -10,35 +10,45 @@ black_menu: true
 header_style: 'one'
 subheader: false
 
+call_of_action:
+  enable: true
+  text: "Convinced yet? Let's make something great together."
+  button_text: "Contact Us"
+  background: "/assets/images/art/bg5.jpg"
+
 hero_area:
   enable: true
   title: "Data Analysis and Decision Support"
   sub_titles:
-    - sub_title: 'We provide advanced data analytics to interpret agricultural data across the entire value chain, from primary production to the transformation of agricultural products and beyond.'
-    - sub_title: "Our services address specific agricultural, environmental, and economic challenges, enabling stakeholders to make informed decisions that promote business development, resource efficiency, and sustainability."
+    - sub_title: "We provide advanced data analytics to interpret agricultural data across the entire value chain, from
+    primary production to the transformation of agricultural products and beyond."
+    - sub_title: "Our services address agricultural, environmental, and economic challenges, supporting our clients in
+    decision-making, business development, and research project outcomes."
   image: 
 
 services_area_1:
   enable: true
-  title: "Data Analysis and Decision Support"
+  title: 
   image: "/assets/images/01-Home/data-analysis.jpg"
   services:
     - icon_title: "Data Analysis"
+      icon_image: "/assets/images/icons/of-diagram.png"
       title: "Data Analysis and Visualization"
-      id: "tab3-1"
+      id: "tab1-1"
       icon: "icofont-chart-line-alt"
       image: "/assets/images/01-Home/data-analysis.jpg"
       content: |
-        We provide a broad range of data analysis services, from descriptive and diagnostic to predictive analytics and analysis
-        of experiments, helping you understand trends and root causes in your operations. We also organize, clean, and transform
-        your data to ensure it’s ready for analysis. Our visualization tools convert complex datasets into clear and intuitive
-        visuals, making it easier for you to interpret results and make informed decisions. Whether you need help cleaning your
-        data and combining databases, designing and analyzing experiments, or visualizing weather patterns and market trends, we
-        offer data-driven solutions adapted to your needs.
+        We help optimize your agricultural performance and value chains, from crop management to resource use like irrigation,
+        fertilization, or feeding. We analyze your data on crop growth, soil health, production and transformation processes, or
+        pest pressures to identify areas for improvement. Additionally, we examine the efficiency of your value chain, helping
+        you identify where processes can be improved, reduce costs, and increase sustainability. Based on our results we can
+        provide you an understanding of the current situation, allowing you to make informed decisions, improve yields, and
+        enhance value chain performance.
 
     - icon_title: "Synthesis of Information"
+      icon_image: "/assets/images/icons/of-chart.png"
       title: "Synthesis of Information and Communication"
-      id: "tab3-2"
+      id: "tab1-2"
       icon: "icofont-presentation"
       image: "/assets/images/02-Services/synthesis-of-information.jpg"
       content: |
@@ -48,8 +58,9 @@ services_area_1:
         data analysis research and real-world application.
 
     - icon_title: "Decision Support"
+      icon_image: "/assets/images/icons/ui-structure.png"
       title: "Decision Support Systems"
-      id: "tab3-3"
+      id: "tab1-3"
       icon: "icofont-site-map"
       image: "/assets/images/02-Services/decision-support.jpg"
       content: |
@@ -60,10 +71,11 @@ services_area_1:
 services_area_2:
   enable: true
   title: "Agriculture-Specific Data Services"
-  image: "/assets/images/02-Services/agri-data-services.jpg"
+  image: "/assets/images/02-Services/fish-ponds.jpg"
   services:
 
     - title: "Agricultural Performance"
+      image: "/assets/images/02-Services/some-photo.jpg"
       content: |
         We help you optimize different aspects of agricultural performance, from crop management to resource use (irrigation,
         fertilization, feeding). We analyze your data on crop growth, soil health, and production processes to identify areas
@@ -73,17 +85,19 @@ services_area_2:
         best course of action.
 
     - title: "Environmental and Resource Analysis"
+      image: "/assets/images/02-Services/fish-ponds.jpg"
       content: |
         We analyze your use of resources like water, energy, and raw materials throughout your operations. Our goal is to
         identify areas where resources can be used more efficiently, cutting down on waste and costs without impacting
         productivity, and manage resources in a more sustainable way.
 
     - title: "Market Trend and Trade Flow Analysis"
+      image: "/assets/images/02-Services/sea-cargo.jpg"
       content: |
         We analyze data on commodity prices, supply chain patterns, and market demand to provide you with information that can
         drive your business decisions. We also examine international trade flows to help you understand how global markets might
         affect your operations, giving you the information you need to adapt to changing market conditions, identify
-        opportunities, minimize risks, and stay competitive.
+        opportunities, minimize risks, and stay competitive in dynamic markets.
 
 tabs:
   - id: "tab3-1"
@@ -144,29 +158,34 @@ tabs:
 <div class="wrapper white-wrapper">
   <div class="container inner">
     <h2 class="section-title mb-40 text-center">{{page.services_area_1.title}}</h2>
-    <ul class="nav nav-pills nav-tabs nav-tabs-centered d-flex justify-content-center text-center">
+    <ul class="nav nav-tabs nav-tabs-centered nav-tabs-bg d-flex justify-content-between nav-justified text-center">
       {% for service in page.services_area_1.services %}
-        <li class="nav-item">
-          <a class="nav-link {% if forloop.first %}active{% endif %}" data-toggle="tab" href="#{{ service.id }}">
-            <div class="icon color-dark"><i class="{{ service.icon }}"></i></div><span>{{ service.icon_title }}</span>
-          </a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link  {% if forloop.first %}active{% endif %}" data-toggle="tab" href="#{{ service.id }}">
+          <div class="icon icon-svg mb-10"><img src="{{relative_url}}{{service.icon_image}}" alt=""></div>
+          <span>{{ service.icon_title }}</span>
+        </a>
+      </li>
       {% endfor %}
     </ul>
     <!-- /.nav-tabs -->
-    <div class="space80"></div>
+    <div class="space30 d-none d-md-block"></div>
     <div class="tab-content">
+
       {% for service in page.services_area_1.services %}
-        <div class="tab-pane {% if forloop.first %}show active{% endif %}" id="{{ service.id }}">
+
+      <div class="tab-pane {% if forloop.first %}show active{% endif %}" id="{{ service.id }}">
+        <div class="box bg-white shadow">
           <div class="row align-items-center">
-            <div class="col-md-6">
-              <div class="pr-15 pr-sm-15 h-100">
-                <figure><img src="#" srcset="{{ relative_url }}{{ service.image }} " alt="" /></figure>
+            <div class="col-lg-6">
+              <div class="pr-15 pr-md-0 pr-sm-0 h-100">
+                <figure><img src="#" srcset="{{relative_url}}{{ service.image }}" alt="" /></figure>
               </div>
             </div>
             <!--/column -->
-            <div class="col-md-6">
-              <div class="pl-15 pl-sm-15 h-100">
+            <div class="space30 d-none d-md-block d-lg-none"></div>
+            <div class="col-lg-6">
+              <div class="pl-15 pl-md-0 pl-sm-0 h-100">
                 <h2>{{ service.title }}</h2>
                 <p>{{ service.content }}</p>
               </div>
@@ -175,30 +194,66 @@ tabs:
           </div>
           <!--/.row -->
         </div>
+        <!--/.box -->
+      </div>
       {% endfor %}
+
     </div>
     <!-- /.tab-content -->
   </div>
   <!-- /.container -->
+     <!-- <div class="divider" data-image-src="{{relative_url}}/assets/images/04-About/vision.jpg">
+    <svg xmlns="http://www.w3.org/2000/svg" class="fill-gray" preserveAspectRatio="none" viewBox="0 0 1070 52.84">
+      <path d="M0,40 C150,20,300,60,450,40 S800,10,1070,35 v18 H0 Z" />
+    </svg>
+  </div> -->
+</div>
 <!-- /.wrapper -->
-<div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-gray" preserveAspectRatio="none"
-  viewBox="0 0 1070 52.84">
-  <path d="M0,40 C150,20,300,60,450,40 S800,10,1070,35 v18 H0 Z" />
-</svg></div>
+
+
+<div class="wrapper dark-wrapper inverse-text">
+  <div class="container inner">
+
+    <h2 class="section-title larger text-center">{{page.services_area_2.title}}</h2>
+
+    {% for service in page.services_area_2.services %}
+    <div class="row align-items-center">
+      <div class="col-lg-6 {% if forloop.index == 2  %} order-lg-2 {% endif %}">
+        <figure class="img-blob blob1 mb-30">
+          <img src="{{service.image}}" alt="{{service.title}}" />
+        </figure>
+      </div>
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div class="col-lg-6 pl-60 pl-md-15">
+        <h3 class="display-3">{{service.title}}</h3>
+        <div class="space20"></div>
+        <p>{{service.content}} </p>
+        <div class="space10"></div>
+        {% if page.two_columns_area_one.btn_url %}
+        <a href="{{page.services_area_2.btn_url}}" class="btn btn-purple">{{page.services_area_2.btn_text}}</a>
+        {% endif %}
+      </div>
+      <!--/column -->
+    </div>
+    <div class="space80"></div>
+    {% endfor %}
+
+
+  </div>
 </div>
 
-
-
 <!-- Toggle Detailed Service Description -->
-<div class="wrapper gray-wrapper">
+<!-- <div class="wrapper image-wrapper bg-image inverse-text"
+  data-image-src="{{relative_url}}/assets/images/02-Services/agri-data-services.jpg"> -->
+  <!-- <div class="wrapper white-wrapper">
   <div class="container inner">
     {% if page.services_area_2.enable %}
+
     <div class="two-columns-two">
-      <!-- <div class="space140"></div> -->
       <div class="row align-items-center">
         {% if page.services_area_2.image %}
         <div class="col-lg-4 order-lg-2 text-center">
-          <!-- <div class="col-lg-6 order-lg-2 text-center"> -->
           <figure class="img-blob blob1 mb-30">
             <img src="{{page.services_area_2.image}}" alt="{{page.services_area_2.title}}" class="img-fluid" />
           </figure>
@@ -207,7 +262,6 @@ tabs:
         <div class="space20 d-md-none"></div>
         <div class="space50 d-none d-md-block d-lg-none"></div>
         <div class="col-lg-8 order-lg-1 pr-60 pr-md-15">
-          <!-- <div class="col-lg-6 pr-60 pr-md-15"> -->
           <h3 class="display-3">{{page.services_area_2.title}}</h3>
           <div class="space20"></div>
           <div id="accordion-2" class="accordion-wrapper">
@@ -219,17 +273,13 @@ tabs:
                     aria-expanded="false" aria-controls="accordion-collapse-2-1">{{service.title}}</button>
                 </h5>
               </div>
-              <!-- /.card-header -->
               <div id="accordion-collapse-2-{{forloop.index}}" class="collapse"
                 aria-labelledby="accordion-heading-2-{{forloop.index}}" data-target="#accordion-2">
                 <div class="card-body">
                   <p>{{service.content}}</p>
                 </div>
-                <!-- /.card-body -->
               </div>
-              <!-- /.collapse -->
             </div>
-            <!-- /.card -->
             {% endfor %}
           </div>
         </div>
@@ -237,21 +287,10 @@ tabs:
     </div>
     {% endif %}
   </div>
-</div>
+</div> -->
 
 
-<!-- Call to Action -->
-<div class="wrapper gray-wrapper" id="whatwedo">
-  <div class="container inner">
-    <div
-      class="box shadow p-60 image-wrapper bg-full bg-image inverse-text rounded d-md-flex align-items-md-center justify-content-md-between"
-      data-image-src="{{relative_url}}/assets/images/art/bg5.jpg">
-      <h3 class="display-3 mb-0">Convinced yet? Let's make something great together.</h3>
-      <!-- <div class="space30 d-md-none"></div> -->
-      <a href="/contact/contact-4" class="btn btn-white btn-strong-hover mb-0">Contact Us</a>
-    </div>
-  </div>
-</div>
+{% include call_of_action.html %}
 
 
 

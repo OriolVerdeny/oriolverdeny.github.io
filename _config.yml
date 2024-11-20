@@ -108,9 +108,12 @@ kramdown:
   input: GFM
   math_engine: mathjax
   parse_block_html: true
+  hard_wrap: false
+  highlighter: rouge
   syntax_highlighter: coderay
   syntax_highlighter_opts:
-    line_numbers: table
+    # line_numbers: table
+    line_numbers: true
     bold_every: 5
 
 
