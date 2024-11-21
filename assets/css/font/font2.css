@@ -1,10 +1,31 @@
+:root {
+    /* Font Sizes */
+    --base-font-size: 18px;
+    --small-font-size: 0.9rem;
+    --medium-font-size: 1rem;
+    --large-font-size: 1.25rem;
+    --extra-large-font-size: 2rem;
+
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+
+    /* Line Heights */
+    --base-line-height: 1.6;
+    --compact-line-height: 1.2;
+}
+
+
 body,
 .icon-blob span,
 .icon-blob h3,
 .icon-blob p,
 .icon-blob .step {
     font-family: 'Nunito', sans-serif !important;
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
 }
+
 h1,
 h2,
 h3,
@@ -44,38 +65,49 @@ th,
 .nav-tabs .nav-link,
 .accordion-wrapper .card-header button,
 label:not(.custom-control-label) {
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--medium-font-size);
 }
+
 .navbar-nav .nav-link,
 .dropdown-item,
 .mega-menu-content a {
-    font-size: 0.8rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-weight-normal);
 }
+
 @media (min-width: 992px) {
+
     .dropdown-item,
     .mega-menu-content a {
-        font-size: 0.7rem;
-        font-weight: 400;
+        font-size: var(--small-font-size);
+        font-weight: var(--font-weight-normal);
     }
+
     .navbar.extended .navbar-nav .nav-link {
         padding-top: 1.35rem;
         padding-bottom: 1.3rem;
     }
 }
+
 @media (max-width: 991.98px) {
+
     .dropdown-item,
     .mega-menu-content a {
-        font-size: 0.75rem;
-        font-weight: 400;
+        font-size: calc(var(--small-font-size) - 0.1rem);
+        font-weight: var(--font-weight-normal);
     }
 }
+
 .nav-tabs .nav-link {
-    font-size: 0.9rem;
-    line-height: 1.2rem;
+    font-size: var(--small-font-size);
+    line-height: var(--compact-line-height);
 }
+
 .btn-l {
     padding: 1rem 1.5rem 0.95rem;
 }
+
 .title-bg {
     padding-top: 0.4rem;
 }
