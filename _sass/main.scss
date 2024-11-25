@@ -1,0 +1,33 @@
+// @import 'colors/typography-light';
+// @import 'colors/typography-dark';
+// @import 'addon/variables';
+// @import 'variables-hook';
+// @import 'addon/module';
+// @import 'addon/syntax';
+// @import 'addon/commons';
+// @import 'layout/home';
+// @import 'layout/post';
+// @import 'layout/tags';
+// @import 'layout/archives';
+// @import 'layout/categories';
+// @import 'layout/category-tag';
+
+
+@import "blog";
+// @import "syntax";
+// @import "overrides";
+
+
+.left {
+    float: left;
+    margin-right: 20px;  // optional, for spacing between the image and text
+  }
+  
+  .right {
+    float: right;
+    margin-left: 20px;  // optional, for spacing between the image and text
+  }
+  
+  .w-50 {
+    width: 50%;  // Ensure the image takes up 50% width
+  }

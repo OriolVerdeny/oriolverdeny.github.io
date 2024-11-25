@@ -1,32 +1,44 @@
+:root {
+    /* Font Sizes */
+    --base-font-size: 18px;
+    --small-font-size: 0.9rem;
+    --medium-font-size: 1rem;
+    --large-font-size: 1.25rem;
+    --extra-large-font-size: 2rem;
+
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+
+    /* Line Heights */
+    --base-line-height: 1.6;
+    --compact-line-height: 1.2;
+}
+
+/* Base Typography */
 body,
 .icon-blob span,
 .icon-blob h3,
 .icon-blob p,
 .icon-blob .step {
     font-family: 'Nunito', sans-serif !important;
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
 }
+
+/* Shared Styles for Bold and Medium Font Size */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-.navbar-nav .nav-link,
-.dropdown-item,
-.mega-menu-content a,
-.btn,
-strong,
 .hero,
 .display-1,
 .display-2,
 .dropcap,
-.navbar-nav .nav-link,
-.dropdown-item,
-.mega-menu-content a,
-.nav-uppercase .navbar-nav .nav-link,
-.navbar-other .nav-item .cart-dropdown-menu .meta.price,
-.badge-cart,
-.badge,
+/* .badge-cart,
+.badge, */
 .alert-link,
 .blockquote-footer,
 .meta,
@@ -42,40 +54,59 @@ th,
 .item-detailed .item-label,
 .item-detailed .price,
 .nav-tabs .nav-link,
+.nav-uppercase .navbar-nav .nav-link,
 .accordion-wrapper .card-header button,
 label:not(.custom-control-label) {
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--medium-font-size);
 }
+
+
+
+/* Navigation and Button Styling */
+.nav-uppercase .navbar-nav .nav-link,
 .navbar-nav .nav-link,
 .dropdown-item,
-.mega-menu-content a {
-    font-size: 0.8rem;
+.mega-menu-content a,
+.nav-tabs .nav-link {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--compact-line-height);  /* added style */
 }
+
+
+/* Media Query Adjustments */
 @media (min-width: 992px) {
-    .dropdown-item,
-    .mega-menu-content a {
-        font-size: 0.7rem;
-        font-weight: 400;
-    }
+
+    .nav-uppercase .navbar-nav .nav-link,
     .navbar.extended .navbar-nav .nav-link {
         padding-top: 1.35rem;
         padding-bottom: 1.3rem;
     }
 }
+
 @media (max-width: 991.98px) {
+
+    .nav-uppercase .navbar-nav .nav-link,
+    .navbar-nav .nav-link,
     .dropdown-item,
     .mega-menu-content a {
-        font-size: 0.75rem;
-        font-weight: 400;
+        font-size: calc(var(--small-font-size) - 0.1rem);
     }
 }
-.nav-tabs .nav-link {
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-}
+
+/* Buttons */
 .btn-l {
     padding: 1rem 1.5rem 0.95rem;
 }
+
+.badge-cart,
+.badge {
+    padding: 0.5rem 1rem;
+}
+
+
+/* Miscellaneous */
 .title-bg {
     padding-top: 0.4rem;
 }

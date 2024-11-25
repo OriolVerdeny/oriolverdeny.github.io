@@ -4,7 +4,7 @@ title: Snowlake - Digital Startup
 tab_title: Home
 
 custom_css: yovori
-custom_font:
+custom_font: font2
 
 black_menu: true
 header_style: 'one'
@@ -12,7 +12,9 @@ subheader: false
 
 hero_area:
   enable: true
-  bg_image: "/assets/images/01-Home/some-photo.jpg"
+  hero_images: 
+  - "/assets/images/01-Home/bitmap.jpg"
+
   title: "Advancing agriculture with data-driven decisions"
   btn_text: "Get Started"
   btn_url: "#whatwedo"
@@ -177,39 +179,42 @@ faq_area:
 
 ---
 
-
 {% if page.hero_area.enable %}
 <div class="wrapper dark-wrapper">
   <div class="rev_slider_wrapper fullwidth-container">
     <div id="slider-yovori" class="rev_slider fullwidthbanner" data-version="5.4.7">
       <ul>
         <li data-transition="fade" data-thumb="">
-          <img src="{{page.hero_area.bg_image}}" alt="{{page.hero_area.title}}" />
+          <img src="{{page.hero_area.hero_images}}" alt="{{page.hero_area.title}}" class="rev-slidebg" />
           <div class="tp-caption font-weight-600 color-white text-center" data-x="center" data-y="middle"
-            data-voffset="['-45','-45','-45','-45']" data-fontsize="['50','50','40','36']"
-            data-lineheight="['65','65','55','51']" data-width="['750','750','700','500']"
-            data-textAlign="['center','center','center','center']"
+            data-voffset="['-45','-45','-45','-45']" data-fontsize="['50','50','40','36']" data-lineheight="['65','65','55','51']"
+            data-width="['750','750','700','500']" data-textAlign="['center','center','center','center']"
             data-whitespace="['normal','normal','normal','normal']"
             data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.7;sY:0.7;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-            data-responsive="on" data-responsive_offset="on" style="z-index: 9;"> {{page.hero_area.title}}
+            data-responsive="on" data-responsive_offset="on" style="z-index: 9;">
+            {{page.hero_area.title}}
           </div>
-          <a class="tp-caption btn btn-l btn-white btn-strong-hover scroll" data-x="center" data-y="middle"
-            data-voffset="['85','85','85','85']" data-width="['auto','auto','auto','auto']"
-            data-textAlign="['center','center','center','center']"
-            data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.7;sY:0.7;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-            data-responsive="on" data-responsive_offset="on" style="z-index: 9;" href="{{page.hero_area.btn_url}}">
-            {{page.hero_area.btn_text}}
-          </a>
+        <a class="tp-caption btn btn-l btn-white btn-strong-hover scroll" data-x="center" data-y="middle"
+          data-voffset="['85','85','85','85']" data-width="['auto','auto','auto','auto']"
+          data-textAlign="['center','center','center','center']"
+          data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.7;sY:0.7;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+          data-responsive="on" data-responsive_offset="on" style="z-index: 9;" href="{{page.hero_area.btn_url}}">
+          {{page.hero_area.btn_text}}
+        </a>
         </li>
       </ul>
       <div class="tp-bannertimer tp-bottom"></div>
     </div>
+
     <!-- /.rev_slider -->
   </div>
   <!-- /.rev_slider_wrapper -->
 </div>
 <!-- /.wrapper -->
 {% endif %}
+
+
+
 <div class="wrapper white-wrapper" id="whatwedo">
   <div class="container inner">
     {% if page.what_we_do.enable %}
@@ -358,7 +363,7 @@ faq_area:
               </figcaption>
             </figure>
             {% endif %}
-            <h2 class="post-title mb-0"><a href="{{post.url}}">{{post.title}}</a></h2>
+            <h2 class="post-title text-center mb-0"><a href="{{post.url}}">{{post.title}}</a></h2>
           </div>
           {% endfor %}
         </div>

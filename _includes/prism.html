@@ -1,0 +1,45 @@
+<!-- add line-numbers class to <pre> -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var codeBlocks = document.querySelectorAll('pre code');
+        codeBlocks.forEach(function (codeBlock) {
+            var preTag = codeBlock.closest('pre');
+            preTag.classList.add('line-numbers');
+        });
+    });
+</script>
+
+<!-- style for code blocks using prism -->
+<!-- Prism.js CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+
+<!-- Prism.js Plugins -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" rel="stylesheet">
+
+<!-- Prism.js JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+
+
+<script>
+    Prism.plugins.toolbar.registerButton('show-language', function (env) {
+        var label = document.createElement('span');
+        label.textContent = env.language || 'Plain Text';
+        label.className = 'code-language'; // Custom class for styling
+        return label;
+    });
+</script>
+
+
+
+
+
+<!-- <link rel="stylesheet" href="{{ '/assets/css/prism.css' | relative_url }} "  />  -->
+
+<!-- style for code blocks using prism -->
+<!-- <script src="{{relative_url}}/assets/js/prism.js"></script> -->
+
