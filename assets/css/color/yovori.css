@@ -55,3 +55,14 @@ variable and uses 30% opacity (0.3). */
 .bg-opacity-default {
     background: rgba(var(--rgb-default), 0.065);
 }
+
+
+
+.badge-category,
+.badge:hover,
+.badge:focus {
+    color: var(--color-default);
+    background: var(--color-text_yovori);
+}
+
+

@@ -10,7 +10,6 @@ black_menu: true
 header_style: 'one'
 subheader: false
 
-
 page_header:
   enable: true
   title: "Contact us"
@@ -25,59 +24,58 @@ contact_area:
   title: "Get in Touch"
   sub_title: "Have any questions? Reach out to us from our contact form and we will get back to you shortly."
   action_email: "yovori.contact@gmail.com"
-  
   lists:
-
-
   forms_data: 
 
-    - field_type: "input"
-      field_name: "first_name"
-      placeholder: "First Name" 
-      error_message: "First Name Is required" 
+  first_name:
+    field_type: "input"
+    field_name: "first_name"
+    placeholder: "First Name"
+    error_message: "First Name Is required"
 
-    - field_type: "input"
-      field_name: "last_name"
-      placeholder: "Last Name" 
-      error_message: "Last Name Is required"
+  last_name:
+    field_type: "input"
+    field_name: "last_name"
+    placeholder: "Last Name"
+    error_message: "Last Name Is required"
 
-    - field_type: "input"
-      field_name: "user_email"
-      placeholder: "Email"
-      error_message: "Email Is required"
+  user_email:
+    field_type: "input"
+    field_name: "user_email"
+    placeholder: "Email"
+    error_message: "Email Is required"
 
-    - field_type: "input"
-      field_name: "user_phone"
-      placeholder: "Phone Number"
-      error_message: "Phone Number Is required"
+  user_phone:
+    field_type: "input"
+    field_name: "user_phone"
+    placeholder: "Phone Number"
+    error_message: "Phone Number Is required"
 
-    - field_type: "textarea"
-      field_name: "user_message"
-      placeholder: "Message"
-      error_message: "Message Is required"
+  user_message:    
+    field_type: "textarea"
+    field_name: "user_message"
+    placeholder: "Message"
+    error_message: "Message Is required"
 
 ---
-
-
 
 {% if page.page_header.enable %}
 {% assign page_d = page.page_header %}
 <div class="wrapper image-wrapper bg-image page-title-wrapper inverse-text"
-    data-image-src="{{page_d.background_image}}">
-    <div class="container inner text-center">
-        
-        <div class="space90"></div>
-        {% if page_d.title %}
-        <h1 class="page-title">{{page_d.title}}</h1>
-        {% endif %}
-        {% if page_d.sub_title %}
-        <p class="lead mb-30">{{page_d.sub_title}}</p>
-        {% endif %}
-        {% if page_d.button_text != null %}
-        <a href="{{page_d.button_url}}" class="btn btn-white btn-strong-hover">{{page_d.button_text}}</a>
-        {% endif %}
-    </div>
-    <!-- /.container -->
+  data-image-src="{{page_d.background_image}}">
+  <div class="container inner text-center">
+    <div class="space90"></div>
+    {% if page_d.title %}
+    <h1 class="page-title">{{page_d.title}}</h1>
+    {% endif %}
+    {% if page_d.sub_title %}
+    <p class="lead mb-30">{{page_d.sub_title}}</p>
+    {% endif %}
+    {% if page_d.button_text != null %}
+    <a href="{{page_d.button_url}}" class="btn btn-white btn-strong-hover">{{page_d.button_text}}</a>
+    {% endif %}
+  </div>
+  <!-- /.container -->
 </div>
 <!-- /.wrapper -->
 {% endif %}

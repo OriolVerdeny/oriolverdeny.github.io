@@ -8,7 +8,7 @@
 {% endif %}
 {% if post.categories %}
  <div class="category">
- 	 <a href="/category/{{post.categories[0] | slugify}}" class="badge badge-pill bg-purple">{{post.categories[0]}}</a>
+ 	 <a href="/category/{{post.categories[0] | slugify}}" class="badge badge-pill badge-category font-weight-bold">{{post.categories[0]}}</a>
  </div>
 {% endif %}
 <h2 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h2>
@@ -20,5 +20,5 @@
 	<!-- {% if post.date %}
 	<span class="date"><i class="jam jam-clock"></i>{{post.date | date_to_string}}</span>
 	{% endif %} -->
-	<span class="comments"><i class="jam jam-user"></i><a href="/authors/{{post.author | slugify}}"> {{post.author}}</a></span>
+	<span class="comments"><i class="jam jam-user"></i><a class= "h6" href="/authors/{{post.author | slugify}}"> {{post.author}}</a></span>
 </div>

@@ -13,8 +13,21 @@
 // @import 'layout/category-tag';
 
 
-// @import "blog";
+@import "blog";
 // @import "syntax";
 // @import "overrides";
 
 
+.left {
+    float: left;
+    margin-right: 20px;  // optional, for spacing between the image and text
+  }
+  
+  .right {
+    float: right;
+    margin-left: 20px;  // optional, for spacing between the image and text
+  }
+  
+  .w-50 {
+    width: 50%;  // Ensure the image takes up 50% width
+  }

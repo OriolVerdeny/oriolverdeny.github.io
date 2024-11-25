@@ -24,16 +24,22 @@ main_menu:
   #   menu_type: "simple"
   #   url: "/portfolios/index"
 
-  - text: "Blog"
+  - text: "Case studies"
     menu_type: "simple"
     url: "/blogs/index-4"
 
-  - text: "About us"
-    url: "/about/about" 
-    submenu:
-      - text: "About"
-        url: "/about/about"
-      - text: "Contact"
-        url: "/contact/contact-4"
-      # - text: "FAQ"
-      #   url: "/faq"
+  - text: "About"
+    menu_type: "simple"
+    url: "/about/about"
+
+  - text: "Contact"
+    menu_type: "simple"
+    url: "/contact/contact-4"
+
+  # - text: "About us"
+  #   url: "/about/about" 
+  #   submenu:
+  #     - text: "About"
+  #       url: "/about/about"
+  #     - text: "Contact"
+  #       url: "/contact/contact-4"

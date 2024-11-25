@@ -14,10 +14,9 @@ hero_area:
   enable: true
   title: "Financial Modeling"
   sub_titles:
-    - sub_title: 'We offer financial modeling services to evaluate the financial impact of your agricultural projects and
-    strategies. Our models help you understand the financial health of your operations, forecast future outcomes, and make
-    informed decisions about investments, budgeting, and project viability. We ensure that both profitability and
-    sustainability are considered, so your projects are not only economically successful but also environmentally
+    - sub_title: 'We help you evaluate the financial impact of your operations and strategies, forecast future outcomes, and
+    make informed decisions about investments, budgeting, and project viability. <br><br> We ensure that both profitability
+    and sustainability are considered, so your projects are not only economically successful but also environmentally
     responsible.'
   image: 
 
@@ -83,7 +82,7 @@ call_of_action:
         <h2 class="section-title larger text-center">{{page.hero_area.title}}</h2>
         <div class="space20"></div>
         {% for subtitle in page.hero_area.sub_titles %}
-        <h5 class="lead text-center"> {{subtitle.sub_title}} </h5>
+        <h5 class="display-4 text-center"> {{subtitle.sub_title}} </h5>
         <div class="space20"></div>
         {% endfor %}
       </div>
