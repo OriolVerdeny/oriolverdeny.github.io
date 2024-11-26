@@ -184,7 +184,7 @@ a.hover:hover {
     transition: border 150ms ease-in-out;
 }
 a {
-    color: var(--color-default);
+    color: #606060; /* var(--color-default); */
     -webkit-transition: all 200ms ease-in-out;
     -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
@@ -1391,6 +1391,9 @@ button.hamburger.animate.active:after {
 }
 .dark-wrapper {
     background-color: #242930 !important;
+}
+.yovori-wrapper {
+    background-color: var(--color-default) !important;
 }
 footer.dark-wrapper,
 .footer-dark-wrapper {
@@ -7138,7 +7141,5 @@ footer.inverse-text address {
 .overflow-hidden {
     overflow: hidden;
 }
-
-
 
 

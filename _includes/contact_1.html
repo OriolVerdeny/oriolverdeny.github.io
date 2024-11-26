@@ -104,22 +104,45 @@
 			<!--/column -->
 			<div class="space30 d-none d-md-block d-lg-none"></div>
 			<div class="col-lg-4 offset-lg-1">
-				{% for lists in page.contact_area.lists %}
+
+				<!-- Address -->
 				<div class="d-flex flex-row">
 					<div>
-						<div class="icon color-default fs-34 mr-25"> <i class="{{lists.icon}}"></i> </div>
+						<div class="icon color-default fs-34 mr-25"> <i class="icofont-location-pin"></i> </div>
 					</div>
 					<div>
-						<h6 class="mb-5">{{lists.title}}</h6>
-						<address>{{lists.info_01}}
-							{% if lists.info_02 %}
-							<br class="d-none d-md-block" />
-							{{lists.info_02}}
-							{% endif %}
+						<h6 class="mb-5">Address</h6>
+						<address>{{site.data.general_settings.address_01}}</address>
+					</div>
+				</div>
+
+				<!-- E-mail -->
+				<div class="d-flex flex-row">
+					<div>
+						<div class="icon color-default fs-34 mr-25"> <i class="icofont-mail-box"></i> </div>
+					</div>
+					<div>
+						<h6 class="mb-5">E-mail</h6>
+						<!-- <address>{{site.data.general_settings.email}}</address> -->
+						<address>
+							<a href="mailto:{{site.data.general_settings.email}}">{{site.data.general_settings.email}}</a>
 						</address>
 					</div>
 				</div>
-				{% endfor %}
+
+				<!-- Phone -->
+				<div class="d-flex flex-row">
+					<div>
+						<div class="icon color-default fs-34 mr-25"> <i class="icofont-telephone"></i> </div>
+					</div>
+					<div>
+						<h6 class="mb-5">Phone</h6>
+						<address>{{site.data.general_settings.phone_number}}</address>
+					</div>
+				</div>
+
+
+
 			</div>
 			<!--/column -->
 		</div>
@@ -127,3 +150,16 @@
 	</div>
 </div>
 {% endif %}
+
+
+
+<div class="boxed">
+	<div class="bg-gray shadow rounded">
+		<div class="image-block-wrapper">
+			<div class="image-block col-lg-12 p-0">
+				{% include gmap.html extra_class="map-full" %}
+				<!--/.google-map -->
+			</div>
+		</div>
+	</div>
+</div>

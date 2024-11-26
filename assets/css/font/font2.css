@@ -100,6 +100,36 @@ label:not(.custom-control-label) {
     padding: 1rem 1.5rem 0.95rem;
 }
 
+
+.btn-cta{
+    color: var(--color-text_yovori);
+    background: var(--color-white)
+}
+.btn-cta:focus,
+.btn-cta:hover {
+    background-color:  #3f4246;
+    color: white;
+}
+.btn.btn-cta:hover,
+.btn.btn-cta:active,
+.btn.btn-cta.active {
+    -webkit-box-shadow: var(--btn-hover-white);
+            box-shadow: var(--btn-hover-white);
+}
+
+:root {
+    --btn-strong-hover-cta: 0 0 0 5px rgba(var(--rgb-white), 0.5);
+}
+
+.btn.btn-strong-hover.btn-cta:hover,
+.btn.btn-strong-hover.btn-cta:active,
+.btn.btn-strong-hover.btn-cta.active {
+    -webkit-box-shadow: var(--btn-strong-hover-cta);
+            box-shadow: var(--btn-strong-hover-cta);
+}
+
+
+
 .badge-cart,
 .badge {
     padding: 0.5rem 1rem;
