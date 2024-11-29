@@ -7147,16 +7147,28 @@ footer.inverse-text address {
 
 
 
+/* Yovori */
+
+/* Ensure the image-wrapper has a dynamic height */
+.image-wrapper {
+    height: 80vh; /* Height 80% of the viewport height */
+    background-size: cover; /* Ensure the background image covers the entire wrapper */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    display: flex; /* Flexbox to align content inside */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+  }
+  
 
 
+/* 
+  * {
+    border: 1px solid red !important; 
+    box-sizing: border-box; 
+  } */
 
-
-
-
-
-
-
-.tp-caption {
-    border: 2px solid red !important; /* Add a red border to all slider elements */
-    box-sizing: border-box; /* Ensure the border doesn't affect element size */
+  /* Restrict to Specific Areas */
+  .container * {
+    border: 1px solid red !important; /* Borders for all elements inside the .wrapper class */
   }
