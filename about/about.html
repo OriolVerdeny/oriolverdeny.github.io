@@ -103,15 +103,15 @@ faq_area:
   sub_title: |
     If you don't see an answer to your question, <br class="d-none d-lg-block">you can send us an email from our contact form
   faq:
-  - question: "Can I cancel my subscription?"
+  - question: "Why Yovori?"
+    answer: "I started this business when I was living in Benin. Foreigners are called Yovo. Yovo + Ori = Yovori."
+  - question: "How much is it going to cost me?"
     answer: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis."
-  - question: "Which payment methods do you accept?"
+  - question: "Are you experienced?"
     answer: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis."
-  - question: "How can I manage my Account?"
+  - question: "Can I solve your problem?"
     answer: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis."
-  - question: "Is my credit card information secure?"
-    answer: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis."
-  - question: "How do I get my subscription receipt?"
+  - question: "What if I'm not satisfied with the results?"
     answer: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis."
   - question: "Are there any discounts for people in need?"
     answer: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis."
@@ -123,7 +123,14 @@ faq_area:
 ---
 
 
-{% if page.values.enable %}
+
+<!-- Who am I -->
+
+
+
+
+<!-- Vision -->
+{% if page.vision.enable %}
 <div class="wrapper image-wrapper bg-image inverse-text"
   data-image-src="{{relative_url}}/assets/images/04-About/vision.jpg">
   <div class="container inner">
@@ -210,6 +217,7 @@ faq_area:
 
 
 
+<!-- FAQ -->
 <div class="wrapper light-wrapper">
   <div class="container inner pb-0">
 

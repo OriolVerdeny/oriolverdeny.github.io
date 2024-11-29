@@ -43,6 +43,7 @@ h6,
 .blockquote-footer,
 .meta,
 .more,
+.more_yovori,
 .breadcrumbs,
 .breadcrumbs *,
 .isotope-filter ul li a,
@@ -61,6 +62,30 @@ label:not(.custom-control-label) {
     font-size: var(--medium-font-size);
 }
 
+
+.more_yovori {
+    /* font-size: 0.65rem;
+    font-weight: 500; */
+    margin-bottom: 1rem;
+    line-height: 1.05rem;
+    text-transform: uppercase;
+    color: var(--color-default);
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.more_yovori:hover {
+    color: rgba(var(--rgb-default), 0.8);
+}
+
+.more_yovori:after {
+    font-family: 'Jam';
+    content: "\e92c";
+    padding-left: 0.2rem;
+    font-size: 0.75rem;
+    font-weight: normal;
+    vertical-align: -2px;
+}
 
 
 /* Navigation and Button Styling */

@@ -56,7 +56,7 @@ what_we_do:
       button_text: "Learn More"
       button_url: "/services/financial-modeling"
 
-two_columns_one_area:
+how_it_works:
   enable: false
   title: "How It Works?"
   sub_title: "Find out everything you need about creating a business process model."
@@ -94,14 +94,7 @@ why_choose_us:
       content: |
         Close collaboration with clients, prioritizing customer satisfaction and focusing on ethical practices, sustainability, and long-lasting positive impact.
 
-video_area:
-  enable: false
-  title: "How We Do It?"
-  sub_title: "Find out everything you need to know about creating a business process model."
-  image: "/assets/images/art/bg25.jpg"
-  video_url: "https://www.youtube.com/watch?v=26TbMXXOe0I"
-
-blogs_area:
+case_studies:
   enable: true
   title: "Case Studies"
   sub_title: "Check out some of our work."
@@ -132,41 +125,9 @@ testimonials_area:
 clients_carousel:
   enable: false
 
-pricing_table:
-  enable: false
-  title: "Our Pricing"
-  sub_title: "We offer great prices, premium products and quality service for your business."
-  btn_url: "#"
-  description: |
-    "Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
-  plans:
-    - title: "Basic Pricing"
-      monthly_price: 9
-      pricing_url: "#"
-      icon: "/assets/images/icons/ec-mobile.png"
-      features:
-        - "<strong>1</strong> Project"
-        - "<strong>100K</strong> API Access"
-        - "<strong>100MB</strong> Storage"
-        - "Custom <strong>Cloud</strong> Services"
-        - "Weekly <strong>Reports</strong>"
-        - "7/24 <strong>Support</strong>"
-
-    - title: "Premium Plan"
-      monthly_price: 19
-      pricing_url: "#"
-      icon: "/assets/images/icons/ec-store.png"
-      features:
-        - "<strong>5</strong> Project"
-        - "<strong>200K</strong> API Access"
-        - "<strong>250MB</strong> Storage"
-        - "Custom <strong>Cloud</strong> Services"
-        - "Weekly <strong>Reports</strong>"
-        - "7/24 <strong>Support</strong>"
-
-
 ---
 
+<!-- Hero -->
 {% if page.hero_area.enable %}
 <div class="wrapper dark-wrapper">
   <div class="rev_slider_wrapper fullwidth-container">
@@ -199,41 +160,74 @@ pricing_table:
 
 
           <!-- Background image -->
-          <img src="{{page.hero_area.hero_bg}}" alt="{{page.hero_area.title}}" class="rev-slidebg" />
+          <img src="{{page.hero_area.hero_bg}}" 
+               alt="{{page.hero_area.title}}" 
+               class="rev-slidebg"
+               style="object-fit: cover;"/>
 
           <!-- Left-aligned title -->
-          <div class="tp-caption font-weight-600 color-white text-left" 
+          <div class="tp-caption font-weight-600 color-white"
+
                data-frames='{{ site.data.frames.title_frame | jsonify }}'
-               data-x="left" 
-               data-hoffset="['0','50%','0','0']" 
-               data-y="middle" 
-               data-voffset="['-120','-100','0','0']" 
-               data-fontsize="['50','50','40','36']"
+          
+               data-visibility="['on', 'on', 'on', 'on']"
+          
+               data-fontsize="['60','50','40','36']"
                data-lineheight="['65','65','55','51']"
+               data-color="['#FFF', '#FFF', '#000', '#000']"
+               data-textAlign="['inherit', 'inherit', 'right', 'center']"
+
+               data-x="[0,'left','center','center']" 
+               data-y="['middle','middle','middle','middle']" 
+               data-hoffset="['0','0','0','0']" 
+               data-voffset="['0','-100','0','0']" 
+
                data-width="['750','750','700','500']"
-               data-textAlign="['center','center','center','center']" 
+               data-height="['auto', 'auto', 'auto', 'auto']"
                data-whitespace="['normal','normal','normal','normal']"
+
+               data-paddingtop="[0, 0, 0, 0]"
+               data-paddingright="[0, 0, 0, 0]"
+               data-paddingbottom="[0, 0, 0, 0]"
+               data-paddingleft="[0, 0, 0, 0]"
+
                data-responsive="on" 
                data-responsive_offset="on" 
                style="z-index: 9;">
-            {{page.hero_area.title}}
+
+              {{page.hero_area.title}}
           </div>
       
           <!-- Left-aligned text -->
-          <div class="tp-caption font-weight-400 color-white text-left" 
-                data-frames='{{ site.data.frames.title_frame | jsonify }}'
-                data-x="left" 
-                data-hoffset="['0','50%','0','0']" 
-                data-y="middle" 
-                data-voffset="['75','50','0','0']" 
-                data-fontsize="['26','26','20','18']"
-                data-lineheight="['40','40','30','30']"
-                data-width="['750','750','700','500']"
-                data-textAlign="['center','center','center','center']" 
-                data-whitespace="['normal','normal','normal','normal']"
-                data-responsive="on" 
-                data-responsive_offset="on" 
-                style="z-index: 9;">
+          <div class="tp-caption font-weight-400 color-white" 
+
+               data-frames='{{ site.data.frames.title_frame | jsonify }}'
+          
+               data-visibility="['on', 'on', 'on', 'on']"
+          
+               data-fontsize="['26','26','20','18']"
+               data-lineheight="['40','40','30','30']"
+               data-color="['#FFF', '#FFF', '#000', '#000']"
+               data-textAlign="['inherit', 'inherit', 'center', 'center']"
+
+               data-x="[0,'left','center','center']" 
+               data-y="['middle','middle','middle','middle']" 
+               data-hoffset="['0','0','0','0']" 
+               data-voffset="['0','-100','0','0']" 
+
+               data-width="['750','750','700','500']"
+               data-height="['auto', 'auto', 'auto', 'auto']"
+               data-whitespace="['normal','normal','normal','normal']"
+
+               data-paddingtop="[0, 0, 0, 0]"
+               data-paddingright="[0, 0, 0, 0]"
+               data-paddingbottom="[0, 0, 0, 0]"
+               data-paddingleft="[0, 0, 0, 0]"
+
+               data-responsive="on" 
+               data-responsive_offset="on" 
+               style="z-index: 9;">
+               
             {{page.hero_area.text}}
           </div>
 
@@ -242,9 +236,9 @@ pricing_table:
           <a class="tp-caption btn btn-l btn-white btn-strong-hover scroll" 
              href="{{page.hero_area.btn_url}}"
              data-frames='{{ site.data.frames.button_frame | jsonify }}'
-             data-x="left"
-             data-hoffset="['0','50%','0','0']"  
-             data-y="middle" 
+             data-x="['0','center','center','center']"
+             data-hoffset="['0','50%','50%','50%']"  
+             data-y="['middle','middle','middle','middle']" 
              data-voffset="['250','200','0','0']" 
              data-width="['auto','auto','auto','auto']"
              data-textAlign="['center','center','center','center']"
@@ -257,9 +251,9 @@ pricing_table:
           <!-- Right-side image -->
             <div class="tp-caption" 
             data-frames='[{"delay":500,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power4.easeInOut"}]'
-            data-x="right" 
+            data-x="['right','right','right','right']" 
             data-hoffset="['-250','0','0','0']" 
-            data-y="middle" 
+            data-y="['center','center','center','center']" 
             data-voffset="['0','0','0','0']" 
             data-width="['auto','auto','auto','auto']"
             data-responsive="on" 
@@ -284,6 +278,7 @@ pricing_table:
 {% endif %}
 
 
+<!-- Value Proposition -->
 {% if page.value_proposition.enable %}
 <div class="wrapper yovori-wrapper">
   <div class="container inner col-lg-6 offset-lg-3">
@@ -296,14 +291,14 @@ pricing_table:
 {% endif %}
 
 
-
-<div class="wrapper gradient-wrapper" id="whatwedo">
+<!-- What we do (Services) -->
+{% if page.what_we_do.enable %}
+<div class="wrapper dark-wrapper inverse-text" id="whatwedo">
   <div class="container inner">
-    {% if page.what_we_do.enable %}
     <div class="three-columns-wrapper">
       <div class="row">
         <div class="col-md-7 mx-auto">
-          <h2 class="display-3 title-color color-gray text-center">{{page.what_we_do.title}}</h2>
+          <h2 class="display-3 title-color text-center">{{page.what_we_do.title}}</h2>
           <!-- <div class="text-center">
             <h2 class="title-bg bg-default color-text_yovori">{{page.what_we_do.title}}</h2>
           </div> -->
@@ -318,24 +313,30 @@ pricing_table:
           <figure class="img-blob blob1 mb-30">
             <img src="{{service.image}}" alt="{{service.title}}" />
           </figure>
-          <h4>{{service.title}}</h4>
+          <h1 class="display-4 font-weight-bold">{{service.title}}</h1>
           <p class="mb-15">{{service.description}}</p>
-          <div class="text-center"><a href="{{service.button_url}}" class="more">{{service.button_text}}</a></div>
+          <div class="text-center font-weight-bold"><a href="{{service.button_url}}" class="more_yovori">{{service.button_text}}</a></div>
         </div>
         <div class="space20 d-md-none"></div>
         {% endfor %}
       </div>
     </div>
-    {% endif %}
-    {% assign colmns_data_one = page.two_columns_one_area %}
-    {% if colmns_data_one.enable %}
+  </div>
+</div>
+{% endif %}
+
+
+<!-- How it works -->
+{% if page.how_it_works.enable %}
+<div class="wrapper light-wrapper">
+  <div class="container inner">
     <div class="two-columns-one">
-      <div class="space140"></div>
+      <!-- <div class="space140"></div> -->
       <div class="row align-items-center">
-        {% if colmns_data_one.image %}
+        {% if page.how_it_works.image %}
         <div class="col-lg-6">
           <figure>
-            <img src="{{colmns_data_one.image}}" alt="{{colmns_data_one.title}}" />
+            <img src="{{page.how_it_works.image}}" alt="{{page.how_it_works.title}}" />
           </figure>
         </div>
         <!--/column -->
@@ -343,12 +344,12 @@ pricing_table:
         <div class="space20 d-md-none"></div>
         <div class="space50 d-none d-md-block d-lg-none"></div>
         <div class="col-lg-6 pl-60 pl-md-15">
-          <h2 class="title-bg bg-default color-text_yovori">{{colmns_data_one.title}}</h2>
+          <h2 class="title-bg bg-default color-text_yovori">{{page.how_it_works.title}}</h2>
           <div class="space10"></div>
-          <h3 class="display-3">{{colmns_data_one.sub_title}}</h3>
+          <h3 class="display-3">{{page.how_it_works.sub_title}}</h3>
           <div class="space20"></div>
           <div class="row">
-            {% for list in colmns_data_one.lists %}
+            {% for list in page.how_it_works.lists %}
             <div class="col-md-6">
               <h5><span class="color-text_yovori">{{forloop.index}}.</span> {{list.title}}</h5>
               <p>{{list.description}}</p>
@@ -362,17 +363,52 @@ pricing_table:
         </div>
       </div>
     </div>
-    {% endif %}
-    {% assign why_choose_us = page.why_choose_us %}
-    {% if why_choose_us.enable %}
+  </div>
+</div>
+{% endif %}
+
+
+<!-- How it works -->
+<div class="wrapper gray-wrapper">
+  <div class="container inner">
+    <h2 class="display-3 title-color color-gray text-center mb-40">How it Works?</h2>
+    <div class="row gutter-50 gutter-md-30 process-wrapper line text-center">
+      <div class="col-md-3"> <span class="icon icon-blob icon-blob-pink mb-30"><span class="number color-pink">01</span></span>
+        <h5>Concept</h5>
+        <p>Nulla vitae elit libero elit non porta gravida eget metus cras.</p>
+      </div>
+      <!--/column -->
+      <div class="col-md-3"> <span class="icon icon-blob icon-blob-blue mb-30"><span class="number color-blue">02</span></span>
+        <h5>Prepare</h5>
+        <p>Nulla vitae elit libero elit non porta gravida eget metus cras.</p>
+      </div>
+      <!--/column -->
+      <div class="col-md-3"> <span class="icon icon-blob icon-blob-green mb-30"><span class="number color-green">03</span></span>
+        <h5>Retouch</h5>
+        <p>Nulla vitae elit libero elit non porta gravida eget metus cras.</p>
+      </div>
+      <!--/column -->
+      <div class="col-md-3"> <span class="icon icon-blob icon-blob-purple mb-30"><span class="number color-purple">04</span></span>
+        <h5>Finalize</h5>
+        <p>Nulla vitae elit libero elit non porta gravida eget metus cras.</p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+
+
+<!-- Why choose us -->
+{% if page.why_choose_us.enable %}
+<div class="wrapper white-wrapper">
+  <div class="container inner">
     <div class="two-column-one">
       <div class="row">
         <div class="col-md-7 mx-auto">
-          <div class="space180"></div>
           <h2 class="display-3 title-color color-gray text-center">{{page.why_choose_us.title}}</h2>
-          <!-- <div class="text-center">
-            <h2 class="title-bg bg-default color-text_yovori">{{page.why_choose_us.title}}</h2>
-          </div> -->
           <h3 class="display-3 mb-0 text-center">{{page.why_choose_us.sub_title}}</h3>
           <div class="space50"></div>
         </div>
@@ -394,169 +430,101 @@ pricing_table:
         </div>
       </div>
     </div>
-    {% endif %}
   </div>
-  {% if page.video_area.enable %}
-  <div class="video-area">
-    <div class="wrapper image-wrapper bg-image gradient-overlay inverse-text"
-      data-image-src="{{page.video_area.image}}">
-      <div class="container inner pt-140 pb-140 text-center">
-        <div class="row">
-          <div class="col-md-7 mx-auto">
-            <h2 class="title-bg bg-white color-dark">{{page.video_area.title}}</h2>
-            <div class="space10"></div>
-            <h3 class="display-3">{{page.video_area.sub_title}}</h3>
-            <div class="space10"></div>
-            <div class="light-gallery-wrapper">
-              <a href="{{page.video_area.video_url}}" class="btn-play lightbox"></a>
-            </div>
-          </div>
-        </div>
+</div>
+{% endif %}
+
+
+<!-- Case studies -->
+{% if page.case_studies.enable %}
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-md-7 mx-auto">
+        <h2 class="display-3 title-color color-gray text-center">{{page.case_studies.title}}</h2>
+
+        <!-- <div class="text-center">
+          <h2 class="title-bg bg-default color-text_yovori">{{page.case_studies.title}}</h2>
+        </div> -->
+        <div class="space10"></div>
+        <h3 class="display-3 text-center">{{page.case_studies.sub_title}}</h3>
+        <div class="space40"></div>
       </div>
     </div>
-  </div>
-  {% endif %}
-  {% if page.blogs_area.enable %}
-  <div class="wrapper light-wrapper">
-    <div class="container inner">
-      <div class="row">
-        <div class="col-md-7 mx-auto">
-          <h2 class="display-3 title-color color-gray text-center">{{page.blogs_area.title}}</h2>
-
-          <!-- <div class="text-center">
-            <h2 class="title-bg bg-default color-text_yovori">{{page.blogs_area.title}}</h2>
-          </div> -->
-          <div class="space10"></div>
-          <h3 class="display-3 text-center">{{page.blogs_area.sub_title}}</h3>
-          <div class="space40"></div>
+    <div class="grid-view">
+      <div class="carousel owl-carousel" data-margin="30" data-dots="true" data-autoplay="false"
+        data-autoplay-timeout="5000"
+        data-responsive='{"0":{"items": "2"}, "768":{"items": "3"}, "992":{"items": "4"}}' data-dotsEach="false">
+        {% for post in site.posts limit: page.case_studies.posts_number %}
+        <div class="item blog-posts">
+          {% if post.post_image %}
+          <figure class="overlay overlay1 rounded mb-30"><a href="{{post.url}}"> <img src="{{post.post_image}}"
+                class="post-thumb" alt="{{post.title}}" /></a>
+            <figcaption>
+              <h5 class="from-top mb-0">Read More</h5>
+            </figcaption>
+          </figure>
+          {% endif %}
+          <h2 class="post-title text-center mb-0"><a href="{{post.url}}">{{post.title}}</a></h2>
         </div>
+        {% endfor %}
       </div>
-      <div class="grid-view">
-        <div class="carousel owl-carousel" data-margin="30" data-dots="true" data-autoplay="false"
-          data-autoplay-timeout="5000"
-          data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "3"}}' data-dotsEach="false">
-          {% for post in site.posts limit: page.blogs_area.posts_number %}
-          <div class="item blog-posts">
-            {% if post.post_image %}
-            <figure class="overlay overlay1 rounded mb-30"><a href="{{post.url}}"> <img src="{{post.post_image}}"
-                  class="post-thumb" alt="{{post.title}}" /></a>
-              <figcaption>
-                <h5 class="from-top mb-0">Read More</h5>
-              </figcaption>
-            </figure>
-            {% endif %}
-            <h2 class="post-title text-center mb-0"><a href="{{post.url}}">{{post.title}}</a></h2>
+      <!-- /.owl-carousel -->
+    </div>
+    <!-- /.grid-view -->
+  </div>
+</div>
+{% endif %}
+
+
+<!-- Testimonial -->
+{% if page.testimonials_area.enable %}
+<div class="wrapper white-wrapper inner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 mx-auto">
+        <div class="text-center">
+          <h2 class="title-bg bg-default color-text_yovori">
+            {{page.testimonials_area.title}}
+          </h2>
+        </div>
+        <div class="space10"></div>
+        <h3 class="display-3 text-center">
+          {{page.testimonials_area.sub_title}}
+        </h3>
+        <div class="space40"></div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      {% if page.testimonials_area.image %}
+      <div class="col-lg-6 pr-60 pr-md-15">
+        <figure><img src="{{page.testimonials_area.image}}" alt="{{page.testimonials_area.title}}" /></figure>
+      </div>
+      {% endif %}
+      <div class="space20 d-md-none"></div>
+      <div class="space50 d-none d-md-block d-lg-none"></div>
+      <div class="col-lg-5">
+        <div class="basic-slider owl-carousel gap-small dots-left" data-margin="30">
+          {% for testimonial in page.testimonials_area.testimonials %}
+          <div class="item">
+            <blockquote class="icon icon-left larger text-left">
+              <p>{{testimonial.quote}}</p>
+              <div class="blockquote-details">
+                <div class="info p-0">
+                  <h6 class="mb-0">{{testimonial.author}}</h6>
+                  <span class="meta mb-0">{{testimonial.bio}}</span>
+                </div>
+              </div>
+            </blockquote>
           </div>
           {% endfor %}
         </div>
-        <!-- /.owl-carousel -->
       </div>
-      <!-- /.grid-view -->
     </div>
+    {% if page.clients_carousel.enable %}
+    <div class="space80"></div>
+    {% include clients_carousel.html %}
+    {% endif %}
   </div>
-  {% endif %}
-  {% if page.testimonials_area.enable %}
-  <div class="wrapper white-wrapper inner">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7 mx-auto">
-          <div class="text-center">
-            <h2 class="title-bg bg-default color-text_yovori">
-              {{page.testimonials_area.title}}
-            </h2>
-          </div>
-          <div class="space10"></div>
-          <h3 class="display-3 text-center">
-            {{page.testimonials_area.sub_title}}
-          </h3>
-          <div class="space40"></div>
-        </div>
-      </div>
-      <div class="row align-items-center">
-        {% if page.testimonials_area.image %}
-        <div class="col-lg-6 pr-60 pr-md-15">
-          <figure><img src="{{page.testimonials_area.image}}" alt="{{page.testimonials_area.title}}" /></figure>
-        </div>
-        {% endif %}
-        <div class="space20 d-md-none"></div>
-        <div class="space50 d-none d-md-block d-lg-none"></div>
-        <div class="col-lg-5">
-          <div class="basic-slider owl-carousel gap-small dots-left" data-margin="30">
-            {% for testimonial in page.testimonials_area.testimonials %}
-            <div class="item">
-              <blockquote class="icon icon-left larger text-left">
-                <p>{{testimonial.quote}}</p>
-                <div class="blockquote-details">
-                  <div class="info p-0">
-                    <h6 class="mb-0">{{testimonial.author}}</h6>
-                    <span class="meta mb-0">{{testimonial.bio}}</span>
-                  </div>
-                </div>
-              </blockquote>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-      {% if page.clients_carousel.enable %}
-      <div class="space80"></div>
-      {% include clients_carousel.html %}
-      {% endif %}
-    </div>
-  </div>
-  {% endif%}
-  <div class="wrapper light-wrapper">
-    <div class="container inner">
-      {% assign pricing_data = page.pricing_table %}
-      {% if pricing_data.enable %}
-      <div class="row">
-        <div class="col-lg-5 pr-50 pr-md-15">
-          <h2 class="title-color color-gray">{{pricing_data.title}}</h2>
-          <h3 class="display-3">{{pricing_data.sub_title}}</h3>
-          <div class="space20"></div>
-          <p>{{pricing_data.description}}</p>
-          <div class="space10"></div>
-          {% if pricing_data.pricing_url %}
-          <a href="{{pricing_data.pricing_url}}" class="btn">See All Prices</a>
-          {% endif %}
-        </div>
-        <!--/column -->
-        <div class="space70 d-none d-md-block d-lg-none"></div>
-        <div class="space20 d-md-none"></div>
-        <div class="col-lg-7">
-          <div class="pricing-wrapper">
-            <div class="row no-gutters">
-              {% for pricing in pricing_data.plans %}
-              <div class="col-md-6">
-                <div class="pricing panel box bg-white shadow">
-                  <div class="panel-heading">
-                    <div class="prices color-dark">
-                      <div class="price price-show"><span class="price-currency">$</span><span
-                          class="price-value">{{pricing.monthly_price}}</span> <span class="price-duration">month</span>
-                      </div>
-                    </div>
-                    <h4 class="panel-title mb-0">{{pricing.title}}</h4>
-                  </div>
-                  <div class="panel-body">
-                    <table class="table">
-                      {% for features in pricing.features %}
-                      <tr>
-                        <td>{{features}}</td>
-                      </tr>
-                      {% endfor %}
-                    </table>
-                  </div>
-                  <div class="panel-footer"><a href="{{pricing.pricing_url}}" class="btn" role="button">Choose Plan</a>
-                  </div>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-    </div>
-  </div>
-
 </div>
+{% endif%}

@@ -7143,3 +7143,20 @@ footer.inverse-text address {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tp-caption {
+    border: 2px solid red !important; /* Add a red border to all slider elements */
+    box-sizing: border-box; /* Ensure the border doesn't affect element size */
+  }
