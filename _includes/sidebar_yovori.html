@@ -2,7 +2,7 @@
 
 <!-- /.widget -->
 <div class="sidebox widget">
-  <h3 class="widget-title">Services</h3>
+  <h3 class="widget-title">Topics</h3>
   <ul class="icon-list">
     {% assign categories_list = site.categories %}
       {% if categories_list.first[0] == null %}
@@ -19,7 +19,7 @@
 </div>
 <!-- /.widget -->
 
-<div class="sidebox widget">
+<!-- <div class="sidebox widget">
   <h3 class="widget-title">Tags</h3>
   <ul class="list-unstyled tag-list">
     {% capture tags %}
@@ -31,11 +31,11 @@
     {% endcapture %}
     {{ tags | split:'</li>' | sort | join:'</li>' }}
 </ul>
-</div>
+</div> -->
 <!-- /.widget -->
 
 
-<div class="sidebox widget">
+<!-- <div class="sidebox widget">
   <h3 class="widget-title">Popular Case Studies</h3>
   <ul class="image-list">
     {% for post in site.posts limit: "5" %}
@@ -51,12 +51,11 @@
         </h6>
         <div class="meta">
           {% if post.date %}
-           <!-- <span class="date"><i class="jam jam-clock"></i> {{post.date | date_to_string}}</span> -->
+           <span class="date"><i class="jam jam-clock"></i> {{post.date | date_to_string}}</span>
           {% endif %}
         </div>
       </div>
     </li>
     {% endfor %}
   </ul>
-  <!-- /.image-list -->
-</div>
+</div> -->

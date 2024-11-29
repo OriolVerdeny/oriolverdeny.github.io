@@ -2,9 +2,9 @@
 
 main_menu:
 
-  - text: "Home"
-    menu_type: "simple"
-    url: "/"
+  # - text: "Home"
+  #   menu_type: "simple"
+  #   url: "/"
 
   - text: "Our services"
     url: "/#whatwedo"

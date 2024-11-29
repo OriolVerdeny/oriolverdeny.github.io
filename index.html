@@ -12,13 +12,26 @@ subheader: false
 
 hero_area:
   enable: true
-  hero_images: 
-  - "/assets/images/01-Home/bitmap.jpg"
+  hero_bg: 
+  - "/assets/images/01-Home/data-analysis.jpg"
+  hero_image:
+  - "/assets/images/Case studies/oriol-verdeny.jpg"
 
   title: "Advancing agriculture with data-driven decisions"
-  btn_text: "Get Started"
+  text: "We envision a world where innovation, technology and sustainable principles drive the creation of a
+  regenerative food system that feeds us, <b>preserves biodiversity</b>, restore ecosystems, and contributes to the development
+  of the economy."
+  btn_text: "Discover our services"
   btn_url: "#whatwedo"
  
+
+value_proposition:
+  enable: true
+  title: "Advancing agriculture with data-driven decisions"
+  text: "We envision a world where innovation, technology and sustainable principles drive the creation of a
+  regenerative food system that feeds us, <b>preserves biodiversity</b>, restore ecosystems, and contributes to the development
+  of the economy."
+
 what_we_do:
   enable: true
   title: "What We Do?"
@@ -151,31 +164,6 @@ pricing_table:
         - "Weekly <strong>Reports</strong>"
         - "7/24 <strong>Support</strong>"
 
-faq_area:
-  enable: false
-  title: "FAQ"
-  sub_title: "If you don't see an answer to your question, you can send us an email from our contact form."
-  image: "/assets/images/concept/concept13.png"
-  tabs:
-    - question: "Can I cancel my subscription?"
-      answer: |
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna,  nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
-
-    - question: "Which payment methods do you accept"
-      answer: |
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna,  nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
-
-    - question: "How can I manage my Account?"
-      answer: |
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna,  nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
-
-    - question: "Is my credit card information secure?"
-      answer: |
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna,  nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
-
-    - question: "How do I get my subscription receipt?"
-      answer: |
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna,  nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cras justo odio, dapibus ac facilisis.
 
 ---
 
@@ -185,22 +173,104 @@ faq_area:
     <div id="slider-yovori" class="rev_slider fullwidthbanner" data-version="5.4.7">
       <ul>
         <li data-transition="fade" data-thumb="">
-          <img src="{{page.hero_area.hero_images}}" alt="{{page.hero_area.title}}" class="rev-slidebg" />
-          <div class="tp-caption font-weight-600 color-white text-center" data-x="center" data-y="middle"
-            data-voffset="['-45','-45','-45','-45']" data-fontsize="['50','50','40','36']" data-lineheight="['65','65','55','51']"
-            data-width="['750','750','700','500']" data-textAlign="['center','center','center','center']"
-            data-whitespace="['normal','normal','normal','normal']"
-            data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.7;sY:0.7;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-            data-responsive="on" data-responsive_offset="on" style="z-index: 9;">
+
+            <!-- 
+            data-frames: Defines the animation frames for this caption, including entry, exit, and transitional effects.
+            data-x: Positions the element horizontally on the screen (left, center, right, 100, 50%)
+            data-y: Positions the element vertically on the screen (top, middle, bottom)
+            data-hoffset: Adds horizontal offset to the position set by data-x.
+            data-voffset: Offsets the vertical position. The array values correspond to different screen sizes (Desktop, Laptop, Tablet, Mobile)
+            data-paddingtop: Adds padding to the caption for better spacing.
+            data-paddingright: Adds padding to the caption for better spacing.
+            data-paddingbottom: Adds padding to the caption for better spacing.
+            data-paddingleft: Adds padding to the caption for better spacing.
+            data-color: Directly sets the color of the text.
+            data-fontsize: Defines font sizes for different screen widths (responsive design)
+            data-lineheight: Sets the line height for text across responsive sizes.
+            data-width: Specifies the maximum width of the caption container for each screen size.
+            data-textAlign: Aligns the text horizontally (left, center, right)
+            data-whitespace: Defines how text wraps within the caption (normal, nowrap, pre).
+            data-rotation: Rotates the caption.
+            data-visibility: Controls visibility on specific devices (on, off).
+            data-responsive: Enables responsive behavior for the caption.
+            data-responsive_offset: Adjusts the offset responsively for different screen sizes.
+            style: Sets the stacking order of the element, ensuring it appears above elements with lower z-index values.
+            -->
+
+
+          <!-- Background image -->
+          <img src="{{page.hero_area.hero_bg}}" alt="{{page.hero_area.title}}" class="rev-slidebg" />
+
+          <!-- Left-aligned title -->
+          <div class="tp-caption font-weight-600 color-white text-left" 
+               data-frames='{{ site.data.frames.title_frame | jsonify }}'
+               data-x="left" 
+               data-hoffset="['0','50%','0','0']" 
+               data-y="middle" 
+               data-voffset="['-120','-100','0','0']" 
+               data-fontsize="['50','50','40','36']"
+               data-lineheight="['65','65','55','51']"
+               data-width="['750','750','700','500']"
+               data-textAlign="['center','center','center','center']" 
+               data-whitespace="['normal','normal','normal','normal']"
+               data-responsive="on" 
+               data-responsive_offset="on" 
+               style="z-index: 9;">
             {{page.hero_area.title}}
           </div>
-        <a class="tp-caption btn btn-l btn-white btn-strong-hover scroll" data-x="center" data-y="middle"
-          data-voffset="['85','85','85','85']" data-width="['auto','auto','auto','auto']"
-          data-textAlign="['center','center','center','center']"
-          data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.7;sY:0.7;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-          data-responsive="on" data-responsive_offset="on" style="z-index: 9;" href="{{page.hero_area.btn_url}}">
-          {{page.hero_area.btn_text}}
-        </a>
+      
+          <!-- Left-aligned text -->
+          <div class="tp-caption font-weight-400 color-white text-left" 
+                data-frames='{{ site.data.frames.title_frame | jsonify }}'
+                data-x="left" 
+                data-hoffset="['0','50%','0','0']" 
+                data-y="middle" 
+                data-voffset="['75','50','0','0']" 
+                data-fontsize="['26','26','20','18']"
+                data-lineheight="['40','40','30','30']"
+                data-width="['750','750','700','500']"
+                data-textAlign="['center','center','center','center']" 
+                data-whitespace="['normal','normal','normal','normal']"
+                data-responsive="on" 
+                data-responsive_offset="on" 
+                style="z-index: 9;">
+            {{page.hero_area.text}}
+          </div>
+
+          <!-- Button below text -->
+           <!-- data-voffset="['85','85','85','85']"  -->
+          <a class="tp-caption btn btn-l btn-white btn-strong-hover scroll" 
+             href="{{page.hero_area.btn_url}}"
+             data-frames='{{ site.data.frames.button_frame | jsonify }}'
+             data-x="left"
+             data-hoffset="['0','50%','0','0']"  
+             data-y="middle" 
+             data-voffset="['250','200','0','0']" 
+             data-width="['auto','auto','auto','auto']"
+             data-textAlign="['center','center','center','center']"
+             data-responsive="on" 
+             data-responsive_offset="on" 
+             style="z-index: 9;">
+            {{page.hero_area.btn_text}}
+          </a>
+
+          <!-- Right-side image -->
+            <div class="tp-caption" 
+            data-frames='[{"delay":500,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power4.easeInOut"}]'
+            data-x="right" 
+            data-hoffset="['-250','0','0','0']" 
+            data-y="middle" 
+            data-voffset="['0','0','0','0']" 
+            data-width="['auto','auto','auto','auto']"
+            data-responsive="on" 
+            data-responsive_offset="on" 
+            style="z-index: 8; ">
+            <img src="{{page.hero_area.hero_image}}" alt="Left Image"
+            data-ww="['60%','60%','70%','70%']" 
+            data-hh="['auto','auto','auto','auto']"
+            style="border-radius: 15px; border: 0px solid #000000; box-shadow: 0 0px 0px rgb(56, 130, 49);"/>
+            </div>
+  
         </li>
       </ul>
       <div class="tp-bannertimer tp-bottom"></div>
@@ -214,8 +284,20 @@ faq_area:
 {% endif %}
 
 
+{% if page.value_proposition.enable %}
+<div class="wrapper yovori-wrapper">
+  <div class="container inner col-lg-6 offset-lg-3">
+    <h1 class="page-title mb-40 text-center"> {{page.value_proposition.title}} </h1>
+    <div class="row">
+        <p class="display-3 text-center"> {{page.value_proposition.text}}</p>
+    </div>
+  </div>
+</div>
+{% endif %}
 
-<div class="wrapper white-wrapper" id="whatwedo">
+
+
+<div class="wrapper gradient-wrapper" id="whatwedo">
   <div class="container inner">
     {% if page.what_we_do.enable %}
     <div class="three-columns-wrapper">
@@ -476,51 +558,5 @@ faq_area:
       {% endif %}
     </div>
   </div>
-  {% if page.faq_area.enable %}
-  <div class="wrapper light-wrapper inner-bottom">
-    <div class="container">
-      <div class="row">
-        {% if page.faq_area.image %}
-        <div class="col-lg-6">
-          <figure>
-            <img src="{{page.faq_area.image}}" alt="{{page.faq_area.title}}" />
-          </figure>
-        </div>
-        {% endif %}
-        <div class="space50 d-none d-md-block d-lg-none"></div>
-        <div class="space10 d-md-none"></div>
-        <div class="col-lg-6 pl-60 pl-md-15">
-          <h2 class="title-bg bg-default color-text_yovori">{{page.faq_area.title}}</h2>
-          <div class="space10"></div>
-          <h3 class="display-3">{{page.faq_area.sub_title}}</h3>
-          <div class="space20"></div>
-          <div id="accordion-2" class="accordion-wrapper simple">
-            {% for tab in page.faq_area.tabs %}
-            <div class="card">
-              <div class="card-header" id="accordion-heading-2-1">
-                <h5>
-                  <button class="collapsed" data-toggle="collapse" data-target="#accordion-collapse-2-{{forloop.index}}"
-                    aria-expanded="false" aria-controls="accordion-collapse-2-1">
-                    {{tab.question}}
-                  </button>
-                </h5>
-              </div>
-              <div id="accordion-collapse-2-{{forloop.index}}" class="collapse"
-                aria-labelledby="accordion-heading-2-{{forloop.index}}" data-target="#accordion-2"
-                data-parent="#accordion-2">
-                <div class="card-body">
-                  <p>
-                    {{tab.answer}}
-                  </p>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-          <!-- /.accordion-wrapper -->
-        </div>
-      </div>
-    </div>
-  </div>
-  {% endif %}
+
 </div>

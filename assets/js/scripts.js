@@ -898,10 +898,12 @@ $(document).ready(function() {
 		fullScreenOffsetContainer: ".navbar:not(.fixed)",
 		spinner: "spinner",
 		dottedOverlay: 'darkoverlay',
+		// dottedOverlay: '',
 		delay: 9000,
 		shadow: 0,
 		gridwidth: [1240, 1024, 778, 480],
-		gridheight: [650, 650, 650, 550],
+		// gridheight: [650, 650, 650, 550],
+		gridheight: [800, 650, 650, 550],
 		responsiveLevels: [1240, 1124, 778, 480],
 		navigation: {
 			keyboardNavigation: 'on',
