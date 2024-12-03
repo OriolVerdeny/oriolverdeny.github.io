@@ -56,8 +56,6 @@ variable and uses 30% opacity (0.3). */
     background: rgba(var(--rgb-default), 0.065);
 }
 
-
-
 .badge-category,
 .badge:hover,
 .badge:focus {

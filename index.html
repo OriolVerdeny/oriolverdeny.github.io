@@ -50,7 +50,7 @@ what_we_do:
       button_url: "/services/financial-modeling"
 
 how_it_works:
-  enable: false
+  enable: true
   title: "How It Works?"
   sub_title: "Find out everything you need about creating a business process model."
   image: "/assets/images/concept/concept15@2x.png"
@@ -212,11 +212,10 @@ clients_carousel:
 
 
 <!-- How it works -->
-{% if page.how_it_works.enable %}
+<!-- {% if page.how_it_works.enable %}
 <div class="wrapper light-wrapper">
   <div class="container inner">
     <div class="two-columns-one">
-      <!-- <div class="space140"></div> -->
       <div class="row align-items-center">
         {% if page.how_it_works.image %}
         <div class="col-lg-6">
@@ -224,7 +223,6 @@ clients_carousel:
             <img src="{{page.how_it_works.image}}" alt="{{page.how_it_works.title}}" />
           </figure>
         </div>
-        <!--/column -->
         {% endif %}
         <div class="space20 d-md-none"></div>
         <div class="space50 d-none d-md-block d-lg-none"></div>
@@ -250,41 +248,29 @@ clients_carousel:
     </div>
   </div>
 </div>
-{% endif %}
-
+{% endif %} -->
 
 <!-- How it works -->
-<div class="wrapper gray-wrapper">
+{% if page.how_it_works.enable %}
+<div class="wrapper white-wrapper">
   <div class="container inner">
     <h2 class="display-3 title-color color-gray text-center mb-40">How it Works?</h2>
     <div class="row gutter-50 gutter-md-30 process-wrapper line text-center">
-      <div class="col-md-3"> <span class="icon icon-blob icon-blob-pink mb-30"><span class="number color-pink">01</span></span>
-        <h5>Concept</h5>
-        <p>Nulla vitae elit libero elit non porta gravida eget metus cras.</p>
+      {% for list in page.how_it_works.lists %}
+      <div class="col-md-3"> 
+        <span class="icon icon-blob icon-blob-dark mb-30">
+          <span class="number color-default">
+            {{forloop.index}}
+          </span>
+        </span>
+        <h5>{{list.title}}</h5>
+        <p>{{list.description}}</p>
       </div>
-      <!--/column -->
-      <div class="col-md-3"> <span class="icon icon-blob icon-blob-blue mb-30"><span class="number color-blue">02</span></span>
-        <h5>Prepare</h5>
-        <p>Nulla vitae elit libero elit non porta gravida eget metus cras.</p>
-      </div>
-      <!--/column -->
-      <div class="col-md-3"> <span class="icon icon-blob icon-blob-green mb-30"><span class="number color-green">03</span></span>
-        <h5>Retouch</h5>
-        <p>Nulla vitae elit libero elit non porta gravida eget metus cras.</p>
-      </div>
-      <!--/column -->
-      <div class="col-md-3"> <span class="icon icon-blob icon-blob-purple mb-30"><span class="number color-purple">04</span></span>
-        <h5>Finalize</h5>
-        <p>Nulla vitae elit libero elit non porta gravida eget metus cras.</p>
-      </div>
-      <!--/column -->
+      {% endfor %}
     </div>
-    <!--/.row -->
   </div>
-  <!-- /.container -->
 </div>
-<!-- /.wrapper -->
-
+{% endif %}
 
 <!-- Why choose us -->
 {% if page.why_choose_us.enable %}
@@ -322,15 +308,11 @@ clients_carousel:
 
 <!-- Case studies -->
 {% if page.case_studies.enable %}
-<div class="wrapper light-wrapper">
+<div class="wrapper white-wrapper">
   <div class="container inner">
     <div class="row">
       <div class="col-md-7 mx-auto">
         <h2 class="display-3 title-color color-gray text-center">{{page.case_studies.title}}</h2>
-
-        <!-- <div class="text-center">
-          <h2 class="title-bg bg-default color-text_yovori">{{page.case_studies.title}}</h2>
-        </div> -->
         <div class="space10"></div>
         <h3 class="display-3 text-center">{{page.case_studies.sub_title}}</h3>
         <div class="space40"></div>

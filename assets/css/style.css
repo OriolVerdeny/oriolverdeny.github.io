@@ -123,6 +123,7 @@ button:focus {
 /*-----------------------------------------------------------------------------------*/
 html {
     font-size: 20px;
+    scroll-behavior: smooth;
 }
 body {
     -webkit-font-smoothing: antialiased;
@@ -861,10 +862,6 @@ button.hamburger.animate.active:after {
 /*  10. BUTTON
 /*-----------------------------------------------------------------------------------*/
 
-/* html {
-    scroll-behavior: smooth;
-} */
-
 .btn {
     color: var(--color-text_yovori);
     background: var(--color-default);
@@ -1387,21 +1384,22 @@ button.hamburger.animate.active:after {
 /*-----------------------------------------------------------------------------------*/
 /*  12. WRAPPERS
 /*-----------------------------------------------------------------------------------*/
-.white-wrapper {
-    background-color: #fff !important;
-}
 .light-wrapper {
-    background-color: #f9fafb !important;
+    background-color: var(--color-light-gray) !important;
 }
 .gray-wrapper {
-    background-color: #f3f4f7 !important;
+    background-color: var(--color-gray) !important;
 }
 .dark-wrapper {
-    background-color: #242930 !important;
+    background-color: var(--color-dark) !important;
 }
 .yovori-wrapper {
     background-color: var(--color-default) !important;
 }
+.white-wrapper {
+    background-color: var(--color-white) !important;
+}
+
 footer.dark-wrapper,
 .footer-dark-wrapper {
     background-color: #1e2228 !important;
@@ -5600,17 +5598,19 @@ pre {
 .title-bg.bg-brown {
     background: rgba(var(--rgb-brown), 0.15);
 }
+
 .fill-default {
-    fill: var(--color-default)
+    fill: var(--color-default);
 }
 .fill-dark {
-    fill: var(--color-dark)
+    fill: var(--color-dark);
 }
-
 .fill-gray {
-    fill: #f3f4f7
+    fill: var(--color-gray);
 }
-
+.fill-light-gray {
+    fill: var(--color-light-gray);
+}
 .fill-white {
     fill: var(--color-white)
 }
@@ -5849,7 +5849,7 @@ pre {
     color: rgba(var(--rgb-default), 0.25);
 }
 .icon-blob-dark:after {
-    color: rgba(var(--rgb-dark), 0.25);
+    color: rgba(var(--rgb-dark), 0.85);
 }
 .icon-blob-white:after {
     color: rgba(var(--rgb-white), 0.25);

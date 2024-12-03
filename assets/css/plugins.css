@@ -6,12 +6,13 @@
 04. LIGHTGALLERY
 05. OWL CAROUSEL
 06. PLYR
-07. UTILITIES
+07. UTILITIES 
 -------------------------------------------------------------------------------------*/
 :root {
 	--color-default: #848abd;
 	--color-dark: #404040;
 	--color-gray: #999;
+	--color-light-gray: #f3f4f7;
 	--color-white: #FFF;
 	--color-red: #d75959;
 	--color-orange: #fb9d7e;
