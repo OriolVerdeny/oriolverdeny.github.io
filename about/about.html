@@ -181,14 +181,17 @@ faq_area:
 
 
 <!-- Values -->
-{% if page.values.enable %}
+ {% if page.values.enable %}
 <div class="wrapper white-wrapper">
   <div class="container inner">
     <h2 class="section-title mb-40 text-center">{{ page.values.title }}</h2>
     <div class="row gutter-50">
       {% for value in page.values.list %}
       <div class="col-md-6 col-lg-4">
-        <div class="d-flex flex-row justify-content-center">
+        <div class="d-flex flex-row justify-content-center" 
+             data-aos="zoom-in" 
+             data-aos-delay="{{ forloop.index | times: 300 }}" 
+             data-aos-duration="1000">
           <div>
             <!-- <div class="icon icon-bg icon-bg-{{ value.color }} color-{{ value.color }} mr-25"> -->
             <div class="icon icon-bg mr-25"

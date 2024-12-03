@@ -115,6 +115,7 @@ tabs:
     velit aliquet."
     image: "concept8.png"
 ---
+
 <!-- Service General Description -->
 <div class="wrapper dark-wrapper inverse-text">
   <div class="container inner">
@@ -210,13 +211,13 @@ tabs:
 <!-- Fetch the Contact menu item directly -->
 {% assign contact = site.data.navigation.main_menu | where: "text", "Contact" | first %}
 <!-- Call to Action -->
-<div class="wrapper white-wrapper" id="whatwedo">
+<div class="wrapper white-wrapper">
   <div class="container inner">
-    <div class="box p-60 bg-default rounded d-md-flex align-items-md-center justify-content-md-between">
+    <div class="box p-60 cta rounded d-md-flex align-items-md-center justify-content-md-between">
       <h3 class="display-3 mb-0">{{ page.call_of_action.text }}</h3>
       <!-- <div class="space30 d-md-none"></div> -->
       <a href="{{ contact.url | default: '/contact/' }}"
-        class="btn btn-cta btn-strong-hover btn-cta mb-0 font-weight-bold display-4">
+        class="btn btn-cta btn-strong-hover mb-0 font-weight-bold display-4">
         {{ page.call_of_action.button_text }}
       </a>
     </div>
@@ -257,51 +258,6 @@ tabs:
   </div>
 </div>
 
-<!-- Toggle Detailed Service Description -->
-<!-- <div class="wrapper image-wrapper bg-image inverse-text"
-  data-image-src="{{relative_url}}/assets/images/02-Services/agri-data-services.jpg"> -->
-  <!-- <div class="wrapper white-wrapper">
-  <div class="container inner">
-    {% if page.services_area_2.enable %}
-
-    <div class="two-columns-two">
-      <div class="row align-items-center">
-        {% if page.services_area_2.image %}
-        <div class="col-lg-4 order-lg-2 text-center">
-          <figure class="img-blob blob1 mb-30">
-            <img src="{{page.services_area_2.image}}" alt="{{page.services_area_2.title}}" class="img-fluid" />
-          </figure>
-        </div>
-        {% endif %}
-        <div class="space20 d-md-none"></div>
-        <div class="space50 d-none d-md-block d-lg-none"></div>
-        <div class="col-lg-8 order-lg-1 pr-60 pr-md-15">
-          <h3 class="display-3">{{page.services_area_2.title}}</h3>
-          <div class="space20"></div>
-          <div id="accordion-2" class="accordion-wrapper">
-            {% for service in page.services_area_2.services %}
-            <div class="card shadow">
-              <div class="card-header" id="accordion-heading-2-{{forloop.index}}">
-                <h5>
-                  <button class="collapsed" data-toggle="collapse" data-target="#accordion-collapse-2-{{forloop.index}}"
-                    aria-expanded="false" aria-controls="accordion-collapse-2-1">{{service.title}}</button>
-                </h5>
-              </div>
-              <div id="accordion-collapse-2-{{forloop.index}}" class="collapse"
-                aria-labelledby="accordion-heading-2-{{forloop.index}}" data-target="#accordion-2">
-                <div class="card-body">
-                  <p>{{service.content}}</p>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endif %}
-  </div>
-</div> -->
 
 
 

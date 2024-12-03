@@ -3,6 +3,7 @@
 	/* Defines a hexadecimal color (#ffd429), which represents a shade of yellow. 
 	This can be used elsewhere by referencing var(--color-default) */
 	--color-default: rgb(255, 212, 41);
+	--color-blue-yovori: #5458AA;
 
 	/* Defines the RGB values of the same color (245, 196, 99) for use in 
 	rgba() functions that support transparency. */
@@ -12,6 +13,7 @@
 	transparency) that can be applied to buttons on hover, using the RGB 
 	values from --rgb-default */
 	--btn-hover-default: 0 0 0 5px rgba(var(--rgb-default), 0.3);
+    --btn-strong-hover-cta: 0 0 0 5px rgba(var(--rgb-white), 0.5);
 
 
 	--color-text_yovori: rgb(51, 45, 41);

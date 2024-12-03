@@ -7180,6 +7180,36 @@ img.hero {
     background-position: center;
 }
 
+/* .cta {
+    background: var(--color-default);
+    border-radius: 15px;
+}
+
+.cta ::-moz-selection {
+    background: var(--color-dark);
+    color: var(--color-default);
+}
+.cta ::selection {
+    background: var(---color-dark);
+    color: var(--color-default);
+} */
+
+
+
+.cta ::-moz-selection {
+    background: var(--color-white);
+    color: #606060;
+}
+.cta ::selection {
+    background: var(--color-white);
+    color: #606060;
+}
+.cta {
+    background: var(--color-default);
+    border-radius: 15px;
+}
+
+
 
 
 
