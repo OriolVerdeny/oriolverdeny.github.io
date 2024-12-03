@@ -137,33 +137,32 @@ clients_carousel:
 
   <!-- container class is responsible for the margins on the right and the left sides -->
   <div class="container inner">
-    <div class="row">
+    <div class="row align-items-center">
 
-      <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-0">
-        <h2 class="display-1 color-white text-left mb-40">
+      <div class="col-12 col-md-8 offset-0 order-1">
+
+        <h2 class="hero display-1 color-white text-left">
           {{page.hero_area.title}}
         </h2>
 
-        <p class="display-3 color-white">
+
+        <p class="hero display-3 color-white">
           {{page.hero_area.text}}
         </p>
 
-
-        <a class="btn btn-l btn-white btn-strong-hover" 
-        href="{{page.hero_area.btn_url}}">
-       {{page.hero_area.btn_text}}
-     </a>
-
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="mt-4">
+            <a class="btn btn-lg btn-white btn-strong-hover" href="{{page.hero_area.btn_url}}">
+              {{page.hero_area.btn_text}}
+            </a>
+          </div>
+        </div>
 
       </div>
 
-      <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-0">
-        <img src="{{page.hero_area.hero_image}}" alt="Left Image"
-        style="border-radius: 15px;"/>
+      <div class="col-12 col-md-4 offset-0 order-2">
+        <img src="{{page.hero_area.hero_image}}" alt="Hero Image" class="img-fluid hero" />
       </div>
-
-      
-
 
     </div>
   </div>
@@ -174,7 +173,7 @@ clients_carousel:
 <!-- Value Proposition -->
 {% if page.value_proposition.enable %}
 <div class="wrapper yovori-wrapper">
-  <div class="container inner col-lg-6 offset-lg-3">
+  <div class="container inner col-lg-6 offset-lg-3" data-aos="fade-up" data-aos-delay="500">
     <h1 class="page-title mb-40 text-center"> {{page.value_proposition.title}} </h1>
     <div class="row">
         <p class="display-3 text-center"> {{page.value_proposition.text}}</p>
