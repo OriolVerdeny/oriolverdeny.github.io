@@ -166,7 +166,8 @@ clients_carousel:
 <!-- Value Proposition -->
 {% if page.value_proposition.enable %}
 <div class="wrapper yovori-wrapper">
-  <div class="container inner col-lg-6 offset-lg-3" data-aos="fade-up" data-aos-delay="500">
+  <div class="container inner col-lg-6 offset-lg-3" data-aos="zoom-in" data-aos-easing="linear"
+  data-aos-duration="2000">
     <h1 class="page-title mb-40 text-center"> {{page.value_proposition.title}} </h1>
     <div class="row">
         <p class="display-3 text-center"> {{page.value_proposition.text}}</p>
@@ -286,14 +287,14 @@ clients_carousel:
       </div>
       <div class="row align-items-center">
         {% if page.why_choose_us.image %}
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
           <figure><img src="{{page.why_choose_us.image}}" alt="{{page.why_choose_us.title}}" /></figure>
         </div>
         {% endif %}
         <div class="space40 d-lg-none"></div>
         <div class="col-lg-6 pl-60 pl-md-15">
           {% for list in page.why_choose_us.lists %}
-          <div data-aos="fade-up" data-aos-delay="800">
+          <div data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
             <h4>{{list.title}}</h4>
             <p>{{list.content}}</p>
           </div>
