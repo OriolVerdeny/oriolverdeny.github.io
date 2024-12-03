@@ -1,7 +1,7 @@
 # General Settings
 title: "Yovori"
 email: "yovori.contact@gmail.com"
-email_2: "yovori.contact@gmail.com"
+
 description: >- # this means to ignore newlines until "baseurl:"
   We provide data-driven services for the agricultural sector, helping organizations optimize processes, evaluate economic feasibility, and achieve sustainable outcomes that positively impact the environment.
 
@@ -18,114 +18,23 @@ address_01: "140 rue Claude Monet, 34090 Montpellier, France"
 phone_number: "+229 52 36 15 83"
 copyright_text: "© 2024 Yovori. All rights reserved."
 
+google_map: |
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76604.70307420091!2d3.8917115681929544!3d43.62221231493983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af411354d05b%3A0x6c1af4a14f964bc7!2s140%20Rue%20Claude%20Monet%2C%2034090%20Montpellier%2C%20France!5e0!3m2!1sen!2sbj!4v1732634533904!5m2!1sen!2sbj" width=100% height=100% style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 google_analytics:
   enable: true
   key: "m0Aey-AYSMOx7bRbTRL3JQ"  # UA-664136761-1
-
-
-google_map: |
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76604.70307420091!2d3.8917115681929544!3d43.62221231493983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af411354d05b%3A0x6c1af4a14f964bc7!2s140%20Rue%20Claude%20Monet%2C%2034090%20Montpellier%2C%20France!5e0!3m2!1sen!2sbj!4v1732634533904!5m2!1sen!2sbj" width=100% height=100% style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 # Custom css styles applied to all pages
 custom_css: yovori
 custom_font: font2
 
-black_menu: true
-header_style: 'one'
-
-
-
 social_accounts:
-  # title: "Follow Us"
-  # links:
-  #   - url: "#"
-  #     icon: "jam jam-twitter"
-
-  #   - url: "#"
-  #     icon: "jam jam-facebook"
-
-  #   - url: "#"
-  #     icon: "jam jam-instagram"
-
-  #   - url: "#"
-  #     icon: "jam jam-vimeo"
-      
-  #   - url: "#"
-  #     icon: "jam jam-youtube"
-
-
-external_links:
-  title: "Learn More"
+  title: "Follow Us:"
   links:
-    - url: "/about/about"
-      text: "About Us"
-    - url: "/#whatwedo"
-      text: "Our Services"
-    - url: "/blogs/index-4"
-      text: "Our Work"
-
-
-external_links_02:
-  title: "Need Help?"
-  links:
-    - url: "/legal-details"
-      text: "Legal details"
-    - url: "/cgu"
-      text: "Terms of Use"
-    - url: "/rgpd"
-      text: "Privacy Policy"
-    - url: "/cgs"
-      text: "Terms of Service"
-    - url: "/contact/contact-4"
-      text: "Contact Us"
-
-
-
-external_links_03:
-  title: "Company"
-  links:
-    - url: "#"
-      text: "Our Team"
-    - url: "#"
-      text: "Strategy"
-    - url: "#"
-      text: "Service"
-    - url: "#"
-      text: "Mission"
-    - url: "#"
-      text: "Process"
-
-footer_newsletter:
-  title: "Our Newsletter"
-  sub_title: "Subscribe to our newsletter to get our news & deals delivered to your inbox!"
-  subscribe_button_text: "Join"
-
-
-one_page_nav_settings:
-  links:
-    - text: "Home"
-      url: "#home"
-    - text: "Services"
-      url: "#services"
-    - text: "Experiences"
-      url: "#experiences"
-    - text: "Portfolio"
-      url: "#portfolio"
-    - text: "Testimonials"
-      url: "#testimonials"
-    - text: "Contact"
-      url: "#contact"
+    - url: "https://www.linkedin.com/in/oriolverdeny/"
+      icon: "jam jam-linkedin"
 
 author_page_header:
   header_background_image: "/assets/images/art/bg31.jpg"
 
-gallery:
-  images:
-  - img: "/assets/images/art/z1.svg"
-  - img: "/assets/images/art/z2.svg"
-  - img: "/assets/images/art/z3.svg"
-  - img: "/assets/images/art/z4.svg"
-  - img: "/assets/images/art/z5.svg"
-  - img: "/assets/images/art/z6.svg"
-  - img: "/assets/images/art/z7.svg"
-  - img: "/assets/images/art/z8.svg"

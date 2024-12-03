@@ -2,10 +2,6 @@
 
 main_menu:
 
-  # - text: "Home"
-  #   menu_type: "simple"
-  #   url: "/"
-
   - text: "Our services"
     url: "/#whatwedo"
     submenu:
@@ -18,7 +14,7 @@ main_menu:
 
   - text: "Case studies"
     menu_type: "simple"
-    url: "/blogs/index-4"
+    url: "/blogs/index"
 
   - text: "About"
     menu_type: "simple"
@@ -26,12 +22,46 @@ main_menu:
 
   - text: "Contact"
     menu_type: "simple"
-    url: "/contact/contact-4"
+    url: "/contact/contact"
 
-  # - text: "About us"
-  #   url: "/about/about" 
-  #   submenu:
-  #     - text: "About"
-  #       url: "/about/about"
-  #     - text: "Contact"
-  #       url: "/contact/contact-4"
+# external_links_02
+
+footer_nav_01:
+  title: "Legal"
+  links:
+    - url: "/legal-details"
+      text: "Legal details"
+    - url: "/cgu"
+      text: "Terms of Use"
+    - url: "/rgpd"
+      text: "Privacy Policy"
+    - url: "/cgs"
+      text: "Terms of Service"
+
+footer_nav_02:
+  title: "Learn More"
+  links:
+    - url: "/about/about"
+      text: "About Us"
+    - url: "/#whatwedo"
+      text: "Our Services"
+    - url: "/blogs/index"
+      text: "Our Work"
+    - url: "/contact/contact"
+      text: "Contact Us"
+
+
+
+footer_nav_03:
+  # title: "Company"
+  # links:
+  #   - url: "#"
+  #     text: "Our Team"
+  #   - url: "#"
+  #     text: "Strategy"
+  #   - url: "#"
+  #     text: "Service"
+  #   - url: "#"
+  #     text: "Mission"
+  #   - url: "#"
+  #     text: "Process"
