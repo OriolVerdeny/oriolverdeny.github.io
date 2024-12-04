@@ -26,8 +26,9 @@ google_analytics:
   key: "m0Aey-AYSMOx7bRbTRL3JQ"  # UA-664136761-1
 
 # Custom css styles applied to all pages
-custom_css: yovori
-custom_font: font2
+custom_css: yovori_color
+custom_font: yovori_font
+custom_style: yovori_style
 
 social_accounts:
   title: "Follow Us:"

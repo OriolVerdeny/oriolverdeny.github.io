@@ -3,11 +3,11 @@ layout: general_page
 
 tab_title: Services
 
-call_of_action:
+call_to_action:
   enable: true
   text: "Do you want us to just do your data analysis for you?"
   button_text: "Yes! Let's talk!"
-  background: "/assets/images/art/bg5.jpg"
+  background: 
 
 hero_area:
   enable: true
@@ -151,7 +151,6 @@ tabs:
     </svg></div>
 </div>
 
-
 <div class="wrapper white-wrapper">
   <div class="container inner">
     <h2 class="section-title mb-40 text-center">{{page.services_area_1.title}}</h2>
@@ -196,34 +195,13 @@ tabs:
       {% endfor %}
 
     </div>
-    <!-- /.tab-content -->
-  </div>
-  <!-- /.container -->
-     <!-- <div class="divider" data-image-src="{{relative_url}}/assets/images/04-About/vision.jpg">
-    <svg xmlns="http://www.w3.org/2000/svg" class="fill-gray" preserveAspectRatio="none" viewBox="0 0 1070 52.84">
-      <path d="M0,40 C150,20,300,60,450,40 S800,10,1070,35 v18 H0 Z" />
-    </svg>
-  </div> -->
-</div>
-<!-- /.wrapper -->
 
-
-<!-- Fetch the Contact menu item directly -->
-{% assign contact = site.data.navigation.main_menu | where: "text", "Contact" | first %}
 <!-- Call to Action -->
-<div class="wrapper white-wrapper">
-  <div class="container inner">
-    <div class="box p-60 cta rounded d-md-flex align-items-md-center justify-content-md-between">
-      <h3 class="display-3 mb-0">{{ page.call_of_action.text }}</h3>
-      <!-- <div class="space30 d-md-none"></div> -->
-      <a href="{{ contact.url | default: '/contact/' }}"
-        class="btn btn-cta btn-strong-hover mb-0 font-weight-bold display-4">
-        {{ page.call_of_action.button_text }}
-      </a>
-    </div>
-  </div>
-</div>
+    <div class="space100 d-none d-md-block"></div>
+    {% include call_to_action.html %}
 
+  </div>  
+</div>
 
 
 <div class="wrapper dark-wrapper inverse-text">

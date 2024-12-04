@@ -1,0 +1,38 @@
+/* Block */
+:root {
+	/* Defines Yovori specific global colors. 
+	They can be used elsewhere by referencing var(--color-default) */
+	--color-default: #ffd429;
+	--color-blue-yovori: #5458aa;
+	--color-dark: #404040;
+	--color-light-gray: #f3f4f7;
+	/* --color-text_yovori: #332d29; */
+	--color-dark-yovori: #332d29;
+
+	/* Defines the RGB values of the same colors for use in 
+	rgba() functions that support transparency. */
+	--rgb-default: 255, 212, 41;
+	--rgb-blue-yovori: 84, 88, 170;
+	--rgb-dark: 64, 64, 64;
+	--rgb-light-gray: 243, 244, 247;
+	--rgb-dark-yovori: 51, 45, 41;
+
+	/* Defines a box-shadow style (inset shadow with 5px spread and 30% 
+	transparency) that can be applied to buttons on hover, using the RGB 
+	values from --rgb-default */
+	--btn-hover-default: 0 0 0 5px rgba(var(--rgb-default), 0.3);
+	/* --btn-hover-text_yovori: 0 0 0 5px rgba(var(--rgb-text_yovori), 0.3); */
+	--btn-hover-blue-yovori: 0 0 0 5px rgba(var(--rgb-blue-yovori), 0.3);
+	--btn-hover-dark: 0 0 0 5px rgba(var(--rgb-dark), 0.3);
+	--btn-hover-light-gray: 0 0 0 5px rgba(var(--rgb-light-gray), 0.3);
+	--btn-hover-dark-yovori: 0 0 0 5px rgba(var(--rgb-dark-yovori), 0.3);
+
+	/* --btn-strong-hover-cta: 0 0 0 5px rgba(var(--rgb-white), 0.5); */
+	--btn-strong-hover-default: 0 0 0 5px rgba(var(--rgb-default), 0.5);
+	--btn-strong-hover-blue-yovori: 0 0 0 5px rgba(var(--rgb-blue-yovori), 0.5);
+	--btn-strong-hover-dark: 0 0 0 5px rgba(var(--rgb-dark), 0.5);
+	--btn-strong-hover-light-gray: 0 0 0 5px rgba(var(--rgb-light-gray), 0.5);
+	--btn-strong-hover-dark-yovori: 0 0 0 5px rgba(var(--rgb-dark-yovori), 0.5);
+}
+
+

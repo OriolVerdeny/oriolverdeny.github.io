@@ -1,0 +1,45 @@
+<!-- {% if page.call_to_action.enable %}
+
+{% assign about_us = site.data.navigation.main_menu | where: "text", "About us" | first %}
+{% assign contact = about_us.submenu | where: "text", "Contact" | first %}
+
+
+{% assign contact = site.data.navigation.main_menu | where: "text", "Contact" | first %}
+
+<div class="wrapper white-wrapper">
+	<div class="container inner">
+		<div class="box shadow p-60 image-wrapper bg-full bg-image inverse-text rounded d-md-flex align-items-md-center justify-content-md-between"
+			data-image-src="{{relative_url}}{{ page.call_to_action.background }}">
+			<h3 class="display-3 mb-0">{{ page.call_to_action.text }}</h3>
+			<a href="{{ contact.url | default: '/contact/' }}"
+				class="btn btn-white btn-strong-hover mb-0 font-weight-bold display-4">
+				{{ page.call_to_action.button_text }}
+			</a>
+		</div>
+	</div>
+</div>
+
+{% endif %} -->
+
+
+<!-- we could use the class "cta" or "image-wrapper" depending on if we want a background image or a color-->
+
+{% if page.call_to_action.enable %}
+
+{% assign contact = site.data.navigation.main_menu | where: "text", "Contact" | first %}
+<div class="box p-60 cta d-md-flex align-items-md-center justify-content-md-between
+			{% if page.call_to_action.background %} cta-wrapper bg-full bg-image {% endif %}"
+	{% if page.call_to_action.background %}
+    	data-image-src="{{ relative_url }}{{ page.call_to_action.background }}"
+	{% endif %}
+	data-aos="fade-up"
+	data-aos-duration="2000"
+	data-aos-once="true">
+	<h3 class="display-3 mb-0">{{ page.call_to_action.text }}</h3>
+	<a href="{{ contact.url | default: '/contact/' }}"
+		class="btn btn-strong-hover btn-cta mb-0 font-weight-bold display-4">
+		{{ page.call_to_action.button_text }}
+	</a>
+</div>
+
+{% endif %}

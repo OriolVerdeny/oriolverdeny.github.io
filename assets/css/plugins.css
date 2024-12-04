@@ -10,10 +10,10 @@
 -------------------------------------------------------------------------------------*/
 :root {
 	--color-default: #848abd;
-	--color-dark: #404040;
-	--color-gray: #999;
-	--color-light-gray: #f3f4f7;
 	--color-white: #FFF;
+	--color-black: #000;
+	--color-dark: #1e1e1e;
+	--color-gray: #999;
 	--color-red: #d75959;
 	--color-orange: #fb9d7e;
 	--color-yellow: #f5c463;
@@ -35,7 +35,7 @@
 	--rgb-white: 255, 255, 255;
 	--rgb-black: 0, 0, 0;
 	--rgb-dark: 30, 30, 30;
-	--rgb-gray: 144, 144, 144;
+	--rgb-gray: 153, 153, 153;
 	--rgb-red: 215, 89, 89;
 	--rgb-orange: 251, 157, 126;
 	--rgb-yellow: 245, 196, 99;

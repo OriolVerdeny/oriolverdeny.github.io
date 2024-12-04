@@ -1,0 +1,292 @@
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	TITLE BACKGROUND (used in the badges that introduce sections (not used anymore)
+/*-----------------------------------------------------------------------------------*/
+
+.title-bg {
+    padding-top: 0.4rem;
+}
+
+/* Background color of elements with both .title-bg and 
+.bg-default classes to the same yellow (var(--rgb-default)), 
+but with 90% opacity . */
+.title-bg.bg-default {
+    background: rgba(var(--rgb-default), 0.9);
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	BACKGROUND WITH OPACITY VALUE
+/*-----------------------------------------------------------------------------------*/
+
+/* This sets a very subtle background color (20% opacity) using the 
+--rgb-default value, creating a nearly transparent effect. */
+.bg-opacity-default {
+    background: rgba(var(--rgb-default), 0.20);
+}
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	BADGES OF THE CASE STUDIES
+/*-----------------------------------------------------------------------------------*/
+
+.badge-cart,
+.badge {
+    padding: 0.5rem 1rem;
+}
+
+.badge-category {
+    color: var(--color-default);
+    background: var(--color-dark-yovori);
+}
+
+.badge-category:hover,
+.badge-category:focus {
+    color: var(--color-default);
+    background: var(--color-dark);
+}
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	HERO SECTION
+/*-----------------------------------------------------------------------------------*/
+
+h2.hero {
+    font-size: clamp(1.7rem, 4vw, 3rem); 
+    line-height: 1.2;
+}
+
+p.hero {
+    font-size: clamp(1rem, 2vw, 1.5rem); 
+    line-height: 1.5;
+}
+img.hero {
+    width: clamp(75%, 80vw, 100%);
+    max-width: clamp(250px, 20vw, 350px);
+    height: auto;
+    border-radius: 15px;
+}
+
+.image-wrapper-hero {
+    /* padding: clamp(10px, 5vw, 30px); */
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	CALL TO ACTION
+/*-----------------------------------------------------------------------------------*/
+
+/*--------*/
+/* BANNER */
+/*--------*/
+
+.cta ::-moz-selection {
+    background: rgba(var(--rgb-blue-yovori), 0.8);
+    color: var(--color-white);
+}
+.cta ::selection {
+    background: rgba(var(--rgb-blue-yovori), 0.8);
+    color: var(--color-white);
+}
+.cta {
+    background: var(--color-default);
+    border-radius: 50px;
+}
+
+
+
+.cta-wrapper {
+    background: no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+.cta-wrapper:not(.mobile) {
+    background-attachment: fixed !important
+}
+.cta-wrapper.bg-auto {
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll !important;
+}
+.cta-wrapper.bg-full {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll !important;
+}
+.cta-wrapper:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba(var(--rgb-default), 0.75);
+}
+.cta-wrapper:before {
+    border-radius: 50px !important;
+}
+.cta-wrapper.gradient-overlay:before {
+    background: none;
+    background-image: -o-linear-gradient(315deg, rgba(111, 63, 124, 0.55) 0%, rgba(88, 73, 170, 0.55) 100%);
+    background-image: linear-gradient(135deg, rgba(111, 63, 124, 0.55) 0%, rgba(88, 73, 170, 0.55) 100%);
+}
+.cta-wrapper.no-overlay:before {
+    display: none;
+}
+.cta-wrapper:not(.no-overlay) * {
+    position: relative;
+    z-index: 2;
+}
+.cta-wrapper .cbp-nav-controls,
+.cta-wrapper .tparrows {
+    position: absolute;
+}
+
+@media (max-width: 767px) {
+    .cta-wrapper.bg-full {
+        background-size: cover !important;
+    }
+}
+
+
+
+
+
+
+
+
+/*--------*/
+/* BUTTON */
+/*--------*/
+
+.btn-cta{
+    color: var(--color-white);
+    background: var(--color-blue-yovori);
+}
+.btn-cta:focus,
+.btn-cta:hover {
+    background-color:  rgba(var(--rgb-blue-yovori), 0.9);
+    color: white;
+}
+
+.btn.btn-cta:hover,
+.btn.btn-cta:active,
+.btn.btn-cta.active {
+    -webkit-box-shadow: var(--btn-hover-blue-yovori);
+            box-shadow: var(--btn-hover-blue-yovori);
+}
+
+.btn.btn-strong-hover.btn-cta:hover,
+.btn.btn-strong-hover.btn-cta:active,
+.btn.btn-strong-hover.btn-cta.active {
+    -webkit-box-shadow: var(--btn-strong-hover-blue-yovori);
+            box-shadow: var(--btn-strong-hover-blue-yovori);
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	MORE YOVORI (adds Yovori styling to .more class)
+/*-----------------------------------------------------------------------------------*/
+
+.more-yovori {
+    color: var(--color-default);
+}
+
+.more-yovori:hover {
+    color: rgba(var(--rgb-default), 0.8);
+}
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	NAVIGATION LINKS, DROPDOWNS, TABS
+/*-----------------------------------------------------------------------------------*/
+
+/* Navigation and Button Styling */
+.nav-uppercase .navbar-nav .nav-link,
+.navbar-nav .nav-link,
+.dropdown-item,
+.mega-menu-content a,
+.nav-tabs .nav-link {
+    font-size: var(--small-font-size); 
+    font-weight: var(--font-weight-bold);
+    line-height: var(--compact-line-height);  /* vertical spacing between lines of text */
+}
+
+
+/* Media Query Adjustments */
+@media (min-width: 992px) {
+
+    .nav-uppercase .navbar-nav .nav-link,
+    .navbar.extended .navbar-nav .nav-link {
+        padding-top: 1.35rem;
+        padding-bottom: 1.3rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    .nav-uppercase .navbar-nav .nav-link,
+    .navbar-nav .nav-link,
+    .dropdown-item,
+    .mega-menu-content a {
+        font-size: calc(var(--small-font-size) - 0.1rem);
+    }
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	PREVENT SELECTION
+/*-----------------------------------------------------------------------------------*/
+
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	DEBUGGING (to see positioning of elements)
+/*-----------------------------------------------------------------------------------*/
+
+/* Show all elements with red borders */
+/* * {
+	border: 1px solid red !important;
+	box-sizing: border-box;
+} */
+
+/* Restrict red borders to specific classes */
+/* .container * {
+	border: 1px solid red !important;
+} */
+
+
+/* Prevent image to be dragged */
+/* <img src="{{relative_url}}{{service.icon_image}}" draggable="false" alt=""> */
+
+/* Prevent text to be selected */
+/* <div class="prevent-select"> */
