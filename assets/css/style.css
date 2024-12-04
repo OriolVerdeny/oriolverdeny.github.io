@@ -3992,187 +3992,11 @@ th {
     padding-left: 40px;
 }
 /*-----------------------------------------------------------------------------------*/
-/*  49. SLIDER REVOLUTION
+/*  49. SLIDER REVOLUTION - I deleted this section since I'm not using it
 /*-----------------------------------------------------------------------------------*/
-.rev_slider_wrapper {
-    left: 0px;
-    width: 100%;
-    position: relative;
-}
-.rev_slider_wrapper .divider {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
-}
-.autowidth-container {
-    border-radius: 4px !important;
-    overflow: hidden !important;
-}
-.tp-dottedoverlay.gradient {
-    background-image: -o-linear-gradient(315deg, rgba(111, 63, 124, 0.55) 0%, rgba(88, 73, 170, 0.55) 100%);
-    background-image: linear-gradient(135deg, rgba(111, 63, 124, 0.55) 0%, rgba(88, 73, 170, 0.55) 100%);
-}
-.tp-dottedoverlay.darkoverlay {
-    background: rgba(var(--rgb-dark), 0.5);
-}
-.tp-dottedoverlay.darkoverlay2 {
-    background: rgba(var(--rgb-dark), 0.3);
-}
-.tparrows {
-    background: none;
-    text-shadow: 0px 1px 1px rgba(var(--rgb-black), 0.1);
-}
-.tparrows:before {
-    font-family: 'Custom';
-    font-size: 1.5rem;
-    color: rgba(var(--rgb-white), 1);
-    line-height: 1.5rem;
-    -webkit-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
-}
-.tparrows.tp-leftarrow:before {
-    content: "\e900";
-}
-.tparrows.tp-rightarrow:before {
-    content: "\e901";
-}
-.tparrows:hover {
-    background: none;
-}
-.tparrows:hover:before {
-    color: rgba(var(--rgb-white), 0.75);
-}
-.tp-bullet {
-    width: 12px;
-    height: 12px;
-    margin: 0 0.45rem;
-    background: rgba(var(--rgb-white), 1);
-    display: block;
-    -webkit-backface-visibility: visible;
-    -webkit-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
-    border-radius: 100%;
-    -webkit-transform: scale(0.6);
-    -ms-transform: scale(0.6);
-    transform: scale(0.6);
-    position: absolute;
-    cursor: pointer;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-}
-.tp-bullet.selected,
-.tp-bullet:hover {
-    background: rgba(var(--rgb-white), 1);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-}
-.tp-caption.btn,
-.tp-caption.btn-play {
-    -webkit-transition: -webkit-box-shadow 300ms ease-in-out !important;
-    transition: -webkit-box-shadow 300ms ease-in-out !important;
-    -o-transition: box-shadow 300ms ease-in-out !important;
-    transition: box-shadow 300ms ease-in-out !important;
-    transition: box-shadow 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out !important;
-    letter-spacing: 0.025rem !important;
-}
-.tp-caption.tp-rotate {
-    -webkit-transform: translateX(53%) translateY(-150px) rotate(-30deg) !important;
-        -ms-transform: translateX(53%) translateY(-150px) rotate(-30deg) !important;
-            transform: translateX(53%) translateY(-150px) rotate(-30deg) !important;
-    -webkit-transform-origin: bottom left !important;
-        -ms-transform-origin: bottom left !important;
-            transform-origin: bottom left !important;
-    overflow: hidden !important;
-    border-bottom-left-radius: 120px !important;
-    width: 100% !important;
-}
-.tp-caption img {
-    -webkit-transform: translateZ(0px);
-            transform: translateZ(0px);
-}
-.video-control {
-    cursor: pointer;
-    background: none;
-    color: rgba(var(--rgb-white), 1);
-    font-size: 1.1rem;
-    -webkit-transition: color 150ms ease-in-out !important;
-    -o-transition: color 150ms ease-in-out !important;
-    transition: color 150ms ease-in-out !important;
-}
-.video-control:hover {
-    color: var(--color-white) !important;
-    color: rgba(var(--rgb-white), 0.75) !important
-}
-a.btn-play-wrapper {
-    color: #404040 !important;
-    -webkit-transition: color 150ms ease-in-out !important;
-    -o-transition: color 150ms ease-in-out !important;
-    transition: color 150ms ease-in-out !important;
-}
-a.btn-play-wrapper.color-white,
-a.btn-play-wrapper.color-white:hover {
-    color: var(--color-white) !important;
-}
-a.btn-play-wrapper:hover {
-    color: var(--color-default) !important
-}
-a.btn-play-wrapper .btn-play:hover {
-    -webkit-box-shadow: var(--shadow);
-            box-shadow: var(--shadow);
-}
-.zeus .tp-tab {}
-.zeus .tp-tab:hover,
-.zeus .tp-tab.selected {}
-.zeus .tp-tab,
-.zeus .tp-tab:after,
-.zeus .tp-tab .tp-tab-image {
-    border-radius: 100%;
-}
-.zeus .tp-tab:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    display: block;
-    z-index: 2;
-    -webkit-transition: all 150ms ease-in-out;
-    -o-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 2px solid transparent;
-}
-.zeus .tp-tab.selected:after {
-    border-color: rgba(255, 255, 255, 0.5);
-}
-.dark-nav .tparrows {
-    text-shadow: none;
-}
-.dark-nav .tparrows:before {
-    color: rgba(var(--rgb-black), 0.75);
-}
-.dark-nav .tparrows:hover:before {
-    color: rgba(var(--rgb-black), 0.55);
-}
-.dark-nav .tp-bullet {
-    background: rgba(var(--rgb-black), 0.2);
-}
-.dark-nav .tp-bullet.selected,
-.dark-nav .tp-bullet:hover {
-    background: rgba(var(--rgb-black), 0.2);
-}
-.rev-scroll-btn span {
-    width: 4px;
-    height: 4px;
-    margin: -2px 0 0 -2px;
-}
+
+
+
 /*-----------------------------------------------------------------------------------*/
 /*  50. OWL CAROUSEL
 /*-----------------------------------------------------------------------------------*/
@@ -7227,3 +7051,9 @@ img.hero {
   /* .container * {
     border: 1px solid red !important; 
   } */
+
+/* 
+  .divider, .fill-white {
+    outline: 1px solid red;
+  } */
+
