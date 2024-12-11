@@ -11,19 +11,16 @@ hero_area:
   - "/assets/images/Case studies/oriol-verdeny.jpg"
 
   title: "Advancing agriculture with data-driven decisions"
-  text: "We envision a world where innovation, technology and sustainable principles drive the creation of a
-  regenerative food system that feeds us, <b>preserves biodiversity</b>, restore ecosystems, and contributes to the development
-  of the economy."
+  text: "We unlock the value of your data to help you achieve clear results and make informed, evidence-based decisions."
   btn_text: "Discover our services"
   btn_url: "#whatwedo"
  
 
 value_proposition:
   enable: true
-  title: "Advancing agriculture with data-driven decisions"
-  text: "We envision a world where innovation, technology and sustainable principles drive the creation of a
-  regenerative food system that feeds us, <b>preserves biodiversity</b>, restore ecosystems, and contributes to the development
-  of the economy."
+  title: "Tired of struggling with complex and unreliable data, inefficient processes, or unclear financial outcomes?"
+  text: "We are here to help you use data to make <b>better decisions</b>, show <b>clear results</b>, and <b>turn findings into real-world results</b>.<br><br> 
+  Whether you're managing development projects, conducting research, or optimizing agribusiness operations, we want you get the most out of your data."
 
 what_we_do:
   enable: true
@@ -52,21 +49,24 @@ what_we_do:
 how_it_works:
   enable: true
   title: "How It Works?"
-  sub_title: "Find out everything you need about creating a business process model."
+  sub_title: "From goals to result: a step-by-step process."
   image: "/assets/images/concept/concept15@2x.png"
   lists:
 
-    - title: "Creative Ideas"
-      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras."
+    - title: "Initial Consultation"
+      description: "We discuss your goals, challenges, and the data you have available."
 
-    - title: "Magic Touch"
-      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras."
+    - title: "Data Integration and Preparation"
+      description: "We integrate your data into our analytical tools and prepare it for analysis."
 
     - title: "Data Analysis"
-      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras."
+      description: "We analyze, model, and visualize the data to address your specific goals."
 
-    - title: "Finalize Product"
-      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras."
+    - title: "Reporting"
+      description: "You receive a clear report with detailed results and practical information from the findings."
+
+    - title: "Follow-up Support"
+      description: "We provide ongoing support to help you implement recommendations, adjust strategies, and update models, ensuring you stay aligned with your objectives."
 
 why_choose_us: 
   enable: true
@@ -134,9 +134,9 @@ clients_carousel:
 
       <div class="col-12 col-md-8 offset-0 order-1">
 
-        <h2 class="hero display-1 color-white text-left">
+        <h1 class="hero display-1 color-white text-left">
           {{page.hero_area.title}}
-        </h2>
+        </h1>
 
 
         <p class="hero display-3 color-white">
@@ -153,7 +153,7 @@ clients_carousel:
 
       </div>
 
-      <div class="col-12 col-md-4 offset-0 order-2">
+      <div class="col-12 col-md-4 offset-0 order-2 d-flex justify-content-center">
         <img src="{{page.hero_area.hero_image}}" alt="Hero Image" class="img-fluid hero" />
       </div>
 
@@ -166,11 +166,18 @@ clients_carousel:
 <!-- Value Proposition -->
 {% if page.value_proposition.enable %}
 <div class="wrapper yovori-wrapper">
-  <div class="container inner col-lg-6 offset-lg-3" data-aos="zoom-in" data-aos-easing="linear"
-  data-aos-duration="2000">
-    <h1 class="page-title mb-40 text-center"> {{page.value_proposition.title}} </h1>
+  <div class="container inner" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="2000">
     <div class="row">
-        <p class="display-3 text-center"> {{page.value_proposition.text}}</p>
+
+      <div class="col-lg-8 offset-lg-2">
+
+        <h1 class="hero page-title mb-40 text-center"> {{page.value_proposition.title}} </h1>
+        <p class="hero display-3 text-center"> {{page.value_proposition.text}}</p>
+
+      </div>
+
+      
+
     </div>
   </div>
 </div>
@@ -209,53 +216,15 @@ clients_carousel:
 {% endif %}
 
 
-<!-- How it works -->
-<!-- {% if page.how_it_works.enable %}
-<div class="wrapper light-wrapper">
-  <div class="container inner">
-    <div class="two-columns-one">
-      <div class="row align-items-center">
-        {% if page.how_it_works.image %}
-        <div class="col-lg-6">
-          <figure>
-            <img src="{{page.how_it_works.image}}" alt="{{page.how_it_works.title}}" />
-          </figure>
-        </div>
-        {% endif %}
-        <div class="space20 d-md-none"></div>
-        <div class="space50 d-none d-md-block d-lg-none"></div>
-        <div class="col-lg-6 pl-60 pl-md-15">
-          <h2 class="title-bg bg-default color-dark">{{page.how_it_works.title}}</h2>
-          <div class="space10"></div>
-          <h3 class="display-3">{{page.how_it_works.sub_title}}</h3>
-          <div class="space20"></div>
-          <div class="row">
-            {% for list in page.how_it_works.lists %}
-            <div class="col-md-6">
-              <h5><span class="color-dark">{{forloop.index}}.</span> {{list.title}}</h5>
-              <p>{{list.description}}</p>
-            </div>
-            {% assign value = forloop.index | modulo:2 %}
-            {% if value == 0 %}
-            <div class="space10 d-none d-md-block"></div>
-            {% endif %}
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% endif %} -->
 
 <!-- How it works -->
-{% if page.how_it_works.enable %}
+<!-- {% if page.how_it_works.enable %}
 <div class="wrapper white-wrapper">
   <div class="container inner">
-    <h2 class="display-3 title-color color-gray text-center mb-40">How it Works?</h2>
+    <h2 class="display-3 title-color color-gray text-center mb-40">{{page.how_it_works.title}}</h2>
     <div class="row gutter-50 gutter-md-30 process-wrapper line text-center">
       {% for list in page.how_it_works.lists %}
-      <div class="col-md-3"
+      <div class="col-md-2"
       data-aos="zoom-in" 
       data-aos-delay="{{ forloop.index | times: 500 }}" 
       data-aos-duration="1000"> 
@@ -271,7 +240,60 @@ clients_carousel:
     </div>
   </div>
 </div>
+{% endif %} -->
+
+
+
+{% if page.how_it_works.enable %}
+<div class="wrapper white-wrapper">
+  <div class="container inner">
+    <h2 class="display-3 title-color color-gray text-center mb-40">{{page.how_it_works.title}}</h2>
+
+    <div class="row align-items-center">
+      {% if page.how_it_works.image %}
+      <div class="col-lg-5 order-lg-2">
+        <figure><img src="{{page.how_it_works.image}}" alt="{{page.how_it_works.title}}"/></figure>
+      </div>
+      {% endif %}
+      <div class="space20 d-md-none"></div>
+      <div class="space50 d-none d-md-block d-lg-none"></div>
+      <div class="col-lg-7 pr-60 pr-md-15">
+
+        <h3 class="display-3">{{page.how_it_works.sub_title}}</h3>
+        {% for step in page.how_it_works.lists %}
+        <div class="space30"></div>
+        <div class="d-flex flex-row justify-content-start"
+        data-aos="zoom-in" 
+        data-aos-anchor-placement="top-bottom"
+        data-aos-once="true"
+        data-aos-delay="500" 
+        data-aos-duration="1500">
+          <div>
+            
+            <span class="icon icon-blob icon-blob-dark mb-30 mr-25">
+              <span class="number color-default">
+                {{forloop.index}}
+              </span>
+            </span>
+            
+          </div>
+          <div>
+            <h5>{{step.title}}</h5>
+            <p class="mb-0">{{step.description}}</p>
+          </div>
+         </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.wrapper -->
 {% endif %}
+
+
+
+
+
 
 <!-- Why choose us -->
 {% if page.why_choose_us.enable %}

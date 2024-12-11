@@ -2,7 +2,7 @@
 
 main_menu:
 
-  - text: "Our services"
+  - text: "Services"
     url: "/#whatwedo"
     submenu:
       - text: "Data Analysis"

@@ -1,5 +1,59 @@
+/*-----------------------------------------------------------------------------------*/
+/*	CONTAINERS
+/*-----------------------------------------------------------------------------------*/
+
+/* Wider container for specific sections */
+.container-wide {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Adjust max-width for different breakpoints */
+@media (min-width: 576px) {
+    .container-wide {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-wide {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-wide {
+        max-width: 1040px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-wide {
+        max-width: 1300px;
+    }
+}
 
 
+
+/*-----------------------------------------------------------------------------------*/
+/*	WRAPPERS
+/*-----------------------------------------------------------------------------------*/
+
+.yovori-wrapper {
+    background-color: var(--color-default) !important;
+}
+
+.yovori-wrapper ::-moz-selection {
+    background: rgba(var(--rgb-blue-yovori), 0.8);
+    color: var(--color-white);
+}
+.yovori-wrapper ::selection {
+    background: rgba(var(--rgb-blue-yovori), 0.8);
+    color: var(--color-white);
+}
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -61,7 +115,7 @@ but with 90% opacity . */
 /*	HERO SECTION
 /*-----------------------------------------------------------------------------------*/
 
-h2.hero {
+h1.hero {
     font-size: clamp(1.7rem, 4vw, 3rem); 
     line-height: 1.2;
 }
@@ -83,6 +137,22 @@ img.hero {
     background-position: center;
 }
 
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	ABOUT SECTION
+/*-----------------------------------------------------------------------------------*/
+
+
+blockquote.icon.about p,
+p.about {
+    /* font-size: 2rem;
+    line-height: 1.6rem; */
+    font-style: normal;
+    font-size: clamp(1rem, 2vw, 1.2rem); 
+    line-height: 1.5;
+}
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -165,12 +235,6 @@ img.hero {
 }
 
 
-
-
-
-
-
-
 /*--------*/
 /* BUTTON */
 /*--------*/
@@ -198,8 +262,6 @@ img.hero {
     -webkit-box-shadow: var(--btn-strong-hover-blue-yovori);
             box-shadow: var(--btn-strong-hover-blue-yovori);
 }
-
-
 
 
 
@@ -267,6 +329,40 @@ img.hero {
     user-select: none; /* Standard syntax */
 }
 
+/* Prevent image to be dragged */
+/* <img src="{{relative_url}}{{service.icon_image}}" draggable="false" alt=""> */
+
+/* Prevent text to be selected */
+/* <div class="prevent-select"> */
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	FULL SCREEN CONTAINER
+/*-----------------------------------------------------------------------------------*/
+
+.full-screen-container {
+
+    min-height: 100vh; /* Ensures the container is at least the viewport height */
+    width: 100%; /* Full width of the screen */
+    display: flex; /* Optional: for flexible content alignment */
+    justify-content: center; /* Optional: center content horizontally */
+    align-items: center; /* Optional: center content vertically */
+    background-color: #f0f0f0; /* Optional: add a background color */
+    padding: 20px; /* Adds padding to prevent content from touching edges */
+    box-sizing: border-box; /* Include padding and borders in width/height calculations */
+    overflow: auto; /* Ensures content is scrollable if it overflows */
+}
+
+
+@media (max-width: 768px) {
+    .full-screen-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -285,8 +381,52 @@ img.hero {
 } */
 
 
-/* Prevent image to be dragged */
-/* <img src="{{relative_url}}{{service.icon_image}}" draggable="false" alt=""> */
 
-/* Prevent text to be selected */
-/* <div class="prevent-select"> */
+
+
+/* Full-width horizontal line with limited-width text */
+.value-item {
+    border-bottom: 1px solid #ccc; /* Horizontal line spanning full width */
+    padding: 1rem 0; /* Vertical padding */
+    transition: background-color 1.0s ease;
+}
+
+
+/* Icon container default styles */
+.icon-value {
+    background-color: #ddd; /* Light gray background */
+    color: gray; /* Gray number */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+
+/* Text and title default styles */
+.text-container,
+.value-title {
+    max-width: 600px; /* Limit text width */
+    color: gray; /* Default text color */
+    transition: color 1s ease; /* Smooth transition for hover effect */
+}
+
+
+
+/* Hover effects */
+.value-item:hover {
+    background-color: rgba(var(--rgb-default), 0.20); /* Dark background on hover */
+}
+
+.value-item:hover .icon-value {
+    background-color: var(--color-dark); /* Dark background on hover */
+    color: var(--color-default); /* Default text color on hover */
+}
+
+.value-item:hover .text-container,
+.value-item:hover .value-title {
+  color: black;
+}
