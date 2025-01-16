@@ -11,21 +11,21 @@ hero_area:
   - "/assets/images/Case studies/oriol-verdeny.jpg"
 
   title: "Advancing agriculture with data-driven decisions"
-  text: "We unlock the value of your data to help you achieve clear results and make informed, evidence-based decisions."
-  btn_text: "Discover our services"
+  text: "I unlock the value of your data to help you achieve clear results and make informed, evidence-based decisions."
+  btn_text: "Discover my services"
   btn_url: "#whatwedo"
  
 
 value_proposition:
   enable: true
   title: "Tired of struggling with complex and unreliable data, inefficient processes, or unclear financial outcomes?"
-  text: "We are here to help you use data to make <b>better decisions</b>, show <b>clear results</b>, and <b>turn findings into real-world results</b>.<br><br> 
-  Whether you're managing development projects, conducting research, or optimizing agribusiness operations, we want you get the most out of your data."
+  text: "I am here to help you use data to make <b>better decisions</b>, show <b>clear results</b>, and <b>turn findings into real-world results</b>.<br><br> 
+  Whether you're managing development projects, conducting research, or optimizing agribusiness operations, I want you get the most out of your data."
 
 what_we_do:
   enable: true
-  title: "What We Do?"
-  sub_title: "We provide specialized data-driven services for the agricultural sector."
+  title: "What I Do?"
+  sub_title: "I provide specialized data-driven services for the agricultural sector."
   services:
 
     - title: "Data Analysis and Decision Support"
@@ -50,28 +50,31 @@ how_it_works:
   enable: true
   title: "How It Works?"
   sub_title: "From goals to result: a step-by-step process."
-  image: "/assets/images/concept/concept15@2x.png"
+  image_large: "/assets/images/01-Home/how-it-works.jpg"
+  image_small: "/assets/images/01-Home/pinya.jpg"
+  image_fallback: "/assets/images/01-Home/mealworm.jpg"
+
   lists:
 
     - title: "Initial Consultation"
-      description: "We discuss your goals, challenges, and the data you have available."
+      description: "We discuss your goals, challenges, and available data to set clear project objectives."
 
     - title: "Data Integration and Preparation"
-      description: "We integrate your data into our analytical tools and prepare it for analysis."
+      description: "I integrate your data into my analytical tools and prepare it for analysis."
 
     - title: "Data Analysis"
-      description: "We analyze, model, and visualize the data to address your specific goals."
+      description: "I analyze, model, and visualize the data to address your specific goals."
 
-    - title: "Reporting"
-      description: "You receive a clear report with detailed results and practical information from the findings."
+    - title: "Deliverable"
+      description: "Based on your needs, you receive outputs like data products or reports with the results and practical information from the findings."
 
     - title: "Follow-up Support"
-      description: "We provide ongoing support to help you implement recommendations, adjust strategies, and update models, ensuring you stay aligned with your objectives."
+      description: "I provide ongoing support to help you implement recommendations, adjust strategies, and update models, ensuring the project stays aligned with your objectives."
 
 why_choose_us: 
   enable: true
-  title: "Why Choose Us?"
-  sub_title: "Why our customers choose us."
+  title: "Why Choose Me?"
+  sub_title: "Why my customers choose me."
   image: "/assets/images/01-Home/why-choose-us.jpg"
   lists:
 
@@ -90,7 +93,7 @@ why_choose_us:
 case_studies:
   enable: true
   title: "Case Studies"
-  sub_title: "Check out some of our work."
+  sub_title: "Check out some of my work."
   posts_number: 5
 
 testimonials_area:
@@ -131,32 +134,34 @@ clients_carousel:
   <!-- container class is responsible for the margins on the right and the left sides -->
   <div class="container inner">
     <div class="row align-items-center">
-
-      <div class="col-12 col-md-8 offset-0 order-1">
-
-        <h1 class="hero display-1 color-white text-left">
+  
+      <div class="col-12 col-md-8 offset-0 order-1 text-md-left text-center">
+  
+        <h1 class="hero display-1 color-white">
           {{page.hero_area.title}}
         </h1>
-
-
-        <p class="hero display-3 color-white">
-          {{page.hero_area.text}}
-        </p>
-
-        <div class="d-flex justify-content-center align-items-center">
+  
+        <div class="w-75 mx-md-0 mx-auto">
+          <p class="hero display-3 color-white">
+            {{page.hero_area.text}}
+          </p>
+        </div>
+  
+        <!-- <div class="d-flex justify-content-center align-items-center"> -->
           <div class="mt-4">
-            <a class="btn btn-lg btn-white btn-strong-hover" href="{{page.hero_area.btn_url}}">
+            <a class="btn btn-lg btn-hero btn-strong-hover font-weight-bold" href="{{page.hero_area.btn_url}}">
               {{page.hero_area.btn_text}}
             </a>
           </div>
-        </div>
-
+        <!-- </div> -->
+  
+        
       </div>
-
+  
       <div class="col-12 col-md-4 offset-0 order-2 d-flex justify-content-center">
         <img src="{{page.hero_area.hero_image}}" alt="Hero Image" class="img-fluid hero" />
       </div>
-
+  
     </div>
   </div>
 </div>
@@ -168,16 +173,14 @@ clients_carousel:
 <div class="wrapper yovori-wrapper">
   <div class="container inner" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="2000">
     <div class="row">
-
-      <div class="col-lg-8 offset-lg-2">
-
+      <div class="col-lg-12">
         <h1 class="hero page-title mb-40 text-center"> {{page.value_proposition.title}} </h1>
-        <p class="hero display-3 text-center"> {{page.value_proposition.text}}</p>
-
       </div>
+      <div class="space20"></div>
+        <div class="col-lg-8 offset-lg-2">
+          <p class="hero display-3 text-center"> {{page.value_proposition.text}}</p>
 
-      
-
+        </div>
     </div>
   </div>
 </div>
@@ -243,45 +246,59 @@ clients_carousel:
 {% endif %} -->
 
 
-
+<!-- How it works -->
 {% if page.how_it_works.enable %}
 <div class="wrapper white-wrapper">
   <div class="container inner">
     <h2 class="display-3 title-color color-gray text-center mb-40">{{page.how_it_works.title}}</h2>
 
     <div class="row align-items-center">
-      {% if page.how_it_works.image %}
+
+      <!-- Image Section -->
       <div class="col-lg-5 order-lg-2">
-        <figure><img src="{{page.how_it_works.image}}" alt="{{page.how_it_works.title}}"/></figure>
+        <div class="d-flex justify-content-center">
+          <figure class="w-100 text-center">
+            <picture>
+              <!-- Image for small screens -->
+              <source media="(max-width: 991.98px)" srcset="{{page.how_it_works.image_small}}">
+              <!-- Image for large screens -->
+              <source media="(min-width: 992px)" srcset="{{page.how_it_works.image_large}}">
+              <!-- Fallback image -->
+              <img class="img-fluid rounded-4 responsive-img" src="{{page.how_it_works.image_fallback}}"
+                alt="How it works" />
+            </picture>
+          </figure>
+        </div>
       </div>
-      {% endif %}
+
+      <!-- Spacer for smaller devices -->
       <div class="space20 d-md-none"></div>
       <div class="space50 d-none d-md-block d-lg-none"></div>
+
+      <!-- Text Section -->
       <div class="col-lg-7 pr-60 pr-md-15">
 
         <h3 class="display-3">{{page.how_it_works.sub_title}}</h3>
         {% for step in page.how_it_works.lists %}
+
         <div class="space30"></div>
-        <div class="d-flex flex-row justify-content-start"
-        data-aos="zoom-in" 
-        data-aos-anchor-placement="top-bottom"
-        data-aos-once="true"
-        data-aos-delay="500" 
-        data-aos-duration="1500">
+
+        <div class="d-flex align-items-start" data-aos="zoom-in" data-aos-anchor-placement="top-bottom"
+          data-aos-once="true" data-aos-delay="500" data-aos-duration="1500">
           <div>
-            
+
             <span class="icon icon-blob icon-blob-dark mb-30 mr-25">
               <span class="number color-default">
                 {{forloop.index}}
               </span>
             </span>
-            
+
           </div>
           <div>
             <h5>{{step.title}}</h5>
             <p class="mb-0">{{step.description}}</p>
           </div>
-         </div>
+        </div>
         {% endfor %}
       </div>
     </div>
@@ -289,7 +306,6 @@ clients_carousel:
 </div>
 <!-- /.wrapper -->
 {% endif %}
-
 
 
 
@@ -418,3 +434,23 @@ clients_carousel:
   </div>
 </div>
 {% endif%}
+
+
+
+
+
+
+<!--           {% assign remainder = forloop.index | modulo: 2 %}
+{% if remainder == 0 %}
+<div class="col-12 text-right mb-4">
+  <figure>
+    <img class="img-fluid w-75" src="{{image.file}}" alt="{{image.alt}}" />
+  </figure>
+</div>
+{% else %}
+<div class="col-12 text-left mb-4">
+  <figure>
+    <img class="img-fluid w-75" src="{{image.file}}" alt="{{image.alt}}" />
+  </figure>
+</div>
+{% endif %} -->

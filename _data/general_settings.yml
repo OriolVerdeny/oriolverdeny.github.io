@@ -1,9 +1,9 @@
 # General Settings
 title: "Yovori"
-email: "yovori.contact@gmail.com"
+email: "oriolverdeny@gmail.com"
 
 description: >- # this means to ignore newlines until "baseurl:"
-  We provide data-driven services for the agricultural sector, helping organizations optimize processes, evaluate economic feasibility, and achieve sustainable outcomes that positively impact the environment.
+  I provide data-driven services to support organizations make informed decisions and achieve their goals to improve agriculture, sustainability, and financial performance.
 
 black_logo_1x: "/assets/images/logo.png"
 black_logo_2x: "/assets/images/logo@2x.png"
@@ -15,7 +15,9 @@ tab_title: "Yovori"
 
 siren: "914840012"
 address_01: "140 rue Claude Monet, 34090 Montpellier, France"
-phone_number: "+229 52 36 15 83"
+phone_number: "(+34) 665 990 141"
+phone_number2: "(+33) 621 996 850"
+phone_number3: "(+229) 152 361 583"
 copyright_text: "© 2024 Yovori. All rights reserved."
 
 google_map: |

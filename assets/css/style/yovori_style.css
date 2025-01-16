@@ -39,6 +39,36 @@
 
 
 /*-----------------------------------------------------------------------------------*/
+/*	RESPONSIVE IMAGES
+/*-----------------------------------------------------------------------------------*/
+
+/* Custom styles for responsive images */
+.responsive-img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 991.98px) {
+  .responsive-img {
+    width: 25%; /* Reduce width for smaller screens */
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-img {
+    width: 75%; /* Full width for larger screens */
+    height: auto;
+  }
+}
+
+/* Optional: Adjust rounded corners */
+.rounded-4 {
+  border-radius: 1.5rem; /* Customize this value as needed */
+}
+
+
+/*-----------------------------------------------------------------------------------*/
 /*	WRAPPERS
 /*-----------------------------------------------------------------------------------*/
 
@@ -265,6 +295,33 @@ p.about {
 
 
 
+
+.btn-hero{
+    color: var(--color-dark-yovori);
+    background: var(--color-default);
+}
+.btn-hero:focus,
+.btn-hero:hover {
+    background-color:  rgba(var(--rgb-blue-electric), 0.9);
+    color: var(--color-dark-yovori);
+}
+
+.btn.btn-hero:hover,
+.btn.btn-hero:active,
+.btn.btn-hero.active {
+    -webkit-box-shadow: var(--btn-hover-blue-electric);
+            box-shadow: var(--btn-hover-blue-electric);
+}
+
+.btn.btn-strong-hover.btn-hero:hover,
+.btn.btn-strong-hover.btn-hero:active,
+.btn.btn-strong-hover.btn-hero.active {
+    -webkit-box-shadow: var(--btn-strong-hover-blue-electric);
+            box-shadow: var(--btn-strong-hover-blue-electric);
+}
+
+
+
 /*-----------------------------------------------------------------------------------*/
 /*	MORE YOVORI (adds Yovori styling to .more class)
 /*-----------------------------------------------------------------------------------*/
@@ -430,3 +487,7 @@ p.about {
 .value-item:hover .value-title {
   color: black;
 }
+
+
+
+
