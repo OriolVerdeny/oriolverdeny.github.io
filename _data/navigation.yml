@@ -14,7 +14,7 @@ main_menu:
 
   - text: "Case studies"
     menu_type: "simple"
-    url: "/blogs/index"
+    url: "/work"
 
   - text: "About"
     menu_type: "simple"
@@ -45,7 +45,7 @@ footer_nav_02:
       text: "About Us"
     - url: "/#whatwedo"
       text: "Our Services"
-    - url: "/blogs/index"
+    - url: "/work"
       text: "Our Work"
     - url: "/contact/contact"
       text: "Contact Us"

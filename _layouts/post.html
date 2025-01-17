@@ -28,14 +28,14 @@ container_class="container" %}
               {% if page.categories %}
               <div class="category text-center">
                 <a href="/category/{{page.categories[0] | slugify}}"
-                  class="badge badge-pill bg-hibiscus">{{page.categories[0]}}</a>
+                  class="badge badge-pill badge-category font-weight-bold">{{page.categories[0]}}</a>
               </div>
               {% endif %}
               <h2 class="post-title text-center">{{page.title}}</h2>
               <div class="meta text-center">
-                {% if page.date %}
+                <!-- {% if page.date %}
                 <span class="date"><i class="jam jam-clock"></i>{{page.date | date_to_string}}</span>
-                {% endif %}
+                {% endif %} -->
                 {% if page.author %}
                 <span class="author"><i class="jam jam-user"></i><a href="/authors/{{page.author | slugify}}">By
                     {{page.author}}</a></span>
@@ -103,7 +103,7 @@ container_class="container" %}
 {% if page.author %}
 {% assign check_author = site.authors | where: "title", page.author %}
 {% for author_data in check_author %}
-<div class="wrapper gray-wrapper">
+<div class="wrapper white-wrapper">
   <div class="container inner">
     <div class="row">
       <div class="col-lg-10 offset-lg-1">
@@ -167,14 +167,14 @@ container_class="container" %}
               {% endif %}
               {% if post.categories %}
               <div class="category">
-                <a href="{{post.categories[0] | slugify}}" class="badge badge-pill bg-purple">{{post.categories[0]}}</a>
+                <a href="{{post.categories[0] | slugify}}" class="badge badge-pill badge-category font-weight-bold">{{post.categories[0]}}</a>
               </div>
               {% endif %}
               <h2 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h2>
               <div class="meta mb-0">
-                {% if post.date %}
+                <!-- {% if post.date %}
                 <span class="date"><i class="jam jam-clock"></i>{{post.date | date_to_long_string}}</span>
-                {% endif %}
+                {% endif %} -->
               </div>
             </div>
             <!-- /.item -->

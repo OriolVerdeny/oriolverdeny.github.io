@@ -4,7 +4,7 @@ title: "Nullam id dolor elit id nibh pharetra augue venenatis"
 date: 2020-10-07 20:37:13 +0600
 tags: technology education
 categories: [couples]
-author: "Tortoiz Theme"
+author: "Oriol Verdeny Vilalta"
 post_image: "/assets/images/art/b2.jpg"
 badge_color: "bg-meander"
 post_format: "gallery"

@@ -4,7 +4,7 @@ title: "Cassava transformation unit into gari"
 date: 2020-10-05 20:37:13 +0600
 tags: technology education
 categories: [Cassava]
-author: "Tortoiz Theme"
+author: "Oriol Verdeny Vilalta"
 post_image: "/assets/images/Case studies/cassava-transformation-unit.jpg"
 gallery: 
   - img: "/assets/images/art/bs1.jpg"
