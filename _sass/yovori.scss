@@ -1,0 +1,1174 @@
+
+// Colors
+$color-default: #ffd429;
+$color-blue-yovori: #5458aa;
+$color-blue-electric: #00c8dc;
+$color-dark: #404040;
+$color-light-gray: #f3f4f7;
+$color-dark-yovori: #332d29;
+
+$color-white: #FFF;
+$color-black: #000;
+$color-dark: #1e1e1e;
+$color-gray: #999;
+$color-red: #d75959;
+$color-orange: #fb9d7e;
+$color-yellow: #f5c463;
+$color-green: #9ccd7e;
+$color-blue: #5ca7db;
+
+
+
+
+// Font Sizes
+$base-font-size: 18px;
+$small-font-size: 0.9rem;
+$medium-font-size: 1rem;
+$large-font-size: 1.25rem;
+$extra-large-font-size: 2rem;
+
+// Font Weights
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+
+// Line Heights
+$base-line-height: 1.6;
+$compact-line-height: 1.2;
+
+
+
+
+$icon-font-family: 'Snowlake' !important;
+$text-font-family: 'Jost', sans-serif !important;
+$icon-size: 4rem;
+$step-size: 1rem;
+$step-font-size: 0.55rem;
+$number-font-size: 1.3rem;
+$transition-duration: 200ms;
+$transition-easing: ease-in-out;
+
+
+
+
+
+
+// Global variables for shadow properties
+$shadow-spread: 5px; // The spread size
+$shadow-opacity-default: 0.3; // Default opacity for hover
+$shadow-opacity-strong: 0.5; // Strong hover opacity
+
+// Mixin for button hover styles
+@mixin btn-hover($color, $opacity: $shadow-opacity-default) {
+    box-shadow: 0 0 0 $shadow-spread rgba($color, $opacity);
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  01. RESET
+/*-----------------------------------------------------------------------------------*/
+
+
+// Text selection styles
+::selection,
+::-moz-selection {
+    background: rgba($color-default, 0.7);
+    color: $color-dark;
+
+    // Overridden for `.bg-default`
+    .bg-default & {
+        background: $color-white;
+        color: $color-gray;
+    }
+}
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  02. GENERAL
+/*-----------------------------------------------------------------------------------*/
+
+
+
+html {
+    font-size: $base-font-size;
+    scroll-behavior: smooth;
+}
+
+// Global Body Styles
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Jost', sans-serif;
+    color: $color-dark;
+    font-size: $small-font-size;
+    line-height: $base-line-height;
+    background: $color-light-gray;
+    overflow-x: hidden;
+    position: relative;
+
+
+}
+
+
+// Specific Typography for .icon-blob elements
+.icon-blob {
+    font-family: 'Nunito', sans-serif !important;
+    font-size: inherit;  // Inherit font-size from body or global settings
+    line-height: inherit; // Inherit line-height from body or global
+    
+    // Nested styles for icon-blob specific elements
+    span,
+    h3,
+    p,
+    .step {
+        font-family: inherit; // Inherit font family from parent
+        font-size: inherit;  // Inherit font size from parent
+        line-height: inherit; // Inherit line height from parent
+    }
+}
+
+
+
+
+.container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+// Fluid container styles
+.container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    // Navbar-specific styles inside .container-fluid
+    .navbar & {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+
+body,
+li,
+address {
+    line-height: 1.4rem;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-weight: normal;
+    color: inherit;
+}
+
+strong {
+    font-weight: bold;
+}
+
+p {
+    margin: 0 0 1rem
+}
+
+
+
+// General hover transition styles
+.hover {
+    transition: all 200ms ease-in-out;
+}
+
+// Anchor tag-specific styles
+a {
+    color: $color-gray; 
+    transition: all 200ms ease-in-out;
+
+    &.hover {
+        transition: border 150ms ease-in-out;
+        padding-bottom: 0;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border-bottom: 1px solid $color-default;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $color-default;
+    }
+}
+
+// Specific styles for post-title and no-color links
+.post-title a,
+a.nocolor {
+    color: inherit;
+}
+
+
+// Loop to generate font-weight classes from 300 to 700
+@for $i from 300 through 700 {
+    .font-weight-#{$i} {
+        font-weight: $i;
+    }
+}
+
+strong {
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    color: $color-dark;
+    font-weight: 500;
+    letter-spacing: normal;
+    margin-bottom: 0.8rem;
+}
+
+
+// Define font sizes (first column) and line heights (second column) for each heading level
+$heading-sizes: (
+  1: (1.4rem, 1.7rem),
+  2: (1.3rem, 1.6rem),
+  3: (1.2rem, 1.5rem),
+  4: (1.1rem, 1.4rem),
+  5: (1.0rem, 1.3rem),
+  6: (0.9rem, 1.2rem)
+);
+
+// Loop through heading sizes and apply styles
+@each $level, $sizes in $heading-sizes {
+  h#{$level}, .h#{$level} {
+    font-size: nth($sizes, 1);
+    line-height: nth($sizes, 2);
+    
+    // Apply margin for h5 and h6
+    @if $level == 5 or $level == 6 {
+      margin-bottom: 0.6rem;
+    }
+
+    &.text-uppercase {
+      font-size: (nth($sizes, 1) - 0.2rem);
+      line-height: (nth($sizes, 2) - 0.2rem);
+    }
+  }
+}
+
+
+.grid-view h2.post-title {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+}
+.classic-view h2.post-title,
+.caption-overlay h3 {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+.widget-title {
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+  
+    &.larger {
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+    }
+  
+    &.text-uppercase {
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+      margin-bottom: 1rem;
+  
+      &.larger {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+.title-color {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    margin-bottom: 1.05rem;
+    text-transform: uppercase;
+}
+.title-bg {
+    font-size: 0.55rem;
+    line-height: 1rem;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 10rem;
+    padding: 0.35rem 0.7rem 0.3rem;
+}
+.page-title {
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    margin-bottom: 1rem;
+}
+.hero {
+    font-size: 3rem;
+    line-height: 3.6rem;
+    font-weight: 500;
+}
+
+.display-1 {
+    font-size: 2.5rem;
+    line-height: 3.1rem;
+    font-weight: 500;
+}
+.display-2 {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+}
+.display-3 {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-weight: normal;
+}
+.display-4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 300;
+}
+
+.lead {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.page-title-wrapper .lead {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+.lead.larger {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+.text-muted {
+    color: $color-gray !important;
+}
+.inner {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+.inner-top {
+    padding-top: 6rem;
+}
+.inner-bottom {
+    padding-bottom: 6rem;
+}
+footer .inner {
+    padding-bottom: 5rem;
+}
+
+// Base styles for page-title-wrapper inner
+.page-title-wrapper {
+    .inner {
+      padding-top: 5rem;
+      padding-bottom: 0;
+  
+      // Additional style for page-title-wrapper with image-wrapper
+      &.image-wrapper {
+        padding-bottom: 6rem;
+      }
+    }
+  }
+
+// Google map styles
+.google-map {
+    iframe {
+      display: block;
+    }
+  
+    &.map-full {
+      height: 100%;
+    }
+  }
+
+#wave {
+    margin: 0;
+}
+canvas {
+    vertical-align: bottom;
+}
+.divider svg {
+    vertical-align: bottom;
+}
+.pointer-none {
+    pointer-events: none;
+}
+
+
+
+
+// Shared Styles for Bold and Medium Font Size
+.shared-bold-medium {
+    font-weight: $font-weight-bold;
+    font-size: $medium-font-size;
+}
+
+// Apply shared class to all relevant elements
+.hero,
+.dropcap,
+.alert-link,
+.blockquote-footer,
+.meta,
+.more,
+.more-yovori,
+.breadcrumbs,
+.breadcrumbs *,
+.isotope-filter ul li a,
+.pagination ul > li > a,
+.icon-blob span,
+.icon-blob .step,
+th,
+.pricing-switcher,
+.item-detailed .item-label,
+.item-detailed .price,
+.nav-tabs .nav-link,
+.nav-uppercase .navbar-nav .nav-link,
+.accordion-wrapper .card-header button,
+label:not(.custom-control-label) {
+    @extend .shared-bold-medium;
+}
+
+
+
+// // Base Typography
+// body,
+// .icon-blob {
+//     font-family: 'Nunito', sans-serif !important;
+//     font-size: var(--base-font-size);
+//     line-height: var(--base-line-height);
+
+//     // Nested styles for icon-blob specific elements
+//     span,
+//     h3,
+//     p,
+//     .step {
+//         font-family: inherit; // Inherit font family from parent
+//         font-size: inherit;  // Inherit font size from parent
+//         line-height: inherit; // Inherit line height from parent
+//     }
+// }
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  26. SERVICES
+/*-----------------------------------------------------------------------------------*/
+.icon-bg {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+
+
+// Base Typography
+body,
+.icon-blob {
+    font-family: 'Nunito', sans-serif !important;
+    font-size: $base-font-size;
+    line-height: 1;
+
+    // Nested styles for children elements inheriting typography
+    span,
+    h3,
+    p,
+    .step,
+    .number {
+        font: inherit; // Shorthand for font-family, font-size, and line-height
+    }
+}
+
+// Icon Blob Styles
+.icon-blob {
+    width: $icon-size;
+    height: $icon-size;
+    display: table;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        font-family: $icon-font-family;
+        content: "\0041";
+        font-size: $icon-size;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    span {
+        font-weight: 500;
+    }
+
+    .number {
+        display: table-cell;
+        text-align: center;
+        margin: 0 auto;
+        vertical-align: middle;
+        font-size: $number-font-size;
+    }
+
+    .step {
+        position: absolute;
+        bottom: -0.15rem;
+        left: 0.55rem;
+        width: $step-size;
+        height: $step-size;
+        border-radius: 50%;
+        font-size: $step-font-size;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: $color-white;
+        z-index: 2;
+    }
+
+    i {
+        display: table-cell;
+        text-align: center;
+        margin: 0 auto;
+        vertical-align: middle;
+        font-size: 1.6rem;
+    }
+
+    &.text-center {
+        margin: 0 auto;
+    }
+
+    &.hover-effect,
+    &.active-effect {
+        transition: all $transition-duration $transition-easing;
+    }
+}
+
+.dial-item {
+    .icon-blob {
+        &::before {
+            font-family: $icon-font-family;
+            content: "\0041";
+            font-size: $icon-size;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            color: $color-white;
+        }
+
+        &.hover-effect:hover,
+        &.active-effect.active,
+        &.hover-effect:hover .number,
+        &.active-effect.active .number {
+            color: var(--color-white) !important;
+        }
+    }
+}
+
+.nav-tabs .nav-link {
+    .icon-blob {
+        transition: all $transition-duration $transition-easing;
+
+        &.hover-effect:hover,
+        &.active-effect.active {
+            color: var(--color-white) !important;
+        }
+    }
+}
+
+
+.img-blob img {
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    -webkit-mask-size: auto auto;
+    -webkit-mask-box-image-repeat: space;
+}
+
+.icon-svg img {
+    width: 3rem;
+    height: 3rem;
+}
+
+
+
+$blob-images: 1 to 15; // Range for the blob images
+
+@each $i in $blob-images {
+  .img-blob.blob#{$i} img {
+    -webkit-mask-box-image: url(../images/blob/blob#{$i}.svg);
+    -webkit-mask-image: url(../images/blob/blob#{$i}.svg);
+            mask-image: url(../images/blob/blob#{$i}.svg);
+    -webkit-mask-box-image-repeat: space;
+  }
+}
+
+
+.owl-carousel .owl-item .img-blob img,
+.owl-carousel .owl-item .img-blob-s img {
+    display: inline;
+    width: 3.5rem;
+}
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	CONTAINERS
+/*-----------------------------------------------------------------------------------*/
+
+/* Wider container for specific sections */
+.container-wide {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Adjust max-width for different breakpoints */
+@media (min-width: 576px) {
+    .container-wide {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-wide {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-wide {
+        max-width: 1040px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-wide {
+        max-width: 1300px;
+    }
+}
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	RESPONSIVE IMAGES
+/*-----------------------------------------------------------------------------------*/
+
+/* Custom styles for responsive images */
+.responsive-img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 991.98px) {
+  .responsive-img {
+    width: 25%; /* Reduce width for smaller screens */
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-img {
+    width: 75%; /* Full width for larger screens */
+    height: auto;
+  }
+}
+
+/* Optional: Adjust rounded corners */
+.rounded-4 {
+  border-radius: 1.5rem; /* Customize this value as needed */
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	WRAPPERS
+/*-----------------------------------------------------------------------------------*/
+
+// Yovori wrapper styles
+.yovori-wrapper {
+    background-color: $color-default !important;
+
+    // Text selection styles
+    &::-moz-selection {
+        background: rgba($color-blue-yovori, 0.8);
+        color: $color-light-gray;
+    }
+
+    &::selection {
+        background: rgba($color-blue-yovori, 0.8);
+        color: $color-light-gray;
+    }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	TITLE BACKGROUND (used in the badges that introduce sections (not used anymore)
+/*-----------------------------------------------------------------------------------*/
+
+// Title background styles
+.title-bg {
+    padding-top: 0.4rem;
+
+    &.bg-default {
+        // Background color with 90% opacity
+        background: rgba($color-default, 0.9);
+    }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	BACKGROUND WITH OPACITY VALUE
+/*-----------------------------------------------------------------------------------*/
+
+/* This sets a very subtle background color (20% opacity) using the 
+--rgb-default value, creating a nearly transparent effect. */
+.bg-opacity-default {
+    background: rgba($color-default, 0.20);
+}
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	BADGES OF THE CASE STUDIES
+/*-----------------------------------------------------------------------------------*/
+
+// Badge styles
+.badge-cart,
+.badge {
+    padding: 0.5rem 1rem;
+}
+
+// Category badge styles
+.badge-category {
+    color: $color-default;
+    background: $color-dark-yovori;
+
+    &:hover,
+    &:focus {
+        color: $color-default;
+        background: $color-dark;
+    }
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	HERO SECTION
+/*-----------------------------------------------------------------------------------*/
+
+// Hero heading styles
+h1.hero {
+    font-size: clamp(1.7rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+// Hero paragraph styles
+p.hero {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    line-height: 1.5;
+}
+
+// Hero image styles
+img.hero {
+    width: clamp(75%, 80vw, 100%);
+    max-width: clamp(250px, 20vw, 350px);
+    height: auto;
+    border-radius: 15px;
+}
+
+
+// Hero image wrapper styles
+.image-wrapper-hero {
+    // padding: clamp(10px, 5vw, 30px); // Uncomment if you want to use padding with clamp
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	ABOUT SECTION
+/*-----------------------------------------------------------------------------------*/
+
+$font-size-about: clamp(1rem, 2vw, 1.2rem);
+$line-height-about: 1.5;
+
+
+blockquote.icon.about p,
+p.about {
+    font-style: normal;
+    font-size: $font-size-about;
+    line-height: $line-height-about;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	CALL TO ACTION
+/*-----------------------------------------------------------------------------------*/
+
+/*--------*/
+/* BANNER */
+/*--------*/
+
+
+// CTA button styles
+.cta {
+    background: $color-default;
+    border-radius: 50px;
+
+    &::-moz-selection {
+        background: rgba($color-blue-yovori, 0.8);
+        color: $color-white;
+    }
+
+    &::selection {
+        background: rgba($color-blue-yovori, 0.8);
+        color: $color-white;
+    }
+}
+
+
+// CTA Wrapper styles
+.cta-wrapper {
+    background: no-repeat center center;
+    background-size: cover;
+    position: relative;
+
+    &:not(.mobile) {
+        background-attachment: fixed !important;
+    }
+
+    &.bg-auto {
+        background-size: auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: scroll !important;
+    }
+
+    &.bg-full {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: scroll !important;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background: rgba($color-default, 0.75);
+        border-radius: 50px !important;
+    }
+
+    &.gradient-overlay::before {
+        background: none;
+        background-image: linear-gradient(135deg, rgba(111, 63, 124, 0.55) 0%, rgba(88, 73, 170, 0.55) 100%);
+    }
+
+    &.no-overlay::before {
+        display: none;
+    }
+
+    &:not(.no-overlay) * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .cbp-nav-controls,
+    .tparrows {
+        position: absolute;
+    }
+}
+
+// Media query for responsiveness
+@media (max-width: 767px) {
+    .cta-wrapper.bg-full {
+        background-size: cover !important;
+    }
+}
+
+
+/*--------*/
+/* BUTTON */
+/*--------*/
+
+// Button CTA styles
+.btn-cta {
+    color: $color-light-gray;
+    background: $color-blue-yovori;
+
+    &:focus,
+    &:hover {
+        background-color: rgba($color-blue-yovori, 0.9);
+        color: $color-light-gray;
+    }
+
+    &.btn {
+        &:hover,
+        &:active,
+        &.active {
+            @include btn-hover($color-blue-yovori);
+        }
+
+        &.btn-strong-hover {
+            &:hover,
+            &:active,
+            &.active {
+                @include btn-hover($color-blue-yovori, $shadow-opacity-strong);
+            }
+        }
+    }
+}
+
+
+
+// Button hero styles
+.btn-hero {
+    color: $color-dark-yovori;
+    background: $color-default;
+  
+    &:focus,
+    &:hover {
+      background-color: rgba($color-blue-electric, 0.9);
+      color: $color-dark-yovori;
+    }
+  
+    &.btn {
+      &:hover,
+      &:active,
+      &.active {
+        @include btn-hover($color-blue-electric);
+      }
+  
+      &.btn-strong-hover {
+        &:hover,
+        &:active,
+        &.active {
+          @include btn-hover($color-blue-electric, $shadow-opacity-strong);
+        }
+      }
+    }
+  }
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	MORE YOVORI (adds Yovori styling to .more class)
+/*-----------------------------------------------------------------------------------*/
+
+.more-yovori {
+    color: $color-default;
+
+    &:hover {
+        color: rgba($color-default, 0.8);
+    }
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	NAVIGATION LINKS, DROPDOWNS, TABS
+/*-----------------------------------------------------------------------------------*/
+
+// Navigation and Button Styling
+.nav-uppercase {
+    .navbar-nav {
+        .nav-link,
+        .dropdown-item,
+        .mega-menu-content a,
+        .nav-tabs .nav-link {
+            font-size: $small-font-size;
+            font-weight: $font-weight-bold;
+            line-height: $compact-line-height; // vertical spacing between lines of text
+        }
+    }
+}
+
+// Media Query Adjustments
+@media (min-width: 992px) {
+    .nav-uppercase {
+        .navbar-nav {
+            .nav-link,
+            .navbar.extended .navbar-nav .nav-link {
+                padding-top: 1.35rem;
+                padding-bottom: 1.3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .nav-uppercase {
+        .navbar-nav {
+            .nav-link,
+            .dropdown-item,
+            .mega-menu-content a {
+                font-size: calc($small-font-size - 0.1rem);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	PREVENT SELECTION
+/*-----------------------------------------------------------------------------------*/
+
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+/* Prevent image to be dragged */
+/* <img src="{{relative_url}}{{service.icon_image}}" draggable="false" alt=""> */
+
+/* Prevent text to be selected */
+/* <div class="prevent-select"> */
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	FULL SCREEN CONTAINER (not used)
+/*-----------------------------------------------------------------------------------*/
+
+.full-screen-container {
+
+    min-height: 100vh; /* Ensures the container is at least the viewport height */
+    width: 100%; /* Full width of the screen */
+    display: flex; /* Optional: for flexible content alignment */
+    justify-content: center; /* Optional: center content horizontally */
+    align-items: center; /* Optional: center content vertically */
+    background-color: #f0f0f0; /* Optional: add a background color */
+    padding: 20px; /* Adds padding to prevent content from touching edges */
+    box-sizing: border-box; /* Include padding and borders in width/height calculations */
+    overflow: auto; /* Ensures content is scrollable if it overflows */
+}
+
+
+@media (max-width: 768px) {
+    .full-screen-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	DEBUGGING (to see positioning of elements)
+/*-----------------------------------------------------------------------------------*/
+
+/* Show all elements with red borders */
+/* * {
+	border: 1px solid red !important;
+	box-sizing: border-box;
+} */
+
+/* Restrict red borders to specific classes */
+/* .container * {
+	border: 1px solid red !important;
+} */
+
+
+
+// Full-width horizontal line with limited-width text
+.value-item {
+    border-bottom: 1px solid #ccc; // Horizontal line spanning full width
+    padding: 1rem 0; // Vertical padding
+    transition: background-color 1s ease;
+
+    &:hover {
+        background-color: rgba($color-default, 0.20); // Dark background on hover
+
+        .icon-value {
+            background-color: $color-dark; // Dark background on hover
+            color: $color-default; // Default text color on hover
+        }
+
+        .text-container,
+        .value-title {
+            color: black;
+        }
+    }
+}
+
+// Icon container default styles
+.icon-value {
+    background-color: #ddd; // Light gray background
+    color: gray; // Gray number
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+// Text and title default styles
+.text-container,
+.value-title {
+    max-width: 600px; // Limit text width
+    color: gray; // Default text color
+    transition: color 1s ease; // Smooth transition for hover effect
+}
+
+
+
+
+
+
+

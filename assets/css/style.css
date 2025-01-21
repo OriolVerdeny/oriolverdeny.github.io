@@ -902,13 +902,13 @@ button.hamburger.animate.active:after {
     -webkit-box-shadow: inherit;
             box-shadow: inherit;
 }
-.btn:hover,
+/* .btn:hover,
 .btn:active,
 .btn.active {
     color: var(--color-dark);
     -webkit-box-shadow: var(--btn-hover-default);
             box-shadow: var(--btn-hover-default);
-}
+} */
 .btn.btn-white {
     color: #404040;
 }

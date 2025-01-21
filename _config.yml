@@ -3,7 +3,8 @@ url: "https://www.yovori.com" #  https://oriolverdeny.github.io https://www.yovo
 permalink: "/:title"
 
 # Build settings
-theme: minima
+theme: 
+
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2
