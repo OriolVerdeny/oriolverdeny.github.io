@@ -42,13 +42,13 @@ footer_nav_02:
   title: "Learn More"
   links:
     - url: "/about/about"
-      text: "About Us"
+      text: "About"
     - url: "/#whatwedo"
-      text: "Our Services"
+      text: "Services"
     - url: "/work"
-      text: "Our Work"
+      text: "Case Studies"
     - url: "/contact/contact"
-      text: "Contact Us"
+      text: "Contact me"
 
 
 

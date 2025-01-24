@@ -32,7 +32,7 @@ $font-weight-normal: 400;
 $font-weight-bold: 600;
 
 // Line Heights
-$base-line-height: 1.6;
+$base-line-height: 1.7;
 $compact-line-height: 1.2;
 
 
@@ -132,7 +132,7 @@ body {
 body,
 li,
 address {
-    line-height: 1.4rem;
+    line-height: $base-line-height;
 }
 
 input,
@@ -207,7 +207,7 @@ h5,
 h6 {
     margin-top: 0;
     color: $color-dark;
-    font-weight: 500;
+    font-weight: $font-weight-bold;
     letter-spacing: normal;
     margin-bottom: 0.8rem;
 }
@@ -225,21 +225,53 @@ $heading-sizes: (
 
 // Loop through heading sizes and apply styles
 @each $level, $sizes in $heading-sizes {
-  h#{$level}, .h#{$level} {
-    font-size: nth($sizes, 1);
-    line-height: nth($sizes, 2);
-    
-    // Apply margin for h5 and h6
-    @if $level == 5 or $level == 6 {
-      margin-bottom: 0.6rem;
+
+    h#{$level},
+    .h#{$level} {
+        font-size: nth($sizes, 1);
+        line-height: nth($sizes, 2);
+
+        // Apply margin for h5 and h6
+        @if $level ==5 or $level ==6 {
+            margin-bottom: 0.6rem;
+        }
+
+        &.text-uppercase {
+            font-size: (nth($sizes, 1) - 0.2rem);
+            line-height: (nth($sizes, 2) - 0.2rem);
+        }
     }
 
-    &.text-uppercase {
-      font-size: (nth($sizes, 1) - 0.2rem);
-      line-height: (nth($sizes, 2) - 0.2rem);
+    // Scoped styles for the blog class
+    .blog h#{$level},
+    .blog .h#{$level} {
+        font-size: nth($sizes, 1) * 1.25;
+        line-height: nth($sizes, 2) + 1;
     }
-  }
+
 }
+
+
+
+.blog {
+
+    @for $i from 1 through 6 {
+      .post-title ~ h#{$i} {
+        margin-top: 2.5rem; // More space for headings
+      }
+    }
+
+    @media (max-width: 768px) {
+
+        @for $i from 1 through 6 {
+            .post-title ~ h#{$i} {
+              margin-top: 1.5rem; // More space for headings
+            }
+          }
+    }
+
+
+  }
 
 
 .grid-view h2.post-title {

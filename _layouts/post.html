@@ -31,16 +31,18 @@ container_class="container" %}
                   class="badge badge-pill badge-category font-weight-bold">{{page.categories[0]}}</a>
               </div>
               {% endif %}
-              <h2 class="post-title text-center">{{page.title}}</h2>
-              <div class="meta text-center">
-                <!-- {% if page.date %}
+              <h1 class="post-title text-center">{{page.title}}</h2>
+              <div class="space50"></div>
+
+              <!-- <div class="meta text-center">
+                {% if page.date %}
                 <span class="date"><i class="jam jam-clock"></i>{{page.date | date_to_string}}</span>
-                {% endif %} -->
+                {% endif %}
                 {% if page.author %}
                 <span class="author"><i class="jam jam-user"></i><a href="/authors/{{page.author | slugify}}">By
                     {{page.author}}</a></span>
                 {% endif %}
-              </div>
+              </div> -->
               {{page.content}}
               {% if page.post_format == "gallery" %}
               <div class="space20"></div>

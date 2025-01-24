@@ -1,171 +1,67 @@
 ---
 layout: post
-title: "Black soldier fly rearing in Benin"
+title: "Could black soldier fly revolutionize animal feed, fertilizers and waste management in Benin?"
 date: 2021-09-15 20:37:13 +0600
 author: "Oriol Verdeny Vilalta"
 post_image: "/assets/images/Case studies/bsf-eggs2.jpg"
 badge_color: "bg-purple"
-categories: [Data Analysis]
+categories: [Black Soldier Fly]
 tags: Benin insects BSF
 slider_post: true
 mathjax: true
----
+post_format: "gallery"
+gallery:
+  - img: "/assets/images/03-Case-Studies/Black-soldier-fly/IMG20230615105627.jpg"
+  - img: "/assets/images/03-Case-Studies/Black-soldier-fly/IMG20230615114858.jpg"
+  - img: "/assets/images/03-Case-Studies/Black-soldier-fly/IMG20230615115128.jpg"
 
+  - img: "/assets/images/03-Case-Studies/Black-soldier-fly/IMG20230615143558.jpg"
+  - img: "/assets/images/03-Case-Studies/Black-soldier-fly/IMG20230616100031.jpg"
+  - img: "/assets/images/03-Case-Studies/Black-soldier-fly/IMG20230616125647.jpg"
+  - img: "/assets/images/03-Case-Studies/Black-soldier-fly/IMG20230616125748.jpg"
+  - img: "/assets/images/03-Case-Studies/Black-soldier-fly/IMG20230616134059.jpg"
+  - img: "/assets/images/03-Case-Studies/Black-soldier-fly/IMG20230915095205.jpg"
 
-We need to inspire from Minimal Mistakes and Chirpy.
-
-* https://chirpy.cotes.page/
-* https://mmistakes.github.io/minimal-mistakes/
-
-
-Now this is a change on the main branch
-Commit in post_layout branch
-
-Let's see if $$1+1=2$$ this works.
-
-# Title
-
-11 time-saving pro tips for web designers working in Webflow11 <a href="#">time-saving pro</a> tips for web designers working in Webflow Consectetuer magna vivamus varius. Faucibus vestibulum faucibus elementum vulputate suscipit. Sit convallis litora nunc, vestibulum nibh tincidunt, in qui vel dui elit feugiat nulla, vehicula eos nec dolor conubia, aliquam proinEtiam id euismod. Purus ut dis feugiat, ac massa error leo sed fermentum, non sem velit eget arcu, lectus luctus congue leo dapibus tincidunt. Nunc vitae quis eu. Sit id ullamcorper semper ridiculus, accumsan augue ullamcorper eros viverra neque, libero est metus libero. Lacinia wisi feugiat tellus neque dui pellentesque, libero Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit est velit similique laborum, cumque aliquam porro dicta debitis repellat, tempore dignissimos, neque ab fuga voluptatibus. Earum numquam repellat sed perspiciatis ratione explicabo, odit! Repellendus voluptatibus nemo praesentium, id facere atque eum! sit nonummy tellus velit vivamus, eu sagittis gravida ut ante. Ut voluptas vestibulum leo pellentesque nulla, taciti congue, vitae nunc metus, imperdiet orci neque sed vestibulum, vestibulum magna ullamcorper posuere massa interdum.
-
-
-
-<div class="gallery-box">
-  <div class="gallery">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="Table">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="Table">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="Table">
-  </div>
-  <em>Gallery / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
-</div>
-
-<!-- <div class="gallery-box">
-  <div class="gallery">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="BSF Eggs" class="gallery__image" onclick="openModal(this)">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="BSF Eggs" class="gallery__image" onclick="openModal(this)">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="BSF Eggs" class="gallery__image" onclick="openModal(this)">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="BSF Eggs" class="gallery__image" onclick="openModal(this)">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="BSF Eggs" class="gallery__image" onclick="openModal(this)">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="BSF Eggs" class="gallery__image" onclick="openModal(this)">
-  </div>
-  <em>Gallery / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
-</div> -->
-
-<!-- Modal -->
-<!-- <div id="imageModal" class="image-modal">
-  <span class="close-modal" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="modalImage" alt="Expanded Image">
-</div> -->
-
-
-
-```python
-def hello_world():
-    print("Hello, World!")
-```
-
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
-
-Let's consider <math><mi>a</mi><mo>≠</mo><mn>0</mn></math>.
-
-# Testing out latex
-
-$$
-\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
-$$
-
-$$\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}$$
-
-$$\nabla_\boldsymbol{x} J(\boldsymbol{x})$$
-
-$$2+2=4$$
-
-$$\frac{1}{x}=y^2+7\cdot\pi$$
-
-Inline formula: $$2+2=4$$
-
-$$\begin{eqnarray}
-x' &=& &x \sin\phi &+& z \cos\phi \\
-z' &=& - &x \cos\phi &+& z \sin\phi \\
-\end{eqnarray}$$
-
-
-This is an example of inline \\(\LaTeX\\). The following is Stokes' theorem in a
-`displaymath` environment: \$$\int_{\partial \Omega} \omega = \int_{\Omega} d\omega\$$
-
-
-**bold text**
-
-*italicized text*
-
-> blockquote
-
-1. First item
-2. Second item
-3. Third item
-
-- First item
-- Second item
-- Third item
-
-`code`
+  - img: "/assets/images/03-Case-Studies/Black-soldier-fly/IMG20230915122503.jpg"
 
 ---
 
-[title](https://www.example.com)
-
-![alt text](/assets/images/Case studies/bsf-eggs2.jpg){:width="50%"}
-
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text | 
-
-```
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-``` 
-
-~~The world is flat.~~
-
-That is so funny! :joy: 
-
-I need to highlight these ==very important words==. 
-
-H~2~O 
-
-X^2^ 
-
-## Risus sociis urna elementum ultricies justo quisque
-
-mattis in eros facilisis mauris vestibulum sed, luctus proin nibh nonummy integer, nullam sit eget cum duis. Et sodales blandit, libero pede suscipit, tincidunt amet ultricies vitae dui tempor.
-
-<blockquote class="blockquote single-quote">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo non labore totam tempora sed neque repellat numquam eaque inventore! Iusto saepe ipsum, ex, commodi asperiores iure dolores amet dolorem eos voluptatum, aliquid incidunt non perferendis earum dignissimos quod iste accusantium deleniti.Risus sociis urna elementum ultricies justo quisque, mattis in eros facilisis mauris vestibulum sed, luctus proin nibh nonummy integer, nullam sit eget cum duis. Et sodales blandit, libero pede suscipit, tincidunt amet
-</blockquote>
-
-## Lorem ipsum dolor sit amet, consectetur adipisicing elit
-eleifend hac porta faucibus aliquam eros, massa facilisis, sed pede maecenas porttitor id magnis. Ac sed aliquam in felis amet, adipiscing pede a amet faucibus sit, quis in et ullamcorper vel commodo. Volutpat ut pede sem ipsum non, sapien adipiscing, suspendisse neque, quis dolor donec dolor. Sit voluptatibus, scelerisque in semper lacus nostra, ac integer dolor mauris tempus eget
-
-Accumsan augue ullamcorper eros viverra neque, libero est metus libero. Lacinia wisi feugiat tellus neque dui pellentesque, libero Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit est velit similique laborum, cumque aliquam porro dicta debitis repellat, tempore dignissimos, neque ab fuga voluptatibus. Earum numquam repellat sed perspiciatis ratione explicabo, odit! Repellendus voluptatibus nemo praesentium
-
-augue ullamcorper eros viverra neque, libero est metus libero. Lacinia wisi feugiat tellus neque dui pellentesque, libero Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit est velit similique laborum, cumque aliquam porro dicta debitis repellat, tempore dignissimos, neque ab fuga voluptatibus. Earum numquam repellat sed perspiciatis ratione explicabo, odit! Repellendus voluptatibus nemo praesentiumaugue ullamcorper eros viverra neque, libero est metus libero. Lacinia wisi feugiat tellus neque dui pellentesque, libero Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit est velit similique laborum, cumque aliquam porro dicta debitis repellat, tempore dignissimos, neque ab fuga voluptatibus. Earum numquam repellat sed perspiciatis ratione explicabo, odit! Repellendus voluptatibus nemo praesentium
 
 
+# The Rise of BSF Farming in Benin
 
-# Hello
+Black soldier fly (BSF) larvae transform organic waste and agricultural by-products into high-protein larvae for animal feed and nutrient-rich frass (insect manure), which improves soil quality and plant growth. This positions BSF as a potential solution to key agricultural challenges, including feed production, soil improvement, and organic waste management.
 
-adasd asmdlfma skdfm 
-asdf a
-sdf a
-sdf 
-asd
-f
-asdf 
-asdf
+BSF farming is gaining attention in Benin as farmers and entrepreneurs explore its potential to reduce feed costs and transform agricultural waste into valuable products. The growth of this sector has been supported by organizations like Swisscontact, IITA, and local agri-businesses, who are working to overcome technical and operational challenges. This collaboration led to the formation of the first association of BSF farmers in Benin.
+
+During field visits with Swisscontact, I observed diverse BSF rearing systems and discussed with farmers to understand their approaches and challenges. I conducted a study to assess the sector’s maturity, identify key producers, and evaluate the economic feasibility of BSF projects.
+
+Currently, BSF production in Benin is small-scale and decentralized, and producers operate independently, which may lead to an inefficient use of some resources. Some producers sell larvae to animal farmers, some use it to feed their own animals, and others do both. Facilities are basic, relying on low-cost infrastructure and manual labor, with little if not any control over critical factors like temperature, humidity, and feed quality. Processing of the larvae is minimal. They are typically sun or gas-dried, but not further processed. Producers sell alive larvae, dried larvae, ground larvae, or formulated feed containing BSF larvae.
+
+The focus of BSF farmers remains on producing cheap protein-rich larvae to cut feed costs. The lack of advanced processing or large-scale operations highlights both the sector’s potential and the need for improved techniques and infrastructure to optimize BSF farming in Benin.
+
+
+# A Vision for the Future
+
+The BSF holds immense potential for Benin’s agricultural sector. By converting agricultural waste into high-value products like protein-rich animal feed and organic fertilizer, BSF farming can address critical challenges such as cost-effective feed production, soil fertility improvement, and waste management. With stakeholder collaboration, supportive policies, and innovation, BSF farming could help build a more sustainable and prosperous agricultural system in Benin.
+
+
+### BSF Feed Availability: Economic and Practical Considerations
+  
+The adoption of BSF-based feed will largely depend on its economic viability. For BSF as feed to succeed, it must offer competitive performance and pricing compared to existing feed options. If these conditions are met, the sector could tap into a vast African market. Otherwise, it risks remaining a niche, dependent on external funding, or tied to short-term agendas rather than becoming a consolidated industry. 
+
+A critical challenge in BSF farming is sourcing suitable raw materials for larvae. While BSF larvae can consume diverse organic waste streams, their growth and nutritional value depend on an optimal diet. This creates a trade-off: low-cost, low-value waste reduces costs but may limit larval growth, while higher-quality substrates improve growth but increase costs.
+
+Additionally, introducing BSF as an additional trophic level raises questions about the efficiency of the overall process. If raw materials are already nutrient-rich, could they be used directly to feed livestock or fish? Adding a step in the food chain results in energy loss through processes like respiration, potentially reducing overall efficiency. Therefore, BSF farming must either use substrates that are not directly edible for animals or significantly enhance feed efficiency or product quality to justify its use.
+
+
+### Scaling BSF Farming: Challenges and Opportunities
+
+Scaling BSF farming to an industrial level presents significant challenges. While large-scale facilities can optimize production, they require substantial capital investment, high operation costs, and large production volumes to ensure profitability. Access to capital and advanced engineering expertise is critical, and not all technological approaches may work as expected. 
+
+Industrial-scale operations also require standardized processes and consistent raw material inputs, which can be difficult to secure. Moreover, the environmental impact of such facilities –energy use, transportation logistics, water use, and carbon footprint– must be carefully managed to avoid offsetting the sustainability benefits of BSF farming.
+
+
+# Conclusion: Weighing the Benefits
+
+The question remains: do the benefits of BSF farming justify the resources and effort required to scale it? While BSF farming addresses important challenges like feed production, soil fertility, and waste management, simpler, less resource-intensive solutions may also exist. Careful evaluation and further studies are needed to determine whether BSF farming is the most effective path forward for Benin’s agricultural sector. In the meantime, small- and medium-scale BSF farmers in Benin are steadily advancing, building their operations step by step, and demonstrating the potential of BSF farming. 

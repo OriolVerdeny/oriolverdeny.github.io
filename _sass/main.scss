@@ -1,7 +1,6 @@
 // @import 'colors/typography-light';
 // @import 'colors/typography-dark';
 // @import 'addon/variables';
-// @import 'variables-hook';
 // @import 'addon/module';
 // @import 'addon/syntax';
 // @import 'addon/commons';
@@ -15,6 +14,11 @@
 
 // @import "blog";
 @import "yovori";
+
+
+// @import 'addon-yovori/syntax';
+@import 'addon-yovori/commons';
+
 
 // @import "syntax";
 // @import "overrides";

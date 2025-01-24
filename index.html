@@ -221,32 +221,6 @@ clients_carousel:
 
 
 <!-- How it works -->
-<!-- {% if page.how_it_works.enable %}
-<div class="wrapper white-wrapper">
-  <div class="container inner">
-    <h2 class="display-3 title-color color-gray text-center mb-40">{{page.how_it_works.title}}</h2>
-    <div class="row gutter-50 gutter-md-30 process-wrapper line text-center">
-      {% for list in page.how_it_works.lists %}
-      <div class="col-md-2"
-      data-aos="zoom-in" 
-      data-aos-delay="{{ forloop.index | times: 500 }}" 
-      data-aos-duration="1000"> 
-        <span class="icon icon-blob icon-blob-dark mb-30">
-          <span class="number color-default">
-            {{forloop.index}}
-          </span>
-        </span>
-        <h5>{{list.title}}</h5>
-        <p>{{list.description}}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-{% endif %} -->
-
-
-<!-- How it works -->
 {% if page.how_it_works.enable %}
 <div class="wrapper white-wrapper">
   <div class="container inner">
@@ -295,7 +269,7 @@ clients_carousel:
 
           </div>
           <div>
-            <h5>{{step.title}}</h5>
+            <h5 class="font-weight-bold">{{step.title}}</h5>
             <p class="mb-0">{{step.description}}</p>
           </div>
         </div>
@@ -306,8 +280,6 @@ clients_carousel:
 </div>
 <!-- /.wrapper -->
 {% endif %}
-
-
 
 
 
@@ -333,7 +305,7 @@ clients_carousel:
         <div class="col-lg-6 pl-60 pl-md-15">
           {% for list in page.why_choose_us.lists %}
           <div data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
-            <h4>{{list.title}}</h4>
+            <h4 class="font-weight-bold">{{list.title}}</h4>
             <p>{{list.content}}</p>
           </div>
           {% endfor %}
