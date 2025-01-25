@@ -6,9 +6,11 @@
 </head>
 
 <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
-  <div class="content-wrapper">
+  <!-- <div class="content-wrapper"> -->
+    {% include header.html %}
     {{ content }}
-  </div>
+    {% include footer.html light_logo="true" %}
+  <!-- </div> -->
 
   {% include scripts.html %}
   {% include cookies.html %}
