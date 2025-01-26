@@ -33,7 +33,7 @@ custom_font: yovori_font
 custom_style: yovori_style
 
 social_accounts:
-  title: "Follow Us:"
+  title: "Follow Me:"
   links:
     - url: "https://www.linkedin.com/in/oriolverdeny/"
       icon: "jam jam-linkedin"

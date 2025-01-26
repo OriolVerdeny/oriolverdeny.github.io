@@ -1,4 +1,12 @@
 
+
+// Define variables for padding values
+$padding-lg: 6rem;
+$padding-md: 4rem;
+$padding-sm: 2rem;
+$footer-padding-bottom: 5rem;
+
+
 // Colors
 $color-default: #ffd429;
 $color-blue-yovori: #5458aa;
@@ -60,6 +68,32 @@ $shadow-opacity-strong: 0.5; // Strong hover opacity
 // Mixin for button hover styles
 @mixin btn-hover-shadow($color, $opacity: $shadow-opacity-default) {
     box-shadow: 0 0 0 $shadow-spread rgba($color, $opacity);
+}
+
+
+// Define placeholder selectors for shared styles
+%inner-top {
+    padding-top: $padding-lg;
+
+    @media (max-width: 992px) {
+        padding-top: $padding-md;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: $padding-sm;
+    }
+}
+
+%inner-bottom {
+    padding-bottom: $padding-lg;
+
+    @media (max-width: 992px) {
+        padding-bottom: $padding-md;
+    }
+
+    @media (max-width: 768px) {
+        padding-bottom: $padding-sm;
+    }
 }
 
 
@@ -373,19 +407,40 @@ $heading-sizes: (
 .text-muted {
     color: $color-gray !important;
 }
+
+
+// This should be responsive. Look at py-* bootstrap classes. 
+
+// Apply placeholder selectors to .inner
 .inner {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-}
-.inner-top {
-    padding-top: 6rem;
-}
-.inner-bottom {
-    padding-bottom: 6rem;
-}
-footer .inner {
-    padding-bottom: 5rem;
-}
+    @extend %inner-top;
+    @extend %inner-bottom;
+  }
+  
+  // Specific styles for .inner-top and .inner-bottom
+  .inner-top {
+    @extend %inner-top;
+  }
+  
+  .inner-bottom {
+    @extend %inner-bottom;
+  }
+  
+  // Footer-specific styles
+  footer .inner {
+    @extend %inner-top;
+    padding-bottom: $footer-padding-bottom;
+  
+    @media (max-width: 992px) {
+      padding-bottom: $padding-md;
+    }
+  
+    @media (max-width: 768px) {
+      padding-bottom: $padding-sm;
+    }
+  }
+
+
 
 // Base styles for page-title-wrapper inner
 .page-title-wrapper {
