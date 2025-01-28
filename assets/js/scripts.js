@@ -13,24 +13,24 @@ $(document).ready(function() {
 
 
 	
-	if ($(".navbar").length) {
-		var options = {
-			offset: 350,
-			offsetSide: 'top',
-			classes: {
-				clone: 'banner--clone fixed',
-				stick: 'banner--stick',
-				unstick: 'banner--unstick'
-			},
-			onStick: function() {
-				$($.SmartMenus.Bootstrap.init);
-			},
-			onUnstick: function() {
-				$('.search-dropdown .dropdown-menu').collapse('hide');
-			}
-		};
-		var banner = new Headhesive('.navbar', options);
-	}
+	// if ($(".navbar").length) {
+	// 	var options = {
+	// 		offset: 350,
+	// 		offsetSide: 'top',
+	// 		classes: {
+	// 			clone: 'banner--clone fixed',
+	// 			stick: 'banner--stick',
+	// 			unstick: 'banner--unstick'
+	// 		},
+	// 		onStick: function() {
+	// 			$($.SmartMenus.Bootstrap.init);
+	// 		},
+	// 		onUnstick: function() {
+	// 			$('.search-dropdown .dropdown-menu').collapse('hide');
+	// 		}
+	// 	};
+	// 	var banner = new Headhesive('.navbar', options);
+	// }
 	/*-----------------------------------------------------------------------------------*/
 	/*	HEADER BUTTONS
 	/*-----------------------------------------------------------------------------------*/
