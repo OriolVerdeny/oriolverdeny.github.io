@@ -1,31 +1,66 @@
-<!-- <nav class="navbar transparent navbar-hover-opacity nav-uppercase navbar-expand-lg"> -->
-<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light nav-uppercase ">  
-  <div class="container flex-row justify-content-center">
-    <!-- <div class="navbar-brand"> -->
-      <a class="navbar-brand" href="{{site.url}}">
-        <img src="{{site.data.general_settings.black_logo_1x}}"
-          srcset="{{site.data.general_settings.black_logo_1x}} 1x, {{site.data.general_settings.black_logo_2x}} 2x"
-          class="logo" alt="{{site.data.general_settings.title}}" />
-      </a>
-    <!-- </div> -->
+<nav class="navbar transparent navbar-hover-opacity nav-uppercase navbar-expand-lg">
+<!-- <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light nav-uppercase"> -->
+  <!-- <div class="container flex-row justify-content-center"> -->
+  <div class="container">
+
+    <!-- Brand Logo -->
+    <a class="navbar-brand" href="{{site.url}}">
+      <img src="{{site.data.general_settings.black_logo_1x}}"
+        srcset="{{site.data.general_settings.black_logo_1x}} 1x, {{site.data.general_settings.black_logo_2x}} 2x"
+        class="logo" alt="{{site.data.general_settings.title}}" />
+    </a>
 
 
+
+    <!-- Hamburger Toggle -->
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+
+        <!-- Navbar Links -->
+
+        <!-- <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            {% for menu in site.data.navigation.main_menu %}
+            {% if menu.submenu %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{{menu.url}}" id="navbarDropdown{{forloop.index}}" role="button"
+                data-toggle="dropdown" aria-expanded="false">
+                {{menu.text}}
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{forloop.index}}">
+                {% for submenu in menu.submenu %}
+                <li><a class="dropdown-item" href="{{submenu.url}}">{{submenu.text}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{menu.url}}">{{menu.text}}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div> -->
+
+
+
+    <!-- Hamburger Toggle -->
     <div class="navbar-other ml-auto order-lg-3">
       <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
-
-        <!-- Hamburger Toggle -->
         <li class="nav-item">
           <div class="navbar-hamburger d-lg-none d-xl-none ml-auto">
             <button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button>
           </div>
         </li>
-
       </ul>
     </div>
 
-    <!-- /.navbar-other -->
-     
-    <div class="navbar-collapse offcanvas-nav">
+
+
+<!-- Navbar Links -->
+<div class="navbar-collapse offcanvas-nav">
       <div class="offcanvas-header d-lg-none d-xl-none">
         <a href="{{site.url}}">
           <img src="{{site.data.general_settings.light_logo_1x}}"
@@ -50,14 +85,10 @@
                     <li><a class="dropdown-item" href="{{column.url}}">{{column.text}}</a></li>
                   </ul>
                 </div>
-                <!--/column -->
                 {% endfor %}
               </div>
-              <!--/.row -->
             </li>
-            <!--/.mega-menu-content-->
           </ul>
-          <!--/.dropdown-menu -->
         </li>
         {% when "dropdown" %}
         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
@@ -105,14 +136,15 @@
         </li>
         {% endcase %}
         {% endfor %}
-
-
-
       </ul>
-      <!-- /.navbar-nav -->
     </div>
-    <!-- /.navbar-collapse -->
+
+
   </div>
-  <!-- /.container-fluid -->
 </nav>
-<!-- /.navbar -->
+
+
+
+
+
+

@@ -1640,10 +1640,10 @@ p.about {
 /*-----------------------------------------------------------------------------------*/
 
 /* Show all elements with red borders */
-* {
-	border: 1px solid red !important;
-	box-sizing: border-box;
-}
+// * {
+// 	border: 1px solid red !important;
+// 	box-sizing: border-box;
+// }
 
 /* Restrict red borders to specific classes */
 // .container * {
