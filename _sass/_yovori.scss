@@ -510,68 +510,205 @@ label:not(.custom-control-label) {
 
 
 
-// Responsive spacing class in Yovori
 
+// Spacing class in Yovori
 
+// Percentage-based spacing sizes
+$spacing-sizes: (
+  sm: 1%,
+  md: 2.5%,
+  lg: 5%
+);
 
-// Consolidated responsive spacing class
+// Pixel-based spacing sizes
+$rem-spacing-sizes: (
+  0: 0rem,  
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem
+);
+
+// Responsive breakpoints
+$breakpoints: (
+  tablet: 768px,
+  mobile: 576px
+);
+
+// Generate percentage-based spacing classes
+@each $size, $value in $spacing-sizes {
+    .space-t-#{$size} {
+        margin-top: $value;
+    }
+
+    .space-b-#{$size} {
+        margin-bottom: $value;
+    }
+
+    .space-r-#{$size} {
+        margin-right: $value;
+    }
+
+    .space-l-#{$size} {
+        margin-left: $value;
+    }
+
+    .space-x-#{$size} {
+        margin-right: $value;
+        margin-left: $value;
+    }
+
+    .space-y-#{$size} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+
+    @media (max-width: map-get($breakpoints, tablet)) {
+        .space-t-#{$size} {
+            margin-top: $value * 0.8;
+        }
+
+        .space-b-#{$size} {
+            margin-bottom: $value * 0.8;
+        }
+
+        .space-r-#{$size} {
+            margin-right: $value * 0.8;
+        }
+
+        .space-l-#{$size} {
+            margin-left: $value * 0.8;
+        }
+
+        .space-x-#{$size} {
+            margin-right: $value * 0.8;
+            margin-left: $value * 0.8;
+        }
+        .space-y-#{$size} {
+            margin-top: $value * 0.8;
+            margin-bottom: $value * 0.8;
+        }
+    }
+
+    @media (max-width: map-get($breakpoints, mobile)) {
+        .space-t-#{$size} {
+            margin-top: $value * 0.6;
+        }
+
+        .space-b-#{$size} {
+            margin-bottom: $value * 0.6;
+        }
+
+        .space-r-#{$size} {
+            margin-right: $value * 0.6;
+        }
+
+        .space-l-#{$size} {
+            margin-left: $value * 0.6;
+        }
+
+        .space-x-#{$size} {
+            margin-right: $value * 0.6;
+            margin-left: $value * 0.6;
+        }
+
+        .space-y-#{$size} {
+            margin-top: $value * 0.6;
+            margin-bottom: $value * 0.6;
+        }
+    }
+}
+
+// Generate rem-based spacing classes
+@each $size, $value in $rem-spacing-sizes {
+    .space-t-#{$size} {
+        margin-top: $value;
+    }
+
+    .space-b-#{$size} {
+        margin-bottom: $value;
+    }
+
+    .space-r-#{$size} {
+        margin-right: $value;
+    }
+
+    .space-l-#{$size} {
+        margin-left: $value;
+    }
+
+    .space-x-#{$size} {
+        margin-right: $value;
+        margin-left: $value;
+    }
+
+    .space-y-#{$size} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+
+    @media (max-width: map-get($breakpoints, tablet)) {
+        .space-t-#{$size} {
+            margin-top: $value * 0.8;
+        }
+
+        .space-b-#{$size} {
+            margin-bottom: $value * 0.8;
+        }
+
+        .space-r-#{$size} {
+            margin-right: $value * 0.8;
+        }
+
+        .space-l-#{$size} {
+            margin-left: $value * 0.8;
+        }
+
+        .space-x-#{$size} {
+            margin-right: $value * 0.8;
+            margin-left: $value * 0.8;
+        }
+
+        .space-y-#{$size} {
+            margin-top: $value * 0.8;
+            margin-bottom: $value * 0.8;
+        }
+    }
+
+    @media (max-width: map-get($breakpoints, mobile)) {
+        .space-t-#{$size} {
+            margin-top: $value * 0.7;
+        }
+
+        .space-b-#{$size} {
+            margin-bottom: $value * 0.7;
+        }
+
+        .space-r-#{$size} {
+            margin-right: $value * 0.7;
+        }
+
+        .space-l-#{$size} {
+            margin-left: $value * 0.7;
+        }
+
+        .space-x-#{$size} {
+            margin-right: $value * 0.7;
+            margin-left: $value * 0.7;
+        }
+
+        .space-y-#{$size} {
+            margin-top: $value * 0.7;
+            margin-bottom: $value * 0.7;
+        }
+    }
+}
+
 .responsive-spacing {
     width: 100%;
     display: block;
-  
-    // Small spacing
-    &.space-sm {
-      margin-top: 2.5%; // Default for desktop
-      margin-bottom: 2.5%;
-    }
-  
-    // Medium spacing
-    &.space-md {
-      margin-top: 5%; // Default for desktop
-      margin-bottom: 5%;
-    }
-  
-    // Large spacing
-    &.space-lg {
-      margin-top: 10%; // Default for desktop
-      margin-bottom: 10%;
-    }
-  
-    // Adjust spacing for tablets
-    @media (max-width: 768px) {
-      &.space-sm {
-        margin-top: 2%; // Smaller for tablets
-        margin-bottom: 2%;
-      }
-      &.space-md {
-        margin-top: 4%;
-        margin-bottom: 4%;
-      }
-      &.space-lg {
-        margin-top: 8%;
-        margin-bottom: 8%;
-      }
-    }
-  
-    // Adjust spacing for mobile devices
-    @media (max-width: 576px) {
-      &.space-sm {
-        margin-top: 1.5%; // Even smaller for mobile
-        margin-bottom: 1.5%;
-      }
-      &.space-md {
-        margin-top: 3%;
-        margin-bottom: 3%;
-      }
-      &.space-lg {
-        margin-top: 6%;
-        margin-bottom: 6%;
-      }
-    }
   }
-
-
-
 
 /*-----------------------------------------------------------------------------------*/
 /*  10. BUTTON

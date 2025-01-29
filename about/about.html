@@ -27,14 +27,11 @@ mission:
   description:
     - paragraph: "I provide data-driven services to support organizations make informed decisions and achieve their goals to
     improve agriculture, sustainability, and financial performance."
-    - paragraph: "My services include Data Analysis and Decision Support, Process and Mass Balance Analysis, and Financial
-    Modeling."
     - paragraph: "These services help you get the most from your data, improve your project results, and make a positive
     impact on people and the environment."
   work:
     title: "I work with"
     clients: "Research organisations.:Development agencies.:Agribusinesses."
-
 
 
 
@@ -176,8 +173,7 @@ faq_area:
   <div class="container inner">
     <h2 class="display-3 title-color mb-40 text-center">{{ page.howidoit.title }}</h2>
     <div class="row">
-      <div class="col-lg-8 offset-lg-0">
-        <div class="space80"></div>
+      <div class="col-lg-8 offset-lg-0 space-t-5">
         <p class="about"> {{ page.howidoit.description }}</p>
       </div>
       <!-- /column -->
@@ -195,24 +191,18 @@ faq_area:
   <div class="container inner">
 
     <h2 class="display-3 title-color mb-40 text-center">{{ page.mission.title }}</h2>
-
     <div class="row">
       <div class="col-lg-10 offset-lg-1">
         {% for desctiption in page.mission.description %}
-
         <p class="about"> {{ desctiption.paragraph }}</p>
-
         {% endfor %}
-
       </div>
       <!-- /column -->
     </div>
 
-    <div class="space200"></div>
-
     <div class="row">
       <div class="col-lg-10 offset-lg-2">
-        <h2 class="display-3">
+        <h2 class="display-3 space-t-5">
           {{ page.mission.work.title}}
           <span class="typer color-default" data-delay="100" data-delim=":"
             data-words="Research organizations.:Development organizations.:Agribusinesses."></span>
@@ -228,21 +218,21 @@ faq_area:
 
 
 <!-- Values -->
-{% if page.values.enable %}<div class="wrapper white-wrapper">
+{% if page.values.enable %}
+<div class="wrapper white-wrapper">
   <div class="container inner">
     <h2 class="display-3 title-color mb-40 text-center">{{ page.values.title }}</h2>
     <div class="row">
 
       {% for value in page.values.list %}
       <div class="col-12">
-        <div class="value-item d-flex flex-row justify-content-start align-items-center p-3 border-bottom">
+        <div class="value-item d-flex flex-row justify-content-start align-items-center border-bottom">
 
-          <div class="icon-container mr-4">
+          <div class="icon-container space-r-3">
             <div class="icon icon-value icon-bg">
               <span class="number">{{ value.number }}</span>
             </div>
           </div>
-
 
           <div class="text-container">
             <h5 class="value-title font-weight-bold mb-1">{{ value.title }}</h5>
@@ -251,7 +241,6 @@ faq_area:
         </div>
       </div>
       {% endfor %}
-
 
     </div>
   </div>
