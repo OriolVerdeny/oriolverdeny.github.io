@@ -193,9 +193,9 @@ clients_carousel:
       <div class="row">
         <div class="col-md-7 mx-auto">
           <h2 class="display-3 title-color text-center">{{page.what_we_do.title}}</h2>
-          <div class="space10"></div>
+          <div class="responsive-spacing space-sm"></div> <!-- Replaces space10 -->
           <h3 class="display-3 text-center">{{page.what_we_do.sub_title}}</h3>
-          <div class="space30"></div>
+          <div class="responsive-spacing space-lg"></div> <!-- Replaces space30 -->
         </div>
       </div>
       <div class="row gutter-60 text-center align-items-end">
@@ -208,7 +208,7 @@ clients_carousel:
           <p class="mb-15">{{service.description}}</p>
           <div class="text-center font-weight-bold"><a href="{{service.button_url}}" class="more more-yovori">{{service.button_text}}</a></div>
         </div>
-        <div class="space20 d-md-none"></div>
+        <div class="responsive-spacing space-md d-md-none"></div> <!-- Replaces space20 -->
         {% endfor %}
       </div>
     </div>
@@ -253,7 +253,7 @@ clients_carousel:
         <h3 class="display-3">{{page.how_it_works.sub_title}}</h3>
         {% for step in page.how_it_works.lists %}
 
-        <div class="d-flex align-items-start responsive-margin" data-aos="zoom-in" data-aos-anchor-placement="top-bottom"
+        <div class="d-flex align-items-start responsive-spacing space-md" data-aos="zoom-in" data-aos-anchor-placement="top-bottom"
           data-aos-once="true" data-aos-delay="500" data-aos-duration="1500">
           <div>
 
@@ -300,7 +300,7 @@ clients_carousel:
         <div class="col-lg-6 pl-60 pl-md-15">
           {% for list in page.why_choose_us.lists %}
           <div data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
-          <div class="responsive-margin">
+          <div class="responsive-spacing space-lg">
             <h4 class="font-weight-bold">{{list.title}}</h4>
             <p>{{list.content}}</p>
           </div>
@@ -329,7 +329,7 @@ clients_carousel:
     <div class="grid-view">
       <div class="carousel owl-carousel" data-margin="30" data-dots="true" data-autoplay="false"
         data-autoplay-timeout="5000"
-        data-responsive='{"0":{"items": "2"}, "768":{"items": "3"}, "992":{"items": "4"}}' data-dotsEach="false">
+        data-responsive='{"0":{"items": "1"}, "768":{"items": "3"}, "992":{"items": "4"}}' data-dotsEach="false">
         {% for post in site.posts limit: page.case_studies.posts_number %}
         <div class="item blog-posts">
           {% if post.post_image %}

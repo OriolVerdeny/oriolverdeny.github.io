@@ -303,8 +303,6 @@ $heading-sizes: (
             }
           }
     }
-
-
   }
 
 
@@ -480,22 +478,6 @@ canvas {
 }
 
 
-.responsive-margin {
-    margin-top: 40px; // Default margin for desktop
-    margin-bottom: 40px; // Default margin for desktop
-  
-    @media (max-width: 768px) {
-      margin-top: 40px; // Default margin for desktop
-      margin-bottom: 30px; // Smaller margin for tablets
-    }
-  
-    @media (max-width: 576px) {
-      margin-top: 40px; // Default margin for desktop    
-      margin-bottom: 20px; // Even smaller margin for mobile devices
-    }
-  }
-
-
 // Shared Styles for Bold and Medium Font Size
 .shared-bold-medium {
     font-weight: $font-weight-bold;
@@ -525,6 +507,70 @@ th,
 label:not(.custom-control-label) {
     @extend .shared-bold-medium;
 }
+
+
+
+// Responsive spacing class in Yovori
+
+
+
+// Consolidated responsive spacing class
+.responsive-spacing {
+    width: 100%;
+    display: block;
+  
+    // Small spacing
+    &.space-sm {
+      margin-top: 2.5%; // Default for desktop
+      margin-bottom: 2.5%;
+    }
+  
+    // Medium spacing
+    &.space-md {
+      margin-top: 5%; // Default for desktop
+      margin-bottom: 5%;
+    }
+  
+    // Large spacing
+    &.space-lg {
+      margin-top: 10%; // Default for desktop
+      margin-bottom: 10%;
+    }
+  
+    // Adjust spacing for tablets
+    @media (max-width: 768px) {
+      &.space-sm {
+        margin-top: 2%; // Smaller for tablets
+        margin-bottom: 2%;
+      }
+      &.space-md {
+        margin-top: 4%;
+        margin-bottom: 4%;
+      }
+      &.space-lg {
+        margin-top: 8%;
+        margin-bottom: 8%;
+      }
+    }
+  
+    // Adjust spacing for mobile devices
+    @media (max-width: 576px) {
+      &.space-sm {
+        margin-top: 1.5%; // Even smaller for mobile
+        margin-bottom: 1.5%;
+      }
+      &.space-md {
+        margin-top: 3%;
+        margin-bottom: 3%;
+      }
+      &.space-lg {
+        margin-top: 6%;
+        margin-bottom: 6%;
+      }
+    }
+  }
+
+
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -915,6 +961,21 @@ $blob-images: 1 to 15; // Range for the blob images
   }
 }
 
+
+/* Responsive adjustments for image blobs */
+@media (max-width: 992px) {
+    .img-blob img {
+      width: 80%; /* Adjust size for medium screens */
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .img-blob img {
+      width: 60%; /* Adjust size for small screens */
+      max-width: 60%;
+    }
+  }
 
 .owl-carousel .owl-item .img-blob img,
 .owl-carousel .owl-item .img-blob-s img {
