@@ -3160,10 +3160,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 /*-----------------------------------------------------------------------------------*/
 /*	07. UTILITIES
 /*-----------------------------------------------------------------------------------*/
-/* [class*="space"] {
+[class*="space"] {
 	width: 100%;
 	display: block;
-} */
+}
 
 .m-0 {
 	margin: 0 !important
