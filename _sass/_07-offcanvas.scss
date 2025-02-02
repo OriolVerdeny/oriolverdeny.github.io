@@ -1,0 +1,52 @@
+/*-----------------------------------------------------------------------------------*/
+/*  07. OFFCANVAS
+/*-----------------------------------------------------------------------------------*/
+.offcanvas-info {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -300px;
+    width: 300px;
+    padding: 3rem 1.5rem 0;
+    overflow-y: auto;
+    visibility: hidden;
+    background: #1e2228;
+    transition: right 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1041;
+    align-items: start;
+    background-clip: padding-box;
+  
+    &.open {
+      right: 0;
+      visibility: visible;
+    }
+  
+    .widget {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  .offcanvas-close {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.8rem;
+    cursor: pointer;
+    color: var(--color-white);
+    font-size: 1.2rem;
+    transition: all 200ms ease-in-out !important;
+  }
+  
+  .offcanvas-nav-close {
+    left: auto;
+    right: 0.5rem;
+  }
+  
+  .offcanvas-header {
+    padding: 3rem 0 2rem;
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  

@@ -1,0 +1,85 @@
+/*-----------------------------------------------------------------------------------*/
+/*  11. BOX
+/*-----------------------------------------------------------------------------------*/
+
+$box-padding: 2rem 2rem 1rem;
+$box-padding-small: 1.5rem 1.5rem 1rem;
+$border-radius: 0.2rem;
+
+.box {
+    padding: $box-padding;
+    border-radius: $border-radius;
+    
+    &.p-30 {
+        padding: $box-padding-small;
+    }
+}
+
+.classic-view.boxed .box {
+    padding-bottom: 2rem;
+}
+
+.boxed {
+    &.list-view:not(.mega-menu) {
+        margin-bottom: -1.5rem;
+    }
+    
+    &.list-view {
+        .item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .box {
+            padding: 1.5rem 1rem;
+        }
+    }
+    
+    .image-block-wrapper {
+        .image-block {
+            & .image-block-bg {
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+            }
+            
+            &[class*="offset-"] .image-block-bg {
+                border-radius: 0;
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+            }
+        }
+    }
+    
+    .rounded .image-block>.google-map {
+        overflow: hidden !important;
+    }
+    
+    &:not(.list-view) {
+        figure.main,
+        .player-wrapper,
+        .post-slider {
+            margin: -2rem -2rem 0 -2rem;
+        }
+        
+        .box.p-30 {
+            figure.main,
+            .player-wrapper,
+            .post-slider {
+                margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+            }
+        }
+    }
+}
+
+.grid-view {
+    .post {
+        margin-bottom: 3rem;
+    }
+    
+    &.boxed .post {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.boxed.classic-view .post {
+    margin-bottom: 2.5rem;
+}

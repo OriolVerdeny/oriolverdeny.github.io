@@ -313,9 +313,9 @@ clients_carousel:
     <div class="row">
       <div class="col-md-7 mx-auto">
         <h2 class="display-3 title-color color-gray text-center">{{page.case_studies.title}}</h2>
-        <div class="space10"></div>
+        <!-- <div class="space10"></div> -->
         <h3 class="display-3 text-center">{{page.case_studies.sub_title}}</h3>
-        <div class="space40"></div>
+        <!-- <div class="space40"></div> -->
       </div>
     </div>
     <div class="grid-view">
@@ -355,11 +355,11 @@ clients_carousel:
             {{page.testimonials_area.title}}
           </h2>
         </div>
-        <div class="space10"></div>
+        <!-- <div class="space10"></div> -->
         <h3 class="display-3 text-center">
           {{page.testimonials_area.sub_title}}
         </h3>
-        <div class="space40"></div>
+        <!-- <div class="space40"></div> -->
       </div>
     </div>
     <div class="row align-items-center">
@@ -368,8 +368,8 @@ clients_carousel:
         <figure><img src="{{page.testimonials_area.image}}" alt="{{page.testimonials_area.title}}" /></figure>
       </div>
       {% endif %}
-      <div class="space20 d-md-none"></div>
-      <div class="space50 d-none d-md-block d-lg-none"></div>
+      <!-- <div class="space20 d-md-none"></div>
+      <div class="space50 d-none d-md-block d-lg-none"></div> -->
       <div class="col-lg-5">
         <div class="basic-slider owl-carousel gap-small dots-left" data-margin="30">
           {% for testimonial in page.testimonials_area.testimonials %}
@@ -389,7 +389,7 @@ clients_carousel:
       </div>
     </div>
     {% if page.clients_carousel.enable %}
-    <div class="space80"></div>
+    <!-- <div class="space80"></div> -->
     {% include clients_carousel.html %}
     {% endif %}
   </div>

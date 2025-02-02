@@ -1,0 +1,101 @@
+/*-----------------------------------------------------------------------------------*/
+/*  61. COLORS
+/*-----------------------------------------------------------------------------------*/
+@mixin color-classes($name, $color) {
+
+    .color-#{$name},
+    .bullet-#{$name}>li:before,
+    .bullet-#{$name} i {
+        color: $color !important;
+    }
+
+    .bg-#{$name} {
+        background: $color;
+    }
+
+    .title-bg.bg-#{$name} {
+        background: rgba($color, 0.15);
+    }
+
+    .fill-#{$name} {
+        fill: $color;
+    }
+
+    .bg-opacity-#{$name} {
+        background: rgba($color, 0.085);
+    }
+
+    .bg-transparent-#{$name} {
+        background: rgba($color, 0.85);
+    }
+
+    .fill-opacity-#{$name} {
+        fill: rgba($color, 0.08);
+    }
+
+    .icon-blob-#{$name}:after {
+        color: rgba($color, 0.75);
+    }
+
+    .icon-bg-#{$name} {
+        background-color: rgba($color, 0.25);
+    }
+
+    .nav-tabs .nav-link:hover .icon-blob-#{$name}:after,
+    .nav-tabs .nav-link.active .icon-blob-#{$name}:after,
+    .dial-item:hover .icon-blob-#{$name}:after,
+    .dial-item.active .icon-blob-#{$name}:after {
+        color: rgba($color, 0.75);
+    }
+
+    .progressbar.#{$name} svg path:last-child {
+        stroke: $color;
+    }
+}
+
+// $colors: (
+//     "default": "color-default",
+//     "white": "color-white",
+//     "gray": "color-gray",
+//     "dark": "color-dark",
+//     "red": "color-red",
+//     "orange": "color-orange",
+//     "yellow": "color-yellow",
+//     "green": "color-green",
+//     "leaf": "color-leaf",
+//     "teal": "color-teal",
+//     "aqua": "color-aqua",
+//     "meander": "color-meander",
+//     "blue": "color-blue",
+//     "cobalt": "color-cobalt",
+//     "sky": "color-sky",
+//     "purple": "color-purple",
+//     "violet": "color-violet",
+//     "pink": "color-pink",
+//     "rose": "color-rose",
+//     "hibiscus": "color-hibiscus",
+//     "brown": "color-brown"
+// );
+
+// Colors mapped to SCSS variables
+$colors: (
+    "default": $color-default,
+    "blue-yovori": $color-blue-yovori,
+    "blue-electric": $color-blue-electric,
+    "dark": $color-dark,
+    "light-gray": $color-light-gray,
+    "dark-yovori": $color-dark-yovori,
+    "white": $color-white,
+    "black": $color-black,
+    "gray": $color-gray,
+    "red": $color-red,
+    "orange": $color-orange,
+    "yellow": $color-yellow,
+    "green": $color-green,
+    "blue": $color-blue
+);
+
+// Generate styles dynamically
+@each $name, $color in $colors {
+    @include color-classes($name, $color);
+}

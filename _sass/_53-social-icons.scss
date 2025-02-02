@@ -1,0 +1,140 @@
+/*-----------------------------------------------------------------------------------*/
+/*  53. SOCIAL ICONS
+/*-----------------------------------------------------------------------------------*/
+
+
+.social {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    i {
+        vertical-align: -2px;
+    }
+
+    &, &.social-s {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    &.social-m {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 0.75rem 0 0;
+
+        a {
+            color: inherit;
+            transition: all 200ms ease-in-out;
+
+            i {
+                opacity: 1;
+                transition: all 200ms ease-in-out;
+            }
+
+            &:hover i {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .pull-right & li,
+    &.pull-right li,
+    .text-right & li,
+    &.text-right li {
+        margin: 0 0 0 0.75rem;
+    }
+
+    .text-center & li,
+    &.text-center li {
+        margin: 0 0.5rem;
+    }
+
+    .social-mute a i {
+        color: $color-dark;
+    }
+
+    .inverse-text .social-mute a i {
+        color: $color-white;
+    }
+
+    $social-colors: (
+        "500px": #00a6df,
+        "airbnb": #ff5156,
+        "amazon": #f79400,
+        "android": #97c03d,
+        "apple": #26a6d1,
+        "baidu": #0077be,
+        "beatport": #a3d80f,
+        "behance": #098ffa,
+        "bing": #008577,
+        "blogger": #e86733,
+        "codepen": #2e3a40,
+        "deezer": #49aae6,
+        "deviantart": #05cc47,
+        "digg": #44699e,
+        "disqus": #2091eb,
+        "drupal": #006fb4,
+        "ebay": #ec4134,
+        "facebook": #4470cf,
+        "fiverr": #00ac2c,
+        "flickr": #f3188c,
+        "foursquare": #f94877,
+        "ghost-org": #738a94,
+        "github": #4073a6,
+        "gitlab": #db4128,
+        "google-play": #24b5bd,
+        "google": #4081ec,
+        "instagram": #d53581,
+        "line": #0fab10,
+        "linkedin": #3393c1,
+        "medium": #00c364,
+        "messenger": #007bf7,
+        "myspace": #3c5ba6,
+        "napster": #3f528d,
+        "npm": #c60000,
+        "odnoklassniki": #f18f00,
+        "opera": #e33737,
+        "patreon": #df4419,
+        "paypal": #2f6ba2,
+        "periscope": #009fbd,
+        "pinterest": #c53942,
+        "quora": #aa261d,
+        "reddit": #ff3f18,
+        "shopify": #75c14d,
+        "skype": #2ebbf0,
+        "snapchat": #f7c31a,
+        "soundcloud": #ff680d,
+        "spotify": #7cc011,
+        "squarespace": #686d6f,
+        "stackoverflow": #f7a000,
+        "stumbleupon": #eb4923,
+        "trello": #1d83dd,
+        "tumblr": #5d82a4,
+        "twitch": #613fa0,
+        "twitter": #5daed5,
+        "unsplash": #304559,
+        "viadeo": #e89441,
+        "viber": #774e98,
+        "vimeo": #099fc7,
+        "vine": #01cc99,
+        "whatsapp": #00a859,
+        "wikipedia": #7c7c7c,
+        "wordpress": #287cb3,
+        "yahoo": #6e0e99,
+        "yelp": #be2f25,
+        "youtube": #c8312b,
+        "dribbble": #d07ead
+    );
+
+    @each $name, $color in $social-colors {
+        .jam[class*="#{$name}"],
+        .color-s-#{$name},
+        .color-s-#{$name}:hover {
+            color: $color;
+        }
+    }
+}

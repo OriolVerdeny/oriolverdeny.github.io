@@ -1,0 +1,175 @@
+/*-----------------------------------------------------------------------------------*/
+/*  10. BUTTON
+/*-----------------------------------------------------------------------------------*/
+
+// Variables
+$colors: (
+  white: var(--color-white),
+  dark: var(--color-dark),
+  default: var(--color-default),
+  red: var(--color-red),
+  orange: var(--color-orange),
+  yellow: var(--color-yellow),
+  green: var(--color-green),
+  leaf: var(--color-leaf),
+  teal: var(--color-teal),
+  aqua: var(--color-aqua),
+  meander: var(--color-meander),
+  blue: var(--color-blue),
+  cobalt: var(--color-cobalt),
+  sky: var(--color-sky),
+  purple: var(--color-purple),
+  violet: var(--color-violet),
+  pink: var(--color-pink),
+  rose: var(--color-rose),
+  hibiscus: var(--color-hibiscus),
+  brown: var(--color-brown),
+);
+
+$hover-shadows: (
+  white: var(--btn-hover-white),
+  dark: var(--btn-hover-dark),
+  red: var(--btn-hover-red),
+  orange: var(--btn-hover-orange),
+  yellow: var(--btn-hover-yellow),
+  green: var(--btn-hover-green),
+  leaf: var(--btn-hover-leaf),
+  teal: var(--btn-hover-teal),
+  aqua: var(--btn-hover-aqua),
+  meander: var(--btn-hover-meander),
+  blue: var(--btn-hover-blue),
+  cobalt: var(--btn-hover-cobalt),
+  sky: var(--btn-hover-sky),
+  purple: var(--btn-hover-purple),
+  violet: var(--btn-hover-violet),
+  pink: var(--btn-hover-pink),
+  rose: var(--btn-hover-rose),
+  hibiscus: var(--btn-hover-hibiscus),
+  brown: var(--btn-hover-brown),
+);
+
+// Mixin for hover and active states
+@mixin btn-hover-active($color) {
+  &:hover,
+  &:active,
+  &.active {
+    box-shadow: map-get($hover-shadows, $color);
+  }
+}
+
+// Button Base Styles
+.btn {
+  color: $color-dark;
+  background: $color-default;
+  border: 0;
+  margin: 0 0.25rem 0.5rem;
+  padding: 0.9rem 1.3rem 0.8rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 1.5rem;
+  text-shadow: none;
+  transition: all 300ms ease-in-out;
+  box-shadow: none;
+  display: inline-block;
+
+  &-icon {
+    i {
+      vertical-align: -1px;
+    }
+
+    &.navigation i {
+      vertical-align: 0;
+    }
+  }
+
+  &-icon-left i {
+    margin-right: 0.25rem;
+  }
+
+  &-icon-right i {
+    margin-left: 0.25rem;
+  }
+
+  &:focus {
+    color: $color-white;
+    box-shadow: inherit;
+  }
+
+  &:hover,
+  &:active,
+  &.active {
+    color: $color-dark;
+    @include btn-hover-shadow($color-default);
+  }
+
+  &.btn-s {
+    padding: 0.65rem 0.9rem 0.55rem;
+  }
+
+  &.btn-l {
+    padding: 1.05rem 1.5rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  &.fixed-width {
+    width: 165px;
+  }
+
+  &.btn-square {
+    padding: 0.5rem;
+  }
+
+  &.btn-submit {
+    margin: 0;
+  }
+
+  // Generate color-specific styles
+  @each $name, $color in $colors {
+    &.btn-#{$name} {
+      background: $color;
+      @include btn-hover-active($name);
+    }
+  }
+}
+
+// Alignment
+.text-center .btn {
+  margin: 0 0.25rem;
+}
+
+.text-right .btn {
+  margin-right: 0;
+}
+
+
+// Define share button colors
+$share-colors: (
+  "facebook": (#4470cf, #340bb3),
+  "google": (#a84539, #91362b),
+  "pinterest": (#c53942, #b12b34),
+  "tumblr": (#5d82a4, #496b8b),
+  "twitter": (#5daed5, #4c9ec6)
+);
+
+// Generate styles for each button
+@each $platform, $colors in $share-colors {
+  $bg: nth($colors, 1);
+  $hover-bg: nth($colors, 2);
+
+  .btn.share-#{$platform} {
+    background: $bg;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background: $hover-bg;
+    }
+  }
+}
+
+
+

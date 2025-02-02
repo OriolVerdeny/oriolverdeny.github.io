@@ -78,7 +78,7 @@ Author:     elemis
 /*-----------------------------------------------------------------------------------*/
 /*  01. RESET
 /*-----------------------------------------------------------------------------------*/
-*,
+/* *,
 *:before,
 *:after {
     -webkit-box-sizing: border-box;
@@ -117,15 +117,15 @@ br {
 }
 button:focus {
     outline: none !important;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  02. GENERAL
 /*-----------------------------------------------------------------------------------*/
-html {
+/* html {
     font-size: 20px;
     scroll-behavior: smooth;
-}
-body {
+} */
+/* body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Jost', sans-serif;
@@ -134,20 +134,20 @@ body {
     background: #f9fafb;
     overflow-x: hidden;
     position: relative;
-}
-.container {
+} */
+/* .container {
     padding-right: 0;
     padding-left: 0;
-}
-.container-fluid {
+} */
+/* .container-fluid {
     padding-left: 20px;
     padding-right: 20px
 }
 .navbar .container-fluid {
     padding-left: 30px;
     padding-right: 30px
-}
-body,
+} */
+/* body,
 li,
 address {
     line-height: 1.4rem;
@@ -165,8 +165,8 @@ strong {
 }
 p {
     margin: 0 0 1rem
-}
-.hover {
+} */
+/* .hover {
     -webkit-transition: all 200ms ease-in-out;
     -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
@@ -185,7 +185,7 @@ a.hover:hover {
     transition: border 150ms ease-in-out;
 }
 a {
-    color: #606060; /* var(--color-default); */
+    color: #606060; 
     -webkit-transition: all 200ms ease-in-out;
     -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
@@ -198,8 +198,8 @@ a:hover,
 a:focus {
     text-decoration: none;
     color: var(--color-default);
-}
-.font-weight-300 {
+} */
+/* .font-weight-300 {
     font-weight: 300;
 }
 .font-weight-400 {
@@ -216,8 +216,8 @@ a:focus {
 }
 strong {
     font-weight: 500;
-}
-h1,
+} */
+/* h1,
 h2,
 h3,
 h4,
@@ -228,8 +228,8 @@ h6 {
     font-weight: 500;
     letter-spacing: normal;
     margin-bottom: 0.8rem;
-}
-h1,
+} */
+/* h1,
 .h1 {
     font-size: 1.4rem;
     line-height: 1.7rem;
@@ -290,8 +290,8 @@ h6.text-uppercase,
 .h6.text-uppercase {
     font-size: 0.7rem;
     line-height: 1rem;
-}
-.grid-view h2.post-title {
+} */
+/* .grid-view h2.post-title {
     margin-bottom: 1rem;
     font-size: 1.1rem;
     line-height: 1.4rem;
@@ -304,8 +304,8 @@ h6.text-uppercase,
 .widget-title {
     font-size: 1rem;
     line-height: 1.3rem;
-}
-.section-title {
+} */
+/* .section-title {
     font-size: 1.5rem;
     line-height: 1.8rem;
     margin-bottom: 1rem;
@@ -337,8 +337,8 @@ h6.text-uppercase,
     display: inline-block;
     border-radius: 10rem;
     padding: 0.35rem 0.7rem 0.3rem;
-}
-.page-title {
+} */
+/* .page-title {
     font-size: 2.5rem;
     line-height: 2.8rem;
     margin-bottom: 1rem;
@@ -379,11 +379,11 @@ h6.text-uppercase,
 .lead.larger {
     font-size: 1.2rem;
     line-height: 1.7rem;
-}
-.text-muted {
+} */
+/* .text-muted {
     color: #808080 !important;
-}
-.inner {
+} */
+/* .inner {
     padding-top: 6rem;
     padding-bottom: 6rem;
 }
@@ -392,11 +392,11 @@ h6.text-uppercase,
 }
 .inner-bottom {
     padding-bottom: 6rem;
-}
-footer .inner {
+} */
+/* footer .inner {
     padding-bottom: 5rem;
-}
-.page-title-wrapper .inner {
+} */
+/* .page-title-wrapper .inner {
     padding-top: 5rem;
     padding-bottom: 0;
 }
@@ -420,13 +420,13 @@ canvas {
 }
 .pointer-none {
     pointer-events: none;
-}
+} */
 
 
 /*-----------------------------------------------------------------------------------*/
 /*  03. NAVBAR
 /*-----------------------------------------------------------------------------------*/
-.navbar {
+/* .navbar {
     z-index: 1008;
     width: 100%;
     padding: 0;
@@ -585,11 +585,11 @@ acronym[title] {
 .navbar:not(.extended) .topbar {
     font-size: 0.75rem;
     padding: 0.15rem 0;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  04. STICKY HEADER
 /*-----------------------------------------------------------------------------------*/
-.navbar.fixed {
+/* .navbar.fixed {
     margin: 0;
     width: 100%;
 }
@@ -630,11 +630,11 @@ acronym[title] {
     background: none !important;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  05. MEGA MENU
 /*-----------------------------------------------------------------------------------*/
-.navbar-nav,
+/* .navbar-nav,
 .navbar-nav>li.mega-menu {
     position: static !important;
 }
@@ -643,11 +643,11 @@ acronym[title] {
     right: 0 !important;
     width: auto !important;
     max-width: none !important;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  06. HAMBURGER MENU ICON
 /*-----------------------------------------------------------------------------------*/
-button.plain {
+/* button.plain {
     cursor: pointer;
     -webkit-transition: -webkit-transform .2s ease-in-out;
     transition: -webkit-transform .2s ease-in-out;
@@ -717,11 +717,11 @@ button.hamburger.animate.active:after {
         transform: translateY(-8px) rotate(-45deg);
     -moz-transform: translateY(-8px) rotate(-45deg);
     -webkit-transform: translateY(-8px) rotate(-45deg);
-}
-/*-----------------------------------------------------------------------------------*/
+} */
+/* ----------------------------------------------------------------------------------- */
 /*  07. OFFCANVAS
 /*-----------------------------------------------------------------------------------*/
-.offcanvas-info {
+/* .offcanvas-info {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -779,11 +779,11 @@ button.hamburger.animate.active:after {
 }
 .offcanvas-info .widget {
     margin-bottom: 2rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  08. SEARCH
 /*-----------------------------------------------------------------------------------*/
-.search-dropdown .dropdown-toggle {
+/* .search-dropdown .dropdown-toggle {
     color: #303030;
 }
 .search-dropdown .dropdown-menu .dropdown-close {
@@ -814,11 +814,11 @@ button.hamburger.animate.active:after {
     position: absolute;
     top: 25px;
     right: 1rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  09. CART
 /*-----------------------------------------------------------------------------------*/
-.dropdown-menu.cart-dropdown-menu {
+/* .dropdown-menu.cart-dropdown-menu {
     padding: 1.5rem !important;
     min-width: 280px;
 }
@@ -857,11 +857,11 @@ button.hamburger.animate.active:after {
     text-align: center;
     display: inline-block;
     vertical-align: 0.35rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  10. BUTTON
 /*-----------------------------------------------------------------------------------*/
-
+/* 
 .btn {
     color: var(--color-dark);
     background: var(--color-default);
@@ -1327,11 +1327,11 @@ button.hamburger.animate.active:after {
     color: var(--color-white);
     -webkit-box-shadow: 0 0 0 5px rgba(var(--rgb-white), 0.03);
             box-shadow: 0 0 0 5px rgba(var(--rgb-white), 0.03);
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  11. BOX
 /*-----------------------------------------------------------------------------------*/
-.box {
+/* .box {
     padding: 2rem 2rem 1rem;
     border-radius: 0.2rem;
 }
@@ -1380,11 +1380,11 @@ button.hamburger.animate.active:after {
 }
 .boxed.classic-view .post {
     margin-bottom: 2.5rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  12. WRAPPERS
 /*-----------------------------------------------------------------------------------*/
-.light-wrapper {
+/* .light-wrapper {
     background-color: var(--color-light-gray) !important;
 }
 .gray-wrapper {
@@ -1442,11 +1442,11 @@ footer.dark-wrapper,
     position: relative;
     z-index: 2;
     margin-bottom: -2rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  13. IMAGE BACKGROUND WRAPPER
 /*-----------------------------------------------------------------------------------*/
-.image-wrapper {
+/* .image-wrapper {
     background: no-repeat center center;
     background-size: cover;
     position: relative;
@@ -1497,11 +1497,11 @@ footer.dark-wrapper,
 }
 .h-100vh {
     height: 100vh;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  14. IMAGE BLOCK WRAPPER
 /*-----------------------------------------------------------------------------------*/
-.image-block-wrapper {
+/* .image-block-wrapper {
     padding: 0px;
     position: relative;
 }
@@ -1526,11 +1526,11 @@ footer.dark-wrapper,
 }
 .image-block-wrapper [class*="container"] .box {
     padding: 6rem 5rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  15. VIDEO BACKGROUND WRAPPER
 /*-----------------------------------------------------------------------------------*/
-.video-wrapper video {
+/* .video-wrapper video {
     width: 100%;
     height: 100%;
     display: inline-block;
@@ -1566,11 +1566,11 @@ footer.dark-wrapper,
 }
 video::-webkit-media-controls {
     display: none !important
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  16. SHADOW
 /*-----------------------------------------------------------------------------------*/
-.shadow {
+/* .shadow {
     -webkit-box-shadow: var(--shadow) !important;
             box-shadow: var(--shadow) !important;
     -webkit-transition: all 200ms ease-in-out;
@@ -1584,7 +1584,7 @@ video::-webkit-media-controls {
 .no-shadow {
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  17. ROUNDED CORNERS
 /*-----------------------------------------------------------------------------------*/
@@ -1734,7 +1734,7 @@ hr.double {
 /*-----------------------------------------------------------------------------------*/
 /*  21. BADGE
 /*-----------------------------------------------------------------------------------*/
-.badge {
+/* .badge {
     text-transform: uppercase;
     font-size: 0.6rem;
     line-height: 1;
@@ -1833,7 +1833,7 @@ a.badge.bg-hibiscus:hover {
 a.badge.bg-brown:hover {
     -webkit-box-shadow: var(--badge-hover-brown);
             box-shadow: var(--badge-hover-brown)
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  22. ALERT
 /*-----------------------------------------------------------------------------------*/
@@ -1910,7 +1910,7 @@ button.close:before {
 /*-----------------------------------------------------------------------------------*/
 /*  24. BLOCKQUOTE
 /*-----------------------------------------------------------------------------------*/
-blockquote p {
+/* blockquote p {
     font-size: 0.9rem;
     line-height: 1.5rem;
     font-style: normal;
@@ -2000,11 +2000,11 @@ blockquote.icon.icon-left:before {
     font-size: 0.8rem;
     font-weight: 400;
     text-transform: none;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  25. LISTS
 /*-----------------------------------------------------------------------------------*/
-ul,
+/* ul,
 ol {
     padding-left: 15px;
 }
@@ -2099,11 +2099,11 @@ ol {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     margin: 0 0 0 0.5rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  26. SERVICES
 /*-----------------------------------------------------------------------------------*/
-.icon-bg {
+/* .icon-bg {
     width: 2rem;
     height: 2rem;
     position: relative;
@@ -2218,7 +2218,7 @@ ol {
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     height: auto;
-    width: 100%; /* 4.5rem; */
+    width: 100%; 
     max-width: 100%;
     -webkit-mask-size: auto auto;
     -webkit-mask-box-image-repeat: space;
@@ -2317,7 +2317,7 @@ ol {
 .owl-carousel .owl-item .img-blob-s img {
     display: inline;
     width: 3.5rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  27. CLIENTS
 /*-----------------------------------------------------------------------------------*/
@@ -2333,7 +2333,7 @@ ol {
 /*-----------------------------------------------------------------------------------*/
 /*  28. FIGURE
 /*-----------------------------------------------------------------------------------*/
-figure {
+/* figure {
     margin: 0;
     padding: 0;
 }
@@ -2352,11 +2352,11 @@ figure.cover .divider [class*="fill-"] {
     left: 0;
     z-index: 2;
     width: 100%;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  29. OVERLAY
 /*-----------------------------------------------------------------------------------*/
-.overlay {
+/* .overlay {
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -2652,11 +2652,11 @@ figure.overlay img {
 }
 .overlay.caption.caption-overlay:hover span.bg:after {
     opacity: 1;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  30. TILES
 /*-----------------------------------------------------------------------------------*/
-.tiles[class*="tiles-"] .items:after {
+/* .tiles[class*="tiles-"] .items:after {
     content: '';
     display: block;
     clear: both;
@@ -2699,11 +2699,11 @@ figure.overlay img {
     padding-right: 10px;
     padding-left: 10px;
     margin-bottom: 20px;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  31. BLOG
 /*-----------------------------------------------------------------------------------*/
-.grid-view .post {
+/* .grid-view .post {
     margin-bottom: 3rem;
 }
 .classic-view .post {
@@ -2768,11 +2768,11 @@ figure.overlay img {
 .meta-footer .tag-list *,
 .meta-footer .social li {
     margin-bottom: 0 !important;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  32. WIDGETS
 /*-----------------------------------------------------------------------------------*/
-.sidebox {
+/* .sidebox {
     margin-top: 50px;
     display: block;
 }
@@ -2830,11 +2830,11 @@ footer.inverse-text .meta a {
 }
 footer.inverse-text .meta a:hover {
     color: var(--color-white);
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  33. PAGINATION
 /*-----------------------------------------------------------------------------------*/
-.pagination {
+/* .pagination {
     display: block;
     margin: 0;
 }
@@ -2905,7 +2905,7 @@ footer.inverse-text .meta a:hover {
     color: var(--color-default);
     -webkit-box-shadow: var(--shadow) !important;
             box-shadow: var(--shadow) !important;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  34. BREADCRUMBS
 /*-----------------------------------------------------------------------------------*/
@@ -3179,7 +3179,7 @@ ul.dial li:first-child .dial-item-info {
 /*-----------------------------------------------------------------------------------*/
 /*  40. TABS
 /*-----------------------------------------------------------------------------------*/
-.nav-tabs {
+/* .nav-tabs {
     border: 0;
 }
 .nav-tabs .nav-link {
@@ -3296,11 +3296,11 @@ ul.dial li:first-child .dial-item-info {
 }
 .tab-content .box {
     padding-bottom: 2rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  41. ACCORDION / COLLAPSE
 /*-----------------------------------------------------------------------------------*/
-.accordion-wrapper .card {
+/* .accordion-wrapper .card {
     background-clip: border-box;
     border: 0;
     border-radius: 0;
@@ -3383,7 +3383,7 @@ ul.dial li:first-child .dial-item-info {
 }
 .accordion-wrapper.simple .card-header {
     margin-bottom: 0.8rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  42. TABLES
 /*-----------------------------------------------------------------------------------*/
@@ -4215,7 +4215,7 @@ video.player {
 /*-----------------------------------------------------------------------------------*/
 /*  53. SOCIAL ICONS
 /*-----------------------------------------------------------------------------------*/
-.social {
+/* .social {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -4599,11 +4599,11 @@ video.player {
 .color-s-dribbble,
 .color-s-dribbble:hover {
     color: #d07ead;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  54. FORMS
 /*-----------------------------------------------------------------------------------*/
-select {
+/* select {
     -webkit-appearance: none;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -4944,7 +4944,7 @@ textarea.error {
     background-color: rgba(var(--rgb-white), 0.6);
     -webkit-box-shadow: var(--shadow) !important;
             box-shadow: var(--shadow) !important;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  55. LIGHTGALLERY
 /*-----------------------------------------------------------------------------------*/
@@ -5166,7 +5166,7 @@ pre {
 /*-----------------------------------------------------------------------------------*/
 /*  59. LINEAR ICONS LIST
 /*-----------------------------------------------------------------------------------*/
-.lineal-icon-list {
+/* .lineal-icon-list {
     text-align: center;
 }
 .lineal-icon-list li {
@@ -5175,20 +5175,20 @@ pre {
 .lineal-icon-list img {
     width: 3rem;
     height: auto;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  60. SPLIT LAYOUT
 /*-----------------------------------------------------------------------------------*/
-.split-layout .content-left {
+/* .split-layout .content-left {
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  61. COLORS
 /*-----------------------------------------------------------------------------------*/
-.color-default,
+/* .color-default,
 .bullet-default>li:before,
 .bullet-default i {
     color: var(--color-default) !important
@@ -5292,8 +5292,8 @@ pre {
 .bullet-brown>li:before,
 .bullet-brown i {
     color: var(--color-brown) !important
-}
-.bg-default {
+} */
+/* .bg-default {
     background: var(--color-default)
 }
 .bg-dark {
@@ -5418,8 +5418,8 @@ pre {
 }
 .title-bg.bg-brown {
     background: rgba(var(--rgb-brown), 0.15);
-}
-
+} */
+/* 
 .fill-default {
     fill: var(--color-default);
 }
@@ -5545,8 +5545,8 @@ pre {
 }
 .bg-opacity-brown {
     background: rgba(var(--rgb-brown), 0.085);
-}
-.bg-transparent-default {
+} */
+/* .bg-transparent-default {
     background: rgba(var(--rgb-default), 0.85);
 }
 .bg-transparent-dark {
@@ -5605,8 +5605,8 @@ pre {
 }
 .bg-transparent-brown {
     background: rgba(var(--rgb-brown), 0.88);
-}
-.fill-opacity-default {
+} */
+/* .fill-opacity-default {
     fill: rgba(var(--rgb-default), 0.08);
 }
 .fill-opacity-dark {
@@ -5665,8 +5665,8 @@ pre {
 }
 .fill-opacity-brown {
     fill: rgba(var(--rgb-brown), 0.08);
-}
-.icon-blob-default:after {
+} */
+/* .icon-blob-default:after {
     color: rgba(var(--rgb-default), 0.25);
 }
 .icon-blob-dark:after {
@@ -5725,8 +5725,8 @@ pre {
 }
 .icon-blob-brown:after {
     color: rgba(var(--rgb-brown), 0.25);
-}
-.icon-bg-default {
+} */
+/* .icon-bg-default {
     background-color: rgba(var(--rgb-default), 0.25);
 }
 .icon-bg-dark {
@@ -5785,8 +5785,8 @@ pre {
 }
 .icon-bg-brown {
     background-color: rgba(var(--rgb-brown), 0.25);
-}
-.nav-tabs .nav-link:hover .icon-blob-default:after,
+} */
+/* .nav-tabs .nav-link:hover .icon-blob-default:after,
 .nav-tabs .nav-link.active .icon-blob-default:after,
 .dial-item:hover .icon-blob-default:after,
 .dial-item.active .icon-blob-default:after {
@@ -5905,8 +5905,8 @@ pre {
 .dial-item:hover .icon-blob-brown:after,
 .dial-item.active .icon-blob-brown:after {
     color: rgba(var(--rgb-brown), 0.75);
-}
-.progressbar.default svg path:last-child {
+} */
+/* .progressbar.default svg path:last-child {
     stroke: var(--color-default)
 }
 .progressbar.dark svg path:last-child {
@@ -5965,11 +5965,11 @@ pre {
 }
 .progressbar.brown svg path:last-child {
     stroke: var(--color-brown)
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  62. INVERSE TEXT
 /*-----------------------------------------------------------------------------------*/
-.inverse-text p,
+/* .inverse-text p,
 .inverse-text li,
 .inverse-text span,
 .inverse-text h1:not([class*="color-"]),
@@ -6195,11 +6195,11 @@ footer.inverse-text address {
 }
 .inverse-text .divider-heading {
     opacity: 0.4;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  63. BOX LAYOUT
 /*-----------------------------------------------------------------------------------*/
-@media (min-width: 1260px) {
+/* @media (min-width: 1260px) {
     .box-layout {
         position: relative;
         background: #eef0f2;
@@ -6210,11 +6210,11 @@ footer.inverse-text address {
         margin: 0 auto;
         position: relative;
     }
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  64. RESPONSIVE
 /*-----------------------------------------------------------------------------------*/
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
     .split-layout .content-wrapper {
         position: relative;
         width: 100%;
@@ -6242,13 +6242,13 @@ footer.inverse-text address {
     .split-layout .inner {
         padding: 5rem;
     }
-}
-@media (min-width: 1200px) {
+} */
+/* @media (min-width: 1200px) {
     .rev_slider_wrapper {
         min-height: 500px;
     }
-}
-@media (min-width: 992px) and (max-width: 1199.98px) {}
+} */
+/* @media (min-width: 992px) and (max-width: 1199.98px) {}
 @media (max-width: 1024px) {}
 @media (min-width: 992px) {
     .navbar-nav .nav-link {
@@ -6481,8 +6481,8 @@ footer.inverse-text address {
         border-top-left-radius: 0.2rem !important;
         border-bottom-left-radius: 0.2rem !important;
     }
-}
-@media (max-width: 991.98px) {
+} */
+/* @media (max-width: 991.98px) {
     .boxed .rounded .image-block>.google-map,
     .boxed .rounded .image-block>.google-map iframe {
         border-top-left-radius: 0.2rem !important;
@@ -6651,8 +6651,8 @@ footer.inverse-text address {
     .sidebar.left-sidebar {
         padding-right: 15px !important;
     }
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
+} */
+/* @media (min-width: 768px) and (max-width: 991.98px) {
     .mosaic .item,
     .mosaic .item.width2 {
         width: 50%;
@@ -6716,8 +6716,8 @@ footer.inverse-text address {
     .nav-tabs.nav-pills .nav-link .icon {
         display: inline-block;
     }
-}
-@media (max-width: 767px) {
+} */
+/* @media (max-width: 767px) {
     .container {
         padding-right: 20px;
         padding-left: 20px;
@@ -6919,19 +6919,19 @@ footer.inverse-text address {
     .modal.fade.modal-bottom-center .modal-dialog {
         width: calc(100% - (0.5rem*2));
     }
-}
+} */
 
-.blog-posts .post-thumb {
+/* .blog-posts .post-thumb {
    max-height: 245px;
    -o-object-fit: cover;
       object-fit: cover;
-}
+} */
 
 
 /*****************************
  custom css
 ******************************/
-
+/* 
 .grid-view .post-thumb {
     height: 250px;
     -o-object-fit: cover;
@@ -6970,4 +6970,4 @@ footer.inverse-text address {
     overflow: hidden;
 }
 
-
+ */

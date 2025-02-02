@@ -1,0 +1,590 @@
+
+/*-----------------------------------------------------------------------------------*/
+/*  02. GENERAL
+/*-----------------------------------------------------------------------------------*/
+
+
+
+html {
+    font-size: $base-font-size;
+    scroll-behavior: smooth;
+}
+
+// Global Body Styles
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Nunito', sans-serif;
+    color: $color-dark;
+    font-size: inherit;
+    line-height: $base-line-height;
+    background: $color-light-gray;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+
+.container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+// Fluid container styles
+.container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    // Navbar-specific styles inside .container-fluid
+    .navbar & {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+
+body,
+li,
+address {
+    line-height: $base-line-height;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-weight: normal;
+    color: inherit;
+}
+
+strong {
+    font-weight: bold;
+}
+
+p {
+    margin: 0 0 1rem
+}
+
+
+
+// General hover transition styles
+.hover {
+    transition: all 200ms ease-in-out;
+}
+
+// Anchor tag-specific styles
+a {
+    color: $color-gray; 
+    transition: all 200ms ease-in-out;
+
+    &.hover {
+        transition: border 150ms ease-in-out;
+        padding-bottom: 0;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border-bottom: 1px solid $color-default;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $color-default;
+    }
+}
+
+// Specific styles for post-title and no-color links
+.post-title a,
+a.nocolor {
+    color: inherit;
+}
+
+
+// Loop to generate font-weight classes from 300 to 700
+@for $i from 300 through 700 {
+    .font-weight-#{$i} {
+        font-weight: $i;
+    }
+}
+
+strong {
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    color: $color-dark;
+    font-weight: $font-weight-bold;
+    letter-spacing: normal;
+    margin-bottom: 0.8rem;
+}
+
+
+// Define font sizes (first column) and line heights (second column) for each heading level
+$heading-sizes: (
+  1: (1.4rem, 1.7rem),
+  2: (1.3rem, 1.6rem),
+  3: (1.2rem, 1.5rem),
+  4: (1.1rem, 1.4rem),
+  5: (1.0rem, 1.3rem),
+  6: (0.9rem, 1.2rem)
+);
+
+// Loop through heading sizes and apply styles
+@each $level, $sizes in $heading-sizes {
+
+    h#{$level},
+    .h#{$level} {
+        font-size: nth($sizes, 1);
+        line-height: nth($sizes, 2);
+
+        // Apply margin for h5 and h6
+        @if $level ==5 or $level ==6 {
+            margin-bottom: 0.6rem;
+        }
+
+        &.text-uppercase {
+            font-size: (nth($sizes, 1) - 0.2rem);
+            line-height: (nth($sizes, 2) - 0.2rem);
+        }
+    }
+
+    // Scoped styles for the blog class
+    .blog h#{$level},
+    .blog .h#{$level} {
+        font-size: nth($sizes, 1) * 1.25;
+        line-height: nth($sizes, 2) + 1;
+    }
+
+}
+
+
+
+.blog {
+
+    @for $i from 1 through 6 {
+      .post-title ~ h#{$i} {
+        margin-top: 2.5rem; // More space for headings
+      }
+    }
+
+    @media (max-width: 768px) {
+
+        @for $i from 1 through 6 {
+            .post-title ~ h#{$i} {
+              margin-top: 1.5rem; // More space for headings
+            }
+          }
+    }
+  }
+
+
+.grid-view h2.post-title {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+}
+.classic-view h2.post-title,
+.caption-overlay h3 {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+.widget-title {
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+  
+    &.larger {
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+    }
+  
+    &.text-uppercase {
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+      margin-bottom: 1rem;
+  
+      &.larger {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+.title-color {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    margin-bottom: 1.05rem;
+    text-transform: uppercase;
+}
+.title-bg {
+    font-size: 0.55rem;
+    line-height: 1rem;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 10rem;
+    padding: 0.35rem 0.7rem 0.3rem;
+}
+.page-title {
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    margin-bottom: 1rem;
+}
+.hero {
+    font-size: 3rem;
+    line-height: 3.6rem;
+    font-weight: 500;
+}
+
+.display-1 {
+    font-size: 2.5rem;
+    line-height: 3.1rem;
+    font-weight: 500;
+}
+.display-2 {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+}
+.display-3 {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-weight: normal;
+}
+.display-4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 300;
+}
+
+.lead {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.page-title-wrapper .lead {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+.lead.larger {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+.text-muted {
+    color: $color-gray !important;
+}
+
+
+// This should be responsive. Look at py-* bootstrap classes. 
+
+// Apply placeholder selectors to .inner
+.inner {
+    @extend %inner-top;
+    @extend %inner-bottom;
+}
+
+// Specific styles for .inner-top and .inner-bottom
+.inner-top {
+    @extend %inner-top;
+}
+
+.inner-bottom {
+    @extend %inner-bottom;
+}
+
+// Footer-specific styles
+footer .inner {
+    @extend %inner-top;
+    padding-bottom: $footer-padding-bottom;
+
+    @media (max-width: 992px) {
+        padding-bottom: $padding-md;
+    }
+
+    @media (max-width: 768px) {
+        padding-bottom: $padding-sm;
+    }
+}
+
+// Base styles for page-title-wrapper inner
+.page-title-wrapper {
+    .inner {
+      padding-top: 5rem;
+      padding-bottom: 0;
+  
+      // Additional style for page-title-wrapper with image-wrapper
+      &.image-wrapper {
+        padding-bottom: 6rem;
+      }
+    }
+  }
+
+// Google map styles
+.google-map {
+    iframe {
+      display: block;
+    }
+  
+    &.map-full {
+      height: 100%;
+    }
+  }
+
+#wave {
+    margin: 0;
+}
+canvas {
+    vertical-align: bottom;
+}
+.divider svg {
+    vertical-align: bottom;
+}
+.pointer-none {
+    pointer-events: none;
+}
+
+
+// Shared Styles for Bold and Medium Font Size
+.shared-bold-medium {
+    font-weight: $font-weight-bold;
+    font-size: $medium-font-size;
+}
+
+// Apply shared class to all relevant elements
+.dropcap,
+.alert-link,
+.blockquote-footer,
+.meta,
+.more,
+.more-yovori,
+.breadcrumbs,
+.breadcrumbs *,
+.isotope-filter ul li a,
+.pagination ul > li > a,
+.icon-blob span,
+.icon-blob .step,
+th,
+.pricing-switcher,
+.item-detailed .item-label,
+.item-detailed .price,
+.nav-tabs .nav-link,
+.nav-uppercase .navbar-nav .nav-link,
+.accordion-wrapper .card-header button,
+label:not(.custom-control-label) {
+    @extend .shared-bold-medium;
+}
+
+
+
+
+// Spacing class in Yovori
+
+// Percentage-based spacing sizes
+$spacing-sizes: (
+  sm: 1%,
+  md: 2.5%,
+  lg: 5%
+);
+
+// Pixel-based spacing sizes
+$rem-spacing-sizes: (
+  0: 0rem,  
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem
+);
+
+// Responsive breakpoints
+$breakpoints: (
+  tablet: 768px,
+  mobile: 576px
+);
+
+// Generate percentage-based spacing classes
+@each $size, $value in $spacing-sizes {
+    .space-t-#{$size} {
+        margin-top: $value;
+    }
+
+    .space-b-#{$size} {
+        margin-bottom: $value;
+    }
+
+    .space-r-#{$size} {
+        margin-right: $value;
+    }
+
+    .space-l-#{$size} {
+        margin-left: $value;
+    }
+
+    .space-x-#{$size} {
+        margin-right: $value;
+        margin-left: $value;
+    }
+
+    .space-y-#{$size} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+
+    @media (max-width: map-get($breakpoints, tablet)) {
+        .space-t-#{$size} {
+            margin-top: $value * 0.8;
+        }
+
+        .space-b-#{$size} {
+            margin-bottom: $value * 0.8;
+        }
+
+        .space-r-#{$size} {
+            margin-right: $value * 0.8;
+        }
+
+        .space-l-#{$size} {
+            margin-left: $value * 0.8;
+        }
+
+        .space-x-#{$size} {
+            margin-right: $value * 0.8;
+            margin-left: $value * 0.8;
+        }
+        .space-y-#{$size} {
+            margin-top: $value * 0.8;
+            margin-bottom: $value * 0.8;
+        }
+    }
+
+    @media (max-width: map-get($breakpoints, mobile)) {
+        .space-t-#{$size} {
+            margin-top: $value * 0.6;
+        }
+
+        .space-b-#{$size} {
+            margin-bottom: $value * 0.6;
+        }
+
+        .space-r-#{$size} {
+            margin-right: $value * 0.6;
+        }
+
+        .space-l-#{$size} {
+            margin-left: $value * 0.6;
+        }
+
+        .space-x-#{$size} {
+            margin-right: $value * 0.6;
+            margin-left: $value * 0.6;
+        }
+
+        .space-y-#{$size} {
+            margin-top: $value * 0.6;
+            margin-bottom: $value * 0.6;
+        }
+    }
+}
+
+// Generate rem-based spacing classes
+@each $size, $value in $rem-spacing-sizes {
+    .space-t-#{$size} {
+        margin-top: $value;
+    }
+
+    .space-b-#{$size} {
+        margin-bottom: $value;
+    }
+
+    .space-r-#{$size} {
+        margin-right: $value;
+    }
+
+    .space-l-#{$size} {
+        margin-left: $value;
+    }
+
+    .space-x-#{$size} {
+        margin-right: $value;
+        margin-left: $value;
+    }
+
+    .space-y-#{$size} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+
+    @media (max-width: map-get($breakpoints, tablet)) {
+        .space-t-#{$size} {
+            margin-top: $value * 0.8;
+        }
+
+        .space-b-#{$size} {
+            margin-bottom: $value * 0.8;
+        }
+
+        .space-r-#{$size} {
+            margin-right: $value * 0.8;
+        }
+
+        .space-l-#{$size} {
+            margin-left: $value * 0.8;
+        }
+
+        .space-x-#{$size} {
+            margin-right: $value * 0.8;
+            margin-left: $value * 0.8;
+        }
+
+        .space-y-#{$size} {
+            margin-top: $value * 0.8;
+            margin-bottom: $value * 0.8;
+        }
+    }
+
+    @media (max-width: map-get($breakpoints, mobile)) {
+        .space-t-#{$size} {
+            margin-top: $value * 0.7;
+        }
+
+        .space-b-#{$size} {
+            margin-bottom: $value * 0.7;
+        }
+
+        .space-r-#{$size} {
+            margin-right: $value * 0.7;
+        }
+
+        .space-l-#{$size} {
+            margin-left: $value * 0.7;
+        }
+
+        .space-x-#{$size} {
+            margin-right: $value * 0.7;
+            margin-left: $value * 0.7;
+        }
+
+        .space-y-#{$size} {
+            margin-top: $value * 0.7;
+            margin-bottom: $value * 0.7;
+        }
+    }
+}
+
+.responsive-spacing {
+    width: 100%;
+    display: block;
+  }
+

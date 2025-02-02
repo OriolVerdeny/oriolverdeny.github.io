@@ -1,0 +1,19 @@
+/*-----------------------------------------------------------------------------------*/
+/*  16. SHADOW
+/*-----------------------------------------------------------------------------------*/
+
+
+$transition: all 200ms ease-in-out;
+
+.shadow {
+    box-shadow: $shadow !important;
+    transition: $transition;
+}
+
+.shadow-hover:hover {
+    box-shadow: $shadow-hover !important;
+}
+
+.no-shadow {
+    box-shadow: none !important;
+}

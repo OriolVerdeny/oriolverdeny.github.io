@@ -1,6 +1,4 @@
-<nav class="navbar transparent navbar-hover-opacity nav-uppercase navbar-expand-lg">
-<!-- <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light nav-uppercase"> -->
-  <!-- <div class="container flex-row justify-content-center"> -->
+<nav class="navbar navbar-hover-opacity nav-uppercase navbar-expand-lg">
   <div class="container">
 
     <!-- Brand Logo -->
@@ -9,42 +7,6 @@
         srcset="{{site.data.general_settings.black_logo_1x}} 1x, {{site.data.general_settings.black_logo_2x}} 2x"
         class="logo" alt="{{site.data.general_settings.title}}" />
     </a>
-
-
-
-    <!-- Hamburger Toggle -->
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-
-        <!-- Navbar Links -->
-
-        <!-- <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            {% for menu in site.data.navigation.main_menu %}
-            {% if menu.submenu %}
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{{menu.url}}" id="navbarDropdown{{forloop.index}}" role="button"
-                data-toggle="dropdown" aria-expanded="false">
-                {{menu.text}}
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{forloop.index}}">
-                {% for submenu in menu.submenu %}
-                <li><a class="dropdown-item" href="{{submenu.url}}">{{submenu.text}}</a></li>
-                {% endfor %}
-              </ul>
-            </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="nav-link" href="{{menu.url}}">{{menu.text}}</a>
-            </li>
-            {% endif %}
-            {% endfor %}
-          </ul>
-        </div> -->
-
-
 
     <!-- Hamburger Toggle -->
     <div class="navbar-other ml-auto order-lg-3">
@@ -59,56 +21,22 @@
 
 
 
-<!-- Navbar Links -->
-<div class="navbar-collapse offcanvas-nav">
+    <!-- Navbar Links -->
+    <div class="navbar-collapse offcanvas-nav">
+
       <div class="offcanvas-header d-lg-none d-xl-none">
         <a href="{{site.url}}">
           <img src="{{site.data.general_settings.light_logo_1x}}"
             srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x"
-            alt="{{site.data.general_settings.title}}" /></a>
+            alt="{{site.data.general_settings.title}}" />
+        </a>
         <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
       </div>
-      <ul
-        class="navbar-nav {% if include.alignment_class %} {{include.alignment_class}} {% else %} mx-auto {% endif %}">
+
+      <ul class="navbar-nav {% if include.alignment_class %} {{include.alignment_class}} {% else %} mx-auto {% endif %}">
         {% for menu in site.data.navigation.main_menu %}
         {% assign check_menu = menu.menu_type %}
         {% case check_menu %}
-        {% when "megamenu" %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{menu.url}}">{{menu.text}}</a>
-          <ul class="dropdown-menu mega-menu boxed list-view text-left">
-            <li class="mega-menu-content">
-              <div class="row">
-                {% for column in menu.submenu cols: 4 %}
-                <div class="col-lg-3">
-                  <ul class="list-unstyled">
-                    <li><a class="dropdown-item" href="{{column.url}}">{{column.text}}</a></li>
-                  </ul>
-                </div>
-                {% endfor %}
-              </div>
-            </li>
-          </ul>
-        </li>
-        {% when "dropdown" %}
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
-          <ul class="dropdown-menu">
-            {% for label_two in menu.label_two %}
-            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">{{label_two.sub_menu_text}}</a>
-              <ul class="dropdown-menu">
-                {% for sub_menu in label_two.sub_menu %}
-                <li class="nav-item"><a class="dropdown-item" href="{{sub_menu.url}}">{{sub_menu.text}}</a></li>
-                {% endfor %}
-              </ul>
-            </li>
-            {% endfor %}
-            {% if menu.submenu %}
-            {% for label_one in menu.submenu %}
-            <li><a class="dropdown-item" href="{{label_one.url}}">{{label_one.text}}</a></li>
-            {% endfor %}
-            {% endif %}
-          </ul>
-        </li>
         {% when "simple" %}
         <li class="nav-item">
           <a class="nav-link" href="{{menu.url}}">{{menu.text}}</a>
@@ -142,9 +70,3 @@
 
   </div>
 </nav>
-
-
-
-
-
-

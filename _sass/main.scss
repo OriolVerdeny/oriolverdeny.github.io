@@ -13,12 +13,53 @@
 
 
 // @import "blog";
+
+@import "plugins/01-smartmenus.scss";
+@import "plugins/04-lightgallery.scss";
+@import "plugins/05-owl-carousel.scss";
+@import "plugins/07-utilities.scss";
+
+
+@import "variables";
+
+@import "01-reset";
+@import "02-general";
+@import "03-navigation";
+@import "04-sticky-header";
+@import "06-hamburger-menu";
+@import "07-offcanvas";
+@import "08-search";
+@import "09-cart";
+@import "10-buttons";
+@import "11-box";
+@import "12-wrappers";
+@import "14-image-block-wrapper";
+@import "15-video-background-wrapper";
+@import "16-shadow";
+@import "21-badge";
+@import "24-blockquote";
+@import "25-lists";
+@import "26-services";
+@import "28-figure";
+@import "29-overlay";
+@import "30-tiles";
+@import "31-blog";
+@import "32-widgets";
+@import "33-pagination";
+@import "40-tabs";
+@import "41-accordion-collapse";
+@import "53-social-icons";
+@import "54-forms";
+@import "59-linear-icon-list";
+@import "61-colors";
+@import "62-inverse-text";
+@import "64-responsive";
+@import "99-custom";
+
 @import "yovori";
 
 
-// @import 'addon-yovori/syntax';
+
 @import 'addon-yovori/commons';
 
 
-// @import "syntax";
-// @import "overrides";

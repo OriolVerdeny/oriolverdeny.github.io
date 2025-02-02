@@ -1,0 +1,113 @@
+/*-----------------------------------------------------------------------------------*/
+/*	01. SMARTMENUS
+/*-----------------------------------------------------------------------------------*/
+
+.navbar-nav {
+    .sub-arrow {
+      font-family: Jam;
+    }
+  
+    &.sm-collapsible {
+      .sub-arrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 2px 0 10px;
+        font-size: 1rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+  
+        &::before {
+          content: '\e9ba';
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+  
+      .show > a > .sub-arrow::before {
+        content: '\e9cf';
+      }
+  
+      .has-submenu {
+        padding-right: 3em;
+      }
+  
+      .dropdown-item,
+      .nav-link {
+        position: relative;
+      }
+    }
+  
+    &:not(.sm-collapsible) {
+      .nav-link .sub-arrow {
+        display: none;
+        margin-right: 1rem;
+      }
+  
+      .nav-link .sub-arrow::before {
+        content: '\e9bc';
+        position: relative;
+      }
+  
+      .dropdown-item .sub-arrow,
+      &:not([data-sm-skip]) .dropdown-menu .dropdown-toggle::after {
+        font-size: 0.85rem;
+        position: absolute;
+        top: 0.55rem;
+        right: 1.6rem;
+      }
+  
+      .dropdown-item .sub-arrow::before,
+      &:not([data-sm-skip]) .dropdown-menu .dropdown-toggle::after {
+        content: '\e9bc';
+        position: relative;
+      }
+  
+      .dropdown-item.has-submenu {
+        padding-right: 2.3em;
+      }
+    }
+  
+    .scroll-down,
+    .scroll-up {
+      position: absolute;
+      display: none;
+      visibility: hidden;
+      height: 20px;
+      overflow: hidden;
+      text-align: center;
+    }
+  
+    .scroll-down-arrow,
+    .scroll-up-arrow {
+      position: absolute;
+      left: 50%;
+      margin-left: -8px;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      border: 7px solid transparent;
+  
+      &.scroll-up-arrow {
+        top: -2px;
+        border-bottom-color: currentColor;
+      }
+  
+      &.scroll-down-arrow {
+        top: 6px;
+        border-top-color: currentColor;
+      }
+    }
+  
+    &:not([data-sm-skip]) .dropdown-item {
+      white-space: normal;
+    }
+  
+    &:not(.sm-collapsible) .sm-nowrap > li > .dropdown-item {
+      white-space: nowrap;
+    }
+  }
+  

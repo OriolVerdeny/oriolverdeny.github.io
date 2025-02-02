@@ -1,0 +1,86 @@
+/*-----------------------------------------------------------------------------------*/
+/*  33. PAGINATION
+/*-----------------------------------------------------------------------------------*/
+
+
+.pagination {
+    display: block;
+    margin: 0;
+
+    ul {
+        box-shadow: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+
+        > li {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+
+            > a {
+                border: 0;
+                display: inline-block;
+                margin: 0;
+                font-weight: 500;
+                font-size: 0.7rem;
+                letter-spacing: normal;
+                padding: 0.8rem;
+                vertical-align: middle;
+                border-radius: 10rem;
+                color: #404040;
+                float: none;
+
+                &:hover {
+                    color: var(--color-default);
+                }
+
+                > i {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        > li {
+            margin: 0;
+        }
+    }
+
+    &.text-center ul > li {
+        margin: 0 4px;
+    }
+
+    &:not(.bg) ul > .active > a {
+        &, &:hover {
+            color: var(--color-default);
+        }
+    }
+
+    i {
+        font-size: 10px;
+        margin-top: -2px;
+        vertical-align: middle;
+    }
+
+    &.bg ul {
+        > li > a {
+            width: 42px;
+            height: 42px;
+            line-height: 42px;
+            padding: 0;
+            border-radius: 100%;
+
+            > i {
+                vertical-align: middle;
+            }
+        }
+
+        > .active > a {
+            background: var(--color-white);
+            color: var(--color-default);
+            box-shadow: var(--shadow) !important;
+        }
+    }
+}

@@ -1,0 +1,234 @@
+
+/*-----------------------------------------------------------------------------------*/
+/*  26. SERVICES
+/*-----------------------------------------------------------------------------------*/
+.icon-bg {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
+// Icon Blob Styles
+.icon-blob {
+    font-family: 'Nunito', sans-serif !important;
+    font-size: inherit; // Inherit font-size from body or global settings
+    line-height: 1;
+    width: $icon-size;
+    height: $icon-size;
+    display: table;
+    position: relative;
+    z-index: 1;
+
+    // Nested styles for icon-blob specific elements
+    span,
+    h3,
+    p,
+    .step {
+        font-family: inherit; // Inherit font family from parent
+        font-size: inherit; // Inherit font size from parent
+        line-height: inherit; // Inherit line height from parent
+    }
+
+    &::after {
+        font-family: $icon-font-family;
+        content: "\0041";
+        font-size: $icon-size;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    span {
+        font-weight: 500;
+    }
+
+    .number {
+        display: table-cell;
+        text-align: center;
+        margin: 0 auto;
+        vertical-align: middle;
+        font-size: $number-font-size;
+    }
+
+    .step {
+        position: absolute;
+        bottom: -0.15rem;
+        left: 0.55rem;
+        width: $step-size;
+        height: $step-size;
+        border-radius: 50%;
+        font-size: $step-font-size;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: $color-white;
+        z-index: 2;
+    }
+
+    i {
+        display: table-cell;
+        text-align: center;
+        margin: 0 auto;
+        vertical-align: middle;
+        font-size: 1.6rem;
+    }
+
+    &.text-center {
+        margin: 0 auto;
+    }
+
+    &.hover-effect,
+    &.active-effect {
+        transition: all $transition-duration $transition-easing;
+    }
+
+
+    // Responsive adjustments for icon blob size
+    @media (max-width: 768px) {
+        width: $icon-size * 0.8; // 80% of default size for tablets
+        height: $icon-size * 0.8;
+
+        &::after {
+            font-size: $icon-size * 0.8; // Adjust pseudo-element size
+        }
+
+        .number {
+            font-size: 1rem; // Smaller size for tablets
+        }
+
+        // Adjust margins for tablets
+        &.mb-30 {
+            margin-bottom: 15px; // Adjust as needed
+        }
+
+        &.mr-25 {
+            margin-right: 15px; // Adjust as needed
+        }
+
+    }
+
+    @media (max-width: 576px) {
+        width: $icon-size * 0.6; // 60% of default size for mobile devices
+        height: $icon-size * 0.6;
+
+        &::after {
+            font-size: $icon-size * 0.6; // Adjust pseudo-element size
+        }
+
+        .number {
+            font-size: 0.9rem; // Smaller size for mobile devices
+        }
+
+        // Adjust margins for mobile devices
+        &.mb-30 {
+            margin-bottom: 10px !important; // Adjust as needed
+        }
+
+        &.mr-25 {
+            margin-right: 10px !important; // Adjust as needed
+        }
+
+    }
+
+}
+
+.dial-item {
+    .icon-blob {
+        &::before {
+            font-family: $icon-font-family;
+            content: "\0041";
+            font-size: $icon-size;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            color: $color-white;
+        }
+
+        &.hover-effect:hover,
+        &.active-effect.active,
+        &.hover-effect:hover .number,
+        &.active-effect.active .number {
+            color: var(--color-white) !important;
+        }
+    }
+}
+
+.nav-tabs .nav-link {
+    .icon-blob {
+        transition: all $transition-duration $transition-easing;
+
+        &.hover-effect:hover,
+        &.active-effect.active {
+            color: var(--color-white) !important;
+        }
+    }
+}
+
+.img-blob {
+    img {
+        -webkit-mask-position: center center;
+        mask-position: center center;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        -webkit-mask-size: auto auto;
+        -webkit-mask-box-image-repeat: space;
+    }
+
+
+    $blob-images: 1 to 15; // Range for the blob images
+
+    @each $i in $blob-images {
+        &.blob#{$i} img {
+            -webkit-mask-box-image: url(../images/blob/blob#{$i}.svg);
+            -webkit-mask-image: url(../images/blob/blob#{$i}.svg);
+            mask-image: url(../images/blob/blob#{$i}.svg);
+            -webkit-mask-box-image-repeat: space;
+        }
+    }
+}
+
+
+.icon-svg img {
+    width: 3rem;
+    height: 3rem;
+}
+
+
+/* Responsive adjustments for image blobs */
+@media (max-width: 992px) {
+    .img-blob img {
+      width: 80%; /* Adjust size for medium screens */
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .img-blob img {
+      width: 60%; /* Adjust size for small screens */
+      max-width: 60%;
+    }
+  }
+
+.owl-carousel .owl-item .img-blob img,
+.owl-carousel .owl-item .img-blob-s img {
+    display: inline;
+    width: 3.5rem;
+}
