@@ -856,7 +856,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .lg-outer .lg-has-video.lg-video-playing .lg-video-object {
 	visibility: visible
 } */
-
+/* 
 .lg-progress-bar {
 	background-color: #333;
 	height: 5px;
@@ -893,6 +893,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .lg-show-autoplay .lg-autoplay-button:after {
 	content: "\e01a"
 }
+ */
+
+
+
+
+/* 
+
 
 .lg-outer.lg-css3.lg-zoom-dragging .lg-item.lg-complete.lg-zoomable .lg-image,
 .lg-outer.lg-css3.lg-zoom-dragging .lg-item.lg-complete.lg-zoomable .lg-img-wrap {
@@ -1524,7 +1531,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .lg-outer.fb-comments .lg-video-cont {
 	max-width: 1250px !important
-}
+} */
 
 /*-----------------------------------------------------------------------------------*/
 /*	05. OWL CAROUSEL

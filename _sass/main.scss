@@ -15,9 +15,13 @@
 // @import "blog";
 
 @import "plugins/01-smartmenus.scss";
-@import "plugins/04-lightgallery.scss";
+
+// Problem here
+// @import "plugins/04-lightgallery.scss";
 @import "plugins/05-owl-carousel.scss";
-@import "plugins/07-utilities.scss";
+
+// Problem here
+// @import "plugins/07-utilities.scss";
 
 
 @import "variables";
