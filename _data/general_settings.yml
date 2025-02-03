@@ -25,7 +25,7 @@ google_map: |
 
 google_analytics:
   enable: true
-  key: "m0Aey-AYSMOx7bRbTRL3JQ"  # UA-664136761-1
+  key: "G-KPHHTGL5LH"  # G-KPHHTGL5LH
 
 # Custom css styles applied to all pages
 custom_css: yovori_color

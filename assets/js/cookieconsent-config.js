@@ -1,33 +1,97 @@
 import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.umd.js';
 
 
-// Get configuration values from the data attributes
-const configElement = document.getElementById('config');
-const googleAnalyticsEnabled = configElement.getAttribute('data-ga-enable') === 'true';
-const googleAnalyticsKey = configElement.getAttribute('data-ga-key');
+// function loadGoogleAnalytics() {
+//     if (window.gtag) return; // Prevents multiple loads
 
+//     // Create Google Analytics script dynamically
+//     var script = document.createElement('script');
+//     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-KPHHTGL5LH'; // Replace with your GA ID
+//     script.async = true;
+//     document.head.appendChild(script);
 
-/**
- * All config. options available here:
- * https://cookieconsent.orestbida.com/reference/configuration-reference.html
- */
+//     script.onload = function () {
+//         window.dataLayer = window.dataLayer || [];
+//         function gtag() { dataLayer.push(arguments); }
+//         window.gtag = gtag;
+
+//         gtag('js', new Date());
+//         gtag('config', 'G-KPHHTGL5LH'); // Replace with your GA ID
+//     };
+// }
+
+// function disableGoogleAnalytics() {
+//     document.cookie = "_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+//     document.cookie = "_gid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+//     document.cookie = "_gat=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+//     console.log("Google Analytics disabled, cookies removed.");
+
+//     // Optionally, reload the page to ensure tracking is disabled
+//     location.reload();
+// }
+
 
 document.documentElement.classList.add('cc--darkmode');
-
 
 
 CookieConsent.run({
 
     disablePageInteraction: true,
+    autoShow: true,
+    hideFromBots: true,
+    mode: 'opt-in',
+    revision: 0,
+    current_lang: 'en',
+    autoclear_cookies: true, // Automatically clear cookies if the user declines
+    page_scripts: true,      // Enable page scripts based on consent
 
+    cookie: {
+        name: 'cc_cookie_demo2',
+        expiresAfterDays: 182,
+    },
+
+    // https://cookieconsent.orestbida.com/reference/configuration-reference.html#guioptions
     guiOptions: {
         consentModal: {
             layout: 'bar',
             position: 'bottom left',
             flipButtons: false,
             equalWeightButtons: false
+        },
+        preferencesModal: {
+            layout: 'box',
+            equalWeightButtons: false,
+            flipButtons: false
         }
     },
+
+
+
+    onFirstConsent: ({ cookie }) => {
+        console.log('onFirstConsent fired', cookie);
+    },
+
+    onConsent: ({ cookie }) => {
+        console.log('onConsent fired!', cookie)
+    },
+
+    onChange: ({ changedCategories, changedServices }) => {
+        console.log('onChange fired!', changedCategories, changedServices);
+    },
+
+    onModalReady: ({ modalName }) => {
+        console.log('ready:', modalName);
+    },
+
+    onModalShow: ({ modalName }) => {
+        console.log('visible:', modalName);
+    },
+
+    onModalHide: ({ modalName }) => {
+        console.log('hidden:', modalName);
+    },
+
 
     categories: {
         necessary: {
@@ -35,23 +99,40 @@ CookieConsent.run({
             readOnly: true  // this category cannot be disabled
         },
         analytics: {
-			enabled: googleAnalyticsEnabled,  // Enables based on the config setting,
+            enabled: false,  // Analytics cookies are disabled by default
             readOnly: false,
-            
+
             // Delete specific cookies when the user opts-out of this category
             autoClear: {
                 cookies: [
-                    {
-                        name: /^_ga/,   // regex: match all cookies starting with '_ga'
-                    },
-                    {
-                        name: '_gid',   // string: exact cookie name
-                    }
+                    { name: /^_ga/ }, // Match all cookies starting with '_ga'
+                    { name: '_gid' },   // Exact cookie name
+                    { name: '_gat' }   // Exact cookie name
+
                 ]
+            },
+
+            // https://cookieconsent.orestbida.com/reference/configuration-reference.html#category-services
+            services: {
+                ga: {
+                    label: 'Google Analytics',
+                    onAccept: () => { // enable ga
+                        // loadGoogleAnalytics();
+                    },
+                    onReject: () => { // disable ga
+                        // disableGoogleAnalytics();
+                    },
+                    cookies: [
+                        { name: /^_ga/ },
+                        { name: '_gid' },
+                        { name: '_gat' }
+                    ]
+                }
             }
-            
-		}
+
+        }
     },
+
 
     language: {
         default: 'en',
@@ -85,8 +166,32 @@ CookieConsent.run({
                         {
                             title: 'Performance and Analytics',
                             description: 'These cookies collect information about how you use our website. All of the data is anonymized and cannot be used to identify you.',
-                            linkedCategory: 'analytics'
+                            linkedCategory: 'analytics',
+                            cookieTable: {
+                                headers: {
+                                    name: "Name",
+                                    domain: "Service",
+                                    description: "Description",
+                                    expiration: "Expiration"
+                                },
+                                body: [
+                                    {
+                                        name: "_ga",
+                                        domain: "Google Analytics",
+                                        description: "Cookie set by <a href=\"#das\">Google Analytics</a>",
+                                        expiration: "Expires after 12 days"
+                                    },
+                                    {
+                                        name: "_gid",
+                                        domain: "Google Analytics",
+                                        description: "Cookie set by <a href=\"#das\">Google Analytics</a>",
+                                        expiration: "Session"
+                                    }
+                                ]
+                            }
                         },
+
+
                         {
                             title: 'More information',
                             description: 'For any queries in relation to my policy on cookies and your choices, please <a href="/contact/contact-4">contact us</a>'
@@ -95,63 +200,8 @@ CookieConsent.run({
                 }
             }
         }
-    },
-
-
-    onAccept: (cookie) => {
-        if (cookie.categories.analytics) {
-            loadGoogleAnalytics(googleAnalyticsKey);
-        }
-    },
-    onChange: (cookie) => {
-        if (cookie.categories && cookie.categories.analytics) {
-            // Only load Google Analytics if consent is given
-            loadGoogleAnalytics(googleAnalyticsKey);
-        } else {
-            // Optional: disable Google Analytics if the user revokes consent
-            window['ga-disable-' + googleAnalyticsKey] = true;
-            // Optional: Remove Google Analytics cookies if consent is revoked
-            document.cookie = '_ga=; Max-Age=0; path=/;';
-            document.cookie = '_gid=; Max-Age=0; path=/;';
-        }
     }
 
+
+
 });
-
-
-// Function to load Google Analytics
-function loadGoogleAnalytics(trackingId) {
-    // if (window.ga) return;  // Prevent loading multiple times if already loaded
-    if (window['ga-disable-' + gaKey]) return; // Exit if GA is disabled
-    console.log("Google Analytics is loading...");
-
-    // (function(i, s, o, g, r, a, m) {
-    //     i['GoogleAnalyticsObject'] = r;
-    //     i[r] = i[r] || function() {
-    //         (i[r].q = i[r].q || []).push(arguments)
-    //     }, i[r].l = 1 * new Date();
-    //     a = s.createElement(o),
-    //     m = s.getElementsByTagName(o)[0];
-    //     a.async = 1;
-    //     a.src = g;
-    //     m.parentNode.insertBefore(a, m)
-    // })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    // // ga('create', 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID', 'auto');
-    // ga('create', trackingId, 'auto');
-    // ga('send', 'pageview');
-    // Add the Google Analytics script dynamically
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${gaKey}`;
-    document.head.appendChild(script);
-
-    // Initialize GA only after loading the script
-    script.onload = () => {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', gaKey, { 'anonymize_ip': true });
-    };
-}
