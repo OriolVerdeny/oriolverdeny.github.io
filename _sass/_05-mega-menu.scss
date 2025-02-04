@@ -1,0 +1,17 @@
+/*-----------------------------------------------------------------------------------*/
+/*  05. MEGA MENU
+/*-----------------------------------------------------------------------------------*/
+.navbar-nav {
+    &,
+    > li.mega-menu {
+      position: static !important;
+    }
+  
+    > li > ul.mega-menu {
+      margin-left: 0 !important;
+      right: 0 !important;
+      width: auto !important;
+      max-width: none !important;
+    }
+  }
+  

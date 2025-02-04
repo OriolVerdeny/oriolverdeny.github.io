@@ -19,30 +19,30 @@
 // Problem here
 // @import "plugins/04-lightgallery.scss";
 @import "plugins/05-owl-carousel.scss";
-
-// Problem here
-// @import "plugins/07-utilities.scss";
+@import "plugins/07-utilities.scss"; // corrected
 
 
 @import "variables";
 
-@import "01-reset";
-@import "02-general";
+@import "01-reset"; // corrected
+@import "02-general"; // corrected
 @import "03-navigation"; // corrected
-@import "04-sticky-header";
+@import "04-sticky-header"; // corrected
+@import "05-mega-menu";
 @import "06-hamburger-menu";
 @import "07-offcanvas";
 @import "08-search";
 @import "09-cart";
-@import "10-buttons";
+@import "10-buttons"; 
 @import "11-box";
-@import "12-wrappers";
+@import "12-wrappers"; // corrected
+@import "13-image-background-wrapper"; // corrected
 @import "14-image-block-wrapper";
 @import "15-video-background-wrapper";
-@import "16-shadow";
+@import "16-shadow"; // corrected
 @import "21-badge";
-@import "24-blockquote";
-@import "25-lists";
+@import "24-blockquote"; // corrected
+@import "25-lists"; // corrected
 @import "26-services";
 @import "28-figure";
 @import "29-overlay";
@@ -56,7 +56,7 @@
 @import "54-forms";
 @import "59-linear-icon-list";
 @import "61-colors";
-@import "62-inverse-text";
+@import "62-inverse-text"; // POTENTIAL PROBLEM?
 @import "64-responsive";
 @import "99-custom";
 

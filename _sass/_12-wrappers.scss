@@ -4,29 +4,21 @@
 /*-----------------------------------------------------------------------------------*/
 
 .light-wrapper {
-    background-color: $color-light-gray !important;
+    background-color: $color-light-gray;
 }
 
 .gray-wrapper {
-    background-color: $color-gray !important;
+    background-color: $color-gray;
 }
 
 .dark-wrapper {
-    background-color: $color-dark !important;
+    background-color: $color-dark;
 }
 
 .white-wrapper {
-    background-color: $color-white !important;
+    background-color: $color-white;
 }
 
-footer.dark-wrapper,
-.footer-dark-wrapper {
-    background-color: #1e2228 !important;
-}
-
-.pattern-wrapper {
-    background: transparent repeat left top;
-}
 
 .gradient-wrapper {
     background-image: -o-linear-gradient(315deg, rgba(149, 74, 166, 1) 0%, rgba(114, 90, 238, 1) 100%);
@@ -34,37 +26,29 @@ footer.dark-wrapper,
 }
 
 .fill-white-wrapper {
-    fill: #fff;
+    fill: $color-white;
 }
 
 .fill-light-wrapper {
-    fill: #f9fafb;
+    fill: $color-light-gray;
 }
 
 .fill-gray-wrapper {
-    fill: #f3f4f7;
+    fill: $color-gray
 }
 
 .fill-dark-wrapper {
-    fill: #242930;
+    fill: $color-dark;
 }
 
-.fill-footer-dark-wrapper {
-    fill: #1e2228;
-}
 
 .overflow-top {
     margin-top: -10rem;
     position: relative;
     z-index: 2;
 
-    &.bleed-s {
-        margin-top: -7.5rem;
-    }
-
-    &.bleed-l {
-        margin-top: -30rem;
-    }
+    &.bleed-s { margin-top: -7.5rem; }
+    &.bleed-l { margin-top: -30rem; }
 }
 
 .overflow-bottom {
@@ -76,73 +60,3 @@ footer.dark-wrapper,
     z-index: 2;
     margin-bottom: -2rem;
 }
-
-
-
-/*-----------------------------------------------------------------------------------*/
-/*  13. IMAGE BACKGROUND WRAPPER
-/*-----------------------------------------------------------------------------------*/
-
-.image-wrapper {
-    background: no-repeat center center;
-    background-size: cover;
-    position: relative;
-
-    &:not(.mobile) {
-        background-attachment: fixed !important;
-    }
-
-    &.bg-auto {
-        background-size: auto;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: scroll !important;
-    }
-
-    &.bg-full {
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-attachment: scroll !important;
-    }
-
-    &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        background: rgba($color-dark, 0.6);
-    }
-
-    &.rounded:before {
-        border-radius: 0.2rem !important;
-    }
-
-    &.gradient-overlay:before {
-        background: none;
-        background-image: -o-linear-gradient(315deg, rgba(111, 63, 124, 0.55) 0%, rgba(88, 73, 170, 0.55) 100%);
-        background-image: linear-gradient(135deg, rgba(111, 63, 124, 0.55) 0%, rgba(88, 73, 170, 0.55) 100%);
-    }
-
-    &.no-overlay:before {
-        display: none;
-    }
-
-    &:not(.no-overlay) * {
-        position: relative;
-        z-index: 2;
-    }
-
-    .cbp-nav-controls,
-    .tparrows {
-        position: absolute;
-    }
-}
-
-.h-100vh {
-    height: 100vh;
-}
-

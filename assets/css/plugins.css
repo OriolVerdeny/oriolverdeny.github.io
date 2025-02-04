@@ -3165,7 +3165,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*	07. UTILITIES
+/*	07. UTILITIES in scss
 /*-----------------------------------------------------------------------------------*/
 /* [class*="space"] {
 	width: 100%;
@@ -4978,8 +4978,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .pl-200 {
 	padding-left: 10rem !important
-} */
-/* 
+}
+
 @media (min-width:1680px) {
 	.col-xxl {
 		-ms-flex-preferred-size: 0;
@@ -5129,9 +5129,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	.offset-xxl-11 {
 		margin-left: 91.66667%
 	}
-} */
+}
 
-/* .fs-1 {
+.fs-1 {
 	font-size: 1px !important
 }
 

@@ -6,14 +6,16 @@
 $transition: all 200ms ease-in-out;
 
 .shadow {
-    box-shadow: $shadow !important;
+    box-shadow: $shadow;
     transition: $transition;
 }
 
+// Not used
 .shadow-hover:hover {
-    box-shadow: $shadow-hover !important;
+    box-shadow: $shadow-hover;
 }
 
+// Not used
 .no-shadow {
-    box-shadow: none !important;
+    box-shadow: none;
 }

@@ -2,6 +2,22 @@
 /*	07. UTILITIES
 /*-----------------------------------------------------------------------------------*/
 
+// This selects any HTML element where the class attribute contains the substring "space" anywhere in the class name.
+// It is useful in a utility-based CSS system, such as when defining spacing helpers (.space10, .space20, etc.).
+
+// <div class="my-space"></div>   <!-- Matches -->
+// <div class="space-large"></div> <!-- Matches -->
+// <div class="extra-space-small"></div> <!-- Matches -->
+// <div class="spacious"></div> <!-- Does NOT match (no "space" exactly) -->
+
+// width: 100%; Ensures that the selected elements take up the full width of their container.
+// display: block; Forces the elements to behave as block-level elements, making them take up the full width by default and stack vertically.
+
+[class*="space"] {
+  width: 100%;
+  display: block;
+}
+
 $space-sizes: ();
 
 @for $i from 0 through 40 {
@@ -10,68 +26,61 @@ $space-sizes: ();
 }
 
 @each $size, $value in $space-sizes {
-  .m-#{$size} { margin: $value !important; }
-  .p-#{$size} { padding: $value !important; }
-  .space#{$size} { height: $value !important; }
-  .mt-#{$size} { margin-top: $value !important; }
-  .pt-#{$size} { padding-top: $value !important; }
-  .mr-#{$size} { margin-right: $value !important; }
-  .pr-#{$size} { padding-right: $value !important; }
-  .mb-#{$size} { margin-bottom: $value !important; }
-  .pb-#{$size} { padding-bottom: $value !important; }
-  .ml-#{$size} { margin-left: $value !important; }
-  .pl-#{$size} { padding-left: $value !important; }
+  .m-#{$size} { margin: $value; }
+  .p-#{$size} { padding: $value; }
+  .space#{$size} { height: $value; }
+  .mt-#{$size} { margin-top: $value; }
+  .pt-#{$size} { padding-top: $value; }
+  .mr-#{$size} { margin-right: $value; }
+  .pr-#{$size} { padding-right: $value; }
+  .mb-#{$size} { margin-bottom: $value; }
+  .pb-#{$size} { padding-bottom: $value; }
+  .ml-#{$size} { margin-left: $value; }
+  .pl-#{$size} { padding-left: $value; }
 }
 
-[class*="space"] {
-  width: 100%;
-  display: block;
-}
 
-.m-0, .p-0, .space0, .mt-0, .pt-0, .mr-0, .pr-0, .mb-0, .pb-0, .ml-0, .pl-0 {
-  margin: 0 !important;
-  padding: 0 !important;
-  height: 0 !important;
-}
 
-// 
 @media (min-width: 1680px) {
-    .col-xxl {
-      -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-      -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-      flex-grow: 1;
-      max-width: 100%;
-    }
-  
-    .col-xxl-auto {
+  .col-xxl {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .col-xxl-auto {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  @for $i from 1 through 12 {
+    $width: ($i / 12) * 100%;
+    $offset: (($i - 1) / 12) * 100%;
+
+    .col-xxl-#{$i} {
       -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
-      width: auto;
-      max-width: none;
+      -ms-flex: 0 0 $width;
+      flex: 0 0 $width;
+      max-width: $width;
     }
-  
-    @for $i from 1 through 12 {
-      .col-xxl-#{$i} {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 #{($i / 12) * 100}% !important;
-        flex: 0 0 #{($i / 12) * 100}% !important;
-        max-width: #{($i / 12) * 100}% !important;
-      }
-  
-      .offset-xxl-#{$i - 1} {
-        margin-left: #{($i - 1) / 12 * 100}% !important;
-      }
+
+    .offset-xxl-#{$i - 1} {
+      margin-left: $offset;
     }
   }
 
-// 
+}
+
 
 
 @for $i from 1 through 200 {
     .fs-#{$i} {
-        font-size: #{$i}px !important;
+        font-size: #{$i}px;
     }
 }
