@@ -511,204 +511,204 @@ label:not(.custom-control-label) {
 
 
 
-// Spacing class in Yovori
+// // Spacing class in Yovori
 
-// Percentage-based spacing sizes
-$spacing-sizes: (
-  sm: 1%,
-  md: 2.5%,
-  lg: 5%
-);
+// // Percentage-based spacing sizes
+// $spacing-sizes: (
+//   sm: 1%,
+//   md: 2.5%,
+//   lg: 5%
+// );
 
-// Pixel-based spacing sizes
-$rem-spacing-sizes: (
-  0: 0rem,  
-  1: 0.25rem,
-  2: 0.5rem,
-  3: 1rem,
-  4: 1.5rem,
-  5: 3rem
-);
+// // Pixel-based spacing sizes
+// $rem-spacing-sizes: (
+//   0: 0rem,  
+//   1: 0.25rem,
+//   2: 0.5rem,
+//   3: 1rem,
+//   4: 1.5rem,
+//   5: 3rem
+// );
 
-// Responsive breakpoints
-$breakpoints: (
-  tablet: 768px,
-  mobile: 576px
-);
+// // Responsive breakpoints
+// $breakpoints: (
+//   tablet: 768px,
+//   mobile: 576px
+// );
 
-// Generate percentage-based spacing classes
-@each $size, $value in $spacing-sizes {
-    .space-t-#{$size} {
-        margin-top: $value;
-    }
+// // Generate percentage-based spacing classes
+// @each $size, $value in $spacing-sizes {
+//     .space-t-#{$size} {
+//         margin-top: $value;
+//     }
 
-    .space-b-#{$size} {
-        margin-bottom: $value;
-    }
+//     .space-b-#{$size} {
+//         margin-bottom: $value;
+//     }
 
-    .space-r-#{$size} {
-        margin-right: $value;
-    }
+//     .space-r-#{$size} {
+//         margin-right: $value;
+//     }
 
-    .space-l-#{$size} {
-        margin-left: $value;
-    }
+//     .space-l-#{$size} {
+//         margin-left: $value;
+//     }
 
-    .space-x-#{$size} {
-        margin-right: $value;
-        margin-left: $value;
-    }
+//     .space-x-#{$size} {
+//         margin-right: $value;
+//         margin-left: $value;
+//     }
 
-    .space-y-#{$size} {
-        margin-top: $value;
-        margin-bottom: $value;
-    }
+//     .space-y-#{$size} {
+//         margin-top: $value;
+//         margin-bottom: $value;
+//     }
 
-    @media (max-width: map-get($breakpoints, tablet)) {
-        .space-t-#{$size} {
-            margin-top: $value * 0.8;
-        }
+//     @media (max-width: map-get($breakpoints, tablet)) {
+//         .space-t-#{$size} {
+//             margin-top: $value * 0.8;
+//         }
 
-        .space-b-#{$size} {
-            margin-bottom: $value * 0.8;
-        }
+//         .space-b-#{$size} {
+//             margin-bottom: $value * 0.8;
+//         }
 
-        .space-r-#{$size} {
-            margin-right: $value * 0.8;
-        }
+//         .space-r-#{$size} {
+//             margin-right: $value * 0.8;
+//         }
 
-        .space-l-#{$size} {
-            margin-left: $value * 0.8;
-        }
+//         .space-l-#{$size} {
+//             margin-left: $value * 0.8;
+//         }
 
-        .space-x-#{$size} {
-            margin-right: $value * 0.8;
-            margin-left: $value * 0.8;
-        }
-        .space-y-#{$size} {
-            margin-top: $value * 0.8;
-            margin-bottom: $value * 0.8;
-        }
-    }
+//         .space-x-#{$size} {
+//             margin-right: $value * 0.8;
+//             margin-left: $value * 0.8;
+//         }
+//         .space-y-#{$size} {
+//             margin-top: $value * 0.8;
+//             margin-bottom: $value * 0.8;
+//         }
+//     }
 
-    @media (max-width: map-get($breakpoints, mobile)) {
-        .space-t-#{$size} {
-            margin-top: $value * 0.6;
-        }
+//     @media (max-width: map-get($breakpoints, mobile)) {
+//         .space-t-#{$size} {
+//             margin-top: $value * 0.6;
+//         }
 
-        .space-b-#{$size} {
-            margin-bottom: $value * 0.6;
-        }
+//         .space-b-#{$size} {
+//             margin-bottom: $value * 0.6;
+//         }
 
-        .space-r-#{$size} {
-            margin-right: $value * 0.6;
-        }
+//         .space-r-#{$size} {
+//             margin-right: $value * 0.6;
+//         }
 
-        .space-l-#{$size} {
-            margin-left: $value * 0.6;
-        }
+//         .space-l-#{$size} {
+//             margin-left: $value * 0.6;
+//         }
 
-        .space-x-#{$size} {
-            margin-right: $value * 0.6;
-            margin-left: $value * 0.6;
-        }
+//         .space-x-#{$size} {
+//             margin-right: $value * 0.6;
+//             margin-left: $value * 0.6;
+//         }
 
-        .space-y-#{$size} {
-            margin-top: $value * 0.6;
-            margin-bottom: $value * 0.6;
-        }
-    }
-}
+//         .space-y-#{$size} {
+//             margin-top: $value * 0.6;
+//             margin-bottom: $value * 0.6;
+//         }
+//     }
+// }
 
-// Generate rem-based spacing classes
-@each $size, $value in $rem-spacing-sizes {
-    .space-t-#{$size} {
-        margin-top: $value;
-    }
+// // Generate rem-based spacing classes
+// @each $size, $value in $rem-spacing-sizes {
+//     .space-t-#{$size} {
+//         margin-top: $value;
+//     }
 
-    .space-b-#{$size} {
-        margin-bottom: $value;
-    }
+//     .space-b-#{$size} {
+//         margin-bottom: $value;
+//     }
 
-    .space-r-#{$size} {
-        margin-right: $value;
-    }
+//     .space-r-#{$size} {
+//         margin-right: $value;
+//     }
 
-    .space-l-#{$size} {
-        margin-left: $value;
-    }
+//     .space-l-#{$size} {
+//         margin-left: $value;
+//     }
 
-    .space-x-#{$size} {
-        margin-right: $value;
-        margin-left: $value;
-    }
+//     .space-x-#{$size} {
+//         margin-right: $value;
+//         margin-left: $value;
+//     }
 
-    .space-y-#{$size} {
-        margin-top: $value;
-        margin-bottom: $value;
-    }
+//     .space-y-#{$size} {
+//         margin-top: $value;
+//         margin-bottom: $value;
+//     }
 
-    @media (max-width: map-get($breakpoints, tablet)) {
-        .space-t-#{$size} {
-            margin-top: $value * 0.8;
-        }
+//     @media (max-width: map-get($breakpoints, tablet)) {
+//         .space-t-#{$size} {
+//             margin-top: $value * 0.8;
+//         }
 
-        .space-b-#{$size} {
-            margin-bottom: $value * 0.8;
-        }
+//         .space-b-#{$size} {
+//             margin-bottom: $value * 0.8;
+//         }
 
-        .space-r-#{$size} {
-            margin-right: $value * 0.8;
-        }
+//         .space-r-#{$size} {
+//             margin-right: $value * 0.8;
+//         }
 
-        .space-l-#{$size} {
-            margin-left: $value * 0.8;
-        }
+//         .space-l-#{$size} {
+//             margin-left: $value * 0.8;
+//         }
 
-        .space-x-#{$size} {
-            margin-right: $value * 0.8;
-            margin-left: $value * 0.8;
-        }
+//         .space-x-#{$size} {
+//             margin-right: $value * 0.8;
+//             margin-left: $value * 0.8;
+//         }
 
-        .space-y-#{$size} {
-            margin-top: $value * 0.8;
-            margin-bottom: $value * 0.8;
-        }
-    }
+//         .space-y-#{$size} {
+//             margin-top: $value * 0.8;
+//             margin-bottom: $value * 0.8;
+//         }
+//     }
 
-    @media (max-width: map-get($breakpoints, mobile)) {
-        .space-t-#{$size} {
-            margin-top: $value * 0.7;
-        }
+//     @media (max-width: map-get($breakpoints, mobile)) {
+//         .space-t-#{$size} {
+//             margin-top: $value * 0.7;
+//         }
 
-        .space-b-#{$size} {
-            margin-bottom: $value * 0.7;
-        }
+//         .space-b-#{$size} {
+//             margin-bottom: $value * 0.7;
+//         }
 
-        .space-r-#{$size} {
-            margin-right: $value * 0.7;
-        }
+//         .space-r-#{$size} {
+//             margin-right: $value * 0.7;
+//         }
 
-        .space-l-#{$size} {
-            margin-left: $value * 0.7;
-        }
+//         .space-l-#{$size} {
+//             margin-left: $value * 0.7;
+//         }
 
-        .space-x-#{$size} {
-            margin-right: $value * 0.7;
-            margin-left: $value * 0.7;
-        }
+//         .space-x-#{$size} {
+//             margin-right: $value * 0.7;
+//             margin-left: $value * 0.7;
+//         }
 
-        .space-y-#{$size} {
-            margin-top: $value * 0.7;
-            margin-bottom: $value * 0.7;
-        }
-    }
-}
+//         .space-y-#{$size} {
+//             margin-top: $value * 0.7;
+//             margin-bottom: $value * 0.7;
+//         }
+//     }
+// }
 
-.responsive-spacing {
-    width: 100%;
-    display: block;
-  }
+// .responsive-spacing {
+//     width: 100%;
+//     display: block;
+//   }
 
 /*-----------------------------------------------------------------------------------*/
 /*  10. BUTTON
