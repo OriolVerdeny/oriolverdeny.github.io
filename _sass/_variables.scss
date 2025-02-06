@@ -1,21 +1,14 @@
 
-// Define variables for padding values
-$padding-lg: 6rem;
-$padding-md: 4rem;
-$padding-sm: 2rem;
-$footer-padding-bottom: 5rem;
+
+///////////////////////////////////////////////////////////////
+/// 
+///  Colors
+/// 
+/////////////////////////////////////////////////////////////// 
 
 
-// Colors
-$color-default: #ffd429;
-$color-blue-yovori: #5458aa;
-$color-blue-electric: #00c8dc;
-$color-dark: #404040;
-// $color-dark: #1e1e1e;
-$color-light-gray: #f3f4f7;
-$color-dark-yovori: #332d29;
 
-// Additional colors
+// Base colors
 $color-white: #FFF;
 $color-black: #000;
 $color-gray: #999;
@@ -37,141 +30,80 @@ $color-rose: #d16b86;
 $color-hibiscus: #ad7c83;
 $color-brown: #9e887a;
 
-// RGB values
-$rgb-default: 132, 138, 189;
-$rgb-white: 255, 255, 255;
-$rgb-black: 0, 0, 0;
-$rgb-dark: 30, 30, 30;
-$rgb-gray: 153, 153, 153;
-$rgb-red: 215, 89, 89;
-$rgb-orange: 251, 157, 126;
-$rgb-yellow: 245, 196, 99;
-$rgb-green: 156, 205, 126;
-$rgb-leaf: 164, 191, 158;
-$rgb-teal: 88, 179, 154;
-$rgb-aqua: 120, 203, 234;
-$rgb-meander: 152, 190, 200;
-$rgb-blue: 92, 167, 219;
-$rgb-cobalt: 60, 113, 211;
-$rgb-sky: 95, 134, 190;
-$rgb-purple: 132, 138, 189;
-$rgb-violet: 185, 126, 205;
-$rgb-pink: 214, 152, 181;
-$rgb-rose: 209, 107, 134;
-$rgb-hibiscus: 173, 124, 131;
-$rgb-brown: 158, 136, 122;
+// Custom colors
+$color-default: #ffd429;
+$color-blue-yovori: #5458aa;
+$color-blue-electric: #00c8dc;
+$color-dark: #404040;
+$color-light-gray: #f3f4f7;
+$color-dark-yovori: #332d29;
 
 // Shadows
-$shadow: 0px 5px 20px rgba($color-black, 0.04) !important;
-$shadow-hover: 0px 1px 2px rgba($color-black, 0.07) !important;
+$shadow: 0px 5px 20px rgba($color-black, 0.04);
+$shadow-hover: 0px 1px 2px rgba($color-black, 0.07);
 
-// Button hover effects
-@mixin btn-hover($color, $opacity: 0.2) {
-  box-shadow: 0 0 0 5px rgba($color, $opacity);
+
+// Color map
+$colors: (
+    white: $color-white,
+    black: $color-black,
+    gray: $color-gray,
+    red: $color-red,
+    orange: $color-orange,
+    yellow: $color-yellow,
+    green: $color-green,
+    leaf: $color-leaf,
+    teal: $color-teal,
+    aqua: $color-aqua,
+    meander: $color-meander,
+    blue: $color-blue,
+    cobalt: $color-cobalt,
+    sky: $color-sky,
+    purple: $color-purple,
+    violet: $color-violet,
+    pink: $color-pink,
+    rose: $color-rose,
+    hibiscus: $color-hibiscus,
+    brown: $color-brown,
+
+    default: $color-default,
+    blue-yovori: $color-blue-yovori,
+    blue-electric: $color-blue-electric,
+    dark: $color-dark,
+    light-gray: $color-light-gray,
+    dark-yovori: $color-dark-yovori,
+);
+
+
+
+// Generate $hover-shadows map dynamically
+$hover-shadows: ();
+@each $name, $color in $colors {
+  $hover-shadows: map-merge($hover-shadows, ($name: rgba($color, 0.2)));
 }
 
-@mixin badge-hover($color, $opacity: 0.2) {
-  box-shadow: 0 0 0 4px rgba($color, $opacity);
-}
 
-:root {
-  // Color variables
-  --color-default: #{$color-default};
-  --color-white: #{$color-white};
-  --color-black: #{$color-black};
-  --color-dark: #{$color-dark};
-  --color-gray: #{$color-gray};
-  --color-red: #{$color-red};
-  --color-orange: #{$color-orange};
-  --color-yellow: #{$color-yellow};
-  --color-green: #{$color-green};
-  --color-leaf: #{$color-leaf};
-  --color-teal: #{$color-teal};
-  --color-aqua: #{$color-aqua};
-  --color-meander: #{$color-meander};
-  --color-blue: #{$color-blue};
-  --color-cobalt: #{$color-cobalt};
-  --color-sky: #{$color-sky};
-  --color-purple: #{$color-purple};
-  --color-violet: #{$color-violet};
-  --color-pink: #{$color-pink};
-  --color-rose: #{$color-rose};
-  --color-hibiscus: #{$color-hibiscus};
-  --color-brown: #{$color-brown};
+// Global variables for shadow properties
+$shadow-spread: 5px; // The spread size
+$shadow-opacity-default: 0.3; // Default opacity for hover
+$shadow-opacity-strong: 0.5; // Strong hover opacity
 
-  // RGB variables
-  --rgb-default: #{$rgb-default};
-  --rgb-white: #{$rgb-white};
-  --rgb-black: #{$rgb-black};
-  --rgb-dark: #{$rgb-dark};
-  --rgb-gray: #{$rgb-gray};
-  --rgb-red: #{$rgb-red};
-  --rgb-orange: #{$rgb-orange};
-  --rgb-yellow: #{$rgb-yellow};
-  --rgb-green: #{$rgb-green};
-  --rgb-leaf: #{$rgb-leaf};
-  --rgb-teal: #{$rgb-teal};
-  --rgb-aqua: #{$rgb-aqua};
-  --rgb-meander: #{$rgb-meander};
-  --rgb-blue: #{$rgb-blue};
-  --rgb-cobalt: #{$rgb-cobalt};
-  --rgb-sky: #{$rgb-sky};
-  --rgb-purple: #{$rgb-purple};
-  --rgb-violet: #{$rgb-violet};
-  --rgb-pink: #{$rgb-pink};
-  --rgb-rose: #{$rgb-rose};
-  --rgb-hibiscus: #{$rgb-hibiscus};
-  --rgb-brown: #{$rgb-brown};
 
-  // Shadows
-  --shadow: #{$shadow};
-  --shadow-hover: #{$shadow-hover};
 
-  // Button hover effects
-  --btn-hover-default: #{btn-hover($rgb-default)};
-  --btn-hover-dark: #{btn-hover($rgb-dark)};
-  --btn-hover-white: #{btn-hover($rgb-dark, 0.05)};
-  --btn-hover-red: #{btn-hover($rgb-red)};
-  --btn-hover-orange: #{btn-hover($rgb-orange, 0.25)};
-  --btn-hover-yellow: #{btn-hover($rgb-yellow, 0.3)};
-  --btn-hover-green: #{btn-hover($rgb-green, 0.25)};
-  --btn-hover-leaf: #{btn-hover($rgb-leaf, 0.25)};
-  --btn-hover-teal: #{btn-hover($rgb-teal)};
-  --btn-hover-aqua: #{btn-hover($rgb-aqua, 0.25)};
-  --btn-hover-meander: #{btn-hover($rgb-meander, 0.25)};
-  --btn-hover-blue: #{btn-hover($rgb-blue)};
-  --btn-hover-cobalt: #{btn-hover($rgb-cobalt)};
-  --btn-hover-sky: #{btn-hover($rgb-sky)};
-  --btn-hover-purple: #{btn-hover($rgb-purple)};
-  --btn-hover-violet: #{btn-hover($rgb-violet)};
-  --btn-hover-pink: #{btn-hover($rgb-pink, 0.25)};
-  --btn-hover-rose: #{btn-hover($rgb-rose)};
-  --btn-hover-hibiscus: #{btn-hover($rgb-hibiscus, 0.25)};
-  --btn-hover-brown: #{btn-hover($rgb-brown)};
+///////////////////////////////////////////////////////////////
+/// 
+///  Colors
+/// 
+/////////////////////////////////////////////////////////////// 
 
-  // Badge hover effects
-  --badge-hover-default: #{badge-hover($rgb-default)};
-  --badge-hover-dark: #{badge-hover($rgb-dark)};
-  --badge-hover-white: #{badge-hover($rgb-dark, 0.05)};
-  --badge-hover-red: #{badge-hover($rgb-red)};
-  --badge-hover-orange: #{badge-hover($rgb-orange)};
-  --badge-hover-yellow: #{badge-hover($rgb-yellow)};
-  --badge-hover-green: #{badge-hover($rgb-green)};
-  --badge-hover-leaf: #{badge-hover($rgb-leaf)};
-  --badge-hover-teal: #{badge-hover($rgb-teal)};
-  --badge-hover-aqua: #{badge-hover($rgb-aqua)};
-  --badge-hover-meander: #{badge-hover($rgb-meander)};
-  --badge-hover-blue: #{badge-hover($rgb-blue)};
-  --badge-hover-cobalt: #{badge-hover($rgb-cobalt)};
-  --badge-hover-sky: #{badge-hover($rgb-sky)};
-  --badge-hover-purple: #{badge-hover($rgb-purple)};
-  --badge-hover-violet: #{badge-hover($rgb-violet)};
-  --badge-hover-pink: #{badge-hover($rgb-pink)};
-  --badge-hover-rose: #{badge-hover($rgb-rose)};
-  --badge-hover-hibiscus: #{badge-hover($rgb-hibiscus)};
-  --badge-hover-brown: #{badge-hover($rgb-brown)};
-}
 
+
+
+// Define variables for padding values
+$padding-lg: 6rem;
+$padding-md: 4rem;
+$padding-sm: 2rem;
+$footer-padding-bottom: 5rem;
 
 
 // Font Sizes
@@ -203,17 +135,9 @@ $transition-easing: ease-in-out;
 
 
 
-// Global variables for shadow properties
-$shadow-spread: 5px; // The spread size
-$shadow-opacity-default: 0.3; // Default opacity for hover
-$shadow-opacity-strong: 0.5; // Strong hover opacity
 
 
 
-// Mixin for button hover styles
-@mixin btn-hover-shadow($color, $opacity: $shadow-opacity-default) {
-    box-shadow: 0 0 0 $shadow-spread rgba($color, $opacity);
-}
 
 
 // Define placeholder selectors for shared styles
