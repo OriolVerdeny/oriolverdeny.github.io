@@ -57,23 +57,6 @@ Let's see if $$1+1=2$$ this works.
   <em>Gallery / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
 </div>
 
-<!-- <div class="gallery-box">
-  <div class="gallery">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="BSF Eggs" class="gallery__image" onclick="openModal(this)">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="BSF Eggs" class="gallery__image" onclick="openModal(this)">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="BSF Eggs" class="gallery__image" onclick="openModal(this)">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="BSF Eggs" class="gallery__image" onclick="openModal(this)">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="BSF Eggs" class="gallery__image" onclick="openModal(this)">
-    <img src="/assets/images/Case studies/bsf-eggs2.jpg" loading="lazy" alt="BSF Eggs" class="gallery__image" onclick="openModal(this)">
-  </div>
-  <em>Gallery / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
-</div> -->
-
-<!-- Modal -->
-<!-- <div id="imageModal" class="image-modal">
-  <span class="close-modal" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="modalImage" alt="Expanded Image">
-</div> -->
 
 
 

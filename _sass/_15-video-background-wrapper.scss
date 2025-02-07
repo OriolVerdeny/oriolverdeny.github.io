@@ -2,8 +2,6 @@
 /*  15. VIDEO BACKGROUND WRAPPER
 /*-----------------------------------------------------------------------------------*/
 
-$video-height: 30rem;
-
 .video-wrapper {
     video {
         width: 100%;
@@ -14,7 +12,7 @@ $video-height: 30rem;
     }
 
     &-inner {
-        height: $video-height;
+        height: 30rem;
         width: 100%;
     }
 
@@ -30,7 +28,7 @@ $video-height: 30rem;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background: rgba(var(--rgb-dark), 0.5);
+        background: rgba($color-dark, 0.5);
     }
 }
 

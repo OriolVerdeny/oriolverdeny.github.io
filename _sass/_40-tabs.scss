@@ -3,125 +3,159 @@
 /*-----------------------------------------------------------------------------------*/
 
 .nav-tabs {
+
+  border: 0;
+
+  .nav-link {
+    font-size: 0.95rem;
+    line-height: 1.25rem;
+    letter-spacing: 0;
+    font-weight: 500;
+    color: $color-dark;
+    margin-right: 1.5rem;
     border: 0;
-  
+    border-radius: 0;
+    padding: 1rem 0;
+    display: block;
+  }
+
+  &.text-center {
     .nav-link {
-      font-size: 0.95rem;
-      line-height: 1.25rem;
-      font-weight: 500;
-      color: #404040;
-      margin-right: 1.5rem;
-      padding: 1rem 0;
-      display: block;
-      border: 0;
-      border-radius: 0;
-  
-      &.active, &:hover {
-        color: $color-default;
-        background: none;
-      }
-  
-      &.nav-tabs-bg {
-        padding: 1.4rem 1.2rem;
-  
-        &:first-child {
-          margin-left: 0;
-        }
-  
-        &:last-child {
-          margin-right: 0;
-        }
-  
-        &:hover, &.active {
-          border-radius: 0.2rem;
-          color: #404040;
-          box-shadow: $shadow !important;
-          background: $color-white;
-        }
-      }
-  
-      .icon {
-        margin-right: 0.5rem;
-        font-size: 1.1rem;
-        vertical-align: -1px;
-        transition: all 150ms ease-in-out;
-      }
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
     }
-  
-    .text-center {
-      .nav-link {
-        margin: 0 0.75rem;
-      }
+  }
+
+  .nav-item {
+
+    &.show .nav-link,
+    .nav-link:hover,
+    .nav-link.active {
+      color: $color-default;
+      background: none;
     }
-  
-    .nav-justified {
-      .nav-item {
-        margin: 0 0.75rem;
-  
-        &:first-child {
-          margin-left: 0;
-        }
-  
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
-  
-    .nav-pills {
-      .nav-link {
-        color: #404040;
-        cursor: pointer;
-        transition: all 150ms ease-in-out;
-        padding: 0.8rem 1.2rem;
-        line-height: 1;
-        border-radius: 1.5rem;
-        background: none;
-  
-        &.active, &:hover {
-          color: $color-default;
-          background: $color-white;
-          box-shadow: $shadow !important;
-        }
-  
-        .icon {
-          color: inherit;
-        }
-      }
-  
-      .nav-item.show .nav-link .icon, .nav-item .nav-link:hover .icon {
-        color: $color-default !important;
-      }
-    }
-  
-    .flex-column {
-      .nav-item {
-        margin-bottom: 1rem;
-      }
-    }
-  
-    .nav-item p {
-      color: $color-gray;
+
+    p {
+      color: $color-dark;
       font-size: 0.8rem;
       font-weight: normal;
       margin: 0.25rem 0 0 0;
     }
+
   }
-  
-  .tabs-wrapper {
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.2rem;
-  
-    .tab-content {
-      padding: 0;
-  
-      .box {
-        padding-bottom: 2rem;
+
+  &.nav-tabs-bg .nav-link {
+    padding: 1.4rem 1.2rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &.active {
+      border-radius: 0.2rem;
+      color: $color-dark;
+      -webkit-box-shadow: $shadow;
+      box-shadow: $shadow;
+      background: $color-white;
+    }
+  }
+
+  &.nav-justified .nav-item {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.flex-column.nav-tabs-bg .nav-item {
+    margin-bottom: 1rem;
+  }
+
+
+  // Not used
+  &.nav-pills {
+    .nav-link {
+      color: $color-dark;
+      cursor: pointer;
+      -webkit-transition: all 150ms ease-in-out;
+      -o-transition: all 150ms ease-in-out;
+      transition: all 150ms ease-in-out;
+      padding: 0.8rem 1.2rem;
+      line-height: 1;
+      border-radius: 1.5rem;
+      background: none;
+
+      .icon {
+        margin-right: 0.5rem;
+        font-size: 1.1rem;
+        vertical-align: -1px;
+        -webkit-transition: all 150ms ease-in-out;
+        -o-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
+      }
+
+      &.active,
+      &:hover {
+        color: $color-default;
+        background: $color-white;
+        -webkit-box-shadow: $shadow;
+        box-shadow: $shadow;
+
+        .icon {
+          color: $color-default;
+          -webkit-transition: all 150ms ease-in-out;
+          -o-transition: all 150ms ease-in-out;
+          transition: all 150ms ease-in-out;
+        }
+      }
+    }
+
+    .nav-item {
+      &.show .nav-link {
+        color: $color-default;
+
+        .icon {
+          color: $color-default;
+          -webkit-transition: all 150ms ease-in-out;
+          -o-transition: all 150ms ease-in-out;
+          transition: all 150ms ease-in-out;
+        }
+      }
+
+      .nav-link:hover {
+        color: $color-default;
+
+        .icon {
+          color: $color-default;
+          -webkit-transition: all 150ms ease-in-out;
+          -o-transition: all 150ms ease-in-out;
+          transition: all 150ms ease-in-out;
+        }
       }
     }
   }
-  
+}
 
+.tabs-wrapper {
+  border-radius: 0.2rem;
+  padding: 0.5rem 1.5rem;
 
+  .tab-content {
+    padding: 0;
+  }
+}
 
-
+.tab-content .box {
+  padding-bottom: 2rem;
+}

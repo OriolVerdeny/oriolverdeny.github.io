@@ -1,18 +1,13 @@
 /*-----------------------------------------------------------------------------------*/
 /*  14. IMAGE BLOCK WRAPPER
 /*-----------------------------------------------------------------------------------*/
-
-
-$image-block-min-height: 450px;
-$image-block-padding: 6rem 5rem;
-
 .image-block-wrapper {
     padding: 0;
     position: relative;
-    min-height: $image-block-min-height;
+    min-height: 450px;
 
     .box {
-        min-height: $image-block-min-height;
+        min-height: 450px;
     }
 
     .image-block {
@@ -21,7 +16,7 @@ $image-block-padding: 6rem 5rem;
         height: 100%;
         top: 0;
 
-        &-bg {
+        .image-block-bg {
             position: absolute;
             top: 0;
             left: 0;
@@ -33,6 +28,6 @@ $image-block-padding: 6rem 5rem;
     }
 
     [class*="container"] .box {
-        padding: $image-block-padding;
+        padding: 6rem 5rem;
     }
 }

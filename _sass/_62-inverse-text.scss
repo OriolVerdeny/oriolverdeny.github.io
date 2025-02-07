@@ -99,7 +99,7 @@
     // Form controls
     select, textarea, input:not(.qty), .uneditable-input {
         background: rgba($color-white, 0.07);
-        color: var(--color-white);
+        color: $color-white;
 
         &:focus {
             background: rgba($color-white, 0.09);

@@ -644,7 +644,7 @@ acronym[title] {
 } */
 
 /*-----------------------------------------------------------------------------------*/
-/*  05. MEGA MENU
+/*  05. MEGA MENU in scss
 /*-----------------------------------------------------------------------------------*/
 /* .navbar-nav,
 .navbar-nav>li.mega-menu {
@@ -657,7 +657,7 @@ acronym[title] {
     max-width: none !important;
 } */
 /*-----------------------------------------------------------------------------------*/
-/*  06. HAMBURGER MENU ICON
+/*  06. HAMBURGER MENU ICON in scss
 /*-----------------------------------------------------------------------------------*/
 /* button.plain {
     cursor: pointer;
@@ -873,7 +873,7 @@ button.hamburger.animate.active:after {
 /*-----------------------------------------------------------------------------------*/
 /*  10. BUTTON
 /*-----------------------------------------------------------------------------------*/
-/* 
+
 .btn {
     color: var(--color-dark);
     background: var(--color-default);
@@ -1339,7 +1339,7 @@ button.hamburger.animate.active:after {
     color: var(--color-white);
     -webkit-box-shadow: 0 0 0 5px rgba(var(--rgb-white), 0.03);
             box-shadow: 0 0 0 5px rgba(var(--rgb-white), 0.03);
-} */
+}
 /*-----------------------------------------------------------------------------------*/
 /*  11. BOX
 /*-----------------------------------------------------------------------------------*/
@@ -1511,7 +1511,7 @@ footer.dark-wrapper,
     height: 100vh;
 } */
 /*-----------------------------------------------------------------------------------*/
-/*  14. IMAGE BLOCK WRAPPER
+/*  14. IMAGE BLOCK WRAPPER in scss
 /*-----------------------------------------------------------------------------------*/
 /* .image-block-wrapper {
     padding: 0px;
@@ -1540,7 +1540,7 @@ footer.dark-wrapper,
     padding: 6rem 5rem;
 } */
 /*-----------------------------------------------------------------------------------*/
-/*  15. VIDEO BACKGROUND WRAPPER
+/*  15. VIDEO BACKGROUND WRAPPER in scss
 /*-----------------------------------------------------------------------------------*/
 /* .video-wrapper video {
     width: 100%;
@@ -1719,9 +1719,9 @@ hr.double {
     line-height: 1;
 }
 /*-----------------------------------------------------------------------------------*/
-/*  20. DROPCAP
+/*  20. DROPCAP in scss
 /*-----------------------------------------------------------------------------------*/
-.dropcap {
+/* .dropcap {
     display: block;
     float: left;
     font-size: 2.5rem;
@@ -1742,7 +1742,7 @@ hr.double {
 }
 .dropcap.circle {
     border-radius: 50%;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  21. BADGE
 /*-----------------------------------------------------------------------------------*/
@@ -3193,7 +3193,7 @@ ul.dial li:first-child .dial-item-info {
     text-transform: uppercase;
 }
 /*-----------------------------------------------------------------------------------*/
-/*  40. TABS
+/*  40. TABS in scss
 /*-----------------------------------------------------------------------------------*/
 /* .nav-tabs {
     border: 0;
@@ -4617,7 +4617,7 @@ video.player {
     color: #d07ead;
 } */
 /*-----------------------------------------------------------------------------------*/
-/*  54. FORMS
+/*  54. FORMS in scss
 /*-----------------------------------------------------------------------------------*/
 /* select {
     -webkit-appearance: none;
@@ -4629,6 +4629,8 @@ video.player {
 .col-form-label {
     line-height: 1.9;
 }
+
+
 label:not(.custom-control-label) {
     font-weight: 500;
     color: #404040;
@@ -4656,12 +4658,12 @@ label textarea {
 }
 .form-row {
     margin-right: -10px;
-    margin-left: -10px
+    margin-left: -10px;
 }
 .form-row>.col,
 .form-row>[class*="col-"] {
     padding-right: 10px;
-    padding-left: 10px
+    padding-left: 10px;
 }
 select,
 textarea,
@@ -5202,7 +5204,7 @@ pre {
     background-size: cover;
 } */
 /*-----------------------------------------------------------------------------------*/
-/*  61. COLORS
+/*  61. COLORS in scss
 /*-----------------------------------------------------------------------------------*/
 /* .color-default,
 .bullet-default>li:before,
@@ -5308,8 +5310,8 @@ pre {
 .bullet-brown>li:before,
 .bullet-brown i {
     color: var(--color-brown) !important
-} */
-/* .bg-default {
+}
+.bg-default {
     background: var(--color-default)
 }
 .bg-dark {
@@ -5434,8 +5436,8 @@ pre {
 }
 .title-bg.bg-brown {
     background: rgba(var(--rgb-brown), 0.15);
-} */
-/* 
+}
+
 .fill-default {
     fill: var(--color-default);
 }
@@ -5561,8 +5563,8 @@ pre {
 }
 .bg-opacity-brown {
     background: rgba(var(--rgb-brown), 0.085);
-} */
-/* .bg-transparent-default {
+}
+.bg-transparent-default {
     background: rgba(var(--rgb-default), 0.85);
 }
 .bg-transparent-dark {
@@ -5621,8 +5623,8 @@ pre {
 }
 .bg-transparent-brown {
     background: rgba(var(--rgb-brown), 0.88);
-} */
-/* .fill-opacity-default {
+}
+.fill-opacity-default {
     fill: rgba(var(--rgb-default), 0.08);
 }
 .fill-opacity-dark {
@@ -5681,8 +5683,8 @@ pre {
 }
 .fill-opacity-brown {
     fill: rgba(var(--rgb-brown), 0.08);
-} */
-/* .icon-blob-default:after {
+}
+.icon-blob-default:after {
     color: rgba(var(--rgb-default), 0.25);
 }
 .icon-blob-dark:after {
@@ -5741,8 +5743,8 @@ pre {
 }
 .icon-blob-brown:after {
     color: rgba(var(--rgb-brown), 0.25);
-} */
-/* .icon-bg-default {
+}
+.icon-bg-default {
     background-color: rgba(var(--rgb-default), 0.25);
 }
 .icon-bg-dark {
@@ -5801,8 +5803,8 @@ pre {
 }
 .icon-bg-brown {
     background-color: rgba(var(--rgb-brown), 0.25);
-} */
-/* .nav-tabs .nav-link:hover .icon-blob-default:after,
+}
+.nav-tabs .nav-link:hover .icon-blob-default:after,
 .nav-tabs .nav-link.active .icon-blob-default:after,
 .dial-item:hover .icon-blob-default:after,
 .dial-item.active .icon-blob-default:after {
@@ -5921,8 +5923,8 @@ pre {
 .dial-item:hover .icon-blob-brown:after,
 .dial-item.active .icon-blob-brown:after {
     color: rgba(var(--rgb-brown), 0.75);
-} */
-/* .progressbar.default svg path:last-child {
+}
+.progressbar.default svg path:last-child {
     stroke: var(--color-default)
 }
 .progressbar.dark svg path:last-child {

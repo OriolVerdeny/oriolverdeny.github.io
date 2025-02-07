@@ -6,7 +6,7 @@
     .color-#{$name},
     .bullet-#{$name}>li:before,
     .bullet-#{$name} i {
-        color: $color !important;
+        color: $color;
     }
 
     .bg-#{$name} {
@@ -53,47 +53,6 @@
     }
 }
 
-// $colors: (
-//     "default": "color-default",
-//     "white": "color-white",
-//     "gray": "color-gray",
-//     "dark": "color-dark",
-//     "red": "color-red",
-//     "orange": "color-orange",
-//     "yellow": "color-yellow",
-//     "green": "color-green",
-//     "leaf": "color-leaf",
-//     "teal": "color-teal",
-//     "aqua": "color-aqua",
-//     "meander": "color-meander",
-//     "blue": "color-blue",
-//     "cobalt": "color-cobalt",
-//     "sky": "color-sky",
-//     "purple": "color-purple",
-//     "violet": "color-violet",
-//     "pink": "color-pink",
-//     "rose": "color-rose",
-//     "hibiscus": "color-hibiscus",
-//     "brown": "color-brown"
-// );
-
-// Colors mapped to SCSS variables
-$colors: (
-    "default": $color-default,
-    "blue-yovori": $color-blue-yovori,
-    "blue-electric": $color-blue-electric,
-    "dark": $color-dark,
-    "light-gray": $color-light-gray,
-    "dark-yovori": $color-dark-yovori,
-    "white": $color-white,
-    "black": $color-black,
-    "gray": $color-gray,
-    "red": $color-red,
-    "orange": $color-orange,
-    "yellow": $color-yellow,
-    "green": $color-green,
-    "blue": $color-blue
-);
 
 // Generate styles dynamically
 @each $name, $color in $colors {

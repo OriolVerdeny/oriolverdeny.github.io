@@ -36,8 +36,8 @@
 
         &.extended {
             .navbar-collapse {
-                background: var(--color-white);
-                box-shadow: var(--shadow);
+                background: $color-white;
+                box-shadow: $shadow;
                 width: 100%;
             }
 
@@ -77,7 +77,7 @@
     }
 
     .search-dropdown .dropdown-menu {
-        padding: 0 !important;
+        padding: 0;
     }
 
     .navbar-other {
@@ -88,8 +88,8 @@
                 font-size: 1.1rem;
 
                 &:hover {
-                    color: var(--color-white) !important;
-                    opacity: 0.8 !important;
+                    color: $color-white;
+                    opacity: 0.8;
                 }
             }
         }
@@ -98,7 +98,7 @@
 
             .nav-item a:not(.btn),
             .nav-item button {
-                color: var(--color-white);
+                color: $color-white;
             }
         }
     }
@@ -253,12 +253,12 @@
 
         &.extended:not(.fixed),
         &.navbar-fancy:not(.fixed) {
-            background: var(--color-white);
-            box-shadow: var(--shadow);
+            background: $color-white;
+            box-shadow: $shadow;
         }
 
         &.navbar-fancy.navbar-fancy-dark:not(.fixed) {
-            background: #242930 !important;
+            background: $color-black !important;
             box-shadow: none !important;
         }
 
@@ -298,7 +298,7 @@
 
     .navbar-nav {
         .nav-link {
-            color: var(--color-white);
+            color: $color-white;
 
             &[href='#!'] {
                 pointer-events: none;
