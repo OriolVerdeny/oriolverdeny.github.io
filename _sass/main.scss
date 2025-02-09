@@ -17,7 +17,7 @@
 @import "plugins/01-smartmenus.scss"; // corrected
 
 // Problem here
-// @import "plugins/04-lightgallery.scss";
+@import "plugins/04-lightgallery.scss";
 @import "plugins/05-owl-carousel.scss";
 @import "plugins/07-utilities.scss"; // corrected
 
@@ -30,9 +30,9 @@
 @import "04-sticky-header"; // corrected
 @import "05-mega-menu"; // corrected
 @import "06-hamburger-menu"; // corrected
-@import "07-offcanvas";
-@import "08-search";
-@import "09-cart";
+@import "07-offcanvas"; 
+@import "08-search"; 
+@import "09-cart"; 
 @import "10-buttons"; // corrected
 @import "11-box"; // corrected
 @import "12-wrappers"; // corrected

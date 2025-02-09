@@ -6,220 +6,296 @@
     position: relative;
     text-align: center;
     overflow: hidden;
-    transform: translate3d(0, 0, 0);
-    
-    * {
-        transition: all 0.4s ease;
-        color: var(--color-white) !important;
-    }
-    
-    img {
-        opacity: 1;
-        width: 100%;
-        max-width: 100%;
-        vertical-align: top;
-        position: relative;
-        transition: none;
-        backface-visibility: hidden;
-    }
-    
-    figcaption, .figcaption {
-        padding: 0.5rem;
-        z-index: 5;
-        pointer-events: none;
-    }
-    
-    &:not(.caption-overlay) i {
-        display: block;
-        font-size: 1.4rem;
-    }
-    
-    a, span.bg {
-        position: relative;
-        display: block;
-        top: 0; bottom: 0; left: 0; right: 0;
-        z-index: 3;
-        cursor: pointer !important;
-    }
-    
-    span.bg {
-        opacity: 0;
-        z-index: 4;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: rgba(var(--rgb-dark), 0.6);
-        
-        &.color { background: rgba(var(--rgb-default), 0.9); }
-        &.gradient { background: linear-gradient(125deg, rgba(95, 134, 190, 0.85) 0%, rgba(167, 114, 185, 0.85) 100%); }
-    }
-    
-    &:hover span.bg {
-        opacity: 1;
-        transition: opacity 0.35s ease-in-out;
-    }
+    -webkit-transform: translate3d(0px, 0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
 }
-
+figure.overlay img {
+    opacity: 1;
+    width: 100%;
+    max-width: 100%;
+    vertical-align: top;
+    position: relative;
+}
 .classic-view figure {
     width: auto;
     height: auto;
 }
-
-.overlay1 {
-    * { box-sizing: border-box; }
-    
-    figcaption {
-        position: absolute;
-        width: 100%; height: 100%;
-        padding: 0.75rem 1rem;
-        top: 0; left: 0;
-        opacity: 0;
-        text-align: center;
-        
-        .from-top {
-            position: absolute;
-            padding: 0.75rem 1rem;
-            top: 50%; left: 0;
-            width: 100%;
-            transform: translateY(-80%);
-        }
-    }
-    
-    &:hover figcaption, &:hover .figcaption {
-        opacity: 1;
-        * { transform: translateY(-50%); }
-    }
+.overlay figcaption,
+.overlay .figcaption {
+    padding: 0.5rem;
+    z-index: 5;
+    pointer-events: none;
 }
-
-.overlay2 {
-    &:before, &:after {
-        content: "";
-        background-color: var(--color-white);
-        position: absolute;
-        z-index: 5;
-        top: 50%; left: 50%;
-        opacity: 0;
-        transition: all 0.4s ease;
-        transform: translate(-50%, -50%);
-    }
-    
-    &.light {
-        &:before, &:after { background-color: #404040; }
-    }
-    
-    &:before { width: 30px; height: 2px; }
-    &:after { height: 30px; width: 2px; }
-    
-    &:hover:before, &:hover:after {
-        opacity: 1;
-        transition-delay: 0.2s;
-    }
+.overlay * {
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
-
-.overlay3 {
-    * {
-        position: absolute;
-        left: 0;
-        margin: 0;
-        width: 100%;
-    }
-    
-    > * {
-        left: 0; right: 0;
-        top: 0; bottom: 0;
-        height: 100%;
-        position: absolute;
-    }
-    
-    figcaption { height: 100%; opacity: 0; }
-    img { position: relative; }
-    
-    .from-top { bottom: 50%; transform: translate3d(0, -100%, 0); }
-    .from-bottom { top: 50%; transform: translate3d(0, 100%, 0); }
-    
-    &:hover {
-        * { opacity: 1; }
-        figcaption * { transform: translate3d(0, 0, 0); }
-    }
+.overlay img {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
 }
-
-.hover-scale {
-    img { transition: all 0.35s ease-in-out; }
-    
-    &:hover img {
-        transform: scale(1.1);
-    }
+.overlay:not(.caption-overlay) i {
+    display: block;
+    font-size: 1.4rem;
 }
-
-.overlay4 {
-    figcaption {
-        position: absolute;
-        left: 0; bottom: 0;
-        opacity: 0;
-        padding: 30px;
-        text-align: left;
-    }
-    
-    &:hover figcaption { opacity: 1; }
+.overlay a,
+.overlay span.bg {
+    position: relative;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    cursor: pointer !important;
 }
-
-.overlay5 {
-    figcaption {
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        padding: 15px;
-        
-        &:hover { transform: translateY(-100%); }
-    }
-    
-    span.bg { display: none; }
+.overlay span.bg {
+    opacity: 0;
+    z-index: 4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
-
-.overlay6 {
-    figcaption, .figcaption {
-        position: absolute;
-        transition: all 0.35s ease;
-        width: 100%; height: 100%;
-        top: 0; left: 0;
-        opacity: 0;
-    }
-    
-    &:hover figcaption, &:hover .figcaption {
-        opacity: 1;
-    }
+.overlay span.bg,
+.overlay5 figcaption {
+    background: rgba($color-dark, 0.6);
 }
-
-.overlay.caption {
-    figcaption, .figcaption {
-        position: absolute;
-        transition: all 0.4s ease;
-        width: 100%; height: 100%;
-        top: 0; left: 0;
-        opacity: 0;
-    }
-    
-    &:hover figcaption, &:hover .figcaption {
-        opacity: 1;
-        transition-delay: 0.2s;
-    }
-    
-    &.caption-overlay span.bg {
-        opacity: 1;
-        background: linear-gradient(transparent 15%, transparent 20%, rgba(var(--rgb-dark), 0.3) 55%, rgba(var(--rgb-dark), 0.7) 85%, rgba(var(--rgb-dark), 0.75) 100%);
-        
-        &:after {
-            content: "";
-            position: absolute;
-            top: 0; left: 0;
-            opacity: 0;
-            width: 100%; height: 100%;
-            background: rgba(var(--rgb-dark), 0.2);
-            transition: opacity 0.35s ease-in-out;
-        }
-        
-        &:hover:after {
-            opacity: 1;
-        }
-    }
+.overlay.color span.bg,
+.overlay5.color figcaption {
+    background: rgba($color-default, 0.9);
+}
+.overlay.gradient span.bg,
+.overlay5.gradient figcaption {
+    background: none;
+    background-image: -o-linear-gradient(325deg, rgba(95, 134, 190, 0.85) 0%, rgba(167, 114, 185, 0.85) 100%);
+    background-image: linear-gradient(125deg, rgba(95, 134, 190, 0.85) 0%, rgba(167, 114, 185, 0.85) 100%);
+}
+.overlay:hover span.bg {
+    opacity: 1;
+    -webkit-transition: opacity 0.35s ease-in-out;
+    -o-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+}
+.overlay * {
+    color: $color-white !important;
+}
+.overlay img {
+    max-width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    vertical-align: top;
+}
+.overlay1 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.overlay1 figcaption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0.75rem 1rem;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    text-align: center;
+}
+.overlay1 .from-top {
+    position: absolute;
+    padding: 0.75rem 1rem;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateY(-80%);
+    -ms-transform: translateY(-80%);
+    transform: translateY(-80%);
+}
+.overlay1:hover figcaption,
+.overlay1:hover .figcaption {
+    opacity: 1;
+}
+.overlay1:hover figcaption *,
+.overlay1:hover .figcaption * {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.overlay2:before,
+.overlay2:after {
+    content: "";
+    background-color: $color-white;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.overlay2.light:before,
+.overlay2.light:after {
+    background-color: #404040;
+}
+.overlay2:before {
+    width: 30px;
+    height: 2px;
+}
+.overlay2:after {
+    height: 30px;
+    width: 2px;
+}
+.overlay2:hover:before,
+.overlay2:hover:after {
+    opacity: 1;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+    top: 50%;
+    left: 50%;
+}
+.overlay3 * {
+    position: absolute;
+    left: 0;
+    margin: 0;
+    width: 100%;
+}
+.overlay3>* {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+}
+.overlay3 figcaption {
+    height: 100%;
+    opacity: 0;
+}
+.overlay3 img {
+    position: relative;
+}
+.overlay3 .from-top {
+    bottom: 50%;
+    padding: 0 1rem;
+    -webkit-transform: translate3d(0%, -100%, 0);
+    transform: translate3d(0%, -100%, 0);
+}
+.overlay3 .from-bottom {
+    top: 50%;
+    padding: 0 1rem;
+    -webkit-transform: translate3d(0%, 100%, 0);
+    transform: translate3d(0%, 100%, 0);
+}
+.overlay3:hover * {
+    opacity: 1;
+}
+.overlay3:hover figcaption * {
+    -webkit-transform: translate3d(0%, 0%, 0);
+    transform: translate3d(0%, 0%, 0);
+}
+.hover-scale img {
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+.hover-scale:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.overlay4 figcaption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    right: auto;
+    opacity: 0;
+    padding: 30px;
+    text-align: left;
+}
+.overlay4:hover figcaption {
+    opacity: 1;
+}
+.overlay5 figcaption {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
+.overlay5:hover figcaption {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+.overlay5 span.bg {
+    display: none;
+}
+.overlay6 figcaption,
+.overlay6 .figcaption {
+    position: absolute;
+    -webkit-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.overlay6:hover figcaption,
+.overlay6:hover .figcaption {
+    opacity: 1;
+}
+.overlay.caption figcaption,
+.overlay.caption .figcaption {
+    position: absolute;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.overlay.caption:hover figcaption,
+.overlay.caption:hover .figcaption {
+    opacity: 1;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.overlay.caption figcaption,
+.overlay.caption .figcaption {
+    opacity: 1;
+}
+.overlay.caption.caption-overlay span.bg {
+    opacity: 1;
+    background: none;
+    background: rgba($color-dark, 0) -o-linear-gradient(transparent 15%, transparent 20%, rgba($color-dark, 0.3) 55%, rgba($color-dark, 0.7) 85%, rgba($color-dark, 0.75) 100%) repeat scroll 0 0;
+    background: rgba($color-dark, 0) -webkit-gradient(linear, left top, left bottom, color-stop(15%, transparent), color-stop(20%, transparent), color-stop(55%, rgba($color-dark, 0.3)), color-stop(85%, rgba($color-dark, 0.7)), to(rgba($color-dark, 0.75))) repeat scroll 0 0;
+    background: rgba($color-dark, 0) linear-gradient(transparent 15%, transparent 20%, rgba($color-dark, 0.3) 55%, rgba($color-dark, 0.7) 85%, rgba($color-dark, 0.75) 100%) repeat scroll 0 0;
+}
+.overlay.caption.caption-overlay span.bg:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-dark, 0.2);
+    -webkit-transition: opacity 0.35s ease-in-out;
+    -o-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+}
+.overlay.caption.caption-overlay:hover span.bg:after {
+    opacity: 1;
 }
