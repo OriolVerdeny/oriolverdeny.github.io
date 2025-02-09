@@ -2,112 +2,142 @@
 /*	01. SMARTMENUS
 /*-----------------------------------------------------------------------------------*/
 
+
 .navbar-nav {
+
+  .sub-arrow {
+    font-family: Jam;
+  }
+
+  &.sm-collapsible {
     .sub-arrow {
-      font-family: Jam;
-    }
-  
-    &.sm-collapsible {
-      .sub-arrow {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 0 2px 0 10px;
-        font-size: 1rem;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-  
-        &::before {
-          content: '\e9ba';
-          display: table-cell;
-          vertical-align: middle;
-        }
-      }
-  
-      .show > a > .sub-arrow::before {
-        content: '\e9cf';
-      }
-  
-      .has-submenu {
-        padding-right: 3em;
-      }
-  
-      .dropdown-item,
-      .nav-link {
-        position: relative;
-      }
-    }
-  
-    &:not(.sm-collapsible) {
-      .nav-link .sub-arrow {
-        display: none;
-        margin-right: 1rem;
-      }
-  
-      .nav-link .sub-arrow::before {
-        content: '\e9bc';
-        position: relative;
-      }
-  
-      .dropdown-item .sub-arrow,
-      &:not([data-sm-skip]) .dropdown-menu .dropdown-toggle::after {
-        font-size: 0.85rem;
-        position: absolute;
-        top: 0.55rem;
-        right: 1.6rem;
-      }
-  
-      .dropdown-item .sub-arrow::before,
-      &:not([data-sm-skip]) .dropdown-menu .dropdown-toggle::after {
-        content: '\e9bc';
-        position: relative;
-      }
-  
-      .dropdown-item.has-submenu {
-        padding-right: 2.3em;
-      }
-    }
-  
-    .scroll-down,
-    .scroll-up {
       position: absolute;
-      display: none;
-      visibility: hidden;
-      height: 20px;
-      overflow: hidden;
+      top: 0;
+      right: 0;
+      margin: 0;
+      border: 0;
+      border-radius: 0;
+      padding: 0 2px 0 10px;
+      font-size: 1rem;
+      line-height: 1;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
       text-align: center;
+
+      &::before {
+        content: '\e9ba';
+        display: table-cell;
+        vertical-align: middle;
+      }
     }
-  
-    .scroll-down-arrow,
-    .scroll-up-arrow {
-      position: absolute;
-      left: 50%;
-      margin-left: -8px;
+
+    .show>a>.sub-arrow::before {
+      content: '\e9cf';
+    }
+
+    .has-submenu {
+      padding-right: 3em;
+    }
+
+    .dropdown-item,
+    .nav-link {
+      position: relative;
+    }
+
+  }
+
+  &:not(.sm-collapsible){
+    .nav-link .sub-arrow {
+      display: none;
       width: 0;
       height: 0;
-      overflow: hidden;
-      border: 7px solid transparent;
+      margin-right: 1rem;
+      vertical-align: 0;
+      border: 0;
   
-      &.scroll-up-arrow {
-        top: -2px;
-        border-bottom-color: currentColor;
-      }
-  
-      &.scroll-down-arrow {
-        top: 6px;
-        border-top-color: currentColor;
+      &:before {
+        position: relative;
+        content: "\e9bc";
       }
     }
-  
-    &:not([data-sm-skip]) .dropdown-item {
-      white-space: normal;
+
+    .dropdown-item .sub-arrow,
+    &:not([data-sm-skip]) .dropdown-menu .dropdown-toggle::after {
+      font-size: .85rem;
+      position: absolute;
+      top: .55rem;
+      right: 1.6rem;
+      width: 0;
+      height: 0;
+      margin: 0;
+      border: 0;
     }
-  
-    &:not(.sm-collapsible) .sm-nowrap > li > .dropdown-item {
-      white-space: nowrap;
+
+    .dropdown-item .sub-arrow:before,
+    &:not([data-sm-skip]) .dropdown-menu .dropdown-toggle::after {
+      position: relative;
+      content: "\e9bc";
     }
+    
+    .dropdown-item.has-submenu {
+      padding-right: 2.3em;
+    }
+
+
+
+  } 
+
+  .scroll-down,
+  .scroll-up {
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    height: 20px;
+    overflow: hidden;
+    text-align: center;
   }
-  
+
+  .scroll-down-arrow,
+  .scroll-up-arrow {
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .scroll-down-arrow {
+    top: 6px;
+    border-top: 7px solid;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid transparent;
+  }
+
+  .scroll-up-arrow {
+    top: -2px;
+    border-top: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid;
+    border-left: 7px solid transparent;
+  }
+
+  &:not([data-sm-skip]) .dropdown-item {
+    white-space: normal;
+  }
+
+  &:not(.sm-collapsible) .sm-nowrap>li>.dropdown-item {
+    white-space: nowrap;
+  }
+
+}
+
+
+
+  .fixed-bottom .navbar-nav:not(.sm-collapsible) .nav-link .sub-arrow,
+  .fixed-bottom .navbar-nav:not(.sm-collapsible):not([data-sm-skip]) .dropdown-toggle::after {
+    border: 0
+  }

@@ -75,7 +75,14 @@ $colors: (
 );
 
 
-
+// Define share button colors
+$share-colors: (
+  "facebook": (#4470cf, #340bb3),
+  "google": (#a84539, #91362b),
+  "pinterest": (#c53942, #b12b34),
+  "tumblr": (#5d82a4, #496b8b),
+  "twitter": (#5daed5, #4c9ec6)
+);
 
 
 // Generate $hover-shadows map dynamically

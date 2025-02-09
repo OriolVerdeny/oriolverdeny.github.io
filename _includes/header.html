@@ -33,7 +33,7 @@
         <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
       </div>
 
-      <ul class="navbar-nav {% if include.alignment_class %} {{include.alignment_class}} {% else %} mx-auto {% endif %}">
+      <ul class="navbar-nav mx-auto">
         {% for menu in site.data.navigation.main_menu %}
         {% assign check_menu = menu.menu_type %}
         {% case check_menu %}

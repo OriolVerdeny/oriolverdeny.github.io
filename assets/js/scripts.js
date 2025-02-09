@@ -12,24 +12,24 @@ $(document).ready(function() {
    }
 
 
-	
-	if ($(".navbar").length) {
+//  Initializes a sticky navigation bar using the Headhesive.js library.
+	if ($(".navbar").length) { // checks if .navbar element exists (if at least one .navbar exists)
 		var options = {
-			offset: 350,
-			offsetSide: 'top',
-			classes: {
-				clone: 'banner--clone fixed',
-				stick: 'banner--stick',
-				unstick: 'banner--unstick'
+			offset: 350, // The navbar becomes sticky after scrolling 350 pixels down.
+			offsetSide: 'top', // The sticky effect is triggered when scrolling from the top.
+			classes: { // Defines CSS classes applied at different states:
+				clone: 'banner--clone fixed', // A cloned navbar is created with these classes.
+				stick: 'banner--stick', // Added when the navbar becomes sticky.
+				unstick: 'banner--unstick' // Added when the navbar returns to its original position.
 			},
-			onStick: function() {
-				$($.SmartMenus.Bootstrap.init);
+			onStick: function() { // Callback function when the navbar becomes sticky.
+				$($.SmartMenus.Bootstrap.init); // Calls SmartMenus Bootstrap integration, initializing dropdown menus.
 			},
-			onUnstick: function() {
-				$('.search-dropdown .dropdown-menu').collapse('hide');
+			onUnstick: function() { // Callback function when the navbar becomes unstuck.
+				$('.search-dropdown .dropdown-menu').collapse('hide'); // Hides dropdown menus inside .search-dropdown by collapsing them.
 			}
 		};
-		var banner = new Headhesive('.navbar', options);
+		var banner = new Headhesive('.navbar', options); // Creates a new Headhesive instance targeting .navbar using the options defined above.
 	}
 	/*-----------------------------------------------------------------------------------*/
 	/*	HEADER BUTTONS

@@ -871,9 +871,9 @@ button.hamburger.animate.active:after {
     vertical-align: 0.35rem;
 } */
 /*-----------------------------------------------------------------------------------*/
-/*  10. BUTTON
+/*  10. BUTTON in scss
 /*-----------------------------------------------------------------------------------*/
-
+/* 
 .btn {
     color: var(--color-dark);
     background: var(--color-default);
@@ -909,6 +909,7 @@ button.hamburger.animate.active:after {
 .btn-icon-right i {
     margin-left: 0.25rem;
 }
+
 .btn:focus {
     color: var(--color-white);
     -webkit-box-shadow: inherit;
@@ -931,6 +932,7 @@ button.hamburger.animate.active:after {
 .text-right .btn {
     margin-right: 0;
 }
+
 .btn-s {
     padding: 0.65rem 0.9rem 0.55rem;
 }
@@ -947,6 +949,7 @@ button.hamburger.animate.active:after {
 .btn-submit {
     margin: 0
 }
+
 .btn.btn-dark {
     background: var(--color-dark)
 }
@@ -1121,6 +1124,7 @@ button.hamburger.animate.active:after {
     -webkit-box-shadow: var(--btn-hover-brown);
             box-shadow: var(--btn-hover-brown);
 }
+
 .btn.share-facebook {
     background: #4470cf;
 }
@@ -1166,6 +1170,7 @@ button.hamburger.animate.active:after {
 .btn.share-twitter.active {
     background: #4c9ec6;
 }
+
 .btn.btn-strong-hover.btn-white:hover,
 .btn.btn-strong-hover.btn-white:active,
 .btn.btn-strong-hover.btn-white.active {
@@ -1280,6 +1285,7 @@ button.hamburger.animate.active:after {
     -webkit-box-shadow: var(--btn-strong-hover-default);
             box-shadow: var(--btn-strong-hover-default);
 }
+
 .btn-play {
     width: 3.5rem;
     height: 3.5rem;
@@ -1339,9 +1345,9 @@ button.hamburger.animate.active:after {
     color: var(--color-white);
     -webkit-box-shadow: 0 0 0 5px rgba(var(--rgb-white), 0.03);
             box-shadow: 0 0 0 5px rgba(var(--rgb-white), 0.03);
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  11. BOX
+/*  11. BOX in scss
 /*-----------------------------------------------------------------------------------*/
 /* .box {
     padding: 2rem 2rem 1rem;
@@ -6232,7 +6238,7 @@ footer.inverse-text address {
 /*-----------------------------------------------------------------------------------*/
 /*  64. RESPONSIVE
 /*-----------------------------------------------------------------------------------*/
-/* @media (min-width: 1280px) {
+@media (min-width: 1280px) {
     .split-layout .content-wrapper {
         position: relative;
         width: 100%;
@@ -6260,13 +6266,13 @@ footer.inverse-text address {
     .split-layout .inner {
         padding: 5rem;
     }
-} */
-/* @media (min-width: 1200px) {
+}
+@media (min-width: 1200px) {
     .rev_slider_wrapper {
         min-height: 500px;
     }
-} */
-/* @media (min-width: 992px) and (max-width: 1199.98px) {}
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {}
 @media (max-width: 1024px) {}
 @media (min-width: 992px) {
     .navbar-nav .nav-link {
@@ -6499,8 +6505,8 @@ footer.inverse-text address {
         border-top-left-radius: 0.2rem !important;
         border-bottom-left-radius: 0.2rem !important;
     }
-} */
-/* @media (max-width: 991.98px) {
+}
+@media (max-width: 991.98px) {
     .boxed .rounded .image-block>.google-map,
     .boxed .rounded .image-block>.google-map iframe {
         border-top-left-radius: 0.2rem !important;
@@ -6669,8 +6675,8 @@ footer.inverse-text address {
     .sidebar.left-sidebar {
         padding-right: 15px !important;
     }
-} */
-/* @media (min-width: 768px) and (max-width: 991.98px) {
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
     .mosaic .item,
     .mosaic .item.width2 {
         width: 50%;
@@ -6734,8 +6740,8 @@ footer.inverse-text address {
     .nav-tabs.nav-pills .nav-link .icon {
         display: inline-block;
     }
-} */
-/* @media (max-width: 767px) {
+}
+@media (max-width: 767px) {
     .container {
         padding-right: 20px;
         padding-left: 20px;
@@ -6937,13 +6943,13 @@ footer.inverse-text address {
     .modal.fade.modal-bottom-center .modal-dialog {
         width: calc(100% - (0.5rem*2));
     }
-} */
+}
 
-/* .blog-posts .post-thumb {
+.blog-posts .post-thumb {
    max-height: 245px;
    -o-object-fit: cover;
       object-fit: cover;
-} */
+}
 
 
 /*****************************
