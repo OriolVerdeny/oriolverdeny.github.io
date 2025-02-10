@@ -54,7 +54,7 @@
     &::-moz-selection,
     & *::-moz-selection {
         background: rgba($color-blue-yovori, 0.8) !important;
-        color: $color-light-gray !important;
+        color: $color-gray-light !important;
     }
 }
 
@@ -98,12 +98,12 @@
 // Category badge styles
 .badge-category {
     color: $color-default;
-    background: $color-dark-yovori;
+    background: $color-gray20;
 
     &:hover,
     &:focus {
         color: $color-default;
-        background: $color-dark;
+        background: $color-gray-dark;
     }
 }
 
@@ -173,7 +173,7 @@ p.about {
         background-color: rgba($color-default, 0.20); // Dark background on hover
 
         .icon-value {
-            background-color: $color-dark; // Dark background on hover
+            background-color: $color-gray-dark; // Dark background on hover
             color: $color-default; // Default text color on hover
         }
 
@@ -224,7 +224,7 @@ p.about {
     &::-moz-selection,
     & *::-moz-selection {
         background: rgba($color-blue-yovori, 0.8) !important;
-        color: $color-light-gray !important;
+        color: $color-gray-light !important;
     }
 }
 
@@ -298,13 +298,13 @@ p.about {
 
 // Button CTA styles
 .btn-cta {
-    color: $color-light-gray;
+    color: $color-gray-light;
     background: $color-blue-yovori;
 
     &:focus,
     &:hover {
         background-color: rgba($color-blue-yovori, 0.9);
-        color: $color-light-gray;
+        color: $color-gray-light;
     }
 
     &.btn {
@@ -328,13 +328,13 @@ p.about {
 
 // Button hero styles
 .btn-hero {
-    color: $color-dark-yovori;
+    color: $color-gray20;
     background: $color-default;
   
     &:focus,
     &:hover {
       background-color: rgba($color-blue-electric, 0.9);
-      color: $color-dark-yovori;
+      color: $color-gray20;
     }
   
     &.btn {
@@ -362,6 +362,7 @@ p.about {
 .more-yovori {
     color: $color-default;
     font-size: 1rem;
+    font-weight: $font-weight-bold;
 
     &:hover {
         color: rgba($color-default, 0.8);

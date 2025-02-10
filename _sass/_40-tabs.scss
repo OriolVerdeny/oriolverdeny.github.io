@@ -11,7 +11,7 @@
     line-height: 1.25rem;
     letter-spacing: 0;
     font-weight: 500;
-    color: $color-dark;
+    color: $color-gray-dark;
     margin-right: 1.5rem;
     border: 0;
     border-radius: 0;
@@ -36,7 +36,7 @@
     }
 
     p {
-      color: $color-dark;
+      color: $color-gray-dark;
       font-size: 0.8rem;
       font-weight: normal;
       margin: 0.25rem 0 0 0;
@@ -58,7 +58,7 @@
     &:hover,
     &.active {
       border-radius: 0.2rem;
-      color: $color-dark;
+      color: $color-gray-dark;
       -webkit-box-shadow: $shadow;
       box-shadow: $shadow;
       background: $color-white;
@@ -86,7 +86,7 @@
   // Not used
   &.nav-pills {
     .nav-link {
-      color: $color-dark;
+      color: $color-gray-dark;
       cursor: pointer;
       -webkit-transition: all 150ms ease-in-out;
       -o-transition: all 150ms ease-in-out;

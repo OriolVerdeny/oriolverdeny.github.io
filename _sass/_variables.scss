@@ -31,12 +31,23 @@ $color-hibiscus: #ad7c83;
 $color-brown: #9e887a;
 
 // Custom colors
-$color-default: #ffd429;
-$color-blue-yovori: #5458aa;
-$color-blue-electric: #00c8dc;
-$color-dark: #404040;
-$color-light-gray: #f3f4f7;
-$color-dark-yovori: #332d29;
+$color-default: #ffd429; // Sunglow 
+$color-blue-yovori: #5458aa; // Liberty 
+$color-blue-electric: #00c8dc; // Dark Turquoise
+
+$color-gray-dark: hsl(0, 0%, 25%); 
+$color-gray-light: hsl(0, 0%, 95%);
+
+$color-gray10: hsl(0, 0%, 10%);
+$color-gray20: hsl(0, 0%, 20%);
+$color-gray30: hsl(0, 0%, 30%);
+$color-gray40: hsl(0, 0%, 40%);
+$color-gray50: hsl(0, 0%, 50%);
+$color-gray60: hsl(0, 0%, 60%);
+$color-gray70: hsl(0, 0%, 70%);
+$color-gray80: hsl(0, 0%, 80%);
+$color-gray90: hsl(0, 0%, 90%);
+
 
 // Shadows
 $shadow: 0px 5px 20px rgba($color-black, 0.04);
@@ -69,10 +80,25 @@ $colors: (
     "default": $color-default,
     "blue-yovori": $color-blue-yovori,
     "blue-electric": $color-blue-electric,
-    "dark": $color-dark,
-    "light-gray": $color-light-gray,
-    "dark-yovori": $color-dark-yovori,
+    "gray-dark": $color-gray-dark,
+    "gray-light": $color-gray-light,
+
+    "gray10": $color-gray10,
+    "gray20": $color-gray20,
+    "gray30": $color-gray30,
+    "gray40": $color-gray40,
+    "gray50": $color-gray50,
+    "gray60": $color-gray60,
+    "gray70": $color-gray70,
+    "gray80": $color-gray80,
+    "gray90": $color-gray90,
 );
+
+
+
+
+
+
 
 
 // Define share button colors
@@ -106,13 +132,12 @@ $shadow-opacity-strong: 0.5; // Strong hover opacity
 /////////////////////////////////////////////////////////////// 
 
 
-
-
-// Define variables for padding values
-$padding-lg: 6rem;
-$padding-md: 4rem;
-$padding-sm: 2rem;
-$footer-padding-bottom: 5rem;
+// Define those variables
+// --breakpoint-xs: 0;
+// --breakpoint-sm: 576px;
+// --breakpoint-md: 768px;
+// --breakpoint-lg: 992px;
+// --breakpoint-xl: 1200px;
 
 
 // Font Sizes
@@ -146,26 +171,26 @@ $transition-easing: ease-in-out;
 
 // Define placeholder selectors for shared styles
 %inner-top {
-    padding-top: $padding-lg;
+    padding-top: 6rem;
 
     @media (max-width: 992px) {
-        padding-top: $padding-md;
+        padding-top: 4rem;
     }
 
     @media (max-width: 768px) {
-        padding-top: $padding-sm;
+        padding-top: 2rem;
     }
 }
 
 %inner-bottom {
-    padding-bottom: $padding-lg;
+    padding-bottom: 6rem;
 
     @media (max-width: 992px) {
-        padding-bottom: $padding-md;
+        padding-bottom: 4rem;
     }
 
     @media (max-width: 768px) {
-        padding-bottom: $padding-sm;
+        padding-bottom: 2rem;
     }
 }
 

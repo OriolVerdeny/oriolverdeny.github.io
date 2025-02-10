@@ -5,14 +5,13 @@
 .inverse-text {
     // General text color for inverse text
     p, li, span,
-    h1:not([class*="color-"]),
-    h2:not([class*="color-"]),
-    h3:not([class*="color-"]),
-    h4:not([class*="color-"]),
-    h5:not([class*="color-"]),
-    h6:not([class*="color-"]),
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
     .blockquote-footer,
-    .color-dark,
     .meta,
     .meta a,
     .widget a:hover,
@@ -21,11 +20,14 @@
     .pricing-switcher,
     address,
     .nav-tabs .nav-link {
-        color: $color-white;
+        &:not([class*="color-"]){
+            color: $color-white;
+        }
+
     }
 
     // Hamburger button styles
-    &.dark-wrapper,
+    &.gray-dark-wrapper,
     &.navbar-fancy-dark {
         .navbar-other .nav-item button.hamburger {
             &::before, span, &::after {
@@ -38,7 +40,7 @@
     &.offcanvas-info,
     footer &.offcanvas-info {
         p, li, span, a, address {
-            color: $color-light-gray;
+            color: $color-gray-light;
         }
     }
 
@@ -52,11 +54,11 @@
     .bg-white,
     .bg-transparent-white {
         p, li, span, .panel {
-            color: $color-gray;
+            color: $color-gray30;
         }
 
         .nav-tabs .nav-link {
-            color: $color-dark;
+            color: $color-gray-dark;
 
             &.show, &:hover, &.active {
                 color: $color-default;
@@ -68,7 +70,7 @@
         }
 
         .color-dark {
-            color: $color-dark;
+            color: $color-gray-dark;
         }
 
         blockquote.icon::before {
@@ -81,7 +83,7 @@
         h4:not([class*="color-"]),
         h5:not([class*="color-"]),
         h6:not([class*="color-"]) {
-            color: $color-dark;
+            color: $color-gray-dark;
         }
     }
 
@@ -168,7 +170,7 @@
 // Page title wrapper specific styles
 .page-title-wrapper.inverse-text {
     .meta, .meta a, .breadcrumbs li, .breadcrumbs li a, .breadcrumbs li + li::before {
-        color: $color-light-gray;
+        color: $color-gray-light;
     }
 
     .meta a:hover, .breadcrumbs li a:hover {
@@ -185,7 +187,5 @@
 .inverse-text .owl-carousel .owl-dots .owl-dot span {
     background: rgba($color-white, 0.6);
 }
-
-
 
 

@@ -17,7 +17,7 @@ select {
 label {
   &:not(.custom-control-label) {
     font-weight: 500;
-    color: $color-dark;
+    color: $color-gray-dark;
   }
 
   input,
@@ -102,7 +102,7 @@ $input-types: "text", "password", "datetime", "datetime-local", "date", "month",
   line-height: 2.5rem;
   padding: 0 1rem;
   font-size: 0.8rem;
-  color: $color-dark;
+  color: $color-gray-dark;
   background: rgba($color-black, 0.05);
   border: 0;
   border-radius: 1.25rem;
@@ -188,7 +188,7 @@ textarea.form-control {
     color: $color-gray;
     height: 1.9rem;
     line-height: 2rem;
-    border-right: 1px solid $color-light-gray;
+    border-right: 1px solid $color-gray-light;
     font-weight: normal;
   }
 }
@@ -295,7 +295,7 @@ textarea.error {
     font-family: 'Jam';
     content: "\e9ba";
     display: block;
-    color: $color-dark;
+    color: $color-gray-dark;
     font-size: 0.9rem;
     pointer-events: none;
   }
@@ -339,24 +339,24 @@ textarea.error {
 
 .form-control {
   &::-webkit-input-placeholder {
-    color: $color-dark;
+    color: $color-gray-dark;
     font-weight: normal;
   }
 
   &:-moz-placeholder {
-    color: $color-dark;
+    color: $color-gray-dark;
     font-weight: normal;
     opacity: 1;
   }
 
   &::-moz-placeholder {
-    color: $color-dark;
+    color: $color-gray-dark;
     font-weight: normal;
     opacity: 1;
   }
 
   &:-ms-input-placeholder {
-    color: $color-dark;
+    color: $color-gray-dark;
     font-weight: normal;
   }
 }

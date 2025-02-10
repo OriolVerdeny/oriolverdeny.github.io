@@ -187,7 +187,7 @@ faq_area:
 
 <!-- Mission (what) -->
 {% if page.mission.enable %}
-<div class="wrapper dark-wrapper inverse-text">
+<div class="wrapper gray-dark-wrapper inverse-text">
   <div class="container inner">
 
     <h2 class="display-3 title-color mb-40 text-center">{{ page.mission.title }}</h2>
@@ -293,7 +293,7 @@ faq_area:
           <div class="col-lg-6 mb-0">
               <div id="accordion-1" class="accordion-wrapper">
                   {% for faq in page.faq_area.faq limit: "4" %}
-                  <div class="card">
+                  <div class="card shadow">
                       <div class="card-header" id="accordion-heading-1-{{forloop.index}}">
                           <h5>
                               <button class="collapsed" data-toggle="collapse"

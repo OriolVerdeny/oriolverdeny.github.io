@@ -19,7 +19,7 @@
 }
 
 .btn {
-  color: $color-dark;
+  color: $color-gray-dark;
   background: $color-default;
   border: 0;
   margin-bottom: 0.5rem;
@@ -50,12 +50,12 @@
   &:hover,
   &:active,
   &.active {
-    color: $color-dark;
+    color: $color-gray-dark;
     @include btn-hover-shadow($color-default);
   }
 
   &.btn-white {
-    color: $color-dark;
+    color: $color-gray-dark;
   }
 
   .text-center & {
@@ -153,7 +153,7 @@
   &:before {
     font-family: 'IcoFont';
     content: "\ec74";
-    color: $color-dark;
+    color: $color-gray-dark;
     font-size: 1rem;
     padding: 0 0 0 2px;
     display: block;
@@ -184,7 +184,7 @@
 }
 
 .inverse-text .tag-list a.btn {
-  background: $color-dark;
+  background: $color-gray-dark;
 
   &:hover,
   &:focus,
