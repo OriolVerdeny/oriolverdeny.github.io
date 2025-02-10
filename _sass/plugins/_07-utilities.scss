@@ -13,11 +13,12 @@
 // width: 100%; Ensures that the selected elements take up the full width of their container.
 // display: block; Forces the elements to behave as block-level elements, making them take up the full width by default and stack vertically.
 
-[class*="space"] {
-  width: 100%;
-  display: block;
-}
+// [class*="space"] {
+//   width: 100%;
+//   display: block;
+// }
 
+// I incorporated the width and display properties directlyinto .space#{$size} because they were interfering with my custom spacing classes.
 $space-sizes: ();
 
 @for $i from 0 through 40 {
@@ -28,7 +29,11 @@ $space-sizes: ();
 @each $size, $value in $space-sizes {
   .m-#{$size} { margin: $value; }
   .p-#{$size} { padding: $value; }
-  .space#{$size} { height: $value; }
+  .space#{$size} { 
+    height: $value; 
+    width: 100%; 
+    display: block;
+  }
   .mt-#{$size} { margin-top: $value; }
   .pt-#{$size} { padding-top: $value; }
   .mr-#{$size} { margin-right: $value; }
