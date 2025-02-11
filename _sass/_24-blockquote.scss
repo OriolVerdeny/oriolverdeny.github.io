@@ -1,0 +1,107 @@
+/*-----------------------------------------------------------------------------------*/
+/*  24. BLOCKQUOTE
+/*-----------------------------------------------------------------------------------*/
+
+
+$blockquote-icon-size: 6rem;
+$blockquote-icon-line-height: 4.5rem;
+
+blockquote {
+  p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    font-style: normal;
+    color: $color-gray-dark;
+  }
+
+  &.icon p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  &.larger p {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    font-weight: 300;
+  }
+
+  &.icon {
+    position: relative;
+    text-align: center;
+    padding-top: 2.5rem;
+
+    &:before {
+      font-family: sans-serif;
+      content: "\201D";
+      color: rgba($color-default, 0.3);
+      z-index: 1;
+      position: absolute;
+      width: 2.5rem;
+      font-size: $blockquote-icon-size;
+      line-height: $blockquote-icon-line-height;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      vertical-align: bottom;
+    }
+
+    &.icon-left:before {
+      left: 0;
+      transform: none;
+      content: "\201C";
+    }
+  }
+}
+
+.owl-carousel blockquote.icon {
+  padding-top: 3rem;
+}
+
+.blockquote-footer {
+  font-size: 0.6rem;
+  line-height: 1.05rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  color: $color-gray;
+
+  &:before {
+    vertical-align: 1px;
+  }
+
+  &.details {
+    text-transform: none;
+
+    span {
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.blockquote-details {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 1rem;
+
+  .info {
+    padding-left: 1rem;
+  }
+
+  .img-blob img {
+    width: 3.5rem;
+  }
+
+  span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: none;
+  }
+}

@@ -1,0 +1,207 @@
+
+
+///////////////////////////////////////////////////////////////
+/// 
+///  Colors
+/// 
+/////////////////////////////////////////////////////////////// 
+
+
+
+// Base colors
+$color-white: #FFF;
+$color-black: #000;
+$color-gray: #999;
+$color-red: #d75959;
+$color-orange: #fb9d7e;
+$color-yellow: #f5c463;
+$color-green: #9ccd7e;
+$color-leaf: #a4bf9e;
+$color-teal: #58b39a;
+$color-aqua: #78cbea;
+$color-meander: #98bec8;
+$color-blue: #5ca7db;
+$color-cobalt: #3c71d3;
+$color-sky: #5f86be;
+$color-purple: #848abd;
+$color-violet: #b97ecd;
+$color-pink: #d698b5;
+$color-rose: #d16b86;
+$color-hibiscus: #ad7c83;
+$color-brown: #9e887a;
+
+// Custom colors
+$color-default: #ffd429; // Sunglow 
+$color-blue-yovori: #5458aa; // Liberty 
+$color-blue-electric: #00c8dc; // Dark Turquoise
+
+$color-gray-dark: hsl(0, 0%, 25%); 
+$color-gray-light: hsl(0, 0%, 95%);
+
+$color-gray10: hsl(0, 0%, 10%);
+$color-gray20: hsl(0, 0%, 20%);
+$color-gray30: hsl(0, 0%, 30%);
+$color-gray40: hsl(0, 0%, 40%);
+$color-gray50: hsl(0, 0%, 50%);
+$color-gray60: hsl(0, 0%, 60%);
+$color-gray70: hsl(0, 0%, 70%);
+$color-gray80: hsl(0, 0%, 80%);
+$color-gray90: hsl(0, 0%, 90%);
+
+
+// Shadows
+$shadow: 0px 5px 20px rgba($color-black, 0.04);
+$shadow-hover: 0px 1px 2px rgba($color-black, 0.07);
+
+
+// Color map
+$colors: (
+    "white": $color-white,
+    "black": $color-black,
+    "gray": $color-gray,
+    "red": $color-red,
+    "orange": $color-orange,
+    "yellow": $color-yellow,
+    "green": $color-green,
+    "leaf": $color-leaf,
+    "teal": $color-teal,
+    "aqua": $color-aqua,
+    "meander": $color-meander,
+    "blue": $color-blue,
+    "cobalt": $color-cobalt,
+    "sky": $color-sky,
+    "purple": $color-purple,
+    "violet": $color-violet,
+    "pink": $color-pink,
+    "rose": $color-rose,
+    "hibiscus": $color-hibiscus,
+    "brown": $color-brown,
+
+    "default": $color-default,
+    "blue-yovori": $color-blue-yovori,
+    "blue-electric": $color-blue-electric,
+    "gray-dark": $color-gray-dark,
+    "gray-light": $color-gray-light,
+
+    "gray10": $color-gray10,
+    "gray20": $color-gray20,
+    "gray30": $color-gray30,
+    "gray40": $color-gray40,
+    "gray50": $color-gray50,
+    "gray60": $color-gray60,
+    "gray70": $color-gray70,
+    "gray80": $color-gray80,
+    "gray90": $color-gray90,
+);
+
+
+
+
+
+
+
+
+// Define share button colors
+$share-colors: (
+  "facebook": (#4470cf, #340bb3),
+  "google": (#a84539, #91362b),
+  "pinterest": (#c53942, #b12b34),
+  "tumblr": (#5d82a4, #496b8b),
+  "twitter": (#5daed5, #4c9ec6)
+);
+
+
+// Generate $hover-shadows map dynamically
+$hover-shadows: ();
+@each $name, $color in $colors {
+  $hover-shadows: map-merge($hover-shadows, ($name: rgba($color, 0.2)));
+}
+
+
+// Global variables for shadow properties
+$shadow-spread: 5px; // The spread size
+$shadow-opacity-default: 0.3; // Default opacity for hover
+$shadow-opacity-strong: 0.5; // Strong hover opacity
+
+
+
+///////////////////////////////////////////////////////////////
+/// 
+///  Other
+/// 
+/////////////////////////////////////////////////////////////// 
+
+
+// Define those variables
+// --breakpoint-xs: 0;
+// --breakpoint-sm: 576px;
+// --breakpoint-md: 768px;
+// --breakpoint-lg: 992px;
+// --breakpoint-xl: 1200px;
+
+
+// Font Sizes
+$base-font-size: 18px;
+$small-font-size: 0.9rem;
+$medium-font-size: 1rem;
+$large-font-size: 1.5rem;
+$extra-large-font-size: 2rem;
+
+// Font Weights
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+
+// Line Heights
+$base-line-height: 1.7;
+$compact-line-height: 1.2;
+
+
+
+// Icon blob
+$icon-font-family: 'Snowlake' !important;
+$text-font-family: 'Jost', sans-serif !important;
+$icon-size: 4rem;
+$step-size: 1rem;
+$step-font-size: 0.55rem;
+$number-font-size: 1.3rem;
+$transition-duration: 200ms;
+$transition-easing: ease-in-out;
+
+
+
+// Define placeholder selectors for shared styles
+%inner-top {
+    padding-top: 6rem;
+
+    @media (max-width: 992px) {
+        padding-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 2rem;
+    }
+}
+
+%inner-bottom {
+    padding-bottom: 6rem;
+
+    @media (max-width: 992px) {
+        padding-bottom: 4rem;
+    }
+
+    @media (max-width: 768px) {
+        padding-bottom: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,245 @@
+/*-----------------------------------------------------------------------------------*/
+/*  03. NAVBAR
+/*-----------------------------------------------------------------------------------*/
+
+
+.navbar {
+    z-index: 1008;
+    width: 100%;
+    padding: 0;
+
+    &.fixed.banner--stick,
+    &.shadow:not(.fixed):not(.banner--stick) {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+    }
+
+    &.absolute {
+        position: absolute;
+    }
+
+    // Not used
+    &.navbar-bg-light {
+        background: $color-white !important;
+    }
+
+    // Not used
+    &.transparent {
+        .logo-dark {
+            display: none;
+        }
+    }
+
+    // Not used
+    &.fixed.transparent {
+        .logo-light {
+            display: none;
+        }
+
+        .logo-dark {
+            display: inline-block;
+        }
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .navbar-brand {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0;
+
+        a {
+            color: #303030;
+        }
+    }
+
+    &:not(.extended) {
+        .topbar {
+            font-size: 0.75rem;
+            padding: 0.15rem 0;
+        }
+    }
+
+    &.extended:not(.banner--clone),
+    &.transparent:not(.banner--clone) {
+        .dropdown-menu {
+            border-top-left-radius: 0.2rem;
+            border-top-right-radius: 0.2rem;
+        }
+    }
+
+}
+
+
+.navbar-brand {
+    img {
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        -webkit-transform: translateZ();
+        height: auto;
+        width: auto;
+        max-width: none;
+
+        @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+            image-rendering: -webkit-optimize-contrast;
+        }
+    }
+}
+
+.navbar-nav {
+    line-height: 1;
+
+    * {
+        line-height: 1;
+    }
+
+    .nav-link {
+        color: #303030;
+
+        // Shared styles for .nav-link, .dropdown-item, and .mega-menu-content a
+        &,
+        .dropdown-item,
+        .mega-menu-content a {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+    }
+    &:not(.sm-collapsible) {
+        .dropdown-item.has-submenu {
+            padding-right: 2rem;
+        }
+    }
+}
+
+.nav-uppercase {
+    .navbar-nav {
+        .nav-link {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+
+// Not used
+.nav-fill {
+    .nav-item {
+        text-align: left;
+    }
+
+    > .nav-item {
+        text-align: center;
+    }
+}
+
+
+.dropdown-menu {
+    min-width: 170px;
+    padding: 0;
+    margin: 0;
+    color: $color-white;
+    background: #1e2228;
+    border: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+
+    &:hover,
+    &:focus {
+        color: $color-white;
+    }
+
+    // Nested dropdown-menu
+    .dropdown-menu {
+        border-radius: 0.2rem;
+    }
+
+    // Shared styles for .nav-item and .mega-menu-content li
+    .nav-item,
+    .mega-menu-content li {
+        line-height: 1;
+    }
+}
+
+
+
+.mega-menu-content {
+    a {
+        color: $color-white;
+        padding: 0.6rem 1.2rem;
+        padding-left: 0;
+        padding-right: 0;
+        display: block;
+
+        &:hover,
+        &:focus {
+            color: $color-white;
+        }
+    }
+
+    .icon-list i {
+        font-size: 0.7rem;
+        width: 1.1rem;
+    }
+}
+
+
+
+.dropdown-item {
+    color: $color-white;
+    padding: 0.6rem 1.2rem;
+
+    &:hover,
+    &:focus {
+        color: $color-white;
+        background: none !important;
+        border-top-color: transparent;
+    }
+
+    &.active {
+        background: none;
+        color: inherit;
+    }
+
+    &.highlighted {
+        background: none !important;
+        border-top-color: transparent;
+    }
+}
+
+
+
+.dropdown-toggle{
+    &::after {
+        display: none;
+    }
+}
+
+
+.navbar-other {
+    .nav-item {
+        a:not(.btn),
+        button {
+            color: #303030;
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+        }
+
+        & + .nav-item {
+            padding-left: 0.8rem;
+
+            &.search-dropdown {
+                padding-left: 1rem !important;
+            }
+        }
+    }
+}
+
+
+abbr[title],
+acronym[title] {
+    cursor: help !important;
+    text-decoration: none !important;
+}

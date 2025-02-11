@@ -1,0 +1,425 @@
+/*-----------------------------------------------------------------------------------*/
+/*  54. FORMS
+/*-----------------------------------------------------------------------------------*/
+
+select {
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  font-weight: normal;
+}
+
+.col-form-label {
+  line-height: 1.9;
+}
+
+label {
+  &:not(.custom-control-label) {
+    font-weight: 500;
+    color: $color-gray-dark;
+  }
+
+  input,
+  textarea {
+    margin-top: 0.25rem;
+  }
+}
+
+
+.form-field label,
+.form-group .custom-select {
+  width: 100%
+}
+
+
+.form-inline {
+  .btn {
+    vertical-align: top;
+  }
+
+  .form-group {
+    margin-right: 0.25rem;
+
+    label {
+      margin-right: 0.25rem;
+    }
+  }
+}
+
+
+.form-group {
+  margin-bottom: 1rem;
+
+  .btn {
+    vertical-align: top;
+  }
+}
+
+
+
+// 1) .form-row > .col
+// Selects any direct child (>) of .form-row that has the class .col.
+// <div class="form-row">
+//     <div class="col">...</div>  <!-- This element is targeted -->
+// </div>
+// 
+// 2) .form-row > [class*="col-"]
+// Selects any direct child of .form-row whose class contains "col-" anywhere.
+// <div class="form-row">
+//     <div class="col-md-6">...</div>  <!-- This element is targeted -->
+//     <div class="col-lg-4">...</div>  <!-- This element is targeted -->
+// </div>
+
+.form-row {
+  margin-right: -10px;
+  margin-left: -10px;
+
+  &>.col,
+  &>[class*="col-"] {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+}
+
+
+
+// input[type="text"],
+// Targets specific <input> elements based on their type attribute.
+// Example: <input type="text">, etc.
+$input-types: "text", "password", "datetime", "datetime-local", "date", "month",
+  "time", "week", "number", "email", "url", "search", "tel", "color";
+
+
+// Mixin for shared styles
+@mixin input-styles {
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  font-weight: inherit;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 1rem;
+  font-size: 0.8rem;
+  color: $color-gray-dark;
+  background: rgba($color-black, 0.05);
+  border: 0;
+  border-radius: 1.25rem;
+  resize: none;
+  vertical-align: middle;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  transition: all 200ms ease-in-out;
+}
+
+
+// Apply styles to select, textarea, and input types
+select,
+textarea,
+textarea.form-control,
+.uneditable-input {
+  @include input-styles;
+}
+
+// Apply styles to input types
+@each $type in $input-types {
+  input[type="#{$type}"] {
+    @include input-styles;
+  }
+}
+
+// Focus styles
+textarea:focus,
+textarea.form-control:focus,
+.uneditable-input:focus {
+  background: rgba($color-black, 0.07);
+  box-shadow: none;
+  border: 0;
+}
+
+@each $type in $input-types {
+  input[type="#{$type}"]:focus {
+    background: rgba($color-black, 0.07);
+    box-shadow: none;
+    border: 0;
+  }
+}
+
+*[type="submit"] {
+  height: 2.5rem;
+}
+
+
+.widget input {
+  margin-bottom: 0;
+}
+
+
+textarea,
+textarea.form-control {
+    height: 8rem;
+    line-height: 1.4rem;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    resize: vertical;
+    font-weight: inherit;
+}
+
+
+.input-group>.custom-select:not(:last-child),
+.input-group>.form-control:not(:last-child),
+.input-group>.custom-select:not(:first-child),
+.input-group>.form-control:not(:first-child) {
+    border-radius: 1.25rem; 
+}
+
+// not ued
+.form-container .form-field {
+  position: relative
+  i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 0.65rem;
+    margin: 1px 0 0 0;
+    line-height: 2rem;
+    color: $color-gray;
+    height: 1.9rem;
+    line-height: 2rem;
+    border-right: 1px solid $color-gray-light;
+    font-weight: normal;
+  }
+}
+
+
+
+// removes native styling from input and select elements in Firefox.
+input,
+select {
+    -moz-appearance: none
+}
+@-moz-document url-prefix() {
+    select {
+        text-shadow: 0 0 0 transparent;
+    }
+}
+
+
+
+input.error,
+textarea.error {
+    border: 1px solid #d9534f;
+}
+.state-error,
+.btn.state-error:hover {
+    background-color: #de4747;
+    color: $color-white;
+}
+.help-block.with-errors {
+    color: #de4747;
+    margin-top: 5px;
+}
+
+
+.notification-box {
+  display: block;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  border: 1px solid transparent;
+  border-radius: 0.2rem;
+  opacity: 0;
+
+  &.show-error {
+    color: #721c24;
+    background: #f8d7da;
+    border: 0;
+    opacity: 1
+  }
+
+  &.show-success {
+    color: #155724;
+    background: #d4edda;
+    border: 0;
+    opacity: 1
+  }
+}
+
+
+
+.search-form {
+  position: relative;
+
+  input {
+    margin: 0;
+    padding-right: 1rem;
+  }
+
+  &:before {
+    content: "\ebab";
+    font-family: 'Jam';
+    display: block;
+    position: absolute;
+    top: 0.55rem;
+    right: 0.75rem;
+    font-size: 0.85rem;
+    color: $color-gray;
+  }
+
+}
+
+
+.custom-select {
+  height: 2.5rem;
+  background: rgba($color-black, 0.05);
+  border: 0;
+  border-radius: 1.25rem;
+  padding: 0 2rem 0 1.2em;
+
+  &:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background: rgba($color-black, 0.07);
+  }
+}
+
+.custom-select-wrapper {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.7rem;
+    font-family: 'Jam';
+    content: "\e9ba";
+    display: block;
+    color: $color-gray-dark;
+    font-size: 0.9rem;
+    pointer-events: none;
+  }
+}
+
+
+.custom-control-label {
+  &::before {
+    background-color: rgba($color-black, 0.07);
+    top: 3px;
+  }
+
+  &::after {
+    top: 3px;
+  }
+
+  // Disabled state
+  .custom-control-input:disabled~& {
+    color: $color-gray;
+
+    &::before {
+      background-color: rgba($color-black, 0.04);
+    }
+  }
+
+  // Active or Checked states 
+  .custom-control-input:active~&::before,
+  .custom-checkbox .custom-control-input:checked~&::before,
+  .custom-radio .custom-control-input:checked~&::before {
+      background-color: $color-default;
+  }
+  
+  // Focus state
+  .custom-control-input:focus~&::before {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+}
+
+
+
+.form-control {
+  &::-webkit-input-placeholder {
+    color: $color-gray-dark;
+    font-weight: normal;
+  }
+
+  &:-moz-placeholder {
+    color: $color-gray-dark;
+    font-weight: normal;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: $color-gray-dark;
+    font-weight: normal;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color-gray-dark;
+    font-weight: normal;
+  }
+}
+
+
+.item-quantity {
+  background: rgba($color-black, 0.05);
+  border: 0;
+  border-radius: 1.25rem;
+  display: inline-block;
+  padding: 0 5px;
+  margin: 0;
+
+  input {
+    border: 0;
+    background: none;
+    height: 48px;
+    line-height: 1;
+  }
+
+  .qty {
+    border: 0;
+    background: none;
+    width: 60px;
+    text-align: center;
+  }
+
+  .qty:focus {
+    background: none;
+  }
+}
+
+.item-detailed .custom-select-wrapper {
+  min-width: 100px;
+}
+
+
+
+.fields-white {
+  select,
+  textarea,
+  textarea.form-control,
+  textarea:focus,
+  textarea.form-control:focus,
+  .uneditable-input,
+  .uneditable-input:focus,
+  .custom-select,
+  .custom-select:focus,
+  .custom-control-label::before,
+  .custom-control-input:disabled ~ .custom-control-label::before {
+      -webkit-appearance: none;
+      background: $color-white;
+      -webkit-box-shadow: $shadow;
+              box-shadow: $shadow;
+  }
+
+  @each $type in $input-types {
+      input[type=#{$type}],
+      input[type=#{$type}]:focus {
+          -webkit-appearance: none;
+          background: $color-white;
+          -webkit-box-shadow: $shadow;
+                  box-shadow: $shadow;
+      }
+  }
+}

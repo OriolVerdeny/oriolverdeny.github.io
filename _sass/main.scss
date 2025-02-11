@@ -13,12 +13,58 @@
 
 
 // @import "blog";
+
+@import "plugins/01-smartmenus.scss"; // corrected
+
+// Problem here
+@import "plugins/04-lightgallery.scss";
+@import "plugins/05-owl-carousel.scss";
+@import "plugins/07-utilities.scss"; // corrected
+
+
+@import "variables"; // to review
+
+@import "01-reset"; // corrected
+@import "02-general"; // corrected
+@import "03-navigation"; // corrected
+@import "04-sticky-header"; // corrected
+@import "05-mega-menu"; // corrected
+@import "06-hamburger-menu"; // corrected
+@import "07-offcanvas"; 
+@import "08-search"; 
+@import "09-cart"; 
+@import "10-buttons"; // corrected
+@import "11-box"; // corrected
+@import "12-wrappers"; // corrected
+@import "13-image-background-wrapper"; // corrected
+@import "14-image-block-wrapper"; // corrected
+@import "15-video-background-wrapper"; // corrected
+@import "16-shadow"; // corrected
+@import "20-dropcap"; // corrected
+@import "21-badge";
+@import "24-blockquote"; // corrected
+@import "25-lists"; // corrected
+@import "26-services";
+@import "28-figure";
+@import "29-overlay"; // <<<<<<<<<----------
+@import "30-tiles";
+@import "31-blog";
+@import "32-widgets";
+@import "33-pagination";
+@import "40-tabs"; // corrected
+@import "41-accordion-collapse";
+@import "53-social-icons";
+@import "54-forms"; // corrected
+@import "59-linear-icon-list";
+@import "61-colors"; //corrected
+@import "62-inverse-text"; // POTENTIAL PROBLEM?
+@import "64-responsive";
+@import "99-custom";
+
 @import "yovori";
 
 
-// @import 'addon-yovori/syntax';
+
 @import 'addon-yovori/commons';
 
 
-// @import "syntax";
-// @import "overrides";

@@ -1,0 +1,51 @@
+/*-----------------------------------------------------------------------------------*/
+/*  09. CART
+/*-----------------------------------------------------------------------------------*/
+.dropdown-menu.cart-dropdown-menu {
+    padding: 1.5rem !important;
+    min-width: 280px;
+
+    .meta.price {
+        font-weight: 500;
+        font-size: 0.8rem;
+        color: #aaa !important;
+
+        .quantity {
+            font-style: normal;
+
+            &::after {
+                content: "x";
+                padding: 0 5px;
+            }
+        }
+    }
+}
+
+.navbar-other {
+    .nav-item {
+        .cart-dropdown-menu {
+            a:not(.btn) {
+                color: var(--color-white);
+                font-size: inherit;
+
+                &:hover {
+                    color: rgba(var(--rgb-white), 0.7) !important;
+                }
+            }
+        }
+    }
+}
+
+.badge-cart {
+    text-transform: uppercase;
+    color: var(--color-white);
+    font-size: 0.55rem;
+    font-weight: 500;
+    line-height: 0.85rem;
+    width: 0.85rem;
+    height: 0.85rem;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: 0.35rem;
+}

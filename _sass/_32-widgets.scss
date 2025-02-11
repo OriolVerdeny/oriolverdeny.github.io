@@ -1,0 +1,89 @@
+/*-----------------------------------------------------------------------------------*/
+/*  32. WIDGETS
+/*-----------------------------------------------------------------------------------*/
+.sidebox {
+    margin-top: 50px;
+    display: block;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.sidebar {
+    padding-left: 35px;
+
+    &.left-sidebar {
+        padding-left: 15px !important;
+        padding-right: 35px !important;
+    }
+
+    a:not(.hover):not(.btn):not(.badge) {
+        color: inherit;
+
+        &:hover {
+            color: $color-default;
+        }
+    }
+
+    .meta a:hover {
+        color: #606060 !important;
+    }
+}
+
+footer {
+    [class*="col-"] {
+        .widget {
+            margin-top: 30px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &:not(.blockquote-footer) {
+        a {
+            color: #606060;
+
+            &:hover {
+                color: $color-default;
+            }
+        }
+    }
+
+    a.btn {
+        color: $color-white;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+
+    &.inverse-text {
+        &:not(.blockquote-footer) * {
+            color: #cacaca;
+        }
+
+        .nocolor.color-text {
+            color: #606060;
+
+            &:hover {
+                color: $color-default;
+            }
+        }
+
+        .meta,
+        .meta * {
+            color: #aaa;
+
+            a {
+                color: #aaa;
+
+                &:hover {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}

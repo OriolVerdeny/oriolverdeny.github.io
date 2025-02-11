@@ -13,7 +13,7 @@ layout: default
           <div class="post mb-0">
 
 
-            <div class="space40"></div>
+            <!-- <div class="space40"></div> -->
             <div class="post-content">
               {% if page.categories %}
               <div class="category text-center">
@@ -31,7 +31,7 @@ layout: default
               </div>
               {{page.content}}
               {% if page.post_format == "gallery" %}
-              <div class="space20"></div>
+              <!-- <div class="space20"></div> -->
               <div class="post-gallery light-gallery-wrapper">
                 <div class="tiles tiles-s">
                   <div class="items row">
@@ -55,8 +55,8 @@ layout: default
               <!--/.post-gallery -->
               {% endif %}
               <div class="clearfix"></div>
-              <div class="space40"></div>
-              <div class="space10"></div>
+              <!-- <div class="space40"></div>
+              <div class="space10"></div> -->
               <div class="d-lg-flex justify-content-between align-items-center meta-footer">
                 <ul class="list-unstyled tag-list">
                   {% capture tags %}
@@ -68,7 +68,7 @@ layout: default
                   {% endcapture %}
                   {{ tags | split:'</li>' | sort | join:'</li>' }}
                 </ul>
-                <div class="space20 d-lg-none"></div>
+                <!-- <div class="space20 d-lg-none"></div> -->
               </div>
             </div>
             <!-- /.post-content -->

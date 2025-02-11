@@ -1,1376 +1,5 @@
 
 
-// Define variables for padding values
-$padding-lg: 6rem;
-$padding-md: 4rem;
-$padding-sm: 2rem;
-$footer-padding-bottom: 5rem;
-
-
-// Colors
-$color-default: #ffd429;
-$color-blue-yovori: #5458aa;
-$color-blue-electric: #00c8dc;
-$color-dark: #404040;
-$color-light-gray: #f3f4f7;
-$color-dark-yovori: #332d29;
-
-$color-white: #FFF;
-$color-black: #000;
-$color-dark: #1e1e1e;
-$color-gray: #999;
-$color-red: #d75959;
-$color-orange: #fb9d7e;
-$color-yellow: #f5c463;
-$color-green: #9ccd7e;
-$color-blue: #5ca7db;
-
-
-
-
-// Font Sizes
-$base-font-size: 18px;
-$small-font-size: 0.9rem;
-$medium-font-size: 1rem;
-$large-font-size: 1.5rem;
-$extra-large-font-size: 2rem;
-
-// Font Weights
-$font-weight-normal: 400;
-$font-weight-bold: 600;
-
-// Line Heights
-$base-line-height: 1.7;
-$compact-line-height: 1.2;
-
-
-
-// Icon blob
-$icon-font-family: 'Snowlake' !important;
-$text-font-family: 'Jost', sans-serif !important;
-$icon-size: 4rem;
-$step-size: 1rem;
-$step-font-size: 0.55rem;
-$number-font-size: 1.3rem;
-$transition-duration: 200ms;
-$transition-easing: ease-in-out;
-
-
-
-
-
-
-// Global variables for shadow properties
-$shadow-spread: 5px; // The spread size
-$shadow-opacity-default: 0.3; // Default opacity for hover
-$shadow-opacity-strong: 0.5; // Strong hover opacity
-
-// Mixin for button hover styles
-@mixin btn-hover-shadow($color, $opacity: $shadow-opacity-default) {
-    box-shadow: 0 0 0 $shadow-spread rgba($color, $opacity);
-}
-
-
-// Define placeholder selectors for shared styles
-%inner-top {
-    padding-top: $padding-lg;
-
-    @media (max-width: 992px) {
-        padding-top: $padding-md;
-    }
-
-    @media (max-width: 768px) {
-        padding-top: $padding-sm;
-    }
-}
-
-%inner-bottom {
-    padding-bottom: $padding-lg;
-
-    @media (max-width: 992px) {
-        padding-bottom: $padding-md;
-    }
-
-    @media (max-width: 768px) {
-        padding-bottom: $padding-sm;
-    }
-}
-
-
-
-/*-----------------------------------------------------------------------------------*/
-/*  01. RESET
-/*-----------------------------------------------------------------------------------*/
-
-
-// Text selection styles
-::selection,
-::-moz-selection {
-    background: rgba($color-default, 0.7);
-    color: $color-dark;
-
-    // Overridden for `.bg-default`
-    .bg-default & {
-        background: $color-white;
-        color: $color-gray;
-    }
-
-}
-
-
-
-/*-----------------------------------------------------------------------------------*/
-/*  02. GENERAL
-/*-----------------------------------------------------------------------------------*/
-
-
-
-html {
-    font-size: $base-font-size;
-    scroll-behavior: smooth;
-}
-
-// Global Body Styles
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: 'Nunito', sans-serif;
-    color: $color-dark;
-    font-size: inherit;
-    line-height: $base-line-height;
-    background: $color-light-gray;
-    overflow-x: hidden;
-    position: relative;
-}
-
-
-
-// .container {
-//     padding-right: 0;
-//     padding-left: 0;
-// }
-
-// Fluid container styles
-.container-fluid {
-    padding-left: 20px;
-    padding-right: 20px;
-
-    // Navbar-specific styles inside .container-fluid
-    .navbar & {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-}
-
-
-body,
-li,
-address {
-    line-height: $base-line-height;
-}
-
-input,
-button,
-select,
-textarea {
-    font-family: inherit;
-    font-weight: normal;
-    color: inherit;
-}
-
-strong {
-    font-weight: bold;
-}
-
-p {
-    margin: 0 0 1rem
-}
-
-
-
-// General hover transition styles
-.hover {
-    transition: all 200ms ease-in-out;
-}
-
-// Anchor tag-specific styles
-a {
-    color: $color-gray; 
-    transition: all 200ms ease-in-out;
-
-    &.hover {
-        transition: border 150ms ease-in-out;
-        padding-bottom: 0;
-        border-bottom: 1px solid transparent;
-
-        &:hover {
-            border-bottom: 1px solid $color-default;
-        }
-    }
-
-    &:hover,
-    &:focus {
-        text-decoration: none;
-        color: $color-default;
-    }
-}
-
-// Specific styles for post-title and no-color links
-.post-title a,
-a.nocolor {
-    color: inherit;
-}
-
-
-// Loop to generate font-weight classes from 300 to 700
-@for $i from 300 through 700 {
-    .font-weight-#{$i} {
-        font-weight: $i;
-    }
-}
-
-strong {
-    font-weight: 500;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: 0;
-    color: $color-dark;
-    font-weight: $font-weight-bold;
-    letter-spacing: normal;
-    margin-bottom: 0.8rem;
-}
-
-
-// Define font sizes (first column) and line heights (second column) for each heading level
-$heading-sizes: (
-  1: (1.4rem, 1.7rem),
-  2: (1.3rem, 1.6rem),
-  3: (1.2rem, 1.5rem),
-  4: (1.1rem, 1.4rem),
-  5: (1.0rem, 1.3rem),
-  6: (0.9rem, 1.2rem)
-);
-
-// Loop through heading sizes and apply styles
-@each $level, $sizes in $heading-sizes {
-
-    h#{$level},
-    .h#{$level} {
-        font-size: nth($sizes, 1);
-        line-height: nth($sizes, 2);
-
-        // Apply margin for h5 and h6
-        @if $level ==5 or $level ==6 {
-            margin-bottom: 0.6rem;
-        }
-
-        &.text-uppercase {
-            font-size: (nth($sizes, 1) - 0.2rem);
-            line-height: (nth($sizes, 2) - 0.2rem);
-        }
-    }
-
-    // Scoped styles for the blog class
-    .blog h#{$level},
-    .blog .h#{$level} {
-        font-size: nth($sizes, 1) * 1.25;
-        line-height: nth($sizes, 2) + 1;
-    }
-
-}
-
-
-
-.blog {
-
-    @for $i from 1 through 6 {
-      .post-title ~ h#{$i} {
-        margin-top: 2.5rem; // More space for headings
-      }
-    }
-
-    @media (max-width: 768px) {
-
-        @for $i from 1 through 6 {
-            .post-title ~ h#{$i} {
-              margin-top: 1.5rem; // More space for headings
-            }
-          }
-    }
-  }
-
-
-.grid-view h2.post-title {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    line-height: 1.4rem;
-}
-.classic-view h2.post-title,
-.caption-overlay h3 {
-    font-size: 1.4rem;
-    line-height: 1.7rem;
-}
-.widget-title {
-    font-size: 1rem;
-    line-height: 1.3rem;
-}
-
-.section-title {
-    font-size: 1.5rem;
-    line-height: 1.8rem;
-    margin-bottom: 1rem;
-  
-    &.larger {
-      font-size: 1.8rem;
-      line-height: 2.1rem;
-    }
-  
-    &.text-uppercase {
-      font-size: 0.9rem;
-      line-height: 1.2rem;
-      margin-bottom: 1rem;
-  
-      &.larger {
-        font-size: 1.2rem;
-        line-height: 1.5rem;
-      }
-    }
-  }
-
-.title-color {
-    font-size: 0.8rem;
-    line-height: 1.1rem;
-    margin-bottom: 1.05rem;
-    text-transform: uppercase;
-}
-.title-bg {
-    font-size: 0.55rem;
-    line-height: 1rem;
-    letter-spacing: 0.025rem;
-    text-transform: uppercase;
-    display: inline-block;
-    border-radius: 10rem;
-    padding: 0.35rem 0.7rem 0.3rem;
-}
-.page-title {
-    font-size: 2.5rem;
-    line-height: 2.8rem;
-    margin-bottom: 1rem;
-}
-.hero {
-    font-size: 3rem;
-    line-height: 3.6rem;
-    font-weight: 500;
-}
-
-.display-1 {
-    font-size: 2.5rem;
-    line-height: 3.1rem;
-    font-weight: 500;
-}
-.display-2 {
-    font-size: 2rem;
-    line-height: 2.6rem;
-    font-weight: 500;
-}
-.display-3 {
-    font-size: 1.6rem;
-    line-height: 2.2rem;
-    font-weight: normal;
-}
-.display-4 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 300;
-}
-
-.lead {
-    font-size: 1rem;
-    line-height: 1.5rem;
-}
-.page-title-wrapper .lead {
-    font-size: 1.1rem;
-    line-height: 1.6rem;
-}
-.lead.larger {
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-}
-.text-muted {
-    color: $color-gray !important;
-}
-
-
-// This should be responsive. Look at py-* bootstrap classes. 
-
-// Apply placeholder selectors to .inner
-.inner {
-    @extend %inner-top;
-    @extend %inner-bottom;
-  }
-  
-  // Specific styles for .inner-top and .inner-bottom
-  .inner-top {
-    @extend %inner-top;
-  }
-  
-  .inner-bottom {
-    @extend %inner-bottom;
-  }
-  
-  // Footer-specific styles
-  footer .inner {
-    @extend %inner-top;
-    padding-bottom: $footer-padding-bottom;
-  
-    @media (max-width: 992px) {
-      padding-bottom: $padding-md;
-    }
-  
-    @media (max-width: 768px) {
-      padding-bottom: $padding-sm;
-    }
-  }
-
-
-
-// Base styles for page-title-wrapper inner
-.page-title-wrapper {
-    .inner {
-      padding-top: 5rem;
-      padding-bottom: 0;
-  
-      // Additional style for page-title-wrapper with image-wrapper
-      &.image-wrapper {
-        padding-bottom: 6rem;
-      }
-    }
-  }
-
-// Google map styles
-.google-map {
-    iframe {
-      display: block;
-    }
-  
-    &.map-full {
-      height: 100%;
-    }
-  }
-
-#wave {
-    margin: 0;
-}
-canvas {
-    vertical-align: bottom;
-}
-.divider svg {
-    vertical-align: bottom;
-}
-.pointer-none {
-    pointer-events: none;
-}
-
-
-// Shared Styles for Bold and Medium Font Size
-.shared-bold-medium {
-    font-weight: $font-weight-bold;
-    font-size: $medium-font-size;
-}
-
-// Apply shared class to all relevant elements
-.dropcap,
-.alert-link,
-.blockquote-footer,
-.meta,
-.more,
-.more-yovori,
-.breadcrumbs,
-.breadcrumbs *,
-.isotope-filter ul li a,
-.pagination ul > li > a,
-.icon-blob span,
-.icon-blob .step,
-th,
-.pricing-switcher,
-.item-detailed .item-label,
-.item-detailed .price,
-.nav-tabs .nav-link,
-.nav-uppercase .navbar-nav .nav-link,
-.accordion-wrapper .card-header button,
-label:not(.custom-control-label) {
-    @extend .shared-bold-medium;
-}
-
-
-
-
-// // Spacing class in Yovori
-
-// // Percentage-based spacing sizes
-// $spacing-sizes: (
-//   sm: 1%,
-//   md: 2.5%,
-//   lg: 5%
-// );
-
-// // Pixel-based spacing sizes
-// $rem-spacing-sizes: (
-//   0: 0rem,  
-//   1: 0.25rem,
-//   2: 0.5rem,
-//   3: 1rem,
-//   4: 1.5rem,
-//   5: 3rem
-// );
-
-// // Responsive breakpoints
-// $breakpoints: (
-//   tablet: 768px,
-//   mobile: 576px
-// );
-
-// // Generate percentage-based spacing classes
-// @each $size, $value in $spacing-sizes {
-//     .space-t-#{$size} {
-//         margin-top: $value;
-//     }
-
-//     .space-b-#{$size} {
-//         margin-bottom: $value;
-//     }
-
-//     .space-r-#{$size} {
-//         margin-right: $value;
-//     }
-
-//     .space-l-#{$size} {
-//         margin-left: $value;
-//     }
-
-//     .space-x-#{$size} {
-//         margin-right: $value;
-//         margin-left: $value;
-//     }
-
-//     .space-y-#{$size} {
-//         margin-top: $value;
-//         margin-bottom: $value;
-//     }
-
-//     @media (max-width: map-get($breakpoints, tablet)) {
-//         .space-t-#{$size} {
-//             margin-top: $value * 0.8;
-//         }
-
-//         .space-b-#{$size} {
-//             margin-bottom: $value * 0.8;
-//         }
-
-//         .space-r-#{$size} {
-//             margin-right: $value * 0.8;
-//         }
-
-//         .space-l-#{$size} {
-//             margin-left: $value * 0.8;
-//         }
-
-//         .space-x-#{$size} {
-//             margin-right: $value * 0.8;
-//             margin-left: $value * 0.8;
-//         }
-//         .space-y-#{$size} {
-//             margin-top: $value * 0.8;
-//             margin-bottom: $value * 0.8;
-//         }
-//     }
-
-//     @media (max-width: map-get($breakpoints, mobile)) {
-//         .space-t-#{$size} {
-//             margin-top: $value * 0.6;
-//         }
-
-//         .space-b-#{$size} {
-//             margin-bottom: $value * 0.6;
-//         }
-
-//         .space-r-#{$size} {
-//             margin-right: $value * 0.6;
-//         }
-
-//         .space-l-#{$size} {
-//             margin-left: $value * 0.6;
-//         }
-
-//         .space-x-#{$size} {
-//             margin-right: $value * 0.6;
-//             margin-left: $value * 0.6;
-//         }
-
-//         .space-y-#{$size} {
-//             margin-top: $value * 0.6;
-//             margin-bottom: $value * 0.6;
-//         }
-//     }
-// }
-
-// // Generate rem-based spacing classes
-// @each $size, $value in $rem-spacing-sizes {
-//     .space-t-#{$size} {
-//         margin-top: $value;
-//     }
-
-//     .space-b-#{$size} {
-//         margin-bottom: $value;
-//     }
-
-//     .space-r-#{$size} {
-//         margin-right: $value;
-//     }
-
-//     .space-l-#{$size} {
-//         margin-left: $value;
-//     }
-
-//     .space-x-#{$size} {
-//         margin-right: $value;
-//         margin-left: $value;
-//     }
-
-//     .space-y-#{$size} {
-//         margin-top: $value;
-//         margin-bottom: $value;
-//     }
-
-//     @media (max-width: map-get($breakpoints, tablet)) {
-//         .space-t-#{$size} {
-//             margin-top: $value * 0.8;
-//         }
-
-//         .space-b-#{$size} {
-//             margin-bottom: $value * 0.8;
-//         }
-
-//         .space-r-#{$size} {
-//             margin-right: $value * 0.8;
-//         }
-
-//         .space-l-#{$size} {
-//             margin-left: $value * 0.8;
-//         }
-
-//         .space-x-#{$size} {
-//             margin-right: $value * 0.8;
-//             margin-left: $value * 0.8;
-//         }
-
-//         .space-y-#{$size} {
-//             margin-top: $value * 0.8;
-//             margin-bottom: $value * 0.8;
-//         }
-//     }
-
-//     @media (max-width: map-get($breakpoints, mobile)) {
-//         .space-t-#{$size} {
-//             margin-top: $value * 0.7;
-//         }
-
-//         .space-b-#{$size} {
-//             margin-bottom: $value * 0.7;
-//         }
-
-//         .space-r-#{$size} {
-//             margin-right: $value * 0.7;
-//         }
-
-//         .space-l-#{$size} {
-//             margin-left: $value * 0.7;
-//         }
-
-//         .space-x-#{$size} {
-//             margin-right: $value * 0.7;
-//             margin-left: $value * 0.7;
-//         }
-
-//         .space-y-#{$size} {
-//             margin-top: $value * 0.7;
-//             margin-bottom: $value * 0.7;
-//         }
-//     }
-// }
-
-// .responsive-spacing {
-//     width: 100%;
-//     display: block;
-//   }
-
-/*-----------------------------------------------------------------------------------*/
-/*  10. BUTTON
-/*-----------------------------------------------------------------------------------*/
-
-// Variables
-$colors: (
-  white: var(--color-white),
-  dark: var(--color-dark),
-  default: var(--color-default),
-  red: var(--color-red),
-  orange: var(--color-orange),
-  yellow: var(--color-yellow),
-  green: var(--color-green),
-  leaf: var(--color-leaf),
-  teal: var(--color-teal),
-  aqua: var(--color-aqua),
-  meander: var(--color-meander),
-  blue: var(--color-blue),
-  cobalt: var(--color-cobalt),
-  sky: var(--color-sky),
-  purple: var(--color-purple),
-  violet: var(--color-violet),
-  pink: var(--color-pink),
-  rose: var(--color-rose),
-  hibiscus: var(--color-hibiscus),
-  brown: var(--color-brown),
-);
-
-$hover-shadows: (
-  white: var(--btn-hover-white),
-  dark: var(--btn-hover-dark),
-  red: var(--btn-hover-red),
-  orange: var(--btn-hover-orange),
-  yellow: var(--btn-hover-yellow),
-  green: var(--btn-hover-green),
-  leaf: var(--btn-hover-leaf),
-  teal: var(--btn-hover-teal),
-  aqua: var(--btn-hover-aqua),
-  meander: var(--btn-hover-meander),
-  blue: var(--btn-hover-blue),
-  cobalt: var(--btn-hover-cobalt),
-  sky: var(--btn-hover-sky),
-  purple: var(--btn-hover-purple),
-  violet: var(--btn-hover-violet),
-  pink: var(--btn-hover-pink),
-  rose: var(--btn-hover-rose),
-  hibiscus: var(--btn-hover-hibiscus),
-  brown: var(--btn-hover-brown),
-);
-
-// Mixin for hover and active states
-@mixin btn-hover-active($color) {
-  &:hover,
-  &:active,
-  &.active {
-    box-shadow: map-get($hover-shadows, $color);
-  }
-}
-
-// Button Base Styles
-.btn {
-  color: $color-dark;
-  background: $color-default;
-  border: 0;
-  margin: 0 0.25rem 0.5rem;
-  padding: 0.9rem 1.3rem 0.8rem;
-  font-size: 0.65rem;
-  letter-spacing: 0.025rem;
-  text-transform: uppercase;
-  font-weight: 500;
-  line-height: 1;
-  border-radius: 1.5rem;
-  text-shadow: none;
-  transition: all 300ms ease-in-out;
-  box-shadow: none;
-  display: inline-block;
-
-  &-icon {
-    i {
-      vertical-align: -1px;
-    }
-
-    &.navigation i {
-      vertical-align: 0;
-    }
-  }
-
-  &-icon-left i {
-    margin-right: 0.25rem;
-  }
-
-  &-icon-right i {
-    margin-left: 0.25rem;
-  }
-
-  &:focus {
-    color: $color-white;
-    box-shadow: inherit;
-  }
-
-  &:hover,
-  &:active,
-  &.active {
-    color: $color-dark;
-    @include btn-hover-shadow($color-default);
-  }
-
-  &.btn-s {
-    padding: 0.65rem 0.9rem 0.55rem;
-  }
-
-  &.btn-l {
-    padding: 1.05rem 1.5rem 1rem;
-    font-size: 0.7rem;
-  }
-
-  &.fixed-width {
-    width: 165px;
-  }
-
-  &.btn-square {
-    padding: 0.5rem;
-  }
-
-  &.btn-submit {
-    margin: 0;
-  }
-
-  // Generate color-specific styles
-  @each $name, $color in $colors {
-    &.btn-#{$name} {
-      background: $color;
-      @include btn-hover-active($name);
-    }
-  }
-}
-
-// Alignment
-.text-center .btn {
-  margin: 0 0.25rem;
-}
-
-.text-right .btn {
-  margin-right: 0;
-}
-
-
-// Define share button colors
-$share-colors: (
-  "facebook": (#4470cf, #340bb3),
-  "google": (#a84539, #91362b),
-  "pinterest": (#c53942, #b12b34),
-  "tumblr": (#5d82a4, #496b8b),
-  "twitter": (#5daed5, #4c9ec6)
-);
-
-// Generate styles for each button
-@each $platform, $colors in $share-colors {
-  $bg: nth($colors, 1);
-  $hover-bg: nth($colors, 2);
-
-  .btn.share-#{$platform} {
-    background: $bg;
-
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      background: $hover-bg;
-    }
-  }
-}
-
-
-
-
-
-/*-----------------------------------------------------------------------------------*/
-/*  26. SERVICES
-/*-----------------------------------------------------------------------------------*/
-.icon-bg {
-    width: 2rem;
-    height: 2rem;
-    position: relative;
-    border-radius: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
-
-
-// Icon Blob Styles
-.icon-blob {
-    font-family: 'Nunito', sans-serif !important;
-    font-size: inherit; // Inherit font-size from body or global settings
-    line-height: 1;
-    width: $icon-size;
-    height: $icon-size;
-    display: table;
-    position: relative;
-    z-index: 1;
-
-    // Nested styles for icon-blob specific elements
-    span,
-    h3,
-    p,
-    .step {
-        font-family: inherit; // Inherit font family from parent
-        font-size: inherit; // Inherit font size from parent
-        line-height: inherit; // Inherit line height from parent
-    }
-
-    &::after {
-        font-family: $icon-font-family;
-        content: "\0041";
-        font-size: $icon-size;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
-
-    span {
-        font-weight: 500;
-    }
-
-    .number {
-        display: table-cell;
-        text-align: center;
-        margin: 0 auto;
-        vertical-align: middle;
-        font-size: $number-font-size;
-    }
-
-    .step {
-        position: absolute;
-        bottom: -0.15rem;
-        left: 0.55rem;
-        width: $step-size;
-        height: $step-size;
-        border-radius: 50%;
-        font-size: $step-font-size;
-        font-weight: 500;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: $color-white;
-        z-index: 2;
-    }
-
-    i {
-        display: table-cell;
-        text-align: center;
-        margin: 0 auto;
-        vertical-align: middle;
-        font-size: 1.6rem;
-    }
-
-    &.text-center {
-        margin: 0 auto;
-    }
-
-    &.hover-effect,
-    &.active-effect {
-        transition: all $transition-duration $transition-easing;
-    }
-
-
-    // Responsive adjustments for icon blob size
-    @media (max-width: 768px) {
-        width: $icon-size * 0.8; // 80% of default size for tablets
-        height: $icon-size * 0.8;
-
-        &::after {
-            font-size: $icon-size * 0.8; // Adjust pseudo-element size
-        }
-
-        .number {
-            font-size: 1rem; // Smaller size for tablets
-        }
-
-        // Adjust margins for tablets
-        &.mb-30 {
-            margin-bottom: 15px !important; // Adjust as needed
-        }
-
-        &.mr-25 {
-            margin-right: 15px !important; // Adjust as needed
-        }
-
-    }
-
-    @media (max-width: 576px) {
-        width: $icon-size * 0.6; // 60% of default size for mobile devices
-        height: $icon-size * 0.6;
-
-        &::after {
-            font-size: $icon-size * 0.6; // Adjust pseudo-element size
-        }
-
-        .number {
-            font-size: 0.9rem; // Smaller size for mobile devices
-        }
-
-        // Adjust margins for mobile devices
-        &.mb-30 {
-            margin-bottom: 10px !important; // Adjust as needed
-        }
-
-        &.mr-25 {
-            margin-right: 10px !important; // Adjust as needed
-        }
-
-    }
-
-}
-
-.dial-item {
-    .icon-blob {
-        &::before {
-            font-family: $icon-font-family;
-            content: "\0041";
-            font-size: $icon-size;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            color: $color-white;
-        }
-
-        &.hover-effect:hover,
-        &.active-effect.active,
-        &.hover-effect:hover .number,
-        &.active-effect.active .number {
-            color: var(--color-white) !important;
-        }
-    }
-}
-
-.nav-tabs .nav-link {
-    .icon-blob {
-        transition: all $transition-duration $transition-easing;
-
-        &.hover-effect:hover,
-        &.active-effect.active {
-            color: var(--color-white) !important;
-        }
-    }
-}
-
-
-.img-blob img {
-    -webkit-mask-position: center center;
-    mask-position: center center;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    height: auto;
-    width: 100%;
-    max-width: 100%;
-    -webkit-mask-size: auto auto;
-    -webkit-mask-box-image-repeat: space;
-}
-
-.icon-svg img {
-    width: 3rem;
-    height: 3rem;
-}
-
-
-
-$blob-images: 1 to 15; // Range for the blob images
-
-@each $i in $blob-images {
-  .img-blob.blob#{$i} img {
-    -webkit-mask-box-image: url(../images/blob/blob#{$i}.svg);
-    -webkit-mask-image: url(../images/blob/blob#{$i}.svg);
-            mask-image: url(../images/blob/blob#{$i}.svg);
-    -webkit-mask-box-image-repeat: space;
-  }
-}
-
-
-/* Responsive adjustments for image blobs */
-@media (max-width: 992px) {
-    .img-blob img {
-      width: 80%; /* Adjust size for medium screens */
-      max-width: 80%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .img-blob img {
-      width: 60%; /* Adjust size for small screens */
-      max-width: 60%;
-    }
-  }
-
-.owl-carousel .owl-item .img-blob img,
-.owl-carousel .owl-item .img-blob-s img {
-    display: inline;
-    width: 3.5rem;
-}
-
-
-
-/*-----------------------------------------------------------------------------------*/
-/*  32. WIDGETS
-/*-----------------------------------------------------------------------------------*/
-.sidebox {
-    margin-top: 50px;
-    display: block;
-
-    &:first-child {
-        margin-top: 0;
-    }
-}
-
-.sidebar {
-    padding-left: 35px;
-
-    &.left-sidebar {
-        padding-left: 15px !important;
-        padding-right: 35px !important;
-    }
-
-    a:not(.hover):not(.btn):not(.badge) {
-        color: inherit;
-
-        &:hover {
-            color: $color-default;
-        }
-    }
-
-    .meta a:hover {
-        color: #606060 !important;
-    }
-}
-
-footer {
-    [class*="col-"] {
-        .widget {
-            margin-top: 30px;
-
-            &:first-child {
-                margin-top: 0;
-            }
-        }
-    }
-
-    &:not(.blockquote-footer) {
-        a {
-            color: #606060;
-
-            &:hover {
-                color: $color-default;
-            }
-        }
-    }
-
-    a.btn {
-        color: $color-white;
-
-        &:hover {
-            color: $color-white;
-        }
-    }
-
-    &.inverse-text {
-        &:not(.blockquote-footer) * {
-            color: #cacaca;
-        }
-
-        .nocolor.color-text {
-            color: #606060;
-
-            &:hover {
-                color: $color-default;
-            }
-        }
-
-        .meta,
-        .meta * {
-            color: #aaa;
-
-            a {
-                color: #aaa;
-
-                &:hover {
-                    color: $color-white;
-                }
-            }
-        }
-    }
-}
-
-/*-----------------------------------------------------------------------------------*/
-/*  41. ACCORDION / COLLAPSE
-/*-----------------------------------------------------------------------------------*/
-
-.accordion-wrapper {
-    .card {
-        background-clip: border-box;
-        border: 0;
-        border-radius: 0.2rem;
-        margin-bottom: 1.25rem;
-
-        &.simple {
-            background: none;
-            border-radius: 0;
-            margin-bottom: 0.1rem;
-
-            .card-header,
-            .card-block,
-            .card-body {
-                padding: 0;
-            }
-
-            .card-body {
-                padding-left: 1.5rem;
-            }
-
-            .card-header {
-                margin-bottom: 0.8rem;
-            }
-        }
-    }
-
-    .card-title {
-        margin-bottom: 0;
-    }
-
-    .card-text:last-child {
-        margin-bottom: 0;
-    }
-
-    .card-body {
-        padding: 0 1.25rem 0.25rem 2.5rem;
-    }
-
-    .card-header {
-        margin-bottom: 0;
-        background: none;
-        border: 0;
-        padding: 0.9rem 1rem;
-
-        > * {
-            margin: 0;
-            font-size: 0.95rem;
-            line-height: 1.25rem;
-        }
-
-        button {
-            background: none;
-            text-align: left;
-            cursor: pointer;
-            font-weight: 500;
-            border: 0;
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            color: $color-default;
-            transition: all 200ms ease-in-out;
-
-            &:hover {
-                color: $color-default;
-            }
-
-            &.collapsed {
-                color: #404040;
-
-                &:before {
-                    content: "\e9bc";
-                }
-            }
-
-            &:before {
-                font-family: 'Jam';
-                content: "\e9cf";
-                font-size: 1rem;
-                font-weight: normal;
-                width: 1.5rem;
-                display: inline-block;
-                vertical-align: -2px;
-                color: $color-default;
-            }
-        }
-    }
-}
-
-
-/*-----------------------------------------------------------------------------------*/
-/*  61. COLORS
-/*-----------------------------------------------------------------------------------*/
-.color-default,
-.bullet-default>li:before,
-.bullet-default i {
-    color: $color-default !important;
-}
-.color-white,
-.bullet-white>li:before,
-.bullet-white i {
-    color: $color-white !important;
-}
-.color-gray,
-.bullet-gray>li:before,
-.bullet-gray i {
-    color: $color-gray !important;
-}
-.color-dark,
-.bullet-dark>li:before,
-.bullet-dark i {
-    color: $color-dark !important;
-}
-
-
-
-
-/*-----------------------------------------------------------------------------------*/
-/*	CONTAINERS
-/*-----------------------------------------------------------------------------------*/
-
-/* Wider container for specific sections */
-.container-wide {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-/* Adjust max-width for different breakpoints */
-@media (min-width: 576px) {
-    .container-wide {
-        max-width: 600px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container-wide {
-        max-width: 800px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container-wide {
-        max-width: 1040px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container-wide {
-        max-width: 1300px;
-    }
-}
 
 
 
@@ -1386,7 +15,7 @@ footer {
 
 @media (max-width: 991.98px) {
   .responsive-img {
-    width: 25%; /* Reduce width for smaller screens */
+    width: 50%; /* Reduce width for smaller screens */
     height: auto;
   }
 }
@@ -1421,7 +50,7 @@ footer {
     &::-moz-selection,
     & *::-moz-selection {
         background: rgba($color-blue-yovori, 0.8) !important;
-        color: $color-light-gray !important;
+        color: $color-gray-light !important;
     }
 }
 
@@ -1465,12 +94,12 @@ footer {
 // Category badge styles
 .badge-category {
     color: $color-default;
-    background: $color-dark-yovori;
+    background: $color-gray20;
 
     &:hover,
     &:focus {
         color: $color-default;
-        background: $color-dark;
+        background: $color-gray-dark;
     }
 }
 
@@ -1540,7 +169,7 @@ p.about {
         background-color: rgba($color-default, 0.20); // Dark background on hover
 
         .icon-value {
-            background-color: $color-dark; // Dark background on hover
+            background-color: $color-gray-dark; // Dark background on hover
             color: $color-default; // Default text color on hover
         }
 
@@ -1582,18 +211,75 @@ p.about {
 /*--------*/
 
 // CTA button styles
+
 .cta {
     background: $color-default;
-    border-radius: 50px;
+    border-radius: clamp(25px, 2vw, 50px);
+    padding: clamp(1rem, 2vw, 4rem) clamp(2rem, 4vw, 8rem);
 
+    
     &::selection,
     & *::selection,
     &::-moz-selection,
     & *::-moz-selection {
         background: rgba($color-blue-yovori, 0.8) !important;
-        color: $color-light-gray !important;
+        color: $color-gray-light !important;
     }
+
+    h3 {
+        // font-size: clamp(1.4rem, 2vw, 1.7rem);
+
+        // smaller than 767px
+        @media (max-width: 767px) {
+            font-size: 1.4rem;
+        }
+
+        // larger than 767px
+        @media (min-width: 768px) {
+            font-size: 1.7rem;
+        }
+    }
+
+    // Button CTA styles
+    .btn {
+        color: $color-gray-light;
+        background: $color-blue-yovori;
+        margin: 0rem 0 0 0rem;
+
+        &:focus,
+        &:hover,
+        &:active,
+        &.active {
+            @include btn-hover-shadow($color-blue-yovori);
+        }
+
+        &.btn-strong-hover {
+
+            &:hover,
+            &:active,
+            &.active {
+                @include btn-hover-shadow($color-blue-yovori, $shadow-opacity-strong);
+            }
+        }
+
+        // smaller than 991px
+        @media (max-width: 991px) {
+            margin: 1rem 0 0 0;
+        }
+
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
 
 // CTA Wrapper styles
 .cta-wrapper {
@@ -1663,45 +349,17 @@ p.about {
 /* BUTTON */
 /*--------*/
 
-// Button CTA styles
-.btn-cta {
-    color: $color-light-gray;
-    background: $color-blue-yovori;
-
-    &:focus,
-    &:hover {
-        background-color: rgba($color-blue-yovori, 0.9);
-        color: $color-light-gray;
-    }
-
-    &.btn {
-        &:hover,
-        &:active,
-        &.active {
-            @include btn-hover-shadow($color-blue-yovori);
-        }
-
-        &.btn-strong-hover {
-            &:hover,
-            &:active,
-            &.active {
-                @include btn-hover-shadow($color-blue-yovori, $shadow-opacity-strong);
-            }
-        }
-    }
-}
 
 
-
-// Button hero styles
+// Button hero styles <––––––– DO THE SAME AS WITH THE STA BUTTON.
 .btn-hero {
-    color: $color-dark-yovori;
+    color: $color-gray20;
     background: $color-default;
   
     &:focus,
     &:hover {
       background-color: rgba($color-blue-electric, 0.9);
-      color: $color-dark-yovori;
+      color: $color-gray20;
     }
   
     &.btn {
@@ -1728,6 +386,8 @@ p.about {
 
 .more-yovori {
     color: $color-default;
+    font-size: 1rem;
+    font-weight: $font-weight-bold;
 
     &:hover {
         color: rgba($color-default, 0.8);
@@ -1741,44 +401,44 @@ p.about {
 /*	NAVIGATION LINKS, DROPDOWNS, TABS
 /*-----------------------------------------------------------------------------------*/
 
-// Navigation and Button Styling
-.nav-uppercase {
-    .navbar-nav {
-        .nav-link,
-        .dropdown-item,
-        .mega-menu-content a,
-        .nav-tabs .nav-link {
-            font-size: $small-font-size;
-            font-weight: $font-weight-bold;
-            line-height: $compact-line-height; // vertical spacing between lines of text
-        }
-    }
-}
+// // Navigation and Button Styling
+// .nav-uppercase {
+//     .navbar-nav {
+//         .nav-link,
+//         .dropdown-item,
+//         .mega-menu-content a,
+//         .nav-tabs .nav-link {
+//             font-size: $small-font-size;
+//             font-weight: $font-weight-bold;
+//             line-height: $compact-line-height; // vertical spacing between lines of text
+//         }
+//     }
+// }
 
-// Media Query Adjustments
-@media (min-width: 992px) {
-    .nav-uppercase {
-        .navbar-nav {
-            .nav-link,
-            .navbar.extended .navbar-nav .nav-link {
-                padding-top: 1.35rem;
-                padding-bottom: 1.3rem;
-            }
-        }
-    }
-}
+// // Media Query Adjustments
+// @media (min-width: 992px) {
+//     .nav-uppercase {
+//         .navbar-nav {
+//             .nav-link,
+//             .navbar.extended .navbar-nav .nav-link {
+//                 padding-top: 1.35rem;
+//                 padding-bottom: 1.3rem;
+//             }
+//         }
+//     }
+// }
 
-@media (max-width: 991.98px) {
-    .nav-uppercase {
-        .navbar-nav {
-            .nav-link,
-            .dropdown-item,
-            .mega-menu-content a {
-                font-size: calc($small-font-size - 0.1rem);
-            }
-        }
-    }
-}
+// @media (max-width: 991.98px) {
+//     .nav-uppercase {
+//         .navbar-nav {
+//             .nav-link,
+//             .dropdown-item,
+//             .mega-menu-content a {
+//                 font-size: calc($small-font-size - 0.1rem);
+//             }
+//         }
+//     }
+// }
 
 
 
@@ -1804,33 +464,6 @@ p.about {
 /* <div class="prevent-select"> */
 
 
-
-
-
-
-/*-----------------------------------------------------------------------------------*/
-/*	FULL SCREEN CONTAINER (not used)
-/*-----------------------------------------------------------------------------------*/
-
-.full-screen-container {
-
-    min-height: 100vh; /* Ensures the container is at least the viewport height */
-    width: 100%; /* Full width of the screen */
-    display: flex; /* Optional: for flexible content alignment */
-    justify-content: center; /* Optional: center content horizontally */
-    align-items: center; /* Optional: center content vertically */
-    background-color: #f0f0f0; /* Optional: add a background color */
-    padding: 20px; /* Adds padding to prevent content from touching edges */
-    box-sizing: border-box; /* Include padding and borders in width/height calculations */
-    overflow: auto; /* Ensures content is scrollable if it overflows */
-}
-
-
-@media (max-width: 768px) {
-    .full-screen-container {
-        padding: 10px; /* Reduce padding for smaller screens */
-    }
-}
 
 
 /*-----------------------------------------------------------------------------------*/

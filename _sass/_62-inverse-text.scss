@@ -1,0 +1,191 @@
+/*-----------------------------------------------------------------------------------*/
+/*  62. INVERSE TEXT
+/*-----------------------------------------------------------------------------------*/
+
+.inverse-text {
+    // General text color for inverse text
+    p, li, span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .blockquote-footer,
+    .meta,
+    .meta a,
+    .widget a:hover,
+    .accordion-wrapper.simple .card-header button.collapsed,
+    label:not(.custom-control-label),
+    .pricing-switcher,
+    address,
+    .nav-tabs .nav-link {
+        &:not([class*="color-"]){
+            color: $color-white;
+        }
+
+    }
+
+    // Hamburger button styles
+    &.gray-dark-wrapper,
+    &.navbar-fancy-dark {
+        .navbar-other .nav-item button.hamburger {
+            &::before, span, &::after {
+                background: $color-white;
+            }
+        }
+    }
+
+    // Offcanvas and footer styles
+    &.offcanvas-info,
+    footer &.offcanvas-info {
+        p, li, span, a, address {
+            color: $color-gray-light;
+        }
+    }
+
+    // Hover states
+    .meta a:hover,
+    .accordion-wrapper.simple .card-header button:hover {
+        color: $color-default;
+    }
+
+    // Background-specific styles
+    .bg-white,
+    .bg-transparent-white {
+        p, li, span, .panel {
+            color: $color-gray30;
+        }
+
+        .nav-tabs .nav-link {
+            color: $color-gray-dark;
+
+            &.show, &:hover, &.active {
+                color: $color-default;
+            }
+        }
+
+        .meta, .meta a, .blockquote-footer {
+            color: $color-gray !important;
+        }
+
+        .color-dark {
+            color: $color-gray-dark;
+        }
+
+        blockquote.icon::before {
+            color: rgba($color-default, 0.3);
+        }
+
+        h1:not([class*="color-"]),
+        h2:not([class*="color-"]),
+        h3:not([class*="color-"]),
+        h4:not([class*="color-"]),
+        h5:not([class*="color-"]),
+        h6:not([class*="color-"]) {
+            color: $color-gray-dark;
+        }
+    }
+
+    // Divider and icon styles
+    .divider-icon {
+        i {
+            color: rgba(255, 255, 255, 0.1);
+        }
+
+        &::before, &::after {
+            border-top: 1px solid rgba($color-white, 0.1);
+        }
+    }
+
+    // Form controls
+    select, textarea, input:not(.qty), .uneditable-input {
+        background: rgba($color-white, 0.07);
+        color: $color-white;
+
+        &:focus {
+            background: rgba($color-white, 0.09);
+        }
+    }
+
+    .custom-select {
+        background: rgba($color-black, 0.35);
+
+        &:focus {
+            background: rgba($color-black, 0.5);
+        }
+    }
+
+    .form-control {
+        &::-webkit-input-placeholder,
+        &:-moz-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder {
+            color: $color-white;
+        }
+    }
+
+    // Miscellaneous styles
+    hr {
+        border-color: rgba($color-white, 0.15);
+    }
+
+    .custom-control-label::before {
+        background-color: rgba($color-black, 0.35);
+
+        .custom-control-input:disabled ~ & {
+            background-color: rgba($color-black, 0.2);
+        }
+    }
+
+    .pricing-switcher-wrapper {
+        background-color: rgba($color-white, 0.05);
+    }
+
+    .dial {
+        border: 2px dashed rgba($color-white, 0.07);
+    }
+
+    .progressbar {
+        svg path:first-child {
+            stroke: rgba($color-white, 0.1);
+        }
+
+        &-text {
+            color: $color-white !important;
+        }
+    }
+
+    .btn:not(.btn-white) {
+        &, &:hover, &:focus, &:active, &.active {
+            color: $color-white !important;
+        }
+    }
+
+    .divider-heading {
+        opacity: 0.4;
+    }
+}
+
+// Page title wrapper specific styles
+.page-title-wrapper.inverse-text {
+    .meta, .meta a, .breadcrumbs li, .breadcrumbs li a, .breadcrumbs li + li::before {
+        color: $color-gray-light;
+    }
+
+    .meta a:hover, .breadcrumbs li a:hover {
+        color: $color-white;
+    }
+}
+
+// Caption overlay specific styles
+.caption-overlay .meta span + span::before {
+    background: rgba($color-white, 0.5);
+}
+
+// Owl carousel dots
+.inverse-text .owl-carousel .owl-dots .owl-dot span {
+    background: rgba($color-white, 0.6);
+}
+
+

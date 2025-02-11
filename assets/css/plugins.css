@@ -8,7 +8,7 @@
 06. PLYR
 07. UTILITIES 
 -------------------------------------------------------------------------------------*/
-:root {
+/* :root {
 	--color-default: #848abd;
 	--color-white: #FFF;
 	--color-black: #000;
@@ -115,12 +115,12 @@
 	--badge-hover-brown: 0 0 0 4px rgba(var(--rgb-brown), 0.2);
 	--shadow: 0px 5px 20px rgba(var(--rgb-black), 0.04) !important;
 	--shadow-hover: 0px 1px 2px rgba(var(--rgb-black), 0.07) !important;
-}
+} */
 
 /*-----------------------------------------------------------------------------------*/
-/*	01. SMARTMENUS
+/*	01. SMARTMENUS in scss
 /*-----------------------------------------------------------------------------------*/
-.navbar-nav .sub-arrow {
+/* .navbar-nav .sub-arrow {
 	font-family: Jam
 }
 
@@ -240,7 +240,7 @@
 
 .navbar-nav:not(.sm-collapsible) .sm-nowrap>li>.dropdown-item {
 	white-space: nowrap
-}
+} */
 
 /*-----------------------------------------------------------------------------------*/
 /*	02. PRETTIFY
@@ -348,7 +348,7 @@ li.L9 {
 /*-----------------------------------------------------------------------------------*/
 /*	04. LIGHTGALLERY
 /*-----------------------------------------------------------------------------------*/
-.lg-sub-html,
+/* .lg-sub-html,
 .lg-toolbar {
 	background-color: rgba(0, 0, 0, .45)
 }
@@ -893,6 +893,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .lg-show-autoplay .lg-autoplay-button:after {
 	content: "\e01a"
 }
+
 
 .lg-outer.lg-css3.lg-zoom-dragging .lg-item.lg-complete.lg-zoomable .lg-image,
 .lg-outer.lg-css3.lg-zoom-dragging .lg-item.lg-complete.lg-zoomable .lg-img-wrap {
@@ -1524,7 +1525,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .lg-outer.fb-comments .lg-video-cont {
 	max-width: 1250px !important
-}
+} */
 
 /*-----------------------------------------------------------------------------------*/
 /*	05. OWL CAROUSEL
@@ -1534,7 +1535,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
  * Copyright 2013-2018 David Deutsch
  * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
  */
-.owl-carousel,
+/* .owl-carousel,
 .owl-carousel .owl-item {
 	-webkit-tap-highlight-color: transparent;
 	position: relative
@@ -1746,7 +1747,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	z-index: 1;
 	height: 100%;
 	width: 100%
-}
+} */
 
 /*-----------------------------------------------------------------------------------*/
 /*	06. PLYR
@@ -3158,9 +3159,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*	07. UTILITIES
+/*	07. UTILITIES in scss
 /*-----------------------------------------------------------------------------------*/
-[class*="space"] {
+/* [class*="space"] {
 	width: 100%;
 	display: block;
 }
@@ -5922,4 +5923,4 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .fs-200 {
 	font-size: 200px !important
-}
+} */

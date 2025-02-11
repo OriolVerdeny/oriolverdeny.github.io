@@ -1,0 +1,96 @@
+/*-----------------------------------------------------------------------------------*/
+/*  31. BLOG
+/*-----------------------------------------------------------------------------------*/
+$gray-color: #999;
+$hover-color: #606060;
+$meta-font-size: 0.65rem;
+$meta-line-height: 1.05rem;
+
+.grid-view .post {
+    margin-bottom: 3rem;
+}
+
+.classic-view .post {
+    margin-bottom: 5rem;
+
+    .meta {
+        margin-bottom: 1.3rem;
+    }
+
+    .more {
+        display: block;
+        margin-top: 1.5rem;
+    }
+}
+
+.meta,
+.more,
+.breadcrumbs {
+    margin-bottom: 1rem;
+    font-size: $meta-font-size;
+    line-height: $meta-line-height;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    a {
+        color: $gray-color;
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+}
+
+.post .meta {
+    padding: 0.25rem 0;
+}
+
+.more:hover {
+    color: $hover-color;
+}
+
+.more:after,
+.p-more:after {
+    font-family: 'Jam';
+    content: "\e92c";
+    padding-left: 0.2rem;
+    font-size: 0.75rem;
+    font-weight: normal;
+    vertical-align: -2px;
+}
+
+.meta {
+    span + span:before {
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        margin: 0 0.6rem;
+        vertical-align: 3px;
+        background: rgba(48, 48, 48, 0.35);
+    }
+
+    span i {
+        font-size: 0.75rem;
+        font-weight: normal;
+        margin-right: 0.2rem;
+        vertical-align: -2px;
+    }
+}
+
+.meta-footer {
+    .tag-list,
+    .tag-list *,
+    .social li {
+        margin-bottom: 0 !important;
+    }
+}
+
+
+.blog-posts .post-thumb {
+    max-height: 245px;
+    -o-object-fit: cover;
+       object-fit: cover;
+ }
+ 

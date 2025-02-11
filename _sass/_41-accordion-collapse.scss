@@ -1,0 +1,93 @@
+/*-----------------------------------------------------------------------------------*/
+/*  41. ACCORDION / COLLAPSE
+/*-----------------------------------------------------------------------------------*/
+
+.accordion-wrapper {
+    .card {
+        background-clip: border-box;
+        border: 0;
+        border-radius: 0.2rem;
+        margin-bottom: 1.25rem;
+
+        &.simple {
+            background: none;
+            border-radius: 0;
+            margin-bottom: 0.1rem;
+
+            .card-header,
+            .card-block,
+            .card-body {
+                padding: 0;
+            }
+
+            .card-body {
+                padding-left: 1.5rem;
+            }
+
+            .card-header {
+                margin-bottom: 0.8rem;
+            }
+        }
+    }
+
+    .card-title {
+        margin-bottom: 0;
+    }
+
+    .card-text:last-child {
+        margin-bottom: 0;
+    }
+
+    .card-body {
+        padding: 0 1.25rem 0.25rem 2.5rem;
+    }
+
+    .card-header {
+        margin-bottom: 0;
+        background: none;
+        border: 0;
+        padding: 0.9rem 1rem;
+
+        > * {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.25rem;
+        }
+
+        button {
+            background: none;
+            text-align: left;
+            cursor: pointer;
+            font-weight: 500;
+            border: 0;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            color: $color-default;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                color: $color-default;
+            }
+
+            &.collapsed {
+                color: #404040;
+
+                &:before {
+                    content: "\e9bc";
+                }
+            }
+
+            &:before {
+                font-family: 'Jam';
+                content: "\e9cf";
+                font-size: 1rem;
+                font-weight: normal;
+                width: 1.5rem;
+                display: inline-block;
+                vertical-align: -2px;
+                color: $color-default;
+            }
+        }
+    }
+}

@@ -1,0 +1,197 @@
+/*-----------------------------------------------------------------------------------*/
+/*  10. BUTTON
+/*-----------------------------------------------------------------------------------*/
+
+
+// Mixin for button hover styles
+@mixin btn-hover-shadow($color, $opacity: $shadow-opacity-default) {
+  box-shadow: 0 0 0 $shadow-spread rgba($color, $opacity);
+}
+
+// Mixin for hover and active states
+@mixin btn-hover-active($color) {
+
+  &:hover,
+  &:active,
+  &.active {
+    box-shadow: map-get($hover-shadows, $color);
+  }
+}
+
+.btn {
+  color: $color-gray-dark;
+  background: $color-default;
+  border: 0;
+  margin-bottom: 0.5rem;
+  margin-right: 0.25rem;
+  padding: 0.9rem 1.3rem 0.8rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 1.5rem;
+  text-shadow: none;
+
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  display: inline-block;
+
+  &:focus {
+    color: $color-white;
+    -webkit-box-shadow: inherit;
+    box-shadow: inherit;
+  }
+
+  &:hover,
+  &:active,
+  &.active {
+    color: $color-gray-dark;
+    @include btn-hover-shadow($color-default);
+  }
+
+  &.btn-white {
+    color: $color-gray-dark;
+  }
+
+  .text-center & {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  .text-right & {
+    margin-right: 0;
+  }
+
+  // In the original css they appear as .btn-s, but I included inside .btn because
+  // in the html they are always preceded by btn.
+  &.btn-s {
+    padding: 0.65rem 0.9rem 0.55rem;
+  }
+
+  &.btn-l {
+    padding: 1.05rem 1.5rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  &.fixed-width {
+    width: 165px;
+  }
+
+  &.btn-square {
+    padding: 0.5rem;
+  }
+
+  &.btn-submit {
+    margin: 0;
+  }
+
+
+
+  // Generate color-specific styles, e.g:
+  //   .btn.btn-white {
+  //     background: #fff;
+  //  }
+  //   .btn.btn-white:hover, 
+  //   .btn.btn-white:active, 
+  //   .btn.btn-white.active {
+  //     box-shadow: rgba(255, 255, 255, 0.2);
+  //  }
+
+  @each $name, $color in $colors {
+    &.btn-#{$name} {
+      background: $color;
+      @include btn-hover-active($name);
+    }
+  }
+
+  // Generate styles for each button
+  @each $platform, $colors in $share-colors {
+    $bg: nth($colors, 1);
+    $hover-bg: nth($colors, 2);
+
+    &.share-#{$platform} {
+      background: $bg;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        background: $hover-bg;
+      }
+    }
+  }
+
+}
+
+.btn-play {
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  text-align: center;
+  border-radius: 100%;
+  background: $color-white;
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+  display: inline-block;
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  margin: 0 auto;
+
+  &:hover {
+    @include btn-hover-shadow($color-white);
+    -webkit-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+  }
+
+  &:before {
+    font-family: 'IcoFont';
+    content: "\ec74";
+    color: $color-gray-dark;
+    font-size: 1rem;
+    padding: 0 0 0 2px;
+    display: block;
+  }
+}
+
+.btn-play-s {
+  width: 2.6rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
+
+  &:before {
+    font-size: 0.75rem;
+  }
+}
+
+.play-wrapper {
+  position: relative;
+
+  .btn-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.inverse-text .tag-list a.btn {
+  background: $color-gray-dark;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $color-white;
+    @include btn-hover-shadow($color-white);
+  }
+
+}

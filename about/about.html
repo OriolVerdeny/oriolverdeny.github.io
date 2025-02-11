@@ -42,7 +42,7 @@ values:
   list:
     - title: "Care for yourself and others"
       description: "Build and nurture healthy relationships that support mutual growth and understanding. Balance and
-      well-being are non-negotiable. I do not want to end up running around like a headless chicken."
+      well-being are non-negotiable."
       color: "green"
       number: 1
     - title: "Stay positive; we’re in this together"
@@ -187,7 +187,7 @@ faq_area:
 
 <!-- Mission (what) -->
 {% if page.mission.enable %}
-<div class="wrapper dark-wrapper inverse-text">
+<div class="wrapper gray-dark-wrapper inverse-text">
   <div class="container inner">
 
     <h2 class="display-3 title-color mb-40 text-center">{{ page.mission.title }}</h2>
@@ -225,7 +225,7 @@ faq_area:
     <div class="row">
 
       {% for value in page.values.list %}
-      <div class="col-12">
+      <div class="col-12 mb-0">
         <div class="value-item d-flex flex-row justify-content-start align-items-center border-bottom">
 
           <div class="icon-container mr-25">
@@ -293,7 +293,7 @@ faq_area:
           <div class="col-lg-6 mb-0">
               <div id="accordion-1" class="accordion-wrapper">
                   {% for faq in page.faq_area.faq limit: "4" %}
-                  <div class="card">
+                  <div class="card shadow">
                       <div class="card-header" id="accordion-heading-1-{{forloop.index}}">
                           <h5>
                               <button class="collapsed" data-toggle="collapse"

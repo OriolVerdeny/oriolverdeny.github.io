@@ -1,0 +1,161 @@
+/*-----------------------------------------------------------------------------------*/
+/*  40. TABS
+/*-----------------------------------------------------------------------------------*/
+
+.nav-tabs {
+
+  border: 0;
+
+  .nav-link {
+    font-size: 0.95rem;
+    line-height: 1.25rem;
+    letter-spacing: 0;
+    font-weight: 500;
+    color: $color-gray-dark;
+    margin-right: 1.5rem;
+    border: 0;
+    border-radius: 0;
+    padding: 1rem 0;
+    display: block;
+  }
+
+  &.text-center {
+    .nav-link {
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+    }
+  }
+
+  .nav-item {
+
+    &.show .nav-link,
+    .nav-link:hover,
+    .nav-link.active {
+      color: $color-default;
+      background: none;
+    }
+
+    p {
+      color: $color-gray-dark;
+      font-size: 0.8rem;
+      font-weight: normal;
+      margin: 0.25rem 0 0 0;
+    }
+
+  }
+
+  &.nav-tabs-bg .nav-link {
+    padding: 1.4rem 1.2rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &.active {
+      border-radius: 0.2rem;
+      color: $color-gray-dark;
+      -webkit-box-shadow: $shadow;
+      box-shadow: $shadow;
+      background: $color-white;
+    }
+  }
+
+  &.nav-justified .nav-item {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.flex-column.nav-tabs-bg .nav-item {
+    margin-bottom: 1rem;
+  }
+
+
+  // Not used
+  &.nav-pills {
+    .nav-link {
+      color: $color-gray-dark;
+      cursor: pointer;
+      -webkit-transition: all 150ms ease-in-out;
+      -o-transition: all 150ms ease-in-out;
+      transition: all 150ms ease-in-out;
+      padding: 0.8rem 1.2rem;
+      line-height: 1;
+      border-radius: 1.5rem;
+      background: none;
+
+      .icon {
+        margin-right: 0.5rem;
+        font-size: 1.1rem;
+        vertical-align: -1px;
+        -webkit-transition: all 150ms ease-in-out;
+        -o-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
+      }
+
+      &.active,
+      &:hover {
+        color: $color-default;
+        background: $color-white;
+        -webkit-box-shadow: $shadow;
+        box-shadow: $shadow;
+
+        .icon {
+          color: $color-default;
+          -webkit-transition: all 150ms ease-in-out;
+          -o-transition: all 150ms ease-in-out;
+          transition: all 150ms ease-in-out;
+        }
+      }
+    }
+
+    .nav-item {
+      &.show .nav-link {
+        color: $color-default;
+
+        .icon {
+          color: $color-default;
+          -webkit-transition: all 150ms ease-in-out;
+          -o-transition: all 150ms ease-in-out;
+          transition: all 150ms ease-in-out;
+        }
+      }
+
+      .nav-link:hover {
+        color: $color-default;
+
+        .icon {
+          color: $color-default;
+          -webkit-transition: all 150ms ease-in-out;
+          -o-transition: all 150ms ease-in-out;
+          transition: all 150ms ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.tabs-wrapper {
+  border-radius: 0.2rem;
+  padding: 0.5rem 1.5rem;
+
+  .tab-content {
+    padding: 0;
+  }
+}
+
+.tab-content .box {
+  padding-bottom: 2rem;
+}

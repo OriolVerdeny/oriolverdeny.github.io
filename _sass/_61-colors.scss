@@ -1,0 +1,60 @@
+/*-----------------------------------------------------------------------------------*/
+/*  61. COLORS
+/*-----------------------------------------------------------------------------------*/
+@mixin color-classes($name, $color) {
+
+    .color-#{$name},
+    .bullet-#{$name}>li:before,
+    .bullet-#{$name} i {
+        color: $color;
+    }
+
+    .bg-#{$name} {
+        background: $color;
+    }
+
+    .title-bg.bg-#{$name} {
+        background: rgba($color, 0.15);
+    }
+
+    .fill-#{$name} {
+        fill: $color;
+    }
+
+    .bg-opacity-#{$name} {
+        background: rgba($color, 0.085);
+    }
+
+    .bg-transparent-#{$name} {
+        background: rgba($color, 0.85);
+    }
+
+    .fill-opacity-#{$name} {
+        fill: rgba($color, 0.08);
+    }
+
+    .icon-blob-#{$name}:after {
+        color: rgba($color, 0.75);
+    }
+
+    .icon-bg-#{$name} {
+        background-color: rgba($color, 0.25);
+    }
+
+    .nav-tabs .nav-link:hover .icon-blob-#{$name}:after,
+    .nav-tabs .nav-link.active .icon-blob-#{$name}:after,
+    .dial-item:hover .icon-blob-#{$name}:after,
+    .dial-item.active .icon-blob-#{$name}:after {
+        color: rgba($color, 0.75);
+    }
+
+    .progressbar.#{$name} svg path:last-child {
+        stroke: $color;
+    }
+}
+
+
+// Generate styles dynamically
+@each $name, $color in $colors {
+    @include color-classes($name, $color);
+}

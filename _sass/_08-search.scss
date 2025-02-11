@@ -1,0 +1,35 @@
+/*-----------------------------------------------------------------------------------*/
+/*  08. SEARCH
+/*-----------------------------------------------------------------------------------*/
+.search-dropdown {
+    .dropdown-toggle {
+      color: #303030;
+    }
+  
+    .dropdown-menu {
+      .dropdown-close {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        font-size: 1.2rem;
+  
+        &:hover {
+          color: rgba(var(--rgb-white), 0.75) !important;
+        }
+      }
+  
+      &.collapsing {
+        display: block;
+      }
+    }
+  
+    input[type="text"] {
+      height: 3rem;
+      line-height: 3rem;
+      font-size: 0.75rem;
+      background: none !important;
+    }
+  }
+  

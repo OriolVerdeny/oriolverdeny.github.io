@@ -76,9 +76,9 @@ Author:     elemis
 64. RESPONSIVE
 -------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------*/
-/*  01. RESET
+/*  01. RESET into scss
 /*-----------------------------------------------------------------------------------*/
-*,
+/* *,
 *:before,
 *:after {
     -webkit-box-sizing: border-box;
@@ -117,11 +117,11 @@ br {
 }
 button:focus {
     outline: none !important;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  02. GENERAL
+/*  02. GENERAL into scss
 /*-----------------------------------------------------------------------------------*/
-html {
+/* html {
     font-size: 20px;
     scroll-behavior: smooth;
 }
@@ -147,6 +147,8 @@ body {
     padding-left: 30px;
     padding-right: 30px
 }
+
+
 body,
 li,
 address {
@@ -185,7 +187,7 @@ a.hover:hover {
     transition: border 150ms ease-in-out;
 }
 a {
-    color: #606060; /* var(--color-default); */
+    color: #606060; 
     -webkit-transition: all 200ms ease-in-out;
     -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
@@ -420,13 +422,13 @@ canvas {
 }
 .pointer-none {
     pointer-events: none;
-}
+} */
 
 
 /*-----------------------------------------------------------------------------------*/
-/*  03. NAVBAR
+/*  03. NAVBAR into scss
 /*-----------------------------------------------------------------------------------*/
-.navbar {
+/* .navbar {
     z-index: 1008;
     width: 100%;
     padding: 0;
@@ -440,6 +442,8 @@ canvas {
 .navbar-nav * {
     line-height: 1;
 }
+
+
 .navbar .container {
     position: relative;
 }
@@ -457,6 +461,8 @@ canvas {
 .navbar .navbar-brand a {
     color: #303030;
 }
+
+
 .navbar-brand img {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
@@ -548,11 +554,12 @@ canvas {
     background: none !important;
     border-top-color: transparent;
 }
+
 .dropdown-menu,
 .dropdown-item,
-.mega-menu-content a,
 .dropdown-item:hover,
 .dropdown-item:focus,
+.mega-menu-content a,
 .mega-menu-content a:hover,
 .mega-menu-content a:focus {
     color: var(--color-white);
@@ -585,14 +592,24 @@ acronym[title] {
 .navbar:not(.extended) .topbar {
     font-size: 0.75rem;
     padding: 0.15rem 0;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  04. STICKY HEADER
+/*  04. STICKY HEADER in scss
 /*-----------------------------------------------------------------------------------*/
-.navbar.fixed {
+/* .navbar.fixed {
     margin: 0;
     width: 100%;
 }
+.navbar.fixed:not(.extended) .topbar {
+    display: none !important;
+}
+.navbar.fixed .navbar-collapse,
+.navbar.fixed.navbar-fancy .container.bg-white {
+    background: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+}
+
 .banner--clone {
     position: fixed !important;
     z-index: 1008;
@@ -608,6 +625,9 @@ acronym[title] {
 .banner--clone:not(.banner--stick) .dropdown-menu.search-dropdown-menu {
     display: none !important;
 }
+
+
+
 .banner--stick {
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
@@ -621,20 +641,12 @@ acronym[title] {
     background: #242930 !important;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
-}
-.navbar.fixed:not(.extended) .topbar {
-    display: none !important;
-}
-.navbar.fixed .navbar-collapse,
-.navbar.fixed.navbar-fancy .container.bg-white {
-    background: none !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-}
+} */
+
 /*-----------------------------------------------------------------------------------*/
-/*  05. MEGA MENU
+/*  05. MEGA MENU in scss
 /*-----------------------------------------------------------------------------------*/
-.navbar-nav,
+/* .navbar-nav,
 .navbar-nav>li.mega-menu {
     position: static !important;
 }
@@ -643,11 +655,11 @@ acronym[title] {
     right: 0 !important;
     width: auto !important;
     max-width: none !important;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  06. HAMBURGER MENU ICON
+/*  06. HAMBURGER MENU ICON in scss
 /*-----------------------------------------------------------------------------------*/
-button.plain {
+/* button.plain {
     cursor: pointer;
     -webkit-transition: -webkit-transform .2s ease-in-out;
     transition: -webkit-transform .2s ease-in-out;
@@ -717,11 +729,11 @@ button.hamburger.animate.active:after {
         transform: translateY(-8px) rotate(-45deg);
     -moz-transform: translateY(-8px) rotate(-45deg);
     -webkit-transform: translateY(-8px) rotate(-45deg);
-}
-/*-----------------------------------------------------------------------------------*/
+} */
+/* ----------------------------------------------------------------------------------- */
 /*  07. OFFCANVAS
 /*-----------------------------------------------------------------------------------*/
-.offcanvas-info {
+/* .offcanvas-info {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -779,11 +791,11 @@ button.hamburger.animate.active:after {
 }
 .offcanvas-info .widget {
     margin-bottom: 2rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  08. SEARCH
 /*-----------------------------------------------------------------------------------*/
-.search-dropdown .dropdown-toggle {
+/* .search-dropdown .dropdown-toggle {
     color: #303030;
 }
 .search-dropdown .dropdown-menu .dropdown-close {
@@ -814,11 +826,11 @@ button.hamburger.animate.active:after {
     position: absolute;
     top: 25px;
     right: 1rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  09. CART
 /*-----------------------------------------------------------------------------------*/
-.dropdown-menu.cart-dropdown-menu {
+/* .dropdown-menu.cart-dropdown-menu {
     padding: 1.5rem !important;
     min-width: 280px;
 }
@@ -857,11 +869,11 @@ button.hamburger.animate.active:after {
     text-align: center;
     display: inline-block;
     vertical-align: 0.35rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  10. BUTTON
+/*  10. BUTTON in scss
 /*-----------------------------------------------------------------------------------*/
-
+/* 
 .btn {
     color: var(--color-dark);
     background: var(--color-default);
@@ -897,6 +909,7 @@ button.hamburger.animate.active:after {
 .btn-icon-right i {
     margin-left: 0.25rem;
 }
+
 .btn:focus {
     color: var(--color-white);
     -webkit-box-shadow: inherit;
@@ -919,6 +932,7 @@ button.hamburger.animate.active:after {
 .text-right .btn {
     margin-right: 0;
 }
+
 .btn-s {
     padding: 0.65rem 0.9rem 0.55rem;
 }
@@ -935,6 +949,7 @@ button.hamburger.animate.active:after {
 .btn-submit {
     margin: 0
 }
+
 .btn.btn-dark {
     background: var(--color-dark)
 }
@@ -1109,6 +1124,7 @@ button.hamburger.animate.active:after {
     -webkit-box-shadow: var(--btn-hover-brown);
             box-shadow: var(--btn-hover-brown);
 }
+
 .btn.share-facebook {
     background: #4470cf;
 }
@@ -1154,6 +1170,7 @@ button.hamburger.animate.active:after {
 .btn.share-twitter.active {
     background: #4c9ec6;
 }
+
 .btn.btn-strong-hover.btn-white:hover,
 .btn.btn-strong-hover.btn-white:active,
 .btn.btn-strong-hover.btn-white.active {
@@ -1268,6 +1285,7 @@ button.hamburger.animate.active:after {
     -webkit-box-shadow: var(--btn-strong-hover-default);
             box-shadow: var(--btn-strong-hover-default);
 }
+
 .btn-play {
     width: 3.5rem;
     height: 3.5rem;
@@ -1327,11 +1345,11 @@ button.hamburger.animate.active:after {
     color: var(--color-white);
     -webkit-box-shadow: 0 0 0 5px rgba(var(--rgb-white), 0.03);
             box-shadow: 0 0 0 5px rgba(var(--rgb-white), 0.03);
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  11. BOX
+/*  11. BOX in scss
 /*-----------------------------------------------------------------------------------*/
-.box {
+/* .box {
     padding: 2rem 2rem 1rem;
     border-radius: 0.2rem;
 }
@@ -1380,11 +1398,11 @@ button.hamburger.animate.active:after {
 }
 .boxed.classic-view .post {
     margin-bottom: 2.5rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  12. WRAPPERS
+/*  12. WRAPPERS in scss
 /*-----------------------------------------------------------------------------------*/
-.light-wrapper {
+/* .light-wrapper {
     background-color: var(--color-light-gray) !important;
 }
 .gray-wrapper {
@@ -1442,11 +1460,11 @@ footer.dark-wrapper,
     position: relative;
     z-index: 2;
     margin-bottom: -2rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  13. IMAGE BACKGROUND WRAPPER
+/*  13. IMAGE BACKGROUND WRAPPER in scss
 /*-----------------------------------------------------------------------------------*/
-.image-wrapper {
+/* .image-wrapper {
     background: no-repeat center center;
     background-size: cover;
     position: relative;
@@ -1497,11 +1515,11 @@ footer.dark-wrapper,
 }
 .h-100vh {
     height: 100vh;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  14. IMAGE BLOCK WRAPPER
+/*  14. IMAGE BLOCK WRAPPER in scss
 /*-----------------------------------------------------------------------------------*/
-.image-block-wrapper {
+/* .image-block-wrapper {
     padding: 0px;
     position: relative;
 }
@@ -1526,11 +1544,11 @@ footer.dark-wrapper,
 }
 .image-block-wrapper [class*="container"] .box {
     padding: 6rem 5rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  15. VIDEO BACKGROUND WRAPPER
+/*  15. VIDEO BACKGROUND WRAPPER in scss
 /*-----------------------------------------------------------------------------------*/
-.video-wrapper video {
+/* .video-wrapper video {
     width: 100%;
     height: 100%;
     display: inline-block;
@@ -1566,11 +1584,11 @@ footer.dark-wrapper,
 }
 video::-webkit-media-controls {
     display: none !important
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  16. SHADOW
+/*  16. SHADOW in scss
 /*-----------------------------------------------------------------------------------*/
-.shadow {
+/* .shadow {
     -webkit-box-shadow: var(--shadow) !important;
             box-shadow: var(--shadow) !important;
     -webkit-transition: all 200ms ease-in-out;
@@ -1584,7 +1602,7 @@ video::-webkit-media-controls {
 .no-shadow {
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  17. ROUNDED CORNERS
 /*-----------------------------------------------------------------------------------*/
@@ -1707,9 +1725,9 @@ hr.double {
     line-height: 1;
 }
 /*-----------------------------------------------------------------------------------*/
-/*  20. DROPCAP
+/*  20. DROPCAP in scss
 /*-----------------------------------------------------------------------------------*/
-.dropcap {
+/* .dropcap {
     display: block;
     float: left;
     font-size: 2.5rem;
@@ -1730,11 +1748,11 @@ hr.double {
 }
 .dropcap.circle {
     border-radius: 50%;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  21. BADGE
 /*-----------------------------------------------------------------------------------*/
-.badge {
+/* .badge {
     text-transform: uppercase;
     font-size: 0.6rem;
     line-height: 1;
@@ -1833,7 +1851,7 @@ a.badge.bg-hibiscus:hover {
 a.badge.bg-brown:hover {
     -webkit-box-shadow: var(--badge-hover-brown);
             box-shadow: var(--badge-hover-brown)
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  22. ALERT
 /*-----------------------------------------------------------------------------------*/
@@ -1908,9 +1926,9 @@ button.close:before {
     color: rgba(var(--rgb-white), 0.8);
 }
 /*-----------------------------------------------------------------------------------*/
-/*  24. BLOCKQUOTE
+/*  24. BLOCKQUOTE in scss
 /*-----------------------------------------------------------------------------------*/
-blockquote p {
+/* blockquote p {
     font-size: 0.9rem;
     line-height: 1.5rem;
     font-style: normal;
@@ -2000,11 +2018,11 @@ blockquote.icon.icon-left:before {
     font-size: 0.8rem;
     font-weight: 400;
     text-transform: none;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  25. LISTS
+/*  25. LISTS in scss
 /*-----------------------------------------------------------------------------------*/
-ul,
+/* ul,
 ol {
     padding-left: 15px;
 }
@@ -2022,7 +2040,7 @@ ol {
 }
 .mega-menu-content .unordered-list>li:before {
     vertical-align: 0;
-}
+} 
 .unordered-list-circle {
     list-style-type: circle;
 }
@@ -2034,7 +2052,8 @@ ol {
 }
 .ordered-list-alpha {
     list-style-type: lower-alpha;
-}
+} 
+
 .list-inline {
     margin-left: -0.5rem
 }
@@ -2046,7 +2065,8 @@ ol {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
-}
+} 
+
 .icon-list {
     list-style: none;
     padding: 0;
@@ -2056,6 +2076,7 @@ ol {
     font-size: 0.75rem;
     vertical-align: -1px;
 }
+
 .image-list {
     padding: 0;
     margin: 0;
@@ -2092,6 +2113,7 @@ ol {
     margin-left: 85px;
     margin-bottom: 0;
 }
+
 .tag-list li {
     display: inline-block;
 }
@@ -2099,11 +2121,11 @@ ol {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     margin: 0 0 0 0.5rem;
-}
+}*/
 /*-----------------------------------------------------------------------------------*/
 /*  26. SERVICES
 /*-----------------------------------------------------------------------------------*/
-.icon-bg {
+/* .icon-bg {
     width: 2rem;
     height: 2rem;
     position: relative;
@@ -2218,7 +2240,7 @@ ol {
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     height: auto;
-    width: 100%; /* 4.5rem; */
+    width: 100%; 
     max-width: 100%;
     -webkit-mask-size: auto auto;
     -webkit-mask-box-image-repeat: space;
@@ -2317,7 +2339,7 @@ ol {
 .owl-carousel .owl-item .img-blob-s img {
     display: inline;
     width: 3.5rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  27. CLIENTS
 /*-----------------------------------------------------------------------------------*/
@@ -2333,7 +2355,7 @@ ol {
 /*-----------------------------------------------------------------------------------*/
 /*  28. FIGURE
 /*-----------------------------------------------------------------------------------*/
-figure {
+/* figure {
     margin: 0;
     padding: 0;
 }
@@ -2352,11 +2374,11 @@ figure.cover .divider [class*="fill-"] {
     left: 0;
     z-index: 2;
     width: 100%;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  29. OVERLAY
 /*-----------------------------------------------------------------------------------*/
-.overlay {
+/* .overlay {
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -2652,11 +2674,11 @@ figure.overlay img {
 }
 .overlay.caption.caption-overlay:hover span.bg:after {
     opacity: 1;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  30. TILES
 /*-----------------------------------------------------------------------------------*/
-.tiles[class*="tiles-"] .items:after {
+/* .tiles[class*="tiles-"] .items:after {
     content: '';
     display: block;
     clear: both;
@@ -2699,11 +2721,11 @@ figure.overlay img {
     padding-right: 10px;
     padding-left: 10px;
     margin-bottom: 20px;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  31. BLOG
 /*-----------------------------------------------------------------------------------*/
-.grid-view .post {
+/* .grid-view .post {
     margin-bottom: 3rem;
 }
 .classic-view .post {
@@ -2768,11 +2790,11 @@ figure.overlay img {
 .meta-footer .tag-list *,
 .meta-footer .social li {
     margin-bottom: 0 !important;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  32. WIDGETS
 /*-----------------------------------------------------------------------------------*/
-.sidebox {
+/* .sidebox {
     margin-top: 50px;
     display: block;
 }
@@ -2830,11 +2852,11 @@ footer.inverse-text .meta a {
 }
 footer.inverse-text .meta a:hover {
     color: var(--color-white);
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  33. PAGINATION
 /*-----------------------------------------------------------------------------------*/
-.pagination {
+/* .pagination {
     display: block;
     margin: 0;
 }
@@ -2905,7 +2927,7 @@ footer.inverse-text .meta a:hover {
     color: var(--color-default);
     -webkit-box-shadow: var(--shadow) !important;
             box-shadow: var(--shadow) !important;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  34. BREADCRUMBS
 /*-----------------------------------------------------------------------------------*/
@@ -3177,9 +3199,9 @@ ul.dial li:first-child .dial-item-info {
     text-transform: uppercase;
 }
 /*-----------------------------------------------------------------------------------*/
-/*  40. TABS
+/*  40. TABS in scss
 /*-----------------------------------------------------------------------------------*/
-.nav-tabs {
+/* .nav-tabs {
     border: 0;
 }
 .nav-tabs .nav-link {
@@ -3296,11 +3318,11 @@ ul.dial li:first-child .dial-item-info {
 }
 .tab-content .box {
     padding-bottom: 2rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  41. ACCORDION / COLLAPSE
 /*-----------------------------------------------------------------------------------*/
-.accordion-wrapper .card {
+/* .accordion-wrapper .card {
     background-clip: border-box;
     border: 0;
     border-radius: 0;
@@ -3383,7 +3405,7 @@ ul.dial li:first-child .dial-item-info {
 }
 .accordion-wrapper.simple .card-header {
     margin-bottom: 0.8rem;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  42. TABLES
 /*-----------------------------------------------------------------------------------*/
@@ -4215,7 +4237,7 @@ video.player {
 /*-----------------------------------------------------------------------------------*/
 /*  53. SOCIAL ICONS
 /*-----------------------------------------------------------------------------------*/
-.social {
+/* .social {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -4599,11 +4621,11 @@ video.player {
 .color-s-dribbble,
 .color-s-dribbble:hover {
     color: #d07ead;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  54. FORMS
+/*  54. FORMS in scss
 /*-----------------------------------------------------------------------------------*/
-select {
+/* select {
     -webkit-appearance: none;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -4613,6 +4635,8 @@ select {
 .col-form-label {
     line-height: 1.9;
 }
+
+
 label:not(.custom-control-label) {
     font-weight: 500;
     color: #404040;
@@ -4640,12 +4664,12 @@ label textarea {
 }
 .form-row {
     margin-right: -10px;
-    margin-left: -10px
+    margin-left: -10px;
 }
 .form-row>.col,
 .form-row>[class*="col-"] {
     padding-right: 10px;
-    padding-left: 10px
+    padding-left: 10px;
 }
 select,
 textarea,
@@ -4944,7 +4968,7 @@ textarea.error {
     background-color: rgba(var(--rgb-white), 0.6);
     -webkit-box-shadow: var(--shadow) !important;
             box-shadow: var(--shadow) !important;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  55. LIGHTGALLERY
 /*-----------------------------------------------------------------------------------*/
@@ -5166,7 +5190,7 @@ pre {
 /*-----------------------------------------------------------------------------------*/
 /*  59. LINEAR ICONS LIST
 /*-----------------------------------------------------------------------------------*/
-.lineal-icon-list {
+/* .lineal-icon-list {
     text-align: center;
 }
 .lineal-icon-list li {
@@ -5175,20 +5199,20 @@ pre {
 .lineal-icon-list img {
     width: 3rem;
     height: auto;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  60. SPLIT LAYOUT
 /*-----------------------------------------------------------------------------------*/
-.split-layout .content-left {
+/* .split-layout .content-left {
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
-/*  61. COLORS
+/*  61. COLORS in scss
 /*-----------------------------------------------------------------------------------*/
-.color-default,
+/* .color-default,
 .bullet-default>li:before,
 .bullet-default i {
     color: var(--color-default) !important
@@ -5965,11 +5989,11 @@ pre {
 }
 .progressbar.brown svg path:last-child {
     stroke: var(--color-brown)
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  62. INVERSE TEXT
 /*-----------------------------------------------------------------------------------*/
-.inverse-text p,
+/* .inverse-text p,
 .inverse-text li,
 .inverse-text span,
 .inverse-text h1:not([class*="color-"]),
@@ -6195,11 +6219,11 @@ footer.inverse-text address {
 }
 .inverse-text .divider-heading {
     opacity: 0.4;
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  63. BOX LAYOUT
 /*-----------------------------------------------------------------------------------*/
-@media (min-width: 1260px) {
+/* @media (min-width: 1260px) {
     .box-layout {
         position: relative;
         background: #eef0f2;
@@ -6210,7 +6234,7 @@ footer.inverse-text address {
         margin: 0 auto;
         position: relative;
     }
-}
+} */
 /*-----------------------------------------------------------------------------------*/
 /*  64. RESPONSIVE
 /*-----------------------------------------------------------------------------------*/
@@ -6931,7 +6955,7 @@ footer.inverse-text address {
 /*****************************
  custom css
 ******************************/
-
+/* 
 .grid-view .post-thumb {
     height: 250px;
     -o-object-fit: cover;
@@ -6970,4 +6994,4 @@ footer.inverse-text address {
     overflow: hidden;
 }
 
-
+ */

@@ -1,0 +1,68 @@
+/*-----------------------------------------------------------------------------------*/
+/*  13. IMAGE BACKGROUND WRAPPER
+/*-----------------------------------------------------------------------------------*/
+
+.image-wrapper {
+    background: no-repeat center center;
+    background-size: cover;
+    position: relative;
+
+    &:not(.mobile) {
+        background-attachment: fixed;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background: rgba($color-gray10, 0.6);
+    }
+
+    &:not(.no-overlay) * {
+        position: relative;
+        z-index: 2;
+    }
+    
+    &.bg-auto {
+        background-size: auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+
+    &.bg-full {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+
+    &.rounded:before {
+        border-radius: 0.2rem;
+    }
+
+    &.gradient-overlay:before {
+        background: none;
+        background-image: -o-linear-gradient(315deg, rgba(111, 63, 124, 0.55) 0%, rgba(88, 73, 170, 0.55) 100%);
+        background-image: linear-gradient(135deg, rgba(111, 63, 124, 0.55) 0%, rgba(88, 73, 170, 0.55) 100%);
+    }
+
+    &.no-overlay:before {
+        display: none;
+    }
+
+    .cbp-nav-controls,
+    .tparrows {
+        position: absolute;
+    }
+}
+
+
+.h-100vh {
+    height: 100vh;
+}
+

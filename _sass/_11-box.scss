@@ -1,0 +1,85 @@
+/*-----------------------------------------------------------------------------------*/
+/*  11. BOX
+/*-----------------------------------------------------------------------------------*/
+
+.box {
+    padding: 2rem 2rem 1rem;
+    border-radius: 0.2rem;
+
+    &.p-30 {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+}
+
+.classic-view.boxed .box {
+    padding-bottom: 2rem;
+}
+
+.boxed.list-view {
+    &:not(.mega-menu) {
+        margin-bottom: -1.5rem;
+    }
+
+    .item {
+        margin-bottom: 1.5rem;
+    }
+
+    .box {
+        padding: 1.5rem 1rem;
+    }
+
+}
+
+
+.boxed {
+    .image-block-wrapper .image-block {
+        .image-block-bg {
+            border-top-left-radius: 0.2rem;
+            border-bottom-left-radius: 0.2rem;
+        }
+
+        &[class*="offset-"] {
+            border-radius: 0;
+            border-top-right-radius: 0.2rem;
+            border-bottom-right-radius: 0.2rem;
+        }
+    }
+
+    .rounded .image-block>.google-map {
+        overflow: hidden;
+    }
+
+
+    &:not(.list-view) {
+        figure.main,
+        .player-wrapper,
+        .post-slider {
+            margin: -2rem -2rem 0 -2rem;
+        }
+
+        .box.p-30 {
+            figure.main,
+            .player-wrapper,
+            .post-slider {
+                margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+            }
+        }
+    }
+
+    &.classic-view .post {
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+.grid-view {
+    .post {
+        margin-bottom: 3rem;
+    }
+
+    &.boxed .post {
+        margin-bottom: 1.5rem;
+    }
+}
+
+
