@@ -3,10 +3,6 @@
 
 
 
-
-
-
-
 /*-----------------------------------------------------------------------------------*/
 /*	RESPONSIVE IMAGES
 /*-----------------------------------------------------------------------------------*/
@@ -215,10 +211,13 @@ p.about {
 /*--------*/
 
 // CTA button styles
+
 .cta {
     background: $color-default;
-    border-radius: 50px;
+    border-radius: clamp(25px, 2vw, 50px);
+    padding: clamp(1rem, 2vw, 4rem) clamp(2rem, 4vw, 8rem);
 
+    
     &::selection,
     & *::selection,
     &::-moz-selection,
@@ -226,7 +225,61 @@ p.about {
         background: rgba($color-blue-yovori, 0.8) !important;
         color: $color-gray-light !important;
     }
+
+    h3 {
+        // font-size: clamp(1.4rem, 2vw, 1.7rem);
+
+        // smaller than 767px
+        @media (max-width: 767px) {
+            font-size: 1.4rem;
+        }
+
+        // larger than 767px
+        @media (min-width: 768px) {
+            font-size: 1.7rem;
+        }
+    }
+
+    // Button CTA styles
+    .btn {
+        color: $color-gray-light;
+        background: $color-blue-yovori;
+        margin: 0rem 0 0 0rem;
+
+        &:focus,
+        &:hover,
+        &:active,
+        &.active {
+            @include btn-hover-shadow($color-blue-yovori);
+        }
+
+        &.btn-strong-hover {
+
+            &:hover,
+            &:active,
+            &.active {
+                @include btn-hover-shadow($color-blue-yovori, $shadow-opacity-strong);
+            }
+        }
+
+        // smaller than 991px
+        @media (max-width: 991px) {
+            margin: 1rem 0 0 0;
+        }
+
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
 
 // CTA Wrapper styles
 .cta-wrapper {
@@ -296,37 +349,9 @@ p.about {
 /* BUTTON */
 /*--------*/
 
-// Button CTA styles
-.btn-cta {
-    color: $color-gray-light;
-    background: $color-blue-yovori;
-
-    &:focus,
-    &:hover {
-        background-color: rgba($color-blue-yovori, 0.9);
-        color: $color-gray-light;
-    }
-
-    &.btn {
-        &:hover,
-        &:active,
-        &.active {
-            @include btn-hover-shadow($color-blue-yovori);
-        }
-
-        &.btn-strong-hover {
-            &:hover,
-            &:active,
-            &.active {
-                @include btn-hover-shadow($color-blue-yovori, $shadow-opacity-strong);
-            }
-        }
-    }
-}
 
 
-
-// Button hero styles
+// Button hero styles <––––––– DO THE SAME AS WITH THE STA BUTTON.
 .btn-hero {
     color: $color-gray20;
     background: $color-default;

@@ -196,11 +196,15 @@ tabs:
     </div>
 
 <!-- Call to Action -->
-    <div class="space100 d-none d-md-block"></div>
     {% include call_to_action.html %}
 
   </div>  
 </div>
+
+
+
+
+
 
 
 <div class="wrapper gray-dark-wrapper inverse-text">
@@ -211,24 +215,24 @@ tabs:
     {% for service in page.services_area_2.services %}
     <div class="row align-items-center">
       <div class="col-lg-6 {% if forloop.index == 2  %} order-lg-2 {% endif %}">
-        <figure class="img-blob blob1 mb-30">
+        <figure class="img-blob blob1">
           <img src="{{service.image}}" alt="{{service.title}}" />
         </figure>
       </div>
       <!--/column -->
-      <div class="space40 d-lg-none"></div>
+      <!-- <div class="space40 d-lg-none"></div> -->
       <div class="col-lg-6 pl-60 pl-md-15">
         <h3 class="display-3">{{service.title}}</h3>
-        <div class="space20"></div>
+        <!-- <div class="space20"></div> -->
         <p>{{service.content}} </p>
-        <div class="space10"></div>
+        <!-- <div class="space10"></div> -->
         {% if page.two_columns_area_one.btn_url %}
         <a href="{{page.services_area_2.btn_url}}" class="btn btn-purple">{{page.services_area_2.btn_text}}</a>
         {% endif %}
       </div>
       <!--/column -->
     </div>
-    <div class="space80"></div>
+    <!-- <div class="space80"></div> -->
     {% endfor %}
 
 
