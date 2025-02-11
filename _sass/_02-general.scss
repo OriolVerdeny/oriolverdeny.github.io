@@ -164,7 +164,7 @@ $heading-sizes: (
     .blog h#{$level},
     .blog .h#{$level} {
         font-size: nth($sizes, 1) * 1.25;
-        line-height: nth($sizes, 2) + 1;
+        line-height: nth($sizes, 2) + 0.5;
     }
 
 }
@@ -172,6 +172,10 @@ $heading-sizes: (
 
 // (Yovori custom)
 .blog {
+
+    h1.post-title{
+        margin-bottom: 3rem;
+    }
 
     @for $i from 1 through 6 {
         .post-title~h#{$i} {
