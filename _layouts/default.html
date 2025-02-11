@@ -6,14 +6,16 @@
 
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KPHHTGL5LH"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPHHTGL5LH"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-KPHHTGL5LH');
-</script>
+  gtag('config', 'G-KPHHTGL5LH'); 
+</script> -->
+{% include google_analytics.html %}
+
 </head>
 
 <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
@@ -24,7 +26,6 @@
   <!-- </div> -->
 
   {% include scripts.html %}
-  {% include google_analytics.html %}
   {% include cookies.html %}
 
 </body>

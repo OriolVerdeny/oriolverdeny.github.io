@@ -44,7 +44,7 @@ CookieConsent.run({
     revision: 0,
     current_lang: 'en',
     autoclear_cookies: true, // Automatically clear cookies if the user declines
-    page_scripts: true,      // Enable page scripts based on consent
+    page_scripts: false,      // Enable page scripts based on consent
 
     cookie: {
         name: 'cc_cookie_demo2',
@@ -117,10 +117,12 @@ CookieConsent.run({
                 ga: {
                     label: 'Google Analytics',
                     onAccept: () => { // enable ga
-                        // loadGoogleAnalytics();
+                        console.log("Google Analytics accepted");
+                        window.loadGoogleAnalytics();
                     },
                     onReject: () => { // disable ga
-                        // disableGoogleAnalytics();
+                        console.log("Google Analytics rejected");
+                        window.disableGoogleAnalytics();
                     },
                     cookies: [
                         { name: /^_ga/ },
