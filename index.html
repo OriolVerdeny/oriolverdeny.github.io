@@ -186,13 +186,13 @@ clients_carousel:
 
 <!-- What we do (Services) -->
 {% if page.what_we_do.enable %}
-<div class="wrapper gray-dark-wrapper inverse-text" id="whatwedo">
+<div class="wrapper gray10-wrapper inverse-text" id="whatwedo">
   <div class="container inner">
     <div class="three-columns-wrapper">
       <div class="row">
         <div class="col-md-7 mx-auto">
           <h2 class="display-3 title-color text-center">{{page.what_we_do.title}}</h2>
-          <h3 class="display-3 text-center space-y-lg">{{page.what_we_do.sub_title}}</h3>
+          <h3 class="display-3 text-center space-y-sm">{{page.what_we_do.sub_title}}</h3>
         </div>
       </div>
       <div class="row gutter-60 text-center align-items-end">
@@ -246,7 +246,7 @@ clients_carousel:
         <h3 class="display-3 space-b-5">{{page.how_it_works.sub_title}}</h3>
         {% for step in page.how_it_works.lists %}
 
-        <div class="d-flex align-items-start space-y-5" data-aos="zoom-in" data-aos-anchor-placement="top-bottom"
+        <div class="d-flex align-items-start space-y-4" data-aos="zoom-in" data-aos-anchor-placement="top-bottom"
           data-aos-once="true" data-aos-delay="500" data-aos-duration="1500">
           <div>
 
@@ -258,7 +258,7 @@ clients_carousel:
 
           </div>
           <div>
-            <h5 class="font-weight-bold">{{step.title}}</h5>
+            <h5 class="font-weight-bold space-b-1">{{step.title}}</h5>
             <p class="mb-0">{{step.description}}</p>
           </div>
         </div>
