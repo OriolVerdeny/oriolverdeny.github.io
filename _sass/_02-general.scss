@@ -407,9 +407,9 @@ label:not(.custom-control-label) {
 
 // Percentage-based spacing sizes
 $spacing-sizes: (
-    sm: 1%,
-    md: 2.5%,
-    lg: 5%
+    sm: 5%,
+    md: 10%,
+    lg: 20%
 );
 
 // Pixel-based spacing sizes
@@ -431,84 +431,84 @@ $breakpoints: (
 // Generate percentage-based spacing classes
 @each $size, $value in $spacing-sizes {
     .space-t-#{$size} {
-        margin-top: $value;
+        margin-top: $value !important;
     }
 
     .space-b-#{$size} {
-        margin-bottom: $value;
+        margin-bottom: $value !important;
     }
 
     .space-r-#{$size} {
-        margin-right: $value;
+        margin-right: $value !important;
     }
 
     .space-l-#{$size} {
-        margin-left: $value;
+        margin-left: $value !important;
     }
 
     .space-x-#{$size} {
-        margin-right: $value;
-        margin-left: $value;
+        margin-right: $value !important;
+        margin-left: $value !important;
     }
 
     .space-y-#{$size} {
-        margin-top: $value;
-        margin-bottom: $value;
+        margin-top: $value !important;
+        margin-bottom: $value !important;
     }
 
     @media (max-width: map-get($breakpoints, tablet)) {
         .space-t-#{$size} {
-            margin-top: $value * 0.8;
+            margin-top: $value * 0.8 !important;
         }
 
         .space-b-#{$size} {
-            margin-bottom: $value * 0.8;
+            margin-bottom: $value * 0.8 !important;
         }
 
         .space-r-#{$size} {
-            margin-right: $value * 0.8;
+            margin-right: $value * 0.8 !important;
         }
 
         .space-l-#{$size} {
-            margin-left: $value * 0.8;
+            margin-left: $value * 0.8 !important;
         }
 
         .space-x-#{$size} {
-            margin-right: $value * 0.8;
-            margin-left: $value * 0.8;
+            margin-right: $value * 0.8 !important;
+            margin-left: $value * 0.8 !important;
         }
 
         .space-y-#{$size} {
-            margin-top: $value * 0.8;
-            margin-bottom: $value * 0.8;
+            margin-top: $value * 0.8 !important;
+            margin-bottom: $value * 0.8 !important;
         }
     }
 
     @media (max-width: map-get($breakpoints, mobile)) {
         .space-t-#{$size} {
-            margin-top: $value * 0.6;
+            margin-top: $value * 0.6 !important;
         }
 
         .space-b-#{$size} {
-            margin-bottom: $value * 0.6;
+            margin-bottom: $value * 0.6 !important;
         }
 
         .space-r-#{$size} {
-            margin-right: $value * 0.6;
+            margin-right: $value * 0.6 !important;
         }
 
         .space-l-#{$size} {
-            margin-left: $value * 0.6;
+            margin-left: $value * 0.6 !important;
         }
 
         .space-x-#{$size} {
-            margin-right: $value * 0.6;
-            margin-left: $value * 0.6;
+            margin-right: $value * 0.6 !important;
+            margin-left: $value * 0.6 !important;
         }
 
         .space-y-#{$size} {
-            margin-top: $value * 0.6;
-            margin-bottom: $value * 0.6;
+            margin-top: $value * 0.6 !important;
+            margin-bottom: $value * 0.6 !important;
         }
     }
 }
@@ -516,84 +516,84 @@ $breakpoints: (
 // Generate rem-based spacing classes
 @each $size, $value in $rem-spacing-sizes {
     .space-t-#{$size} {
-        margin-top: $value;
+        margin-top: $value !important;
     }
 
     .space-b-#{$size} {
-        margin-bottom: $value;
+        margin-bottom: $value !important;
     }
 
     .space-r-#{$size} {
-        margin-right: $value;
+        margin-right: $value !important;
     }
 
     .space-l-#{$size} {
-        margin-left: $value;
+        margin-left: $value !important;
     }
 
     .space-x-#{$size} {
-        margin-right: $value;
-        margin-left: $value;
+        margin-right: $value !important;
+        margin-left: $value !important;
     }
 
     .space-y-#{$size} {
-        margin-top: $value;
-        margin-bottom: $value;
+        margin-top: $value !important;
+        margin-bottom: $value !important;
     }
 
     @media (max-width: map-get($breakpoints, tablet)) {
         .space-t-#{$size} {
-            margin-top: $value * 0.8;
+            margin-top: $value * 0.8 !important;
         }
 
         .space-b-#{$size} {
-            margin-bottom: $value * 0.8;
+            margin-bottom: $value * 0.8 !important;
         }
 
         .space-r-#{$size} {
-            margin-right: $value * 0.8;
+            margin-right: $value * 0.8 !important;
         }
 
         .space-l-#{$size} {
-            margin-left: $value * 0.8;
+            margin-left: $value * 0.8 !important;
         }
 
         .space-x-#{$size} {
-            margin-right: $value * 0.8;
-            margin-left: $value * 0.8;
+            margin-right: $value * 0.8 !important;
+            margin-left: $value * 0.8 !important;
         }
 
         .space-y-#{$size} {
-            margin-top: $value * 0.8;
-            margin-bottom: $value * 0.8;
+            margin-top: $value * 0.8 !important;
+            margin-bottom: $value * 0.8 !important;
         }
     }
 
     @media (max-width: map-get($breakpoints, mobile)) {
         .space-t-#{$size} {
-            margin-top: $value * 0.7;
+            margin-top: $value * 0.7 !important;
         }
 
         .space-b-#{$size} {
-            margin-bottom: $value * 0.7;
+            margin-bottom: $value * 0.7 !important;
         }
 
         .space-r-#{$size} {
-            margin-right: $value * 0.7;
+            margin-right: $value * 0.7 !important;
         }
 
         .space-l-#{$size} {
-            margin-left: $value * 0.7;
+            margin-left: $value * 0.7 !important;
         }
 
         .space-x-#{$size} {
-            margin-right: $value * 0.7;
-            margin-left: $value * 0.7;
+            margin-right: $value * 0.7 !important;
+            margin-left: $value * 0.7 !important;
         }
 
         .space-y-#{$size} {
-            margin-top: $value * 0.7;
-            margin-bottom: $value * 0.7;
+            margin-top: $value * 0.7 !important;
+            margin-bottom: $value * 0.7 !important;
         }
     }
 }

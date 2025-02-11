@@ -442,14 +442,14 @@
         }
 
         .navbar-brand {
-            padding-top: 1.25rem;
-            padding-bottom: 1.25rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
         }
 
         &.fixed {
             .navbar-brand {
-                padding-top: 0.9rem;
-                padding-bottom: 0.9rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
             }
 
             .offcanvas-nav.open {
