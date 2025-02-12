@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  
 <head>
   {% include head.html %}
 
+  <!-- GA is not activated -->
+  {% include google_analytics.html %}
 
-<!-- Google tag (gtag.js) -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPHHTGL5LH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KPHHTGL5LH'); 
-</script> -->
-{% include google_analytics.html %}
+  <!-- Using umami analytics, which does not use cookies -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="40a4d736-2f2e-4184-ba50-fc7edfaf67b2"></script>
 
 </head>
 
