@@ -1,6 +1,6 @@
 # General Settings
 title: "Yovori"
-email: "oriolverdeny@gmail.com"
+email: "oriol@yovori.com"
 
 description: >- # this means to ignore newlines until "baseurl:"
   I provide data-driven services to support organizations make informed decisions and achieve their goals to improve agriculture, sustainability, and financial performance.
@@ -18,7 +18,7 @@ address_01: "140 rue Claude Monet, 34090 Montpellier, France"
 phone_number: "(+33) 621 996 850"
 phone_number2: "(+34) 665 990 141"
 phone_number3: "(+229) 152 361 583"
-copyright_text: "© 2024 Yovori. All rights reserved."
+copyright_text: "© 2025 Yovori. All rights reserved."
 
 google_map: |
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76604.70307420091!2d3.8917115681929544!3d43.62221231493983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af411354d05b%3A0x6c1af4a14f964bc7!2s140%20Rue%20Claude%20Monet%2C%2034090%20Montpellier%2C%20France!5e0!3m2!1sen!2sbj!4v1732634533904!5m2!1sen!2sbj" width=100% height=100% style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
