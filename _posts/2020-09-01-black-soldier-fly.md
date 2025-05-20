@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: case_study
 title: "Could black soldier fly revolutionize animal feed, fertilizers and waste management in Benin?"
 date: 2021-09-15 20:37:13 +0600
 author: "Oriol Verdeny Vilalta"
@@ -9,6 +9,14 @@ categories: [Black Soldier Fly]
 tags: Benin insects BSF
 slider_post: true
 mathjax: true
+
+overview:
+  enable: true
+  title: "Overview"
+  description: "I believe data is a powerful tool for achieving this vision. By using data to guide decisions, we can
+  improve outcomes, optimize processes, and create a positive lasting impact. My approach focuses on making complex data
+  clear, useful, and aligned with your goals."
+
 post_format: "gallery"
 gallery:
   - img: "/assets/images/03-Case-Studies/Black-soldier-fly/IMG20230615105627.jpg"

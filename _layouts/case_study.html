@@ -7,6 +7,21 @@ layout: default
 {% include mathjax.html %}
 {% endif %}
 
+{% if page.overview.enable %}
+<div class="wrapper white-wrapper">
+  <div class="container inner">
+    <h2 class="display-3 title-color mb-40 text-center">{{ page.overview.title }}</h2>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-0 space-t-5">
+        <p class="about"> {{ page.overview.description }}</p>
+      </div>
+      <!-- /column -->
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
 
 <div class="wrapper light-wrapper">
   <div class="container inner pt-80">
@@ -28,65 +43,53 @@ layout: default
               </div>
               {% endif %}
               <h1 class="post-title text-center">{{page.title}}</h1>
-              <div class="space50"></div>
+                <div class="space50"></div>
 
+                {{page.content}}
 
-
-
-
-
-
-
-              
-              {{page.content}}
-              
-
-
-
-
-              {% if page.post_format == "gallery" %}
-              <div class="space20"></div>
-              <div class="post-gallery light-gallery-wrapper">
-                <div class="tiles tiles-s">
-                  <div class="items row">
-                    {% for gallery in page.gallery %}
-                    <div class="item {% if forloop.index < 3 %} col-md-6 {% else %} col-md-4 {% endif %}">
-                      <figure class="overlay overlay1 rounded">
-                        <a href="{{gallery.img}}" class="lightbox">
-                          <img src="{{gallery.img}}" alt="{{gallery.img}}"></a>
-                        <figcaption>
-                          <h5 class="from-top mb-0">View Larger</h5>
-                        </figcaption>
-                      </figure>
+                {% if page.post_format == "gallery" %}
+                <div class="space20"></div>
+                <div class="post-gallery light-gallery-wrapper">
+                  <div class="tiles tiles-s">
+                    <div class="items row">
+                      {% for gallery in page.gallery %}
+                      <div class="item {% if forloop.index < 3 %} col-md-6 {% else %} col-md-4 {% endif %}">
+                        <figure class="overlay overlay1 rounded">
+                          <a href="{{gallery.img}}" class="lightbox">
+                            <img src="{{gallery.img}}" alt="{{gallery.img}}"></a>
+                          <figcaption>
+                            <h5 class="from-top mb-0">View Larger</h5>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <!--/.item -->
+                      {% endfor %}
                     </div>
-                    <!--/.item -->
-                    {% endfor %}
+                    <!--/.items -->
                   </div>
-                  <!--/.items -->
+                  <!--/.tiles -->
                 </div>
-                <!--/.tiles -->
-              </div>
-              <!--/.post-gallery -->
-              {% endif %}
-              <div class="clearfix"></div>
-              <div class="space40"></div>
-              <div class="space10"></div>
-              <div class="d-lg-flex justify-content-between align-items-center meta-footer">
-                <ul class="list-unstyled tag-list">
-                  {% capture tags %}
-                  {% for tag in page.tags %}
-                  <li data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
-                    <a class="btn btn-s" href="/tag/{{tag |slugify}}">{{ tag }}</a>
-                  </li>
-                  {% endfor %}
-                  {% endcapture %}
-                  {{ tags | split:'</li>' | sort | join:'</li>' }}
-                </ul>
-                <div class="space20 d-lg-none"></div>
-                <div class="d-flex align-items-center">
-                  {% include social_share.html %}
+                <!--/.post-gallery -->
+                {% endif %}
+                <div class="clearfix"></div>
+                <div class="space40"></div>
+                <div class="space10"></div>
+                <div class="d-lg-flex justify-content-between align-items-center meta-footer">
+                  <ul class="list-unstyled tag-list">
+                    {% capture tags %}
+                    {% for tag in page.tags %}
+                    <li data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
+                      <a class="btn btn-s" href="/tag/{{tag |slugify}}">{{ tag }}</a>
+                    </li>
+                    {% endfor %}
+                    {% endcapture %}
+                    {{ tags | split:'</li>' | sort | join:'</li>' }}
+                  </ul>
+                  <div class="space20 d-lg-none"></div>
+                  <div class="d-flex align-items-center">
+                    {% include social_share.html %}
+                  </div>
                 </div>
-              </div>
             </div>
             <!-- /.post-content -->
           </div>
@@ -146,6 +149,7 @@ layout: default
 <!-- /.wrapper -->
 {% endfor %}
 {% endif %}
+
 <div class="wrapper light-wrapper">
   <div class="container inner">
     <div class="row">
@@ -169,7 +173,8 @@ layout: default
               {% endif %}
               {% if post.categories %}
               <div class="category">
-                <a href="{{post.categories[0] | slugify}}" class="badge badge-pill badge-category font-weight-bold">{{post.categories[0]}}</a>
+                <a href="{{post.categories[0] | slugify}}"
+                  class="badge badge-pill badge-category font-weight-bold">{{post.categories[0]}}</a>
               </div>
               {% endif %}
               <h2 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h2>
@@ -191,16 +196,4 @@ layout: default
     <!-- /.row -->
   </div>
   <!-- /.container -->
-</div>
-<!-- /.wrapper -->
-<!-- <div class="wrapper gray-wrapper">
-  <div class="container inner">
-    <div class="row">
-      <div class="col-lg-10 mx-auto">
-        {% include disqus_comments.html %}
-      </div>
-    </div>
-  </div>
-</div> -->
-<!-- /.wrapper -->
 </div>
