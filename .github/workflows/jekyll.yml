@@ -43,6 +43,8 @@ jobs:
         run: |
           gem install bundler
           bundle install
+      - name: Show installed gems
+        run: bundle list
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
