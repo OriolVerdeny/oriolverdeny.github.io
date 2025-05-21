@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: case_study
 title: "Could black soldier fly revolutionize animal feed, fertilizers and waste management in Benin?"
 date: 2021-09-15 20:37:13 +0600
 author: "Oriol Verdeny Vilalta"
