@@ -6,8 +6,8 @@ permalink: "/:title"
 theme: 
 
 plugins:
-  - jekyll-feed
   - jekyll-paginate-v2
+  - jekyll-feed
   - jekyll-archives
 
 collections:
@@ -77,9 +77,7 @@ pagination:
   # Without file extension
   indexpage: 'index'
 
-  # Old jekyll-paginate pagination logic
-#paginate: 3
-#paginate_path: "/legacy/page:num/"
+
 
 
 ############################################################

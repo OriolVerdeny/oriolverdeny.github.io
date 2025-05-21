@@ -10,6 +10,7 @@ layout: default
           <div class="row isotope d-flex flex-wrap">
 
 
+
            {% if paginator %}
 
            {% for post in paginator.posts %}
@@ -29,6 +30,9 @@ layout: default
         </div>
         <!-- /.blog -->
         {% include pagination.html %}
+
+        <p>{{ paginator.posts | size }} posts found.</p>
+
       </div>
       <!--/column -->
       <div class="space30 d-none d-md-block d-lg-none"></div>
