@@ -9,8 +9,6 @@ layout: default
         <div class="blog grid grid-view">
           <div class="row isotope d-flex flex-wrap">
 
-
-
            {% if paginator %}
 
            {% for post in paginator.posts %}
@@ -24,14 +22,11 @@ layout: default
             <p>No paginator found. Check your _config.yml and pagination settings.</p>
            {% endif %}
 
-
           </div>
           <!-- /.row -->
         </div>
         <!-- /.blog -->
         {% include pagination.html %}
-
-        <p>{{ paginator.posts | size }} posts found.</p>
 
       </div>
       <!--/column -->
