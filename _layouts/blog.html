@@ -8,12 +8,22 @@ layout: default
       <div class="col-lg-8">
         <div class="blog grid grid-view">
           <div class="row isotope d-flex flex-wrap">
+
+
+           {% if paginator %}
+
            {% for post in paginator.posts %}
             <div class="item post grid-sizer col-md-6">
              {% include post_loop.html %}
             </div>
             <!-- /.post -->
            {% endfor %}
+
+           {% else %}
+            <p>No paginator found. Check your _config.yml and pagination settings.</p>
+           {% endif %}
+
+
           </div>
           <!-- /.row -->
         </div>
