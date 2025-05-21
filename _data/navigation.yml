@@ -29,13 +29,13 @@ main_menu:
 footer_nav_01:
   title: "Legal"
   links:
-    - url: "/legal-details"
+    - url: "/legal/legal-details"
       text: "Legal details"
-    - url: "/cgu"
+    - url: "/legal/cgu"
       text: "Terms of Use"
-    - url: "/rgpd"
+    - url: "/legal/rgpd"
       text: "Privacy Policy"
-    - url: "/cgs"
+    - url: "/legal/cgs"
       text: "Terms of Service"
 
 footer_nav_02:
