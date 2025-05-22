@@ -1,0 +1,277 @@
+---
+layout: default
+---
+<!-- Title Section -->
+<div class="wrapper light-wrapper wrapper-title">
+  <div class="container inner">
+    <h1 class="display-2 title-color text-center">{{ page.title }}</h1>
+    {% if page.sub_title %}
+    <p class="lead text-center">{{ page.sub_title }}</p>
+    {% endif %}
+  </div>
+</div>
+
+
+<!-- Image Overlap Section -->
+{% if page.post_image %}
+<div class="wrapper image-overlap-wrapper">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <figure class="rounded text-center">
+          <img src="{{ page.post_image }}" alt="{{ page.title }}" class="overlap-image" />
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<!-- Section 1 -->
+{% if page.section1 %}
+<div class="wrapper white-wrapper">
+  <div class="container inner">
+    <div class="row align-items-start">
+      <!-- Left Column: Title -->
+      <div class="col-12 col-md-4 text-md-left text-center mb-3 mb-md-0">
+        <h2 class="display-1">{{ page.section1.title }}</h2>
+      </div>
+      <!-- Right Column: Content -->
+      <div class="col-12 col-md-8">
+        <p>{{ page.section1.content | markdownify}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<!-- Section 2 -->
+{% if page.section2 %}
+<div class="wrapper black-wrapper">
+  <div class="container inner">
+    <div class="row align-items-start">
+      <!-- Left Column: Title -->
+
+      <div class="col-12 col-md-4 text-md-left text-center mb-3 mb-md-0">
+        <h2 class="display-1 text-white">{{ page.section2.title }}</h2>
+      </div>
+      <!-- Right Column: Content -->
+
+      <div class="col-12 col-md-8">
+        <div class="text-white">
+          <p>{{ page.section2.content | markdownify}}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+{% endif %}
+
+<!-- Section 3 -->
+{% if page.section3 %}
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+
+    <div class="row align-items-start">
+      <!-- Left Column: Title -->
+      <div class="col-12 col-md-4 text-md-left text-center mb-3 mb-md-0">
+        <h2 class="display-1">{{ page.section3.title }}</h2>
+      </div>
+      <!-- Right Column: Content -->
+      <div class="col-12 col-md-8">
+        <p>{{ page.section3.content | markdownify}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endif %}
+
+<!-- Section 4 -->
+{% if page.section4 %}
+<div class="wrapper yovori-wrapper">
+  <div class="container inner">
+
+    <div class="row align-items-start">
+      <!-- Left Column: Title -->
+      <div class="col-12 col-md-4 text-md-left text-center mb-3 mb-md-0">
+        <h2 class="display-1">{{ page.section4.title }}</h2>
+      </div>
+      <!-- Right Column: Content -->
+      <div class="col-12 col-md-8">
+        <p>{{ page.section4.content | markdownify}}</p>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+{% endif %}
+
+
+
+<div class="wrapper light-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="blog classic-view">
+          <div class="post mb-0">
+
+
+            <div class="post-content">
+
+
+              {{page.content}}
+
+              {% if page.post_format == "gallery" %}
+              <div class="space20"></div>
+              <div class="post-gallery light-gallery-wrapper">
+                <div class="tiles tiles-s">
+                  <div class="items row">
+                    {% for gallery in page.gallery %}
+                    <div class="item {% if forloop.index < 3 %} col-md-6 {% else %} col-md-4 {% endif %}">
+                      <figure class="overlay overlay1 rounded">
+                        <a href="{{gallery.img}}" class="lightbox">
+                          <img src="{{gallery.img}}" alt="{{gallery.img}}"></a>
+                        <figcaption>
+                          <h5 class="from-top mb-0">View Larger</h5>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!--/.item -->
+                    {% endfor %}
+                  </div>
+                  <!--/.items -->
+                </div>
+                <!--/.tiles -->
+              </div>
+              <!--/.post-gallery -->
+              {% endif %}
+              <div class="clearfix"></div>
+              <div class="space40"></div>
+              <div class="space10"></div>
+              <div class="d-lg-flex justify-content-between align-items-center meta-footer">
+                <ul class="list-unstyled tag-list">
+                  {% capture tags %}
+                  {% for tag in page.tags %}
+                  <li data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
+                    <a class="btn btn-s" href="/tag/{{tag |slugify}}">{{ tag }}</a>
+                  </li>
+                  {% endfor %}
+                  {% endcapture %}
+                  {{ tags | split:'</li>' | sort | join:'</li>' }}
+                </ul>
+                <div class="space20 d-lg-none"></div>
+                <div class="d-flex align-items-center">
+                  {% include social_share.html %}
+                </div>
+              </div>
+            </div>
+            <!-- /.post-content -->
+          </div>
+          <!-- /.post -->
+        </div>
+        <!-- /.blog -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+
+{% if page.author %}
+{% assign check_author = site.authors | where: "title", page.author %}
+{% for author_data in check_author %}
+<div class="wrapper white-wrapper">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="row align-items-center">
+          {% if author_data.image %}
+          <div class="col-md-4">
+            <figure class="rounded">
+              <a href="/authors/{{author_data.title | slugify}}"><img alt="{{author_data.title}}"
+                  src="{{author_data.image}}" /></a>
+            </figure>
+          </div>
+          <!--/column -->
+          {% endif %}
+          <div class="col-md-8">
+            <h4>{{author_data.title}}</h4>
+            {% if author_data.bio %}
+            <p class="mb-10">{{author_data.bio}}</p>
+            {% endif %}
+            {% if author_data.social_accounts %}
+            <ul class="social">
+              {% for author_social in author_data.social_accounts %}
+              <li><a href="{{author_social.url}}" target="_blank" rel="noopener noreferrer"><i
+                    class="{{author_social.icon}}"></i></a></li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+{% endfor %}
+{% endif %}
+
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <h3 class="mb-30">You Might Also Like</h3>
+        <div class="grid-view">
+          <div class="carousel owl-carousel" data-margin="30" data-dots="true" data-autoplay="false"
+            data-autoplay-timeout="5000"
+            data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "3"}}'>
+            {% for post in site.posts limit: 6 %}
+            <div class="item">
+              {% if post.post_image %}
+              <figure class="overlay overlay1 rounded mb-30">
+                <a href="{{post.url}}">
+                  <img class="post-thumb" src="{{post.post_image}}" alt="{{post.title}}" />
+                </a>
+                <figcaption>
+                  <h5 class="from-top mb-0">Read More</h5>
+                </figcaption>
+              </figure>
+              {% endif %}
+              {% if post.categories %}
+              <div class="category">
+                <a href="{{post.categories[0] | slugify}}"
+                  class="badge badge-pill badge-category font-weight-bold">{{post.categories[0]}}</a>
+              </div>
+              {% endif %}
+              <h2 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h2>
+              <div class="meta mb-0">
+                <!-- {% if post.date %}
+                <span class="date"><i class="jam jam-clock"></i>{{post.date | date_to_long_string}}</span>
+                {% endif %} -->
+              </div>
+            </div>
+            <!-- /.item -->
+            {% endfor %}
+          </div>
+          <!-- /.owl-carousel -->
+        </div>
+        <!-- /.grid-view -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
