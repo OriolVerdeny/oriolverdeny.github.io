@@ -14,15 +14,15 @@ main_menu:
 
   - text: "Case studies"
     menu_type: "simple"
-    url: "/case-studies"
+    url: "/case-studies/"
 
   - text: "About"
     menu_type: "simple"
-    url: "/about/about"
+    url: "/about/"
 
   - text: "Contact"
     menu_type: "simple"
-    url: "/contact/contact"
+    url: "/contact/"
 
 # external_links_02
 
@@ -41,13 +41,13 @@ footer_nav_01:
 footer_nav_02:
   title: "Learn More"
   links:
-    - url: "/about/about"
+    - url: "/about/"
       text: "About"
     - url: "/#whatwedo"
       text: "Services"
     - url: "/case-studies"
       text: "Case Studies"
-    - url: "/contact/contact"
+    - url: "/contact/"
       text: "Contact me"
 
 
