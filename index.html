@@ -163,7 +163,7 @@ clients_carousel:
       </div>
   
       <div class="col-12 col-md-4 offset-0 order-2 d-flex justify-content-center">
-        <img src="{{page.hero_area.hero_image}}" alt="Oriol Verdeny - Senior Data Consultant" class="img-fluid hero" />
+        <img src="{{page.hero_area.hero_image}}" alt="Oriol Verdeny - Senior Data Consultant" class="img-fluid hero" loading="lazy"/>
       </div>
   
     </div>
@@ -204,7 +204,7 @@ clients_carousel:
         {% for service in page.what_we_do.services %}
         <div class="col-md-4 space-t-5">
           <figure class="img-blob blob1 mb-30">
-            <img src="{{service.image}}" alt="{{service.title}}" />
+            <img src="{{service.image}}" alt="{{service.title}}" loading="lazy"/>
           </figure>
           <h1 class="display-4 font-weight-bold">{{service.title}}</h1>
           <p class="mb-15">{{service.description}}</p>
@@ -238,7 +238,7 @@ clients_carousel:
               <source media="(min-width: 992px)" srcset="{{page.how_it_works.image_large}}">
               <!-- Fallback image -->
               <img class="img-fluid rounded-4 responsive-img" src="{{page.how_it_works.image_fallback}}"
-                alt="How it works" />
+                alt="How it works" loading="lazy"/>
             </picture>
           </figure>
         </div>
@@ -291,7 +291,7 @@ clients_carousel:
       <div class="row align-items-center">
         {% if page.why_choose_us.image %}
         <div class="col-lg-6 space-y-4" data-aos="fade-up" data-aos-duration="1000">
-          <figure><img src="{{page.why_choose_us.image}}" alt="{{page.why_choose_us.title}}" /></figure>
+          <figure><img src="{{page.why_choose_us.image}}" alt="{{page.why_choose_us.title}}" loading="lazy"/></figure>
         </div>
         {% endif %}
         <div class="col-lg-6 pl-60 pl-md-15">
@@ -331,7 +331,7 @@ clients_carousel:
         <div class="item blog-posts">
           {% if post.post_image %}
           <figure class="overlay overlay1 rounded mb-30"><a href="{{post.url}}"> <img src="{{post.post_image}}"
-                class="post-thumb" alt="{{post.title}}" /></a>
+                class="post-thumb" alt="{{post.title}}" loading="lazy"/></a>
             <figcaption>
               <h5 class="from-top mb-0">Read More</h5>
             </figcaption>
@@ -370,7 +370,7 @@ clients_carousel:
     <div class="row align-items-center">
       {% if page.testimonials_area.image %}
       <div class="col-lg-6 pr-60 pr-md-15">
-        <figure><img src="{{page.testimonials_area.image}}" alt="{{page.testimonials_area.title}}" /></figure>
+        <figure><img src="{{page.testimonials_area.image}}" alt="{{page.testimonials_area.title}}" loading="lazy"/></figure>
       </div>
       {% endif %}
       <!-- <div class="space20 d-md-none"></div>

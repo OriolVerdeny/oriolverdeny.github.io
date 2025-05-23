@@ -7,11 +7,11 @@
           {% if include.light_logo %}
           <img src="{{site.data.general_settings.light_logo_1x}}"
             srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x"
-            alt="{{site.data.general_settings.title}}" />
+            alt="{{site.data.general_settings.title}}" loading="lazy"/>
           {% else %}
           <img src="{{site.data.general_settings.black_logo_1x}}"
             srcset="{{site.data.general_settings.black_logo_1x}} 1x, {{site.data.general_settings.black_logo_2x}} 2x"
-            alt="{{site.data.general_settings.title}}" />
+            alt="{{site.data.general_settings.title}}" loading="lazy"/>
           {% endif %}
 
           {% if site.data.general_settings.description %}
