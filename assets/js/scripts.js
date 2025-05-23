@@ -309,14 +309,16 @@ $(document).ready(function() {
 			mode: 'lg-fade',
 			download: false,
 			autoplayControls: false,
-			zoom: false,
+			zoom: true,
 			fullScreen: false,
 			videoMaxWidth: '1000px',
-			loop: false,
+			loop: true,
 			hash: false,
 			mousewheel: true,
 			videojs: true,
-			share: false
+			share: false,
+			subHtmlSelectorRelative: false,
+			getCaptionFromTitleOrAlt: false
 		});
 	}
 	enablelightGallery();

@@ -118,10 +118,7 @@ layout: default
       <div class="col-lg-10 mx-auto">
         <div class="blog classic-view">
           <div class="post mb-0">
-
-
             <div class="post-content">
-
 
               {{page.content}}
 
@@ -134,7 +131,7 @@ layout: default
                     <div class="item {% if forloop.index < 3 %} col-md-6 {% else %} col-md-4 {% endif %}">
                       <figure class="overlay overlay1 rounded">
                         <a href="{{gallery.img}}" class="lightbox">
-                          <img src="{{gallery.img}}" alt="{{gallery.img}}"></a>
+                          <img src="{{gallery.img}}" alt="{{ page.title }}"></a>
                         <figcaption>
                           <h5 class="from-top mb-0">View Larger</h5>
                         </figcaption>
