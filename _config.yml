@@ -9,6 +9,8 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 collections:
   authors:
@@ -18,7 +20,7 @@ collections:
     permalink: "/legal/:title"
 
 paginate: 8
-paginate_path: "/work/page:num"
+paginate_path: "/case-studies/page:num"
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
